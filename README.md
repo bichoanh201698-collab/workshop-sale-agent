@@ -49,8 +49,10 @@ assets/fonts/         ← Be Vietnam Pro + IBM Plex Mono (self-host, chạy offl
 
 ## Xuất file ảnh / PDF
 ```bash
-for i in $(seq 1 27); do ./shot.sh $i "out/slide-$i.png"; done   # PNG 4480×1120
+for i in $(seq 1 27); do ./shot.sh $i "out/slide-$(printf %02d $i).png"; done   # PNG 4480×1120
 ```
+`shot.sh` mở deck ở chế độ `?export=1` nên ảnh xuất ra không có progress bar hay thanh điều khiển.
+Bộ 27 PNG đã render sẵn trong `out/`.
 In PDF: mở `index.html` trong Chrome → Print → khổ ngang, tắt margin.
 Cần `.pptx` thì import bộ PNG trên vào PowerPoint với slide size 4480×1120 px.
 
