@@ -1,0 +1,84 @@
+<section class="slide t-ink l-split" data-slide="23" data-title="Sửa để nhân viên giống shop hơn" id="s23">
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb mint" style="right:-700px; bottom:-1160px; opacity:.13;"></div>
+    <div class="deco-noise"></div>
+  </div>
+  <p class="meta">Session 03 <b>·</b> Hands-on</p>
+
+  <style>
+    #s23{ gap:150px; }
+    #s23 > .lead{ flex:0 0 1460px; gap:42px; }
+    #s23 > .payload{ flex-direction:row; align-items:center; gap:48px; }
+    #s23 .arrow i{ width:150px; height:4px; }
+
+    #s23 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
+    #s23 .cap{
+      margin:0; font-family:var(--mono); font-size:29px; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
+      display:flex; align-items:center; gap:18px;
+    }
+    #s23 .cap i{ width:52px; height:3px; background:currentColor; flex:none; }
+    #s23 .pane.after .cap{ color:var(--mint); }
+
+    #s23 .bub{
+      max-width:100%; width:100%; padding:38px 44px; font-size:52px; line-height:1.22;
+    }
+    #s23 .bub.bad{ border-style:dashed; border-color:#FFFFFF33; color:var(--muted); }
+    #s23 .bub .who{ font-size:24px; }
+
+    #s23 .diag{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:18px; }
+    #s23 .diag li{
+      font-size:38px; line-height:1.24; color:var(--muted);
+      display:flex; gap:18px; align-items:flex-start;
+    }
+    #s23 .diag li::before{ content:"×"; color:var(--accent); font-weight:700; flex:none; }
+    #s23 .pane.after .diag li::before{ content:"✓"; color:var(--mint); }
+
+    #s23 .badge{ display:flex; align-items:center; gap:30px; }
+    #s23 .badge .chip{ font-family:var(--mono); font-size:32px; letter-spacing:.16em; padding:18px 32px; }
+    #s23 .badge p{ margin:0; font-size:38px; line-height:1.26; color:var(--fg); font-weight:500; }
+  </style>
+
+  <div class="lead">
+    <p class="label" data-anim="wipe-r" data-delay="120">Sửa &amp; train lại</p>
+    <h1 class="h1" data-anim="up-sm" data-delay="240">
+      Nhân viên số <span class="ac">không cần hoàn hảo</span> ngay từ lần đầu.
+    </h1>
+    <p class="body wide" data-anim="up-sm" data-delay="420">
+      Điều quan trọng là mình biết cách <b style="color:var(--fg);font-weight:700;">kiểm tra, sửa và train lại</b> sau mỗi lần test.
+    </p>
+    <div class="badge" data-anim="up-sm" data-delay="1400">
+      <span class="chip solid"><span class="ic"></span>AHA MOMENT</span>
+      <p>Sửa được một câu trả lời<br><b>ngay tại workshop</b>.</p>
+    </div>
+  </div>
+
+  <div class="payload">
+    <div class="pane before">
+      <p class="cap" data-anim="up-sm" data-delay="520"><i></i>Trước · chưa đúng giọng shop</p>
+      <div class="bub bad" data-anim="up-sm" data-delay="620">
+        <span class="who">Nhân viên số · v1</span>Sản phẩm này hiện đang có sẵn. Bạn vui lòng cho biết thêm yêu cầu.
+      </div>
+      <ul class="diag" data-anim="up-sm" data-delay="760">
+        <li>Không nói tình trạng hàng cụ thể</li>
+        <li>Không đúng cách xưng hô của shop</li>
+        <li>Không dẫn khách tới bước tiếp theo</li>
+      </ul>
+    </div>
+
+    <div class="arrow" data-anim="up-sm" data-delay="900" style="align-self:center;"><i></i></div>
+
+    <div class="pane after">
+      <p class="cap" data-anim="up-sm" data-delay="1000"><i></i>Sau · đã train lại</p>
+      <div class="bub agent" data-anim="up-sm" data-delay="1100">
+        <span class="who">Nhân viên số · v2</span>Dạ còn size M và L ạ. Chị lấy màu be hay đen để em giữ hàng cho mình?
+      </div>
+      <ul class="diag" data-anim="up-sm" data-delay="1240">
+        <li>Có tình trạng hàng</li>
+        <li>Đúng giọng &amp; cách xưng hô của shop</li>
+        <li>Có bước tiếp theo cho khách</li>
+      </ul>
+    </div>
+  </div>
+</section>

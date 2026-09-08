@@ -1,0 +1,163 @@
+/* ============================================================
+   ENGINE — stage sizing, transitions, animation primitives
+   Canvas: 4480 x 1120 px (ratio 4:1, ultrawide LED wall)
+   ============================================================ */
+
+:root{
+  --stage-w: 4480;
+  --stage-h: 1120;
+  --safe-x: 180px;   /* horizontal safe margin */
+  --safe-y: 96px;    /* vertical safe margin */
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --ease-in-out: cubic-bezier(.7,0,.3,1);
+  --dur: 900ms;
+}
+
+*,*::before,*::after{ box-sizing: border-box; }
+
+html,body{
+  margin:0; padding:0; height:100%; width:100%;
+  background:#000; overflow:hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- viewport → stage fit ---------------------------------- */
+#viewport{
+  position:fixed; inset:0;
+  display:grid; place-items:center;
+  background:#000;
+}
+
+#stage{
+  position:relative;
+  width: calc(var(--stage-w) * 1px);
+  height: calc(var(--stage-h) * 1px);
+  transform-origin: center center;
+  overflow:hidden;
+  will-change: transform;
+}
+
+/* ---- slides ------------------------------------------------ */
+.slide{
+  position:absolute; inset:0;
+  opacity:0; visibility:hidden;
+  pointer-events:none;
+  transition: opacity 600ms var(--ease-in-out), visibility 600ms;
+}
+.slide.is-active{
+  opacity:1; visibility:visible; pointer-events:auto;
+  z-index:2;
+}
+.slide.is-leaving{ z-index:1; }
+
+/* ---- animation primitives ---------------------------------
+   Put data-anim="<name>" on any element inside a slide.
+   Optional data-delay="450" (ms). Fires when slide activates,
+   resets when it deactivates so every entry replays clean.
+   ----------------------------------------------------------- */
+[data-anim]{
+  opacity:0;
+  will-change: transform, opacity, clip-path;
+  transition-property: opacity, transform, clip-path, filter, letter-spacing;
+  transition-duration: var(--dur);
+  transition-timing-function: var(--ease-out);
+  transition-delay: var(--_d, 0ms);
+}
+.is-active [data-anim].is-in{ opacity:1; transform:none; clip-path:none; filter:none; }
+
+[data-anim="fade"]        { }
+[data-anim="up"]          { transform: translateY(90px); }
+[data-anim="up-sm"]       { transform: translateY(34px); }
+[data-anim="down"]        { transform: translateY(-70px); }
+[data-anim="left"]        { transform: translateX(120px); }
+[data-anim="right"]       { transform: translateX(-120px); }
+[data-anim="scale"]       { transform: scale(.88); }
+[data-anim="scale-out"]   { transform: scale(1.12); }
+[data-anim="blur"]        { filter: blur(28px); transform: scale(1.04); }
+[data-anim="wipe-r"]      { clip-path: inset(0 100% 0 0); opacity:1; }
+[data-anim="wipe-l"]      { clip-path: inset(0 0 0 100%); opacity:1; }
+[data-anim="wipe-u"]      { clip-path: inset(100% 0 0 0); opacity:1; }
+[data-anim="mask-up"]     { transform: translateY(110%); opacity:1; }
+[data-anim="track"]       { letter-spacing:.4em; }
+[data-anim="grow-x"]      { transform: scaleX(0); transform-origin:left center; opacity:1; }
+[data-anim="grow-y"]      { transform: scaleY(0); transform-origin:bottom center; opacity:1; }
+
+/* mask-up needs a clipping parent.
+   The pad/pull pair gives Vietnamese diacritics room inside the clip
+   (dot-below on ạ ộ ệ, stacked marks on ể ỗ) without moving the text box. */
+.mask{ overflow:hidden; display:block; padding:.18em 0 .22em; margin:-.18em 0 -.22em; }
+
+/* ---- chrome ------------------------------------------------ */
+#chrome{
+  position:fixed; inset:auto 0 0 0; z-index:50;
+  display:flex; align-items:center; gap:18px;
+  padding:14px 22px;
+  font:500 12px/1 ui-sans-serif,system-ui,-apple-system,sans-serif;
+  color:#fff8; letter-spacing:.08em; text-transform:uppercase;
+  background:linear-gradient(to top, #000a, #0000);
+  opacity:0; transition:opacity 300ms;
+}
+#chrome:hover, #chrome.is-visible{ opacity:1; }
+#progress{
+  position:fixed; left:0; top:0; height:5px; z-index:51;
+  background:#FF4D1C;   /* reads on every theme except the accent floods */
+  width:0; transition:width 500ms var(--ease-out);
+}
+#counter{ margin-left:auto; font-variant-numeric: tabular-nums; }
+#chrome button{
+  all:unset; cursor:pointer; padding:4px 10px; border-radius:99px;
+  border:1px solid #fff2; color:#fff9; font:inherit;
+}
+#chrome button:hover{ background:#fff1; color:#fff; }
+
+/* ---- overview / grid mode ---------------------------------- */
+#viewport.is-overview{ background:#0a0a0a; }
+#viewport.is-overview #stage{ display:none; }
+#overview{
+  position:fixed; inset:0; z-index:40; display:none;
+  overflow-y:auto; padding:48px;
+  grid-template-columns: repeat(auto-fill, minmax(560px,1fr));
+  gap:24px; align-content:start;
+}
+#viewport.is-overview + #overview, #overview.is-open{ display:grid; }
+.ov-card{
+  position:relative; aspect-ratio:4/1; border-radius:10px; overflow:hidden;
+  border:1px solid #fff1; background:#111; cursor:pointer;
+  transition: border-color 200ms, transform 200ms;
+}
+.ov-card:hover{ border-color:#fff5; transform:translateY(-2px); }
+.ov-card .ov-n{
+  position:absolute; left:10px; top:8px; z-index:2;
+  font:600 11px/1 ui-monospace,monospace; color:#fff9;
+}
+.ov-card .ov-t{
+  position:absolute; inset:auto 12px 10px 12px; z-index:2;
+  font:600 15px/1.25 ui-sans-serif,system-ui,sans-serif; color:#fff;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+.ov-card::after{ content:""; position:absolute; inset:0; background:linear-gradient(to top,#000c,#0002); }
+
+/* ---- utility ----------------------------------------------- */
+.stage-grid-overlay{
+  position:absolute; inset:0; z-index:99; pointer-events:none; display:none;
+  background:
+    repeating-linear-gradient(to right, #ff005520 0 1px, #0000 1px 320px),
+    repeating-linear-gradient(to bottom, #ff005520 0 1px, #0000 1px 112px);
+}
+.stage-grid-overlay::after{
+  content:""; position:absolute;
+  inset: var(--safe-y) var(--safe-x);
+  border:1px dashed #00e5ff55;
+}
+#stage.show-grid .stage-grid-overlay{ display:block; }
+
+/* export mode — see deck.js: ?export=1 */
+body.is-export #chrome,
+body.is-export #progress,
+body.is-export #overview{ display:none !important; }
+
+@media print{
+  html,body{ overflow:visible; background:#fff; }
+  #chrome,#progress,#overview{ display:none !important; }
+}

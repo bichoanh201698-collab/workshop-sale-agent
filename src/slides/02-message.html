@@ -1,0 +1,56 @@
+<section class="slide t-accent l-center" data-slide="2" data-title="Thông điệp xuyên suốt" id="s02">
+  <style>
+    /* theme.css .t-accent computes --bg from var(--accent) *after* shadowing
+       --accent to near-black, so the flood collapses to bg == fg.
+       Restore the vermilion flood locally; --accent stays dark on purpose
+       (that is what makes .hl.fill / hairlines read on this theme). */
+    #s02{ gap:0; }
+    /* mask-up needs an overflow:hidden line box; the padding/negative-margin
+       pair buys headroom for Vietnamese diacritics without moving the line. */
+    #s02 .ln{ display:block; overflow:hidden;
+              padding:.24em 0 .14em; margin:-.24em 0 -.14em; }
+    #s02 .mega{ font-size:184px; line-height:1.12; letter-spacing:-.04em; }
+    /* the marker fill must clear ă / ự / ấ above and the dot under ự below */
+    #s02 .hl.fill .hl-bar{ top:-.17em; bottom:-.15em; border-radius:6px; }
+    #s02 .hl.fill{ padding:0 .05em; }
+    #s02 .rule{ align-self:stretch; height:3px;
+               background:color-mix(in srgb, var(--fg) 40%, transparent); }
+    #s02 .keys{
+      align-self:stretch; display:flex; justify-content:space-between; align-items:center;
+      border-top:3px solid color-mix(in srgb, var(--fg) 40%, transparent); padding-top:40px;
+      font-family:var(--mono); font-size:34px; font-weight:600;
+      letter-spacing:.34em; text-transform:uppercase;
+    }
+    #s02 .keys span{ display:flex; align-items:center; gap:26px; }
+    #s02 .keys .d{ width:12px; height:12px; border-radius:50%; background:var(--fg); opacity:.55; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="left:50%; margin-left:-900px; top:-1240px; opacity:.10;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Thông điệp xuyên suốt <b>·</b> 02</p>
+
+  <p class="label bare" style="justify-content:center; letter-spacing:.42em; margin-bottom:36px;"
+     data-anim="fade" data-delay="120">Một câu duy nhất cho cả buổi</p>
+
+  <div class="rule" data-anim="grow-x" data-delay="200" data-dur="1100"></div>
+
+  <h1 class="mega" style="margin:52px 0 0;">
+    <span class="ln"><span style="display:block" data-anim="mask-up" data-delay="380" data-dur="1000">Chúng ta không thiếu khách.</span></span>
+    <span class="ln"><span style="display:block" data-anim="mask-up" data-delay="620" data-dur="1000">Chúng ta cần thêm <em class="hl fill">năng lực tư vấn<i class="hl-bar" data-anim="grow-x" data-delay="1180" data-dur="620"></i></em>.</span></span>
+  </h1>
+
+  <p class="h3" style="margin:52px 0 0; font-size:64px; font-weight:600;" data-anim="up-sm" data-delay="1000">
+    Để trả lời <b style="font-weight:800;">đúng, nhanh và đều</b> khi khách đến nhiều hơn.
+  </p>
+
+  <div class="keys" style="margin-top:64px;" data-anim="fade" data-delay="1320">
+    <span><i class="d"></i>Đúng</span>
+    <span><i class="d"></i>Nhanh</span>
+    <span><i class="d"></i>Đều</span>
+    <span><i class="d"></i>Mọi cuộc trò chuyện</span>
+  </div>
+</section>

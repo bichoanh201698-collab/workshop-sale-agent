@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Workshop Sale Agent — Nhân viên tư vấn số đầu tiên</title>
+<link rel="stylesheet" href="src/css/fonts.css">
+<link rel="stylesheet" href="src/css/engine.css">
+<link rel="stylesheet" href="src/css/theme.css">
+</head>
+<body>
+<div id="progress"></div>
+<div id="viewport">
+  <div id="stage">
+    <div class="stage-grid-overlay"></div>
+
+<!-- ===== 01-cover.html ===== -->
+<section class="slide t-ink" style="gap:150px; align-items:stretch;" data-slide="1" data-title="Cover — Workshop Sale Agent" id="s01">
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="left:-620px; bottom:-1120px;"></div>
+    <div class="deco-orb mint" style="right:-760px; top:-1180px; opacity:.09;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <!-- ZONE 1 — identity -->
+  <div style="flex:0 0 1580px; display:flex; flex-direction:column;">
+    <p class="label" data-anim="wipe-r" data-delay="150">Workshop · Session 1–3</p>
+
+    <h1 class="mega" style="font-size:228px; line-height:.88; margin:52px 0 0;">
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="340">SALE</span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="440"><span class="ac">AGENT</span></span></span>
+    </h1>
+
+    <p class="on" style="font-size:46px; line-height:1.32; font-weight:500; max-width:30ch; margin:44px 0 0; color:var(--fg);"
+       data-anim="up-sm" data-delay="720">
+      Hôm nay mình không học AI cho vui. Hôm nay mình cùng nhau tạo ra
+      <em class="hl">nhân viên tư vấn số đầu tiên<i class="hl-bar" data-anim="grow-x" data-delay="1480"></i></em>
+      cho shop của mình.
+    </p>
+
+    <div class="speaker" style="margin-top:auto;" data-anim="up-sm" data-delay="900">
+      <div class="av" style="width:132px;height:132px;font-size:58px;">T</div>
+      <div>
+        <p class="nm" style="font-size:56px;">Tín</p>
+        <p class="ro" style="font-size:32px;">Chuyên gia thiết kế giải pháp AI Agent cho doanh nghiệp</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZONE 2 — the problem, shown not told -->
+  <div style="flex:1; min-width:0; display:flex; flex-direction:column; justify-content:space-between;">
+    <div class="thread" style="width:100%; margin-top:8px;">
+      <div class="bub" style="max-width:1500px;" data-anim="up-sm" data-delay="860">
+        <span class="who">Khách · 21:47</span>Shop còn mẫu này không ạ? Giá bao nhiêu?
+      </div>
+      <div class="bub" style="max-width:1500px;" data-anim="up-sm" data-delay="1000">
+        <span class="who">Khách · 21:48</span>Có freeship với đổi trả không chị?
+      </div>
+      <div class="bub me" style="max-width:1180px;" data-anim="up-sm" data-delay="1160">
+        <span class="who">Chủ shop · đang đóng đơn</span><span class="typing"><i></i><i></i><i></i></span>
+      </div>
+      <div class="bub agent" style="max-width:1720px;" data-anim="up-sm" data-delay="1380">
+        <span class="who"><span class="pulse" style="display:inline-block;vertical-align:-4px;margin-right:16px;"><i></i></span>Nhân viên số · 21:47</span>
+        Dạ còn size M và L ạ. Giá 320.000₫, freeship đơn từ 300k, đổi trả trong 7 ngày.
+      </div>
+    </div>
+
+    <div style="display:flex; gap:110px; justify-content:flex-start; border-top:2px solid var(--hair); padding-top:40px; margin-top:56px;" data-stagger="0">
+      <p class="label bare" style="flex:0 0 auto; align-items:flex-start; line-height:1.5; letter-spacing:.1em; white-space:nowrap; font-size:25px;" data-anim="up-sm" data-delay="1560">
+        <b style="color:var(--accent);font-weight:600;">01</b>&nbsp;&nbsp;Không thiếu khách
+      </p>
+      <p class="label bare" style="flex:0 0 auto; align-items:flex-start; line-height:1.5; letter-spacing:.1em; white-space:nowrap; font-size:25px;" data-anim="up-sm" data-delay="1650">
+        <b style="color:var(--accent);font-weight:600;">02</b>&nbsp;&nbsp;Nhân viên tư vấn số là gì
+      </p>
+      <p class="label bare" style="flex:0 0 auto; align-items:flex-start; line-height:1.5; letter-spacing:.1em; white-space:nowrap; font-size:25px;" data-anim="up-sm" data-delay="1740">
+        <b style="color:var(--accent);font-weight:600;">03</b>&nbsp;&nbsp;Nhân viên số đầu tiên
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02-message.html ===== -->
+<section class="slide t-accent l-center" data-slide="2" data-title="Thông điệp xuyên suốt" id="s02">
+  <style>
+    /* theme.css .t-accent computes --bg from var(--accent) *after* shadowing
+       --accent to near-black, so the flood collapses to bg == fg.
+       Restore the vermilion flood locally; --accent stays dark on purpose
+       (that is what makes .hl.fill / hairlines read on this theme). */
+    #s02{ gap:0; }
+    /* mask-up needs an overflow:hidden line box; the padding/negative-margin
+       pair buys headroom for Vietnamese diacritics without moving the line. */
+    #s02 .ln{ display:block; overflow:hidden;
+              padding:.24em 0 .14em; margin:-.24em 0 -.14em; }
+    #s02 .mega{ font-size:184px; line-height:1.12; letter-spacing:-.04em; }
+    /* the marker fill must clear ă / ự / ấ above and the dot under ự below */
+    #s02 .hl.fill .hl-bar{ top:-.17em; bottom:-.15em; border-radius:6px; }
+    #s02 .hl.fill{ padding:0 .05em; }
+    #s02 .rule{ align-self:stretch; height:3px;
+               background:color-mix(in srgb, var(--fg) 40%, transparent); }
+    #s02 .keys{
+      align-self:stretch; display:flex; justify-content:space-between; align-items:center;
+      border-top:3px solid color-mix(in srgb, var(--fg) 40%, transparent); padding-top:40px;
+      font-family:var(--mono); font-size:34px; font-weight:600;
+      letter-spacing:.34em; text-transform:uppercase;
+    }
+    #s02 .keys span{ display:flex; align-items:center; gap:26px; }
+    #s02 .keys .d{ width:12px; height:12px; border-radius:50%; background:var(--fg); opacity:.55; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="left:50%; margin-left:-900px; top:-1240px; opacity:.10;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Thông điệp xuyên suốt <b>·</b> 02</p>
+
+  <p class="label bare" style="justify-content:center; letter-spacing:.42em; margin-bottom:36px;"
+     data-anim="fade" data-delay="120">Một câu duy nhất cho cả buổi</p>
+
+  <div class="rule" data-anim="grow-x" data-delay="200" data-dur="1100"></div>
+
+  <h1 class="mega" style="margin:52px 0 0;">
+    <span class="ln"><span style="display:block" data-anim="mask-up" data-delay="380" data-dur="1000">Chúng ta không thiếu khách.</span></span>
+    <span class="ln"><span style="display:block" data-anim="mask-up" data-delay="620" data-dur="1000">Chúng ta cần thêm <em class="hl fill">năng lực tư vấn<i class="hl-bar" data-anim="grow-x" data-delay="1180" data-dur="620"></i></em>.</span></span>
+  </h1>
+
+  <p class="h3" style="margin:52px 0 0; font-size:64px; font-weight:600;" data-anim="up-sm" data-delay="1000">
+    Để trả lời <b style="font-weight:800;">đúng, nhanh và đều</b> khi khách đến nhiều hơn.
+  </p>
+
+  <div class="keys" style="margin-top:64px;" data-anim="fade" data-delay="1320">
+    <span><i class="d"></i>Đúng</span>
+    <span><i class="d"></i>Nhanh</span>
+    <span><i class="d"></i>Đều</span>
+    <span><i class="d"></i>Mọi cuộc trò chuyện</span>
+  </div>
+</section>
+
+<!-- ===== 03-session1.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="3" data-title="Session 01 — Shop đang tư vấn khách như thế nào?" id="s03">
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-marquee band" style="top:172px;">
+      <span>KHÁCH ĐẾN&nbsp;·&nbsp;INBOX&nbsp;·&nbsp;COMMENT&nbsp;·&nbsp;LIVESTREAM&nbsp;·&nbsp;TIN NHẮN DỒN&nbsp;·&nbsp;</span><span>KHÁCH ĐẾN&nbsp;·&nbsp;INBOX&nbsp;·&nbsp;COMMENT&nbsp;·&nbsp;LIVESTREAM&nbsp;·&nbsp;TIN NHẮN DỒN&nbsp;·&nbsp;</span>
+    </div>
+    <div class="deco-marquee band b2" style="top:690px;">
+      <span>PHẢN HỒI&nbsp;·&nbsp;NGOÀI GIỜ&nbsp;·&nbsp;CHỜ ĐỢI&nbsp;·&nbsp;BỎ LỠ KHÁCH&nbsp;·&nbsp;TỰ TRẢ LỜI&nbsp;·&nbsp;</span><span>PHẢN HỒI&nbsp;·&nbsp;NGOÀI GIỜ&nbsp;·&nbsp;CHỜ ĐỢI&nbsp;·&nbsp;BỎ LỠ KHÁCH&nbsp;·&nbsp;TỰ TRẢ LỜI&nbsp;·&nbsp;</span>
+    </div>
+    <div class="deco-bar bottom"></div>
+  </div>
+
+  <div class="head">
+    <p class="label" data-anim="wipe-r" data-delay="120">Session 01</p>
+    <p class="idx" data-anim="fade" data-delay="220">Phần <b>01</b> / 03</p>
+  </div>
+
+  <h1 class="dtitle">
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="340" data-dur="1000">Shop đang tư vấn khách <span class="ac">như thế nào?</span></span></span>
+  </h1>
+  <p class="sub" data-anim="up-sm" data-delay="620">Khách đã đến rồi — đang ở trong <b>inbox, comment và livestream</b>. Câu hỏi là shop có trả lời kịp không.</p>
+
+  <div class="strip">
+    <span class="st" data-anim="up-sm" data-delay="760"><i></i>Làm quen</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="850"><i></i>Fact</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="940"><i></i>Câu hỏi giả định</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="1030"><i></i>Interview</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="1120"><i></i>Conclusion</span>
+  </div>
+</section>
+
+<!-- ===== 04-intro.html ===== -->
+<section class="slide t-paper l-split" data-slide="4" data-title="Slide 1 — Intro &amp; làm quen" id="s04">
+  <style>
+    #s04 .lead{ flex:0 0 1720px; gap:52px; }
+    #s04 .payload{ gap:52px; }
+    #s04 .hd{ font-size:134px; }
+    #s04 .qrow{ display:flex; align-items:center; gap:36px; }
+    #s04 .qrow .chip{ font-size:56px; padding:30px 50px; }
+    #s04 .qrow .ln{
+      flex:1; height:3px; min-width:60px;
+      background:color-mix(in srgb, var(--fg) 20%, transparent);
+    }
+    #s04 .qn{
+      flex:none; font-family:var(--mono); font-size:50px; font-weight:600;
+      letter-spacing:.1em; color:var(--muted);
+    }
+    #s04 .divide{
+      position:absolute; left:2000px; top:var(--safe-y); bottom:var(--safe-y); width:3px;
+      background:color-mix(in srgb, var(--fg) 16%, transparent);
+    }
+    #s04 .note{
+      display:flex; align-items:center; gap:26px; margin:14px 0 0;
+      font-family:var(--mono); font-size:34px; font-weight:500;
+      letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
+    }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="right:-820px; bottom:-1160px; opacity:.13;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 01 <b>·</b> Slide 01 <b>·</b> Làm quen</p>
+  <span class="divide" data-anim="grow-y" data-delay="360" data-dur="1200"></span>
+
+  <div class="lead">
+    <p class="label" data-anim="wipe-r" data-delay="120">Bắt đầu · Làm quen</p>
+
+    <h1 class="h1 hd" style="margin:0;" data-anim="up-sm" data-delay="280">
+      Hôm nay, chúng ta cùng nhìn lại cách shop đang <span class="ac">tư vấn khách hàng.</span>
+    </h1>
+
+    <p class="body wide" style="max-width:1690px; font-size:50px;" data-anim="up-sm" data-delay="480">
+      Mỗi anh/chị một ngành hàng, một quy mô, một cách vận hành — nhưng cùng gặp nhau ở một điểm:
+      <b style="color:var(--fg); font-weight:700;">khách hàng đang đến bằng
+      <em class="hl">những cuộc trò chuyện.<i class="hl-bar" data-anim="grow-x" data-delay="1180" data-dur="700"></i></em></b>
+    </p>
+  </div>
+
+  <div class="payload">
+    <p class="label bare" style="letter-spacing:.28em;" data-anim="fade" data-delay="600">Ba câu để làm quen</p>
+
+    <div class="qrow" data-anim="up-sm" data-delay="720">
+      <span class="chip"><i class="ic"></i>Anh/chị bán ngành hàng gì?</span>
+      <i class="ln"></i><span class="qn">01</span>
+    </div>
+    <div class="qrow" data-anim="up-sm" data-delay="840">
+      <span class="chip"><i class="ic"></i>Bán qua kênh nào?</span>
+      <i class="ln"></i><span class="qn">02</span>
+    </div>
+    <div class="qrow" data-anim="up-sm" data-delay="960">
+      <span class="chip"><i class="ic"></i>Mỗi ngày bao nhiêu cuộc trò chuyện cần tư vấn?</span>
+      <i class="ln"></i><span class="qn">03</span>
+    </div>
+
+    <p class="note" data-anim="fade" data-delay="1120">
+      <span class="pulse" style="color:var(--accent);"><i></i></span>Mời 2–3 anh/chị giới thiệu ngắn
+    </p>
+  </div>
+</section>
+
+<!-- ===== 05-fact.html ===== -->
+<section class="slide t-ink l-stack" data-slide="5" data-title="Slide 2 — Fact: 3 con số từ khảo sát" id="s05">
+  <style>
+    #s05{ gap:66px; }
+    #s05 .hd{ font-size:106px; line-height:.98; margin:0; }
+    /* the cross-out must sit ON the glyphs, not behind them */
+    #s05 .strike .hl-bar{ z-index:2; height:.085em; border-radius:0; }
+
+    #s05 .strip{ display:flex; align-items:flex-start; }
+    #s05 .strip > .stat{ flex:1; min-width:0; padding:0 70px; }
+    #s05 .strip > .stat:first-child{ padding-left:0; }
+    #s05 .strip > .stat:last-child{ padding-right:0; }
+    #s05 .strip > .stat + .stat{ border-left:3px solid var(--hair); }
+    /* theme.css never zeroes the margin on .stat .num — as a <p> it would
+       inherit a 1em (=280px) block margin and blow the 1120px height. */
+    #s05 .stat .num{ font-size:300px; margin:0; }
+    #s05 .strip > .stat{ gap:28px; }
+    #s05 .stat .cap{ max-width:1180px; font-size:48px; }
+    #s05 .stat .cap b{ color:var(--fg); font-weight:800; }
+    #s05 .stat .cap{ color:var(--muted); }
+
+    #s05 .foot{
+      display:flex; align-items:baseline; justify-content:space-between; gap:80px;
+      border-top:3px solid var(--hair); padding-top:38px;
+      font-family:var(--mono); font-size:34px; font-weight:500;
+      letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+    }
+    #s05 .foot .close{ color:var(--fg); display:flex; align-items:center; gap:26px; }
+    #s05 .foot .src{ white-space:nowrap; }
+    #s05 .foot .src b{ color:var(--am, var(--amber)); font-weight:600; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb amber" style="left:1500px; top:-1240px; opacity:.10;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 01 <b>·</b> Slide 02 <b>·</b> Fact</p>
+
+  <div style="display:flex; flex-direction:column; gap:34px;">
+    <p class="label" data-anim="wipe-r" data-delay="120">Fact <b>·</b> Khảo sát 27 người tham dự</p>
+    <h1 class="h1 hd" data-anim="up-sm" data-delay="260">
+      Bài toán không phải là <span class="strike">tìm thêm khách<i class="hl-bar" data-anim="grow-x" data-delay="900" data-dur="620"></i></span>
+      — mà là <span class="ac">tư vấn kịp số khách đang đến.</span>
+    </h1>
+  </div>
+
+  <div class="strip">
+    <div class="stat a" data-anim="up-sm" data-delay="560">
+      <span class="num">18<span class="den">/27</span></span>
+      <p class="cap">có từ <b>10 khách cần tư vấn mỗi ngày</b> trở lên</p>
+    </div>
+    <div class="stat b" data-anim="up-sm" data-delay="700">
+      <span class="num">14<span class="den">/27</span></span>
+      <p class="cap">phản hồi <b>từ 5 phút trở lên</b>, hoặc chỉ trả lời khi rảnh</p>
+    </div>
+    <div class="stat c" data-anim="up-sm" data-delay="840">
+      <span class="num">20<span class="den">/27</span></span>
+      <p class="cap"><b>ngoài giờ</b> vẫn phải tự trả lời, hoặc chưa có ai trực</p>
+    </div>
+  </div>
+
+  <div class="foot" data-anim="fade" data-delay="1080">
+    <span class="close"><span class="pulse" style="color:var(--accent);"><i></i></span>Khách đã đến rồi — đang ở trong inbox, comment, livestream</span>
+    <span class="src">Nguồn: <b>Khảo sát 27 người tham dự</b> workshop</span>
+  </div>
+</section>
+
+<!-- ===== 06-traffic3x.html ===== -->
+<section class="slide t-ink-2 l-split" data-slide="6" data-title="Slide 3 — Nếu traffic tăng gấp 3" id="s06">
+  <style>
+    #s06{ gap:130px; }
+    #s06 .lead{ flex:0 0 2120px; flex-direction:row; align-items:center; gap:86px; }
+    #s06 .payload{ flex:1; gap:40px; }
+
+    #s06 .anchor{ flex:none; display:flex; flex-direction:column; align-items:flex-start; gap:22px; }
+    #s06 .anchor .x3{
+      margin:0; font-size:376px; line-height:.9; letter-spacing:-.06em;
+      font-weight:900; color:var(--amber);
+    }
+    #s06 .anchor .cp{
+      margin:0; font-family:var(--mono); font-size:30px; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
+      border-top:3px solid var(--amber); padding-top:20px; align-self:stretch;
+    }
+
+    #s06 .say{ flex:1; min-width:0; display:flex; flex-direction:column; gap:40px; }
+    #s06 .hd{ font-size:96px; line-height:.98; margin:0; }
+    #s06 .sb{ margin:0; font-size:44px; line-height:1.32; color:var(--muted); max-width:1280px; }
+
+    #s06 .badge{
+      display:flex; flex-direction:column; gap:14px;
+      background:var(--card); border:2px solid var(--card-line);
+      border-left:8px solid var(--amber); border-radius:0 20px 20px 0;
+      padding:30px 40px; max-width:1560px;
+    }
+    #s06 .badge .bl{
+      font-family:var(--mono); font-size:26px; font-weight:600;
+      letter-spacing:.24em; text-transform:uppercase; color:var(--amber);
+    }
+    #s06 .badge p{ margin:0; font-size:36px; line-height:1.3; color:var(--fg); font-weight:500; }
+    #s06 .badge p b{ font-weight:800; }
+
+    #s06 .qs > li{ font-size:54px; }
+    #s06 .qs > li::before{ font-size:48px; }
+    #s06 .qs > li + li{ border-top:2px solid var(--hair); padding-top:26px; }
+    #s06 .qs > li:last-child{ border-bottom:2px solid var(--hair); padding-bottom:26px; }
+    #s06 .divide{
+      position:absolute; left:2320px; top:var(--safe-y); bottom:var(--safe-y); width:3px;
+      background:color-mix(in srgb, var(--fg) 14%, transparent);
+    }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb amber" style="left:-560px; top:-620px; opacity:.14;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 01 <b>·</b> Slide 03 <b>·</b> Câu hỏi giả định</p>
+  <span class="divide" data-anim="grow-y" data-delay="400" data-dur="1200"></span>
+
+  <div class="lead">
+    <div class="anchor">
+      <p class="x3" data-anim="scale" data-delay="240" data-dur="1000">×3</p>
+      <p class="cp" data-anim="wipe-r" data-delay="700">Lượng khách</p>
+    </div>
+
+    <div class="say">
+      <p class="label" data-anim="wipe-r" data-delay="120">Câu hỏi giả định</p>
+      <h1 class="h1 hd" data-anim="up-sm" data-delay="300">
+        Nếu ngày mai lượng khách <span class="am">tăng gấp 3</span>, cách làm hiện tại có chịu nổi không?
+      </h1>
+      <p class="sb" data-anim="up-sm" data-delay="460">
+        Một mùa lễ, một chiến dịch tốt, một nội dung viral — tin nhắn dồn vào cùng một thời điểm.
+      </p>
+      <div class="badge" data-anim="up-sm" data-delay="1120">
+        <span class="bl">Kịch bản giả định</span>
+        <p>×3 là <b>kịch bản giả định để hình dung</b> — không phải kết quả đã chứng minh.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="payload">
+    <p class="label bare" style="letter-spacing:.28em;" data-anim="fade" data-delay="560">Bốn câu hỏi cho cả phòng</p>
+    <ul class="qs">
+      <li data-anim="up-sm" data-delay="660">Hiện tại ai đang trả lời khách?</li>
+      <li data-anim="up-sm" data-delay="760">Một người xử lý được bao nhiêu cuộc trò chuyện cùng lúc mà vẫn tư vấn đúng?</li>
+      <li data-anim="up-sm" data-delay="860">Nếu cùng lúc có 30, 50, 100 khách đang chờ — shop ưu tiên thế nào?</li>
+      <li data-anim="up-sm" data-delay="960">Khách phải chờ bao lâu trước khi được phản hồi?</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07-interview.html ===== -->
+<section class="slide t-paper l-split" data-slide="7" data-title="Slide 4 — Interview một khách" id="s07">
+  <style>
+    #s07{ gap:140px; }
+    #s07 .lead{ flex:0 0 1900px; gap:48px; }
+    #s07 .payload{ flex:1; gap:38px; }
+    /* balance would leave ~600px of the 1900px column empty; let it fill */
+    #s07 .hd{ font-size:126px; line-height:.96; margin:0; text-wrap:wrap; }
+
+    #s07 .chipset{ align-items:center; gap:26px; }
+    #s07 .chip{ font-size:48px; padding:26px 44px; }
+    #s07 .note{
+      display:flex; flex-direction:column; gap:18px; align-items:flex-start; margin:0;
+      border-top:3px solid color-mix(in srgb, var(--fg) 22%, transparent);
+      padding-top:32px; max-width:1900px;
+      font-family:var(--mono); font-size:32px; font-weight:500;
+      letter-spacing:.06em; line-height:1.42; color:var(--muted);
+    }
+    #s07 .note b{ color:var(--fg); font-weight:600; }
+    #s07 .note .tag{
+      flex:none; color:var(--accent); font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase;
+    }
+
+    #s07 .qs > li{ font-size:58px; align-items:baseline; }
+    #s07 .qs > li + li{ border-top:2px solid var(--hair); padding-top:28px; }
+    #s07 .qs > li:last-child{ border-bottom:2px solid var(--hair); padding-bottom:28px; }
+
+    #s07 .listen{
+      align-self:flex-start; max-width:1900px; margin-top:6px;
+      background:transparent; border:3px dashed color-mix(in srgb, var(--fg) 28%, transparent);
+      color:var(--muted); font-size:38px;
+    }
+    #s07 .listen .who{ color:var(--accent); opacity:1; }
+    #s07 .divide{
+      position:absolute; left:2100px; top:var(--safe-y); bottom:var(--safe-y); width:3px;
+      background:color-mix(in srgb, var(--fg) 16%, transparent);
+    }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="left:-700px; top:-1000px; opacity:.12;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 01 <b>·</b> Slide 04 <b>·</b> Interview</p>
+  <span class="divide" data-anim="grow-y" data-delay="400" data-dur="1200"></span>
+
+  <div class="lead">
+    <p class="label" data-anim="wipe-r" data-delay="120">Interview <b>·</b> Một khách mời</p>
+
+    <h1 class="h1 hd" data-anim="up-sm" data-delay="260">
+      Khi khách đến nhiều hơn, shop đang phải <span class="ac">hy sinh điều gì?</span>
+    </h1>
+
+    <div class="chipset" data-anim="up-sm" data-delay="440">
+      <span class="chip solid"><i class="ic"></i>60–90 giây</span>
+      <span class="chip">một anh/chị chia sẻ</span>
+    </div>
+
+    <p class="note" data-anim="fade" data-delay="1120">
+      <span class="tag">Điều phối</span>
+      <span>Nhắc lại đúng <b>1–2 ý khách vừa nói</b>. Không thêm số liệu, không kết luận thay họ.</span>
+    </p>
+  </div>
+
+  <div class="payload">
+    <p class="label bare" style="letter-spacing:.28em;" data-anim="fade" data-delay="560">Câu hỏi đào sâu</p>
+    <ul class="qs">
+      <li data-anim="up-sm" data-delay="660">Lúc đông khách nhất, điều gì xảy ra với inbox?</li>
+      <li data-anim="up-sm" data-delay="760">Ai là người phải gánh phần việc này?</li>
+      <li data-anim="up-sm" data-delay="860">Những câu hỏi nào lặp lại nhiều nhất?</li>
+      <li data-anim="up-sm" data-delay="960">Có khi nào phải trả lời ngoài giờ, hoặc đang làm việc khác không?</li>
+    </ul>
+    <div class="bub listen" data-anim="up-sm" data-delay="1220">
+      <span class="who"><span class="pulse" style="display:inline-block; vertical-align:-4px; margin-right:16px;"><i></i></span>Anh/chị đang chia sẻ</span>
+      <span class="typing"><i></i><i></i><i></i></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08-conclusion.html ===== -->
+<section class="slide t-accent l-center" data-slide="8" data-title="Conclusion — Năng lực tư vấn là điểm nghẽn" id="s08">
+  <style>
+    /* theme.css .t-accent resolves --bg from var(--accent) *after* shadowing
+       --accent to near-black, so the vermilion flood collapses to bg == fg.
+       Restore the flood locally; --accent stays dark on purpose — that is what
+       makes .hl.fill and the bleed bars read on this theme. */
+    #s08{ gap:0; }
+    #s08 .ln{ display:block; overflow:hidden;
+              padding:.24em 0 .14em; margin:-.24em 0 -.14em; }
+    #s08 .mega{ font-size:228px; line-height:1.1; letter-spacing:-.042em; }
+    /* the marker fill must clear ă / ự / ấ above and the dot under ự below */
+    #s08 .hl.fill .hl-bar{ top:-.17em; bottom:-.15em; border-radius:6px; }
+    #s08 .hl.fill{ padding:0 .05em; }
+    #s08 .sub{ font-size:72px; font-weight:700; line-height:1.16;
+               letter-spacing:-.02em; margin:78px 0 0; max-width:4080px; }
+    #s08 .sub b{ font-weight:900; }
+    /* filled callout: generous vertical padding so ẽ above and g below clear */
+    #s08 .pinch{
+      display:inline-block; background:var(--accent); color:var(--bg);
+      padding:.14em .16em .2em; margin:-.14em 0 -.2em; line-height:1;
+      border-radius:8px;
+    }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="left:50%; margin-left:-900px; top:-1120px; opacity:.12;"></div>
+    <div class="deco-bar top" style="height:26px;"></div>
+    <div class="deco-bar bottom" style="height:26px;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 01 <b>·</b> Conclusion</p>
+
+  <h1 class="mega" style="margin:0;">
+    <span class="ln"><span style="display:block" data-anim="mask-up" data-delay="520" data-dur="1200">Chúng ta không thiếu khách.</span></span>
+    <span class="ln"><span style="display:block" data-anim="mask-up" data-delay="880" data-dur="1200">Chúng ta cần thêm <em class="hl fill">năng lực tư vấn<i class="hl-bar" data-anim="grow-x" data-delay="1520" data-dur="760"></i></em>.</span></span>
+  </h1>
+
+  <p class="sub" data-anim="up-sm" data-delay="1280" data-dur="1100">
+    Nếu mọi cuộc trò chuyện đều phải chờ một người, chính <b>năng lực tư vấn</b>
+    sẽ trở thành <b class="pinch">điểm nghẽn</b>.
+  </p>
+</section>
+
+<!-- ===== 09-why-today.html ===== -->
+<section class="slide t-ink l-split" data-slide="9" data-title="Vì sao chúng ta có mặt hôm nay" id="s09"
+         style="gap:170px;">
+  <div class="deco">
+    <div class="deco-dots" style="opacity:.30;"></div>
+    <div class="deco-orb" style="left:-560px; top:-980px; opacity:.14;"></div>
+    <div class="deco-orb mint" style="right:-700px; bottom:-1020px; opacity:.10;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <style>
+    #s09 .lead{ flex:0 0 1880px; align-self:stretch; justify-content:space-between; gap:0; }
+    #s09 .payload{ align-self:stretch; justify-content:space-between; gap:0; padding:6px 0 10px; }
+    #s09 .cap3{ display:grid; grid-template-columns:repeat(3,1fr); gap:0 48px; }
+    #s09 .cap3 .kv .k{ font-size:56px; min-height:124px; }
+    #s09 .cap3 .kv .v{ font-size:33px; }
+    #s09 .h{ display:flex; flex-direction:column; }
+  </style>
+
+  <p class="meta">Session 01 <b>·</b> Mở đầu</p>
+
+  <div class="lead">
+    <p class="label" data-anim="wipe-r" data-delay="120">Mục tiêu hôm nay</p>
+
+    <h1 class="h1 h" style="font-size:136px; line-height:.98;">
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="280">Hôm nay, chúng ta cùng</span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="380">tạo ra <em class="hl">nhân viên số<i class="hl-bar" data-anim="grow-x" data-delay="1180" data-dur="520"></i></em></span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="480"><em class="hl">đầu tiên<i class="hl-bar" data-anim="grow-x" data-delay="1300" data-dur="520"></i></em>.</span></span>
+    </h1>
+
+    <p class="body wide on" style="max-width:36ch; font-size:46px;" data-anim="up-sm" data-delay="640">
+      Không <span class="strike">thay thế con người<i class="hl-bar"></i></span> — mà tạo thêm
+      <b style="font-weight:700;">một người phụ</b> cho shop — làm đúng phần việc được giao.
+    </p>
+  </div>
+
+  <div class="payload">
+    <div class="speaker" data-anim="up-sm" data-delay="760">
+      <div class="av" style="width:228px; height:228px; font-size:100px;">T</div>
+      <div>
+        <p class="nm" style="font-size:112px; line-height:.94;">Tín</p>
+        <p class="ro" style="font-size:42px; line-height:1.26; max-width:26ch; margin-top:10px;">
+          Chuyên gia thiết kế giải pháp AI&nbsp;Agent cho doanh nghiệp
+        </p>
+      </div>
+    </div>
+
+    <div class="cap3">
+      <div class="kv" data-anim="up-sm" data-delay="980">
+        <p class="k">Biết sản phẩm</p>
+        <p class="v">Giá, tồn kho, chính sách — trả lời không cần hỏi lại chủ shop.</p>
+      </div>
+      <div class="kv" data-anim="up-sm" data-delay="1090">
+        <p class="k">Giữ nhịp tư vấn</p>
+        <p class="v">Khách nhắn 21:47 vẫn có người trả lời đúng giọng của shop.</p>
+      </div>
+      <div class="kv" data-anim="up-sm" data-delay="1200">
+        <p class="k">Gọi người thật khi cần</p>
+        <p class="v">Vượt quá phạm vi thì chuyển ngay cho chủ shop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10-bridge-s2.html ===== -->
+<section class="slide t-ink l-center" data-slide="10" data-title="Cầu sang Session 2" id="s10" style="gap:0;">
+  <div class="deco">
+    <div class="deco-grid" style="opacity:.34;"></div>
+    <div class="deco-orb mint" style="left:1340px; top:-1090px; opacity:.15;"></div>
+    <div class="deco-orb mint" style="right:-900px; bottom:-1160px; opacity:.09;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <style>
+    #s10 .h{ display:flex; flex-direction:column; }
+    #s10 .hl-bar{ background:var(--mint); bottom:.055em; height:.11em; }
+    #s10 .label::before{ background:var(--mint); }
+    #s10 .rail{ display:flex; align-items:center; width:100%; }
+    #s10 .rail i.ln{ flex:1 1 0; height:3px; background:#FFFFFF3D; min-width:80px; }
+    #s10 .rail .chip{ flex:none; font-size:48px; padding:24px 42px; }
+    #s10 .rail .chip .ic{ background:var(--mint); width:18px; height:18px; }
+    #s10 .rail .chip.on{ background:var(--mint); color:#04241A; border-color:transparent; font-weight:700; }
+    #s10 .rail .chip.on .ic{ background:#04241A; }
+  </style>
+
+  <p class="meta">Session 01 <b>→</b> Session 02</p>
+
+  <p class="label" data-anim="wipe-r" data-delay="120" style="justify-content:center;">Cầu nối</p>
+
+  <h1 class="xl h" style="font-size:236px; line-height:1.1; margin:44px 0 0; letter-spacing:-.038em;">
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="280">Trước khi tạo nhân viên số,</span></span>
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="400">hãy hiểu <em class="hl">nhân viên đó sẽ làm gì<i class="hl-bar" data-anim="grow-x" data-delay="1080" data-dur="560"></i></em>.</span></span>
+  </h1>
+
+  <div class="rail" style="margin-top:112px;">
+    <i class="ln" data-anim="grow-x" data-delay="1300" data-dur="480" style="transform-origin:right center;"></i>
+    <div class="chip on" data-anim="up-sm" data-delay="640"><span class="ic"></span>Là gì</div>
+    <i class="ln" data-anim="grow-x" data-delay="1340" data-dur="480"></i>
+    <div class="chip" data-anim="up-sm" data-delay="740"><span class="ic"></span>Làm được những gì</div>
+    <i class="ln" data-anim="grow-x" data-delay="1400" data-dur="480"></i>
+    <div class="chip" data-anim="up-sm" data-delay="840"><span class="ic"></span>Khác gì một chatbot thông thường</div>
+    <i class="ln" data-anim="grow-x" data-delay="1460" data-dur="480"></i>
+  </div>
+</section>
+
+<!-- ===== 11-session2.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="11" data-title="Session 02 — Nhân viên tư vấn số là gì?" id="s11">
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-marquee band" style="top:172px;">
+      <span>VAI TRÒ&nbsp;·&nbsp;KÊNH CHAT&nbsp;·&nbsp;DỮ LIỆU CỦA SHOP&nbsp;·&nbsp;QUY TẮC&nbsp;·&nbsp;PHẠM VI&nbsp;·&nbsp;</span><span>VAI TRÒ&nbsp;·&nbsp;KÊNH CHAT&nbsp;·&nbsp;DỮ LIỆU CỦA SHOP&nbsp;·&nbsp;QUY TẮC&nbsp;·&nbsp;PHẠM VI&nbsp;·&nbsp;</span>
+    </div>
+    <div class="deco-marquee band b2" style="top:690px;">
+      <span>MÔ TẢ CÔNG VIỆC&nbsp;·&nbsp;KPI&nbsp;·&nbsp;ĐÀO TẠO&nbsp;·&nbsp;BÀN GIAO&nbsp;·&nbsp;NGƯỜI THẬT&nbsp;·&nbsp;</span><span>MÔ TẢ CÔNG VIỆC&nbsp;·&nbsp;KPI&nbsp;·&nbsp;ĐÀO TẠO&nbsp;·&nbsp;BÀN GIAO&nbsp;·&nbsp;NGƯỜI THẬT&nbsp;·&nbsp;</span>
+    </div>
+    <div class="deco-bar bottom"></div>
+  </div>
+
+  <div class="head">
+    <p class="label" data-anim="wipe-r" data-delay="120">Session 02</p>
+    <p class="idx" data-anim="fade" data-delay="220">Phần <b>02</b> / 03</p>
+  </div>
+
+  <h1 class="dtitle">
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="340" data-dur="1000">Nhân viên tư vấn số <span class="ac">là gì?</span></span></span>
+  </h1>
+  <p class="sub" data-anim="up-sm" data-delay="620">Chuyển cách nghĩ từ “chatbot” sang <b>một vai trò nhân viên cụ thể</b> trong quy trình tư vấn của shop.</p>
+
+  <div class="strip">
+    <span class="st" data-anim="up-sm" data-delay="760"><i></i>Nhân viên thật cần gì</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="850"><i></i>Định nghĩa</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="940"><i></i>Hồ sơ nhân sự</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="1030"><i></i>Ba việc đầu tiên</span>
+  </div>
+</section>
+
+<!-- ===== 12-what-staff-needs.html ===== -->
+<section class="slide t-paper l-stack" data-slide="12" data-title="Một nhân viên thật cần biết gì" id="s12" style="gap:0;">
+  <div class="deco">
+    <div class="deco-grid" style="opacity:.34;"></div>
+    <div class="deco-orb" style="right:-1080px; top:-1120px; opacity:.10;"></div>
+    <div class="deco-noise" style="opacity:.03;"></div>
+  </div>
+
+  <style>
+    #s12 .h{ display:flex; flex-direction:column; }
+
+    #s12 .top{ display:flex; align-items:flex-end; gap:120px; }
+    #s12 .top .hd{ flex:1; min-width:0; display:flex; flex-direction:column; }
+    #s12 .tally{
+      flex:0 0 980px; height:262px; border:3px solid var(--card-line); border-radius:28px;
+      background:var(--card); padding:34px 46px;
+      display:flex; align-items:center; gap:44px;
+    }
+    #s12 .tally .n{
+      font-size:196px; font-weight:900; line-height:.82; letter-spacing:-.05em;
+      color:var(--accent); font-variant-numeric:tabular-nums; flex:none;
+    }
+    #s12 .tally .t{
+      font-family:var(--mono); font-size:33px; line-height:1.5; letter-spacing:.12em;
+      color:var(--muted); text-transform:uppercase; margin:0;
+    }
+    #s12 .tally .t b{ color:var(--fg); font-weight:600; }
+
+    #s12 .chipset{ gap:26px 26px; justify-content:space-between; }
+    #s12 .chip{ font-size:54px; padding:26px 46px; border-width:3px; background:transparent; }
+    #s12 .chip .ic{ width:20px; height:20px; }
+    #s12 .chip .k{ font-family:var(--mono); font-size:26px; letter-spacing:.16em;
+                   color:var(--muted); margin-right:4px; }
+
+    /* câu chốt — full-bleed inverted band, the point of the slide */
+    #s12 .clincher{
+      background:var(--ink); color:var(--paper);
+      margin:0 calc(var(--safe-x) * -1); padding:66px var(--safe-x);
+      display:flex; align-items:center; gap:48px;
+    }
+    #s12 .clincher .eq{
+      flex:none; font-family:var(--mono); font-size:27px; letter-spacing:.2em;
+      color:var(--accent); line-height:1.5; text-transform:uppercase;
+      border-left:5px solid var(--accent); padding-left:26px;
+    }
+    #s12 .clincher .txt{
+      margin:0; font-size:77px; font-weight:800; letter-spacing:-.03em; line-height:1.08;
+      max-width:none; flex:1;
+    }
+    #s12 .clincher .txt .ac{ color:var(--accent); }
+  </style>
+
+  <p class="meta">Session 02 <b>·</b> 07</p>
+
+  <div class="top">
+    <div class="hd">
+      <p class="label" data-anim="wipe-r" data-delay="120">Một nhân viên thật</p>
+      <h1 class="h1 h" style="font-size:148px; line-height:.98; margin:46px 0 0;">
+        <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="280">Trước khi trả lời khách, một nhân viên</span></span>
+        <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="380">cần được <em class="hl">giao những gì?<i class="hl-bar" data-anim="grow-x" data-delay="1120" data-dur="520"></i></em></span></span>
+      </h1>
+    </div>
+    <div class="tally" data-anim="up-sm" data-delay="540">
+      <span class="n">06</span>
+      <p class="t"><b>điều phải giao</b><br>trước ngày<br>đầu đi làm</p>
+    </div>
+  </div>
+
+  <div class="chipset" style="margin-top:88px;">
+    <div class="chip" data-anim="up-sm" data-delay="640"><span class="ic"></span><span class="k">01</span>Sản phẩm</div>
+    <div class="chip" data-anim="up-sm" data-delay="710"><span class="ic"></span><span class="k">02</span>Giá</div>
+    <div class="chip" data-anim="up-sm" data-delay="780"><span class="ic"></span><span class="k">03</span>Tình trạng hàng</div>
+    <div class="chip" data-anim="up-sm" data-delay="850"><span class="ic"></span><span class="k">04</span>Chính sách</div>
+    <div class="chip" data-anim="up-sm" data-delay="920"><span class="ic"></span><span class="k">05</span>Cách nói chuyện</div>
+    <div class="chip" data-anim="up-sm" data-delay="990"><span class="ic"></span><span class="k">06</span>Lúc nào cần chuyển cho chủ shop</div>
+  </div>
+
+  <div class="clincher" style="margin-top:92px;" data-anim="up-sm" data-delay="1200">
+    <p class="eq">Câu<br>chốt</p>
+    <p class="txt">
+      Những điều một nhân viên thật cần biết <span class="ac">cũng chính là</span>
+      những điều chúng ta cần chuẩn bị cho nhân viên số.
+    </p>
+  </div>
+</section>
+
+<!-- ===== 13-definition.html ===== -->
+<section class="slide t-ink l-center" data-slide="13" data-title="Định nghĩa — nhân viên tư vấn số" id="s13" style="gap:0;">
+  <div class="deco">
+    <div class="deco-grid" style="opacity:.30;"></div>
+    <div class="deco-orb" style="left:640px; top:-1240px; opacity:.13;"></div>
+    <div class="deco-orb mint" style="right:280px; bottom:-1280px; opacity:.10;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <style>
+    #s13 .def{
+      width:100%; margin:34px 0 0;
+      font-size:172px; font-weight:900; line-height:1.14;
+      letter-spacing:-.04em; text-align:center; text-wrap:initial;
+      display:flex; flex-direction:column;
+    }
+    #s13 .def .hl-bar{ bottom:.045em; height:.105em; border-radius:3px; }
+    #s13 .def .lt{ color:var(--muted); font-weight:800; }
+  </style>
+
+  <p class="meta">Session 02 <b>·</b> 08</p>
+
+  <p class="label" data-anim="wipe-r" data-delay="120" style="justify-content:center; letter-spacing:.42em;">Định nghĩa</p>
+
+  <h1 class="def">
+    <span class="mask"><span style="display:block" data-anim="blur" data-delay="300" data-dur="1000">Nhân viên tư vấn số là <em class="hl">một vai trò làm việc<i class="hl-bar" data-anim="grow-x" data-delay="720" data-dur="440"></i></em></span></span>
+    <span class="mask"><span style="display:block" data-anim="blur" data-delay="340" data-dur="1000"><em class="hl">trong kênh chat<i class="hl-bar" data-anim="grow-x" data-delay="880" data-dur="300"></i></em>, được đào tạo bằng <em class="hl">dữ liệu<i class="hl-bar" data-anim="grow-x" data-delay="1080" data-dur="440"></i></em></span></span>
+    <span class="mask"><span style="display:block" data-anim="blur" data-delay="380" data-dur="1000"><em class="hl">và quy tắc của shop<i class="hl-bar" data-anim="grow-x" data-delay="1240" data-dur="300"></i></em>, trả lời được các câu hỏi</span></span>
+    <span class="mask"><span style="display:block" data-anim="blur" data-delay="420" data-dur="1000">phù hợp và <em class="hl">gọi người thật khi vượt quá phạm vi<i class="hl-bar" data-anim="grow-x" data-delay="1420" data-dur="520"></i></em>.</span></span>
+  </h1>
+</section>
+
+<!-- ===== 14-quote-hire.html ===== -->
+<section class="slide t-accent l-center" data-slide="14" data-title="Ví von — “Em vào trả lời khách đi.”" id="s14" style="gap:0;">
+  <div class="deco">
+    <div class="deco-grid" style="opacity:.42;"></div>
+    <div class="q q1">“</div>
+    <div class="q q2">”</div>
+    <div class="deco-noise" style="opacity:.07;"></div>
+  </div>
+
+  <style>
+    /* giant faded quotation marks as background decoration */
+    #s14 .q{
+      position:absolute; font-family:var(--sans); font-weight:900;
+      font-size:820px; line-height:1; color:var(--fg); opacity:.15;
+      letter-spacing:-.06em; user-select:none;
+    }
+    #s14 .q1{ left:110px; top:-88px; }
+    #s14 .q2{ right:70px; top:658px; }
+
+    #s14 .h{ display:flex; flex-direction:column; }
+
+    #s14 .eyebrow{ color:var(--fg); opacity:.72; }
+    #s14 .eyebrow::before{ background:var(--fg); width:88px; }
+
+    #s14 .sub{
+      margin:0; font-size:86px; font-weight:700; letter-spacing:-.022em;
+      line-height:1.1; color:var(--fg); max-width:none;
+    }
+    #s14 .sub .u{ position:relative; display:inline-block; font-weight:800; }
+    #s14 .sub .u i{
+      position:absolute; left:-.03em; right:-.03em; bottom:.02em; height:.1em;
+      background:var(--fg); display:block; border-radius:3px; z-index:-1;
+    }
+    #s14 .rule{ height:3px; background:var(--hair); width:100%; }
+  </style>
+
+  <p class="meta" style="color:var(--fg); opacity:.6;">Session 02 <b>·</b> 09</p>
+
+  <p class="label eyebrow" data-anim="wipe-r" data-delay="140" style="justify-content:center; letter-spacing:.4em;">
+    Đừng tuyển một người rồi chỉ bảo
+  </p>
+
+  <h1 class="mega h" style="font-size:352px; line-height:.9; margin:56px 0 0; letter-spacing:-.05em;">
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="320" data-dur="1000">Em vào trả lời khách đi.</span></span>
+  </h1>
+
+  <div class="rule" data-anim="grow-x" data-delay="900" data-dur="600" style="margin-top:74px; max-width:2600px;"></div>
+
+  <p class="sub" data-anim="up-sm" data-delay="1080" style="margin-top:60px;">
+    Nhân viên số cũng cần được thiết kế
+    <span class="u">như một nhân sự mới gia nhập doanh nghiệp<i data-anim="grow-x" data-delay="1440" data-dur="480"></i></span>.
+  </p>
+</section>
+
+<!-- ===== 15-hr-file.html ===== -->
+<section class="slide t-paper l-index" data-slide="15" data-title="Slide 9b — Hồ sơ nhân sự của nhân viên số" id="s15">
+  <style>
+    #s15{ gap:86px; }
+    #s15 > .rail-v{ flex:0 0 268px; padding-right:52px; }
+    #s15 .vt{
+      writing-mode:vertical-rl; transform:rotate(180deg);
+      font-size:94px; font-weight:900; letter-spacing:-.03em; line-height:.94; margin:0;
+    }
+    #s15 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; justify-content:center; gap:56px; }
+    #s15 .kvgrid{ gap:0 40px; align-items:start; }
+    #s15 .kvgrid.r3{ grid-template-columns:repeat(3,1fr); }
+    #s15 .kv{ padding-top:28px; border-top-width:5px; gap:16px; }
+    #s15 .kv .k{ font-size:62px; line-height:1.1; margin:0; }
+    #s15 .kv .v{ font-size:40px; line-height:1.3; }
+    #s15 .kv.b{ border-top-color:var(--ink); }
+    #s15 .kv .no{
+      font-family:var(--mono); font-size:24px; font-weight:600;
+      letter-spacing:.2em; color:var(--accent); margin:0;
+    }
+    #s15 .kv.b .no{ color:var(--ink); opacity:.45; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="right:-960px; top:-1280px; opacity:.10;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 02 <b>·</b> Slide 09</p>
+
+  <!-- eyebrow rail -->
+  <div class="rail-v">
+    <p class="label" data-anim="wipe-r" data-delay="120">Slide 09</p>
+    <h2 class="vt" data-anim="up-sm" data-delay="240">Hồ sơ nhân sự<br>của nhân viên số</h2>
+    <p class="label bare" style="letter-spacing:.22em; font-size:24px;" data-anim="fade" data-delay="1500">07 mục</p>
+  </div>
+
+  <!-- payload: 4 + 3 -->
+  <div class="pane">
+    <div class="kvgrid" data-stagger="90">
+      <div class="kv" data-anim="up-sm">
+        <p class="no">01</p>
+        <p class="k">Mô tả công việc</p>
+        <p class="v">Phụ trách bước nào? Được làm gì, không được tự quyết gì?</p>
+      </div>
+      <div class="kv b" data-anim="up-sm">
+        <p class="no">02</p>
+        <p class="k">KPI &amp; tiêu chuẩn</p>
+        <p class="v">Trả lời đúng thông tin, thu thập đủ, bàn giao đúng quy trình. <b style="color:var(--accent);font-weight:700;">Không</b> mặc định KPI là doanh thu.</p>
+      </div>
+      <div class="kv" data-anim="up-sm">
+        <p class="no">03</p>
+        <p class="k">Quy trình bán hàng</p>
+        <p class="v">Chào hỏi → xác định nhu cầu → hỏi thông tin → đề xuất → giải thích chính sách → bước tiếp theo.</p>
+      </div>
+      <div class="kv b" data-anim="up-sm">
+        <p class="no">04</p>
+        <p class="k">Đào tạo &amp; học sản phẩm</p>
+        <p class="v">Danh mục, giá, thuộc tính, tồn kho, điểm khác biệt, ship, thanh toán, đổi trả, FAQ.</p>
+      </div>
+    </div>
+
+    <div class="kvgrid r3" data-stagger="90" style="--_base:0ms">
+      <div class="kv" data-anim="up-sm" data-delay="450">
+        <p class="no">05</p>
+        <p class="k">Đào tạo qua tình huống thật</p>
+        <p class="v">Câu hỏi thường gặp, tình huống thiếu dữ liệu, câu nhiều cách hiểu, ca cần người thật.</p>
+      </div>
+      <div class="kv b" data-anim="up-sm" data-delay="540">
+        <p class="no">06</p>
+        <p class="k">Phối hợp &amp; bàn giao</p>
+        <p class="v">Báo giá đặc biệt, kiểm tồn kho, chốt đơn, khiếu nại → chuyển đúng người: kho, sales, chủ shop.</p>
+      </div>
+      <div class="kv" data-anim="up-sm" data-delay="630">
+        <p class="no">07</p>
+        <p class="k">Đánh giá &amp; đào tạo lại</p>
+        <p class="v">Ghi nhận đúng/sai/thiếu, bổ sung dữ liệu, sửa hướng dẫn, test lại từ hội thoại thật.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 16-not-chatbot.html ===== -->
+<section class="slide t-ink l-split" data-slide="16" data-title="Slide 9c — Không phải chatbot. Một nhân viên mới." id="s16">
+  <style>
+    #s16{ gap:120px; }
+    #s16 > .lead{ flex:0 0 1480px; gap:46px; }
+    #s16 .cols{ display:flex; gap:100px; align-items:stretch; }
+    #s16 .col{ flex:1; min-width:0; display:flex; flex-direction:column; gap:0; }
+    #s16 .col > .hd{
+      font-size:80px; font-weight:800; letter-spacing:-.025em; line-height:1;
+      margin:0 0 44px; display:flex; align-items:center; gap:26px;
+    }
+    #s16 .col.no > .hd{ color:var(--muted); }
+    #s16 .col.yes > .hd{ color:var(--accent); }
+    #s16 .col.yes > .hd .tick{
+      width:26px; height:26px; border-radius:50%; background:var(--accent); flex:none;
+    }
+    #s16 .col ul{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; }
+    #s16 .col li{
+      font-size:54px; font-weight:600; letter-spacing:-.015em; line-height:1.2;
+      padding:37px 0; border-top:2px solid var(--hair);
+      display:flex; gap:26px; align-items:baseline;
+    }
+    #s16 .col li:last-child{ border-bottom:2px solid var(--hair); }
+    #s16 .col.no li{ color:var(--muted); }
+    #s16 .col.no li .x{ font-family:var(--mono); font-weight:600; font-size:32px; opacity:.55; flex:none; width:34px; }
+    #s16 .col.yes li .x{ font-family:var(--mono); font-weight:600; font-size:32px; color:var(--accent); flex:none; width:34px; }
+    #s16 .kicker{
+      display:flex; gap:36px; align-items:flex-start;
+      border-top:3px solid var(--accent); padding-top:32px; margin-top:8px;
+    }
+    #s16 .kicker p{
+      margin:0; font-family:var(--mono); font-size:31px; line-height:1.44;
+      color:var(--muted); font-weight:400;
+    }
+    #s16 .kicker p b{ color:var(--fg); font-weight:600; }
+    #s16 .kicker .tag{
+      font-family:var(--mono); font-size:28px; font-weight:600; letter-spacing:.24em;
+      text-transform:uppercase; color:var(--accent); flex:none; padding-top:2px;
+    }
+    #s16 .strike{ font-style:normal; }
+    #s16 .strike .hl-bar{ height:.075em; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="right:-820px; bottom:-1180px; opacity:.14;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 02 <b>·</b> Câu chốt</p>
+
+  <!-- headline column -->
+  <div class="lead">
+    <p class="label" data-anim="wipe-r" data-delay="120">Slide 09c <b>·</b> Câu chốt</p>
+
+    <h1 class="h1" style="font-size:126px; line-height:1.09;">
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="300">Không phải một chatbot</span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="400">được bật lên.</span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="560">Một <em class="hl ac">nhân viên mới<i class="hl-bar" data-anim="grow-x" data-delay="1180"></i></em>.</span></span>
+    </h1>
+
+    <div class="kicker" data-anim="up-sm" data-delay="1300">
+      <span class="tag">Lưu ý</span>
+      <p>Nhân viên số không phải lúc nào cũng đúng và không thay thế hoàn toàn người thật.
+         Giá trị nằm ở việc <b>làm tốt phần việc được giao</b> và <b>biết gọi người thật khi cần</b>.</p>
+    </div>
+  </div>
+
+  <!-- comparison -->
+  <div class="payload">
+    <div class="cols">
+      <div class="col no">
+        <p class="hd" data-anim="fade" data-delay="600">
+          <em class="strike">Chatbot<i class="hl-bar" data-anim="grow-x" data-delay="880"></i></em>
+        </p>
+        <ul data-stagger="80">
+          <li data-anim="up-sm" data-delay="700"><span class="x">—</span>Bật lên là trả lời tự động</li>
+          <li data-anim="up-sm" data-delay="780"><span class="x">—</span>Kịch bản cố định</li>
+          <li data-anim="up-sm" data-delay="860"><span class="x">—</span>Không biết giới hạn</li>
+          <li data-anim="up-sm" data-delay="940"><span class="x">—</span>Sai thì tắt đi</li>
+        </ul>
+      </div>
+
+      <div class="col yes">
+        <p class="hd" data-anim="fade" data-delay="1000"><i class="tick"></i>Nhân viên mới</p>
+        <ul>
+          <li data-anim="up-sm" data-delay="1060"><span class="x">01</span>Có mô tả công việc</li>
+          <li data-anim="up-sm" data-delay="1140"><span class="x">02</span>Có KPI</li>
+          <li data-anim="up-sm" data-delay="1220"><span class="x">03</span>Được học sản phẩm</li>
+          <li data-anim="up-sm" data-delay="1300"><span class="x">04</span>Được đào tạo nghiệp vụ, biết bàn giao</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 17-three-jobs.html ===== -->
+<section class="slide t-ink-2 l-rail" data-slide="17" data-title="Slide 10 — Ba việc đầu tiên nên giao" id="s17">
+  <style>
+    #s17{ gap:60px; }
+    #s17 .band{ display:flex; align-items:flex-end; gap:140px; }
+    #s17 .band .hd{ flex:1 1 auto; min-width:0; }
+    #s17 .band .hd h1{ font-size:118px; line-height:1.09; }
+    #s17 .close{
+      flex:0 0 1500px; border-top:3px solid var(--accent); padding-top:30px;
+    }
+    #s17 .close p{ margin:0; font-size:42px; line-height:1.34; color:var(--muted); font-weight:500; }
+    #s17 .close p b{ color:var(--fg); font-weight:700; }
+    #s17 .rail{ gap:48px; }
+    #s17 .card{ min-height:490px; padding:52px 54px 54px; border-radius:32px; gap:0; justify-content:flex-start; }
+    #s17 .card .n{ font-size:38px; letter-spacing:.16em; }
+    #s17 .card .k{ font-size:80px; line-height:1.1; margin:44px 0 0; }
+    #s17 .card .v{ font-size:42px; line-height:1.3; margin:auto 0 0; padding-top:38px; border-top:2px solid var(--hair); }
+    #s17 .card.hot .v{ border-top-color:#170A0533; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb mint" style="left:-780px; top:-1200px; opacity:.10;"></div>
+    <div class="deco-orb" style="right:-880px; bottom:-1240px; opacity:.13;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 02 <b>·</b> Slide 10</p>
+
+  <!-- headline band: headline left, punchline right -->
+  <div class="band">
+    <div class="hd">
+      <p class="label" style="margin-bottom:34px;" data-anim="wipe-r" data-delay="120">Ba việc đầu tiên nên giao</p>
+      <h1 class="h1" data-anim="up-sm" data-delay="260">
+        Bắt đầu bằng những việc
+        <em class="hl">lặp lại nhưng quan trọng<i class="hl-bar" data-anim="grow-x" data-delay="900"></i></em>.
+      </h1>
+    </div>
+    <div class="close" data-anim="up-sm" data-delay="1240">
+      <p>Nhân viên tư vấn số <b>không thay chủ shop</b>. Nhân viên đó <b>giữ nhịp tư vấn</b> để chủ shop không bỏ lỡ khách.</p>
+    </div>
+  </div>
+
+  <!-- three jobs -->
+  <div class="rail">
+    <div class="card" data-anim="up-sm" data-delay="620">
+      <p class="n">01</p>
+      <p class="k">Trả lời câu hỏi thường gặp</p>
+      <p class="v">Giá, tồn kho, size, ship, đổi trả.</p>
+    </div>
+    <div class="card" data-anim="up-sm" data-delay="740">
+      <p class="n">02</p>
+      <p class="k">Tư vấn sản phẩm cơ bản</p>
+      <p class="v">Dựa trên nhu cầu khách.</p>
+    </div>
+    <div class="card hot" data-anim="up-sm" data-delay="860">
+      <p class="n">03</p>
+      <p class="k">Giữ nhịp cuộc trò chuyện</p>
+      <p class="v">Và chuyển lead cho người thật khi cần.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 18-transition.html ===== -->
+<section class="slide t-mint l-center" data-slide="18" data-title="Transition 10 → 11 — Bước đầu tiên là gì?" id="s18">
+  <style>
+    #s18{ gap:78px; }
+    #s18 .q{ font-size:200px; line-height:1.14; letter-spacing:-.038em; max-width:none; }
+    #s18 .flow{
+      display:flex; align-items:center; width:3560px; max-width:100%;
+    }
+    #s18 .flow .chip{
+      flex:none; font-size:58px; font-weight:700; padding:30px 54px;
+      border-width:3px; border-color:#04241A38; background:#04241A0F;
+    }
+    #s18 .flow .chip .ic{ width:20px; height:20px; background:#04241A; }
+    #s18 .flow .chip:last-of-type{ background:#04241A; color:var(--mint); border-color:transparent; }
+    #s18 .flow .chip:last-of-type .ic{ background:var(--mint); }
+    #s18 .flow .lnk{ flex:1 1 auto; display:flex; align-items:center; min-width:60px; }
+    #s18 .flow .lnk i{ flex:1 1 auto; height:3px; background:#04241A47; }
+    #s18 .flow .lnk::after{
+      content:""; flex:none; width:0; height:0;
+      border:17px solid transparent; border-left-color:#04241A; border-right:0;
+    }
+    #s18 .sub{ font-size:68px; line-height:1.16; font-weight:700; max-width:3200px; margin:0; }
+    #s18 .sub b{ font-weight:900; }
+    #s18 .rule{ width:220px; height:6px; background:#04241A; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-dots" style="opacity:.45;"></div>
+    <div class="deco-marquee" style="top:-46px; opacity:.55; font-size:190px; -webkit-text-stroke:3px #04241A26;">
+      <span>bước đầu tiên · phạm vi · sản phẩm · đào tạo · bước đầu tiên · phạm vi · sản phẩm · đào tạo ·&nbsp;</span>
+      <span>bước đầu tiên · phạm vi · sản phẩm · đào tạo · bước đầu tiên · phạm vi · sản phẩm · đào tạo ·&nbsp;</span>
+    </div>
+    <div class="deco-marquee" style="bottom:-46px; opacity:.55; font-size:190px; -webkit-text-stroke:3px #04241A26;">
+      <span>bước đầu tiên · phạm vi · sản phẩm · đào tạo · bước đầu tiên · phạm vi · sản phẩm · đào tạo ·&nbsp;</span>
+      <span>bước đầu tiên · phạm vi · sản phẩm · đào tạo · bước đầu tiên · phạm vi · sản phẩm · đào tạo ·&nbsp;</span>
+    </div>
+  </div>
+
+  <p class="meta" style="color:#04241A99;">Transition <b>10 → 11</b></p>
+
+  <h2 class="xl q">
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="140">Nếu xem đây là một nhân sự mới —</span></span>
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="260">bước đầu tiên là gì?</span></span>
+  </h2>
+
+  <div class="flow" data-anim="fade" data-delay="640">
+    <span class="chip"><i class="ic"></i>Chọn phạm vi công việc</span>
+    <span class="lnk"><i></i></span>
+    <span class="chip"><i class="ic"></i>Thêm sản phẩm</span>
+    <span class="lnk"><i></i></span>
+    <span class="chip"><i class="ic"></i>Bắt đầu đào tạo</span>
+  </div>
+
+  <p class="sub" data-anim="up-sm" data-delay="1000">
+    Anh/chị chọn <b>một nhóm sản phẩm</b> hoặc <b>một nhóm câu hỏi thường gặp nhất</b> để bắt đầu.
+  </p>
+</section>
+
+<!-- ===== 19-session3.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="19" data-title="Session 03 — Nhân viên tư vấn số đầu tiên của bạn" id="s19">
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-marquee band" style="top:172px;">
+      <span>CHỌN VAI TRÒ&nbsp;·&nbsp;NẠP KIẾN THỨC&nbsp;·&nbsp;TEST THẬT&nbsp;·&nbsp;SỬA LẠI&nbsp;·&nbsp;HANDOFF&nbsp;·&nbsp;</span><span>CHỌN VAI TRÒ&nbsp;·&nbsp;NẠP KIẾN THỨC&nbsp;·&nbsp;TEST THẬT&nbsp;·&nbsp;SỬA LẠI&nbsp;·&nbsp;HANDOFF&nbsp;·&nbsp;</span>
+    </div>
+    <div class="deco-marquee band b2" style="top:690px;">
+      <span>GIÁ&nbsp;·&nbsp;TỒN KHO&nbsp;·&nbsp;CHÍNH SÁCH&nbsp;·&nbsp;FAQ&nbsp;·&nbsp;GIỌNG NÓI CỦA SHOP&nbsp;·&nbsp;</span><span>GIÁ&nbsp;·&nbsp;TỒN KHO&nbsp;·&nbsp;CHÍNH SÁCH&nbsp;·&nbsp;FAQ&nbsp;·&nbsp;GIỌNG NÓI CỦA SHOP&nbsp;·&nbsp;</span>
+    </div>
+    <div class="deco-bar bottom"></div>
+  </div>
+
+  <div class="head">
+    <p class="label" data-anim="wipe-r" data-delay="120">Session 03</p>
+    <p class="idx" data-anim="fade" data-delay="220">Phần <b>03</b> / 03</p>
+  </div>
+
+  <h1 class="dtitle">
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="340" data-dur="1000">Nhân viên số <span class="ac">đầu tiên của bạn</span></span></span>
+  </h1>
+  <p class="sub" data-anim="up-sm" data-delay="620">Mỗi người tạo được một agent chạy được và test bằng <b>câu hỏi thật của shop</b>.</p>
+
+  <div class="strip">
+    <span class="st" data-anim="up-sm" data-delay="760"><i></i>Chọn vai trò</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="850"><i></i>Nạp kiến thức</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="940"><i></i>Test câu hỏi thật</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="1030"><i></i>Sửa & train lại</span>
+    <span class="cx"></span>    <span class="st dim" data-anim="up-sm" data-delay="1120"><i></i>Handoff</span>
+  </div>
+</section>
+
+<!-- ===== 20-handson.html ===== -->
+<section class="slide t-paper l-rail" data-slide="20" data-title="Slide 11 — Bắt đầu hands-on: 5 bước" id="s20">
+  <style>
+    #s20{ gap:70px; }
+    #s20 .band{ display:flex; align-items:flex-end; gap:120px; }
+    #s20 .band .hd{ flex:1 1 auto; min-width:0; }
+    #s20 .band h1{ font-size:144px; line-height:1.12; letter-spacing:-.034em; }
+    #s20 .band .cue{
+      flex:0 0 auto; display:flex; align-items:center; gap:24px;
+      font-family:var(--mono); font-size:32px; font-weight:600; letter-spacing:.22em;
+      text-transform:uppercase; color:var(--muted); white-space:nowrap; padding-bottom:14px;
+    }
+    #s20 .band .cue b{ color:var(--accent); font-weight:700; }
+    #s20 .rail{ gap:38px; }
+    #s20 .card{
+      min-height:0; gap:0; border-radius:30px;
+      padding:46px 48px 48px; border:2px solid var(--hair);
+      background:#0A0B0D0A; border-top:8px solid var(--accent);
+    }
+    #s20 .card .n{
+      font-family:var(--mono); font-size:152px; font-weight:600; line-height:.9;
+      letter-spacing:-.04em; color:var(--accent); margin:0;
+    }
+    #s20 .card .k{
+      font-size:58px; font-weight:800; line-height:1.18; letter-spacing:-.02em;
+      margin:36px 0 0; padding-top:36px; border-top:3px solid #0A0B0D2B; color:var(--fg);
+    }
+    #s20 .card .v{ font-size:34px; margin:auto 0 0; padding-top:30px; }
+    
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="left:-820px; bottom:-1200px; opacity:.11;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 03 <b>·</b> Slide 11</p>
+
+  <div class="band">
+    <div class="hd">
+      <p class="label" style="margin-bottom:36px;" data-anim="wipe-r" data-delay="120">Bắt đầu hands-on</p>
+      <h1 class="h1" data-anim="up-sm" data-delay="240">
+        Hãy tạo <em class="hl">một nhân viên cho chính shop của mình<i class="hl-bar" data-anim="grow-x" data-delay="880"></i></em>.
+      </h1>
+    </div>
+    <p class="cue" data-anim="fade" data-delay="1180"><b>05</b> bước · làm ngay tại chỗ</p>
+  </div>
+
+  <div class="rail">
+    <div class="card" data-anim="up-sm" data-delay="560">
+      <p class="n">01</p>
+      <p class="k">Chọn vai trò và đặt tên cho nhân viên</p>
+    </div>
+    <div class="card" data-anim="up-sm" data-delay="660">
+      <p class="n">02</p>
+      <p class="k">Chọn ngành hàng / nhóm sản phẩm đầu tiên</p>
+    </div>
+    <div class="card" data-anim="up-sm" data-delay="760">
+      <p class="n">03</p>
+      <p class="k">Nạp kiến thức tối thiểu</p>
+    </div>
+    <div class="card" data-anim="up-sm" data-delay="860">
+      <p class="n">04</p>
+      <p class="k">Test bằng câu hỏi thật</p>
+    </div>
+    <div class="card" data-anim="up-sm" data-delay="960">
+      <p class="n">05</p>
+      <p class="k">Sửa một câu trả lời và test lại</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 21-feed-data.html ===== -->
+<section class="slide t-ink l-stack" data-slide="21" data-title="Nạp gì để nhân viên trả lời được" id="s21">
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb amber" style="right:-820px; top:-1120px; opacity:.12;"></div>
+    <div class="deco-noise"></div>
+  </div>
+  <p class="meta">Session 03 <b>·</b> Hands-on</p>
+
+  <style>
+    #s21{ gap:88px; }
+    #s21 .band{ display:flex; align-items:flex-end; gap:140px; }
+    #s21 .band .hd{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
+    #s21 .band .cl{ flex:0 0 1020px; text-align:right; border-top:3px solid var(--amber); padding-top:32px; }
+    #s21 .band .cl p{
+      margin:0; font-family:var(--mono); font-size:34px; line-height:1.36; font-weight:500;
+      letter-spacing:.01em; color:var(--fg);
+    }
+    #s21 .band .cl b{ color:var(--amber); font-weight:600; }
+
+    #s21 .grid7{ display:grid; grid-template-columns:repeat(7,1fr); gap:34px; }
+    #s21 .it{
+      display:flex; flex-direction:column;
+      min-height:456px; padding:26px 26px 0 0;
+      border-top:4px solid #FFFFFF3D;
+    }
+    #s21 .it .n{
+      font-family:var(--mono); font-size:88px; font-weight:600; letter-spacing:-.03em;
+      line-height:1; color:var(--muted); opacity:.72;
+    }
+    #s21 .it .k{
+      margin:auto 0 0; font-size:56px; font-weight:800; letter-spacing:-.024em; line-height:1.06;
+      padding-bottom:26px;
+    }
+    #s21 .it .u{ display:block; height:4px; background:var(--accent); border-radius:2px; }
+
+    #s21 .it.last{
+      border-top:none; background:var(--accent); color:var(--ink);
+      border-radius:28px; padding:26px 32px 32px; margin-top:-4px;
+    }
+    #s21 .it.last .n{ color:var(--ink); opacity:.5; }
+    #s21 .it.last .k{ padding-bottom:0; }
+    #s21 .it.last .tag{
+      display:block; font-family:var(--mono); font-size:27px; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase; opacity:.72; margin-bottom:16px;
+    }
+  </style>
+
+  <div class="band">
+    <div class="hd">
+      <p class="label" data-anim="wipe-r" data-delay="120">Nạp dữ liệu · 7 mục</p>
+      <h1 class="l" data-anim="up-sm" data-delay="240">
+        Nạp gì để nhân viên <span class="ac">trả lời được?</span>
+      </h1>
+    </div>
+    <div class="cl" data-anim="up-sm" data-delay="1320">
+      <p><b>Dữ liệu của shop</b><br>quyết định chất lượng trả lời.</p>
+    </div>
+  </div>
+
+  <div class="grid7">
+    <div class="it" data-anim="up-sm" data-delay="420">
+      <span class="n">01</span>
+      <p class="k">Tên shop &amp; ngành hàng</p><i class="u" data-anim="grow-x" data-delay="1000"></i>
+    </div>
+    <div class="it" data-anim="up-sm" data-delay="500">
+      <span class="n">02</span>
+      <p class="k">5–10 sản phẩm đầu tiên</p><i class="u" data-anim="grow-x" data-delay="1060"></i>
+    </div>
+    <div class="it" data-anim="up-sm" data-delay="580">
+      <span class="n">03</span>
+      <p class="k">Giá, thuộc tính, tình trạng hàng</p><i class="u" data-anim="grow-x" data-delay="1120"></i>
+    </div>
+    <div class="it" data-anim="up-sm" data-delay="660">
+      <span class="n">04</span>
+      <p class="k">Chính sách giao hàng, đổi trả, thanh toán</p><i class="u" data-anim="grow-x" data-delay="1180"></i>
+    </div>
+    <div class="it" data-anim="up-sm" data-delay="740">
+      <span class="n">05</span>
+      <p class="k">Câu hỏi thường gặp</p><i class="u" data-anim="grow-x" data-delay="1240"></i>
+    </div>
+    <div class="it" data-anim="up-sm" data-delay="820">
+      <span class="n">06</span>
+      <p class="k">Giọng nói &amp; cách xưng hô của shop</p><i class="u" data-anim="grow-x" data-delay="1300"></i>
+    </div>
+    <div class="it last" data-anim="up-sm" data-delay="960">
+      <span class="n">07</span>
+      <p class="k"><span class="tag">Ranh giới</span>Trường hợp nào phải chuyển cho người thật</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 22-test-5.html ===== -->
+<section class="slide t-paper l-split" data-slide="22" data-title="Test bằng 5 câu khách thật sẽ hỏi" id="s22">
+  <div class="deco">
+    <div class="deco-dots" style="opacity:.35;"></div>
+    <div class="deco-orb" style="left:1500px; top:-1240px; opacity:.10;"></div>
+  </div>
+  <p class="meta">Session 03 <b>·</b> Hands-on</p>
+
+  <style>
+    #s22{ gap:130px; }
+    #s22 > .lead{ flex:0 0 1180px; gap:46px; }
+    #s22 > .payload{ flex-direction:row; gap:70px; align-items:flex-start; justify-content:flex-start; }
+    #s22 .col{ flex:0 0 1280px; min-width:0; display:flex; flex-direction:column; gap:34px; }
+    #s22 .col.b{ flex:1; margin-top:252px; align-items:flex-end; }
+
+    #s22 .bub{
+      max-width:100%; background:#FFFFFF; border:2px solid var(--paper-3);
+      padding:36px 46px; font-size:54px; line-height:1.2; font-weight:500;
+      box-shadow:0 18px 40px -24px #0A0B0D2E;
+    }
+    #s22 .bub .who{ color:var(--muted); opacity:1; font-size:25px; letter-spacing:.2em; margin-bottom:14px; }
+    #s22 .col.b .bub{ width:100%; }
+    #s22 .bub.esc{ border-color:var(--accent); border-width:3px; }
+    #s22 .bub.esc .who{ color:var(--accent); }
+
+    #s22 .chk{
+      background:var(--accent); color:var(--ink); border-radius:28px; padding:40px 46px 44px;
+      display:flex; flex-direction:column; gap:22px;
+    }
+    #s22 .chk .t{
+      font-family:var(--mono); font-size:27px; font-weight:600; letter-spacing:.22em;
+      text-transform:uppercase; opacity:.68; margin:0;
+    }
+    #s22 .chk p{ margin:0; font-size:44px; line-height:1.2; font-weight:600; letter-spacing:-.012em; }
+    #s22 .chk p.two{ padding-top:20px; border-top:2px solid #170A0533; }
+  </style>
+
+  <div class="lead">
+    <p class="label" data-anim="wipe-r" data-delay="120">Kiểm thử · 5 câu</p>
+    <h1 class="h1" data-anim="up-sm" data-delay="240">
+      Test bằng <em class="hl">5 câu khách thật sẽ hỏi.<i class="hl-bar" data-anim="grow-x" data-delay="1480"></i></em>
+    </h1>
+    <div class="chk" data-anim="up-sm" data-delay="1240">
+      <p class="t">Checklist tối thiểu</p>
+      <p>Trả lời đúng và an toàn ít nhất <b>3 câu đầu</b>.</p>
+      <p class="two">Câu vượt phạm vi <b>phải biết chuyển người thật</b>.</p>
+    </div>
+  </div>
+
+  <div class="payload">
+    <div class="col a">
+      <div class="bub" data-anim="up-sm" data-delay="420">
+        <span class="who">Khách · 01</span>Shop còn mẫu này không?
+      </div>
+      <div class="bub" data-anim="up-sm" data-delay="560">
+        <span class="who">Khách · 02</span>Giá bao nhiêu?
+      </div>
+      <div class="bub" data-anim="up-sm" data-delay="700">
+        <span class="who">Khách · 03</span>Sản phẩm nào phù hợp với nhu cầu của em?
+      </div>
+    </div>
+    <div class="col b">
+      <div class="bub" data-anim="up-sm" data-delay="840">
+        <span class="who">Khách · 04</span>Có freeship hoặc đổi trả không?
+      </div>
+      <div class="bub esc" data-anim="up-sm" data-delay="980">
+        <span class="who">Khách · 05 · vượt phạm vi</span>Cho chị đặt hàng —<br>hoặc chuyển người thật tư vấn.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 23-refine.html ===== -->
+<section class="slide t-ink l-split" data-slide="23" data-title="Sửa để nhân viên giống shop hơn" id="s23">
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb mint" style="right:-700px; bottom:-1160px; opacity:.13;"></div>
+    <div class="deco-noise"></div>
+  </div>
+  <p class="meta">Session 03 <b>·</b> Hands-on</p>
+
+  <style>
+    #s23{ gap:150px; }
+    #s23 > .lead{ flex:0 0 1460px; gap:42px; }
+    #s23 > .payload{ flex-direction:row; align-items:center; gap:48px; }
+    #s23 .arrow i{ width:150px; height:4px; }
+
+    #s23 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
+    #s23 .cap{
+      margin:0; font-family:var(--mono); font-size:29px; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
+      display:flex; align-items:center; gap:18px;
+    }
+    #s23 .cap i{ width:52px; height:3px; background:currentColor; flex:none; }
+    #s23 .pane.after .cap{ color:var(--mint); }
+
+    #s23 .bub{
+      max-width:100%; width:100%; padding:38px 44px; font-size:52px; line-height:1.22;
+    }
+    #s23 .bub.bad{ border-style:dashed; border-color:#FFFFFF33; color:var(--muted); }
+    #s23 .bub .who{ font-size:24px; }
+
+    #s23 .diag{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:18px; }
+    #s23 .diag li{
+      font-size:38px; line-height:1.24; color:var(--muted);
+      display:flex; gap:18px; align-items:flex-start;
+    }
+    #s23 .diag li::before{ content:"×"; color:var(--accent); font-weight:700; flex:none; }
+    #s23 .pane.after .diag li::before{ content:"✓"; color:var(--mint); }
+
+    #s23 .badge{ display:flex; align-items:center; gap:30px; }
+    #s23 .badge .chip{ font-family:var(--mono); font-size:32px; letter-spacing:.16em; padding:18px 32px; }
+    #s23 .badge p{ margin:0; font-size:38px; line-height:1.26; color:var(--fg); font-weight:500; }
+  </style>
+
+  <div class="lead">
+    <p class="label" data-anim="wipe-r" data-delay="120">Sửa &amp; train lại</p>
+    <h1 class="h1" data-anim="up-sm" data-delay="240">
+      Nhân viên số <span class="ac">không cần hoàn hảo</span> ngay từ lần đầu.
+    </h1>
+    <p class="body wide" data-anim="up-sm" data-delay="420">
+      Điều quan trọng là mình biết cách <b style="color:var(--fg);font-weight:700;">kiểm tra, sửa và train lại</b> sau mỗi lần test.
+    </p>
+    <div class="badge" data-anim="up-sm" data-delay="1400">
+      <span class="chip solid"><span class="ic"></span>AHA MOMENT</span>
+      <p>Sửa được một câu trả lời<br><b>ngay tại workshop</b>.</p>
+    </div>
+  </div>
+
+  <div class="payload">
+    <div class="pane before">
+      <p class="cap" data-anim="up-sm" data-delay="520"><i></i>Trước · chưa đúng giọng shop</p>
+      <div class="bub bad" data-anim="up-sm" data-delay="620">
+        <span class="who">Nhân viên số · v1</span>Sản phẩm này hiện đang có sẵn. Bạn vui lòng cho biết thêm yêu cầu.
+      </div>
+      <ul class="diag" data-anim="up-sm" data-delay="760">
+        <li>Không nói tình trạng hàng cụ thể</li>
+        <li>Không đúng cách xưng hô của shop</li>
+        <li>Không dẫn khách tới bước tiếp theo</li>
+      </ul>
+    </div>
+
+    <div class="arrow" data-anim="up-sm" data-delay="900" style="align-self:center;"><i></i></div>
+
+    <div class="pane after">
+      <p class="cap" data-anim="up-sm" data-delay="1000"><i></i>Sau · đã train lại</p>
+      <div class="bub agent" data-anim="up-sm" data-delay="1100">
+        <span class="who">Nhân viên số · v2</span>Dạ còn size M và L ạ. Chị lấy màu be hay đen để em giữ hàng cho mình?
+      </div>
+      <ul class="diag" data-anim="up-sm" data-delay="1240">
+        <li>Có tình trạng hàng</li>
+        <li>Đúng giọng &amp; cách xưng hô của shop</li>
+        <li>Có bước tiếp theo cho khách</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 24-demo-flow.html ===== -->
+<section class="slide t-ink-2 l-rail" data-slide="24" data-title="Demo flow — 9 bước" id="s24">
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="left:-900px; top:-1180px; opacity:.10;"></div>
+    <div class="deco-noise"></div>
+  </div>
+  <p class="meta">Session 03 <b>·</b> Demo</p>
+
+  <style>
+    #s24{ gap:52px; }
+    #s24 .hdr{ display:flex; align-items:flex-end; gap:60px; }
+    #s24 .hdr h1{ margin:0; font-size:96px; font-weight:900; letter-spacing:-.03em; line-height:.9; }
+    #s24 .hdr .sub{
+      margin:0 0 8px; font-family:var(--mono); font-size:30px; font-weight:500;
+      letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+    }
+    #s24 .hdr .spacer{ flex:1; height:2px; background:var(--hair); margin-bottom:26px; }
+
+    #s24 .grp{ display:flex; flex-direction:column; gap:22px; }
+    #s24 .eb{
+      margin:0; font-family:var(--mono); font-size:27px; font-weight:600; letter-spacing:.2em;
+      text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:22px;
+    }
+    #s24 .eb i{ flex:1; height:2px; background:var(--hair); }
+    #s24 .rail{ gap:36px; }
+    #s24 .st{
+      background:var(--card); border:2px solid var(--card-line); border-radius:24px;
+      padding:28px 32px 32px; min-height:268px;
+      display:flex; flex-direction:column; justify-content:space-between; gap:24px;
+    }
+    #s24 .st .n{
+      font-family:var(--mono); font-size:36px; font-weight:600; letter-spacing:.08em; color:var(--accent);
+    }
+    #s24 .st .k{ margin:0; font-size:52px; font-weight:700; letter-spacing:-.02em; line-height:1.08; }
+    #s24 .st.hand{ background:var(--mint); border-color:transparent; color:#04241A; }
+    #s24 .st.hand .n{ color:#04241A; opacity:.6; }
+    #s24 .st.hand .k{ font-weight:800; }
+  </style>
+
+  <div class="hdr">
+    <h1 data-anim="up-sm" data-delay="120">Demo flow</h1>
+    <p class="sub" data-anim="up-sm" data-delay="200">9 bước · làm trực tiếp</p>
+    <div class="spacer" data-anim="grow-x" data-delay="300"></div>
+  </div>
+
+  <div class="grp">
+    <p class="eb" data-anim="up-sm" data-delay="340">Bước 01 → 05 <i></i></p>
+    <div class="rail">
+      <div class="st" data-anim="up-sm" data-delay="400">
+        <span class="n">01</span><p class="k">Mở workspace / OpenClaw</p>
+      </div>
+      <div class="st" data-anim="up-sm" data-delay="470">
+        <span class="n">02</span><p class="k">Tạo agent “Nhân viên tư vấn của shop”</p>
+      </div>
+      <div class="st" data-anim="up-sm" data-delay="540">
+        <span class="n">03</span><p class="k">Nhập thông tin shop + 5 sản phẩm mẫu</p>
+      </div>
+      <div class="st" data-anim="up-sm" data-delay="610">
+        <span class="n">04</span><p class="k">Nhập chính sách ship, đổi trả, bảo hành, thanh toán</p>
+      </div>
+      <div class="st" data-anim="up-sm" data-delay="680">
+        <span class="n">05</span><p class="k">Test bằng câu hỏi thật</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grp">
+    <p class="eb" data-anim="up-sm" data-delay="760">Bước 06 → 09 <i></i></p>
+    <div class="rail">
+      <div class="st" data-anim="up-sm" data-delay="820">
+        <span class="n">06</span><p class="k">Chỉ ra một câu trả lời chưa phù hợp</p>
+      </div>
+      <div class="st" data-anim="up-sm" data-delay="890">
+        <span class="n">07</span><p class="k">Train lại / bổ sung dữ liệu</p>
+      </div>
+      <div class="st" data-anim="up-sm" data-delay="960">
+        <span class="n">08</span><p class="k">Test lại để thấy thay đổi</p>
+      </div>
+      <div class="st hand" data-anim="up-sm" data-delay="1060">
+        <span class="n">09</span><p class="k">Demo handoff khi gặp câu hỏi khó</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 25-emphasis.html ===== -->
+<section class="slide t-accent l-stack" data-slide="25" data-title="Khi demo, nhấn 4 điều này" id="s25">
+  <div class="deco">
+    <div class="deco-dots" style="opacity:.45;"></div>
+    <div class="deco-bar bottom"></div>
+  </div>
+  <p class="meta">Session 03 <b>·</b> Demo</p>
+
+  <style>
+    #s25{ gap:94px; }
+    #s25 .hdr{ display:flex; flex-direction:column; gap:28px; }
+    #s25 .hdr .label{ color:#170A05; opacity:.62; }
+    #s25 .hdr .label::before{ background:#170A05; }
+
+    #s25 .cols{ display:flex; gap:0; align-items:stretch; }
+    #s25 .c{
+      flex:1; min-width:0; display:flex; flex-direction:column; gap:34px;
+      padding:0 50px; border-left:3px solid #170A0533;
+    }
+    #s25 .c:first-child{ padding-left:0; border-left:none; }
+    #s25 .c:last-child{ padding-right:0; }
+    #s25 .c .n{
+      font-family:var(--mono); font-size:82px; font-weight:600; line-height:1;
+      letter-spacing:-.04em; color:#170A05; opacity:.42;
+    }
+    #s25 .c p{
+      margin:0; font-size:104px; font-weight:900; line-height:1.06; letter-spacing:-.034em;
+    }
+    #s25 .c p u{
+      text-decoration-line:underline; text-decoration-thickness:8px;
+      text-underline-offset:14px; text-decoration-skip-ink:none;
+    }
+  </style>
+
+  <div class="hdr">
+    <p class="label" data-anim="wipe-r" data-delay="120">Nhấn mạnh · 01 → 04</p>
+    <h1 class="h1" style="font-size:150px; line-height:.9;" data-anim="up-sm" data-delay="240">
+      Khi demo, nhấn 4 điều này.
+    </h1>
+  </div>
+
+  <div class="cols">
+    <div class="c" data-anim="up-sm" data-delay="480">
+      <span class="n">01</span>
+      <p><u>Dữ liệu của shop</u> quyết định chất lượng trả lời.</p>
+    </div>
+    <div class="c" data-anim="up-sm" data-delay="600">
+      <span class="n">02</span>
+      <p>Agent <u>không cần làm tất cả</u> ngay từ đầu.</p>
+    </div>
+    <div class="c" data-anim="up-sm" data-delay="720">
+      <span class="n">03</span>
+      <p>Bắt đầu nhỏ, <u>test thật</u>, cải thiện dần.</p>
+    </div>
+    <div class="c" data-anim="up-sm" data-delay="840">
+      <span class="n">04</span>
+      <p><u>Handoff là một phần của thiết kế</u>, không phải thất bại.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 26-bridge-s4.html ===== -->
+<section class="slide t-ink l-center" data-slide="26" data-title="Cầu sang Session 4 — Doanh nghiệp một người" id="s26">
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb mint" style="left:1340px; bottom:-1360px; opacity:.16;"></div>
+    <div class="deco-orb" style="left:-880px; top:-1240px; opacity:.10;"></div>
+    <div class="deco-noise"></div>
+  </div>
+  <p class="meta">Cầu nối <b>·</b> Session 04</p>
+
+  <style>
+    #s26{ gap:0; }
+    #s26 .cap{
+      margin:0; font-family:var(--mono); font-size:32px; font-weight:500; letter-spacing:.14em;
+      color:var(--muted);
+    }
+
+    /* one person multiplying into a bench of digital workers, across the full stage */
+    #s26 .spread{
+      position:relative; width:100%; display:flex; align-items:flex-start;
+      justify-content:space-between;
+    }
+    #s26 .spread .rl{ position:absolute; left:0; right:0; top:71px; height:2px; background:var(--hair); }
+    #s26 .ag{
+      position:relative; display:flex; flex-direction:column; align-items:center; gap:24px;
+      flex:0 0 auto;
+    }
+    #s26 .av{
+      width:144px; height:144px; border-radius:50%; display:grid; place-items:center;
+      font-size:60px; font-weight:900; color:#04241A; background:var(--mint);
+      box-shadow:0 0 0 14px var(--bg);
+    }
+    #s26 .ag.you .av{
+      width:168px; height:168px; font-size:70px; margin-top:-12px;
+      background:linear-gradient(140deg,var(--accent),var(--amber)); color:#170A05;
+    }
+    #s26 .ag .rn{
+      margin:0; font-family:var(--mono); font-size:26px; line-height:1.34; font-weight:500;
+      letter-spacing:.06em; color:var(--muted); max-width:330px; text-align:center;
+    }
+    #s26 .ag.you .rn{ color:var(--fg); font-weight:600; }
+    #s26 .ghost{ display:flex; align-items:center; gap:34px; flex:0 0 auto; }
+    #s26 .ghost .av{ background:var(--mint); }
+    #s26 .ghost .g1{ opacity:.52; width:124px; height:124px; margin-top:10px; }
+    #s26 .ghost .g2{ opacity:.30; width:104px; height:104px; margin-top:20px; }
+    #s26 .ghost .g3{ opacity:.15; width:84px;  height:84px;  margin-top:30px; }
+    #s26 .arw{ flex:0 0 auto; margin-top:57px; }
+    #s26 .arw .arrow i{ width:230px; height:4px; background:var(--accent); }
+    #s26 .arw .arrow::after{ border-width:20px; border-right:0; }
+
+    /* footer: the point of Session 4, and the handover */
+    #s26 .foot{
+      width:100%; display:flex; align-items:flex-end; gap:160px; text-align:left;
+      border-top:2px solid var(--hair); padding-top:40px;
+    }
+    #s26 .foot .ln{ flex:1; min-width:0; margin:0; font-size:40px; line-height:1.32; color:var(--muted); }
+    #s26 .foot .ln b{ color:var(--fg); font-weight:700; }
+    #s26 .ho{ flex:0 0 1360px; display:flex; align-items:center; gap:36px; }
+    #s26 .ho .sq{
+      flex:none; width:122px; height:122px; border-radius:28px; display:grid; place-items:center;
+      background:var(--accent); color:var(--ink); font-size:50px; font-weight:900;
+      font-family:var(--mono);
+    }
+    #s26 .ho .tx{ min-width:0; }
+    #s26 .ho .t1{
+      margin:0 0 8px; font-family:var(--mono); font-size:26px; letter-spacing:.22em;
+      text-transform:uppercase; color:var(--accent); font-weight:600;
+    }
+    #s26 .ho .t2{ margin:0; font-size:54px; font-weight:800; letter-spacing:-.02em; line-height:1.1; }
+    #s26 .ho .t3{ margin:10px 0 0; font-size:36px; color:var(--muted); }
+  </style>
+
+  <p class="label bare" style="letter-spacing:.26em;" data-anim="up-sm" data-delay="120">
+    Từ nhân viên số đến công ty số
+  </p>
+
+  <h1 class="mega" style="font-size:236px; margin:30px 0 0;" data-anim="up-sm" data-delay="260">
+    Doanh nghiệp <span class="mn">một người</span>.
+  </h1>
+
+  <p class="cap" style="margin-top:46px;" data-anim="up-sm" data-delay="480">
+    Một người vận hành như một team nhỏ
+  </p>
+
+  <div class="spread" style="margin-top:38px;">
+    <div class="rl" data-anim="grow-x" data-delay="560"></div>
+
+    <div class="ag you" data-anim="scale" data-delay="600">
+      <div class="av">1</div>
+      <p class="rn">Bạn</p>
+    </div>
+
+    <div class="arw" data-anim="up-sm" data-delay="700">
+      <div class="arrow"><i></i></div>
+    </div>
+
+    <div class="ag" data-anim="up-sm" data-delay="780">
+      <div class="av">T</div><p class="rn">người tư vấn</p>
+    </div>
+    <div class="ag" data-anim="up-sm" data-delay="850">
+      <div class="av">G</div><p class="rn">người ghi nhận thông tin</p>
+    </div>
+    <div class="ag" data-anim="up-sm" data-delay="920">
+      <div class="av">F</div><p class="rn">người follow-up</p>
+    </div>
+    <div class="ag" data-anim="up-sm" data-delay="990">
+      <div class="av">N</div><p class="rn">người làm nội dung</p>
+    </div>
+    <div class="ag" data-anim="up-sm" data-delay="1060">
+      <div class="av">C</div><p class="rn">người chăm khách</p>
+    </div>
+
+    <div class="ghost" data-anim="up-sm" data-delay="1160">
+      <div class="av g1"></div><div class="av g2"></div><div class="av g3"></div>
+    </div>
+  </div>
+
+  <div class="foot" style="margin-top:54px;">
+    <p class="ln" data-anim="up-sm" data-delay="1280">
+      Những nhân viên số đó cần <b>một nơi làm việc chung</b> — có dữ liệu, có quy trình,
+      <br>có lịch sử công việc và có cách phối hợp với con người.
+    </p>
+    <div class="ho" data-anim="up-sm" data-delay="1420">
+      <div class="sq">S4</div>
+      <div class="tx">
+        <p class="t1">Session 4 · tiếp theo</p>
+        <p class="t2">Công ty số đầu tiên của mọi người</p>
+        <p class="t3">anh Hoàng Nguyễn Lê</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 27-qa.html ===== -->
+<section class="slide t-paper l-stack" data-slide="27" data-title="Q&A + 7 ngày đầu tiên" id="s27">
+  <div class="deco">
+    <div class="deco-dots" style="opacity:.32;"></div>
+    <div class="deco-orb" style="right:-980px; top:-1200px; opacity:.10;"></div>
+  </div>
+  <p class="meta">Session 05 <b>·</b> Q&amp;A</p>
+
+  <style>
+    #s27{ gap:60px; }
+    #s27 .row{ display:flex; align-items:stretch; gap:80px; }
+    #s27 .z1{ flex:0 0 940px; display:flex; flex-direction:column; gap:34px; }
+    #s27 .z2{ flex:0 0 1560px; display:flex; flex-direction:column; gap:32px; }
+    #s27 .z3{ flex:1; min-width:0; }
+
+    #s27 .eb{
+      margin:0; font-family:var(--mono); font-size:28px; font-weight:600; letter-spacing:.22em;
+      text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:20px;
+    }
+    #s27 .eb i{ width:56px; height:3px; background:var(--accent); flex:none; }
+
+    #s27 .qs{ gap:26px; }
+    #s27 .qs > li{ font-size:52px; font-weight:600; line-height:1.16; }
+    #s27 .qs > li::before{ font-size:52px; }
+
+    #s27 .safe{
+      height:100%; background:var(--accent); color:var(--ink); border-radius:30px;
+      padding:44px 48px 48px; display:flex; flex-direction:column; gap:30px;
+    }
+    #s27 .safe .t{
+      margin:0; font-family:var(--mono); font-size:28px; font-weight:600; letter-spacing:.22em;
+      text-transform:uppercase; opacity:.66;
+    }
+    #s27 .safe ul{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:0; }
+    #s27 .safe li{
+      position:relative; font-size:46px; font-weight:600; line-height:1.16; letter-spacing:-.012em;
+      padding:24px 0 24px 56px; border-top:2px solid #170A0526;
+    }
+    #s27 .safe li:first-child{ border-top:none; padding-top:0; }
+    #s27 .safe li:last-child{ padding-bottom:0; }
+    #s27 .safe li b{ font-weight:800; }
+    #s27 .safe li::before{
+      content:"→"; position:absolute; left:0; top:24px;
+      font-family:var(--mono); font-weight:600; opacity:.6; font-size:38px;
+    }
+    #s27 .safe li:first-child::before{ top:0; }
+
+    #s27 .close{
+      display:flex; align-items:center; gap:80px;
+      background:var(--ink); color:var(--paper); border-radius:32px; padding:40px 56px 44px;
+    }
+    #s27 .close .lt{ flex:none; }
+    #s27 .close .lt .e{
+      margin:0 0 16px; font-family:var(--mono); font-size:28px; font-weight:600;
+      letter-spacing:.22em; text-transform:uppercase; color:var(--accent);
+    }
+    #s27 .close .n7{ margin:0; font-size:130px; font-weight:900; letter-spacing:-.038em; line-height:.88; }
+    #s27 .close .vr{ flex:1; height:3px; background:#FFFFFF26; }
+    #s27 .close .cx{ flex:none; text-align:right; }
+    #s27 .close .cx p{ margin:0; font-size:62px; font-weight:600; line-height:1.12; letter-spacing:-.018em; }
+    #s27 .close .cx .hl-bar{ background:var(--accent); }
+  </style>
+
+  <div class="row">
+    <div class="z1">
+      <p class="label" data-anim="wipe-r" data-delay="120">Session 5 · Hỏi &amp; đáp</p>
+      <h1 class="mega" style="font-size:300px; margin-top:6px;" data-anim="up-sm" data-delay="240">Q&amp;A</h1>
+    </div>
+
+    <div class="z2">
+      <p class="eb" data-anim="up-sm" data-delay="340"><i></i>Câu hỏi gợi mở</p>
+      <ul class="qs" data-anim="up-sm" data-delay="440">
+        <li>Nhân viên số lấy dữ liệu sản phẩm ở đâu?</li>
+        <li>Agent trả lời sai thì sửa thế nào?</li>
+        <li>Khi nào phải chuyển người thật?</li>
+        <li>Shop nhiều SKU thì setup ra sao?</li>
+        <li>Dùng được cho Facebook, Zalo, group không?</li>
+        <li>Làm sao kiểm soát agent không bịa giá hoặc chính sách?</li>
+      </ul>
+    </div>
+
+    <div class="z3" data-anim="up-sm" data-delay="640">
+      <div class="safe">
+        <p class="t">Cách trả lời an toàn</p>
+        <ul>
+          <li>Chưa có dữ liệu thì nói rõ <b>chưa biết, không bịa</b></li>
+          <li>Vượt phạm vi thì <b>handoff</b></li>
+          <li>Phân biệt <b>trả lời đúng</b> với <b>tạo ra đơn hàng</b></li>
+          <li>Bắt đầu <b>phạm vi nhỏ</b>, test bằng hội thoại thật</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="close" data-anim="up-sm" data-delay="860">
+    <div class="lt">
+      <p class="e">Bước tiếp theo</p>
+      <p class="n7">7 ngày đầu tiên</p>
+    </div>
+    <div class="vr" data-anim="grow-x" data-delay="1200"></div>
+    <div class="cx">
+      <p>Đưa nhân viên số vào<br><em class="hl">một tình huống thật<i class="hl-bar" data-anim="grow-x" data-delay="1520"></i></em>.</p>
+    </div>
+  </div>
+</section>
+  </div>
+</div>
+<div id="overview"></div>
+<div id="chrome">
+  <button data-nav="prev">←</button>
+  <button data-nav="next">→</button>
+  <button data-nav="overview">Overview (O)</button>
+  <button data-nav="grid">Grid (G)</button>
+  <span>F fullscreen · C fit-mode · R replay</span>
+  <span id="counter">01 / 27</span>
+</div>
+<script src="src/js/deck.js"></script>
+</body>
+</html>

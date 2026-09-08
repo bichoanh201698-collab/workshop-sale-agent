@@ -1,0 +1,407 @@
+/* ============================================================
+   WORKSHOP SALE AGENT — DESIGN SYSTEM
+   Canvas 4480 x 1120 (4:1). Every value below is authored in
+   REAL stage pixels; the engine scales the whole stage.
+   ============================================================ */
+
+:root{
+  /* ---- palette ------------------------------------------- */
+  --ink:      #0A0B0D;
+  --ink-2:    #13161B;
+  --ink-3:    #1C2128;
+  --paper:    #F6F3ED;
+  --paper-2:  #E8E3D8;
+  --paper-3:  #D8D2C4;
+
+  --accent:   #FF4D1C;   /* vermilion — energy, the "act now" colour */
+  --accent-d: #D93A0C;
+  --mint:     #00E0A4;   /* the "digital worker" colour            */
+  --amber:    #FFC53D;   /* data / facts                           */
+
+  /* resolved per-theme below */
+  --bg: var(--ink);
+  --fg: var(--paper);
+  --muted: #8A9099;
+  --hair: #FFFFFF1F;
+  --card: #FFFFFF08;
+
+  /* ---- type --------------------------------------------- */
+  --sans: "Be Vietnam Pro", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --fs-mega:  340px;   /* single-word statements      */
+  --fs-xl:    232px;   /* cover / conclusion headline */
+  --fs-l:     168px;   /* section divider             */
+  --fs-h1:    124px;   /* standard slide headline     */
+  --fs-h2:     84px;   /* card title / sub-headline   */
+  --fs-h3:     60px;
+  --fs-body:   48px;
+  --fs-sm:     38px;
+  --fs-label:  28px;   /* mono eyebrow                */
+  --fs-stat:  300px;   /* giant numerals              */
+
+  --safe-x: 200px;
+  --safe-y: 104px;
+  --col: calc((4480px - var(--safe-x) * 2 - 23 * 40px) / 24); /* 24-col grid */
+}
+
+/* ---- themes ---------------------------------------------- */
+.t-ink{
+  --bg: var(--ink); --fg: var(--paper); --muted:#8A9099;
+  --hair:#FFFFFF1F; --card:#FFFFFF0A; --card-line:#FFFFFF14;
+}
+.t-ink-2{
+  --bg: var(--ink-2); --fg: var(--paper); --muted:#909aa4;
+  --hair:#FFFFFF1F; --card:#FFFFFF0A; --card-line:#FFFFFF14;
+}
+.t-paper{
+  --bg: var(--paper); --fg: var(--ink); --muted:#5F656E;
+  --hair:#0A0B0D1F; --card:#0A0B0D06; --card-line:#0A0B0D14;
+}
+.t-accent{
+  /* --bg MUST be a literal: var(--accent) would resolve against the
+     --accent override declared below in this same block. */
+  --bg: #FF4D1C; --fg: #170A05; --muted:#5E2A16;
+  --hair:#170A0533; --card:#170A050D; --card-line:#170A0522;
+  --accent: #170A05; --mint:#170A05;
+}
+.t-mint{
+  --bg: #00E0A4; --fg: #04241A; --muted:#0C5741;   /* literal, same reason as .t-accent */
+  --hair:#04241A2E; --card:#04241A0D; --card-line:#04241A1F;
+  --accent:#04241A;
+}
+
+/* ============================================================
+   SLIDE SHELL
+   ============================================================ */
+.slide{
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  padding: var(--safe-y) var(--safe-x);
+  display: flex;
+  isolation: isolate;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+.mega, .xl, .l, .h1, .h2, .h3{
+  margin:0; font-weight:800; letter-spacing:-.028em; line-height:.94;
+  text-wrap: balance;
+}
+.mega{ font-size:var(--fs-mega); font-weight:900; letter-spacing:-.042em; line-height:.86; }
+.xl  { font-size:var(--fs-xl);   font-weight:900; letter-spacing:-.036em; line-height:.9;  }
+.l   { font-size:var(--fs-l);    font-weight:900; letter-spacing:-.032em; }
+.h1  { font-size:var(--fs-h1); }
+.h2  { font-size:var(--fs-h2);  letter-spacing:-.022em; line-height:1.02; }
+.h3  { font-size:var(--fs-h3);  letter-spacing:-.015em; line-height:1.1; font-weight:700; }
+
+.body{ margin:0; font-size:var(--fs-body); line-height:1.34; font-weight:400; color:var(--muted); max-width:26ch; }
+.body.wide{ max-width:44ch; }
+.body.on{ color:var(--fg); }
+.sm{ font-size:var(--fs-sm); line-height:1.4; color:var(--muted); margin:0; }
+
+.label{
+  font-family:var(--mono); font-size:var(--fs-label); font-weight:500;
+  letter-spacing:.3em; text-transform:uppercase; color:var(--muted);
+  margin:0; display:flex; align-items:center; gap:20px;
+}
+.label::before{
+  content:""; width:56px; height:2px; background:var(--accent); flex:none;
+}
+.label.bare::before{ display:none; }
+.label .dot{ width:14px; height:14px; border-radius:50%; background:var(--accent); }
+
+/* accent treatments for keywords ---------------------------- */
+.ac{ color:var(--accent); }
+.mn{ color:var(--mint); }
+.am{ color:var(--amber); }
+
+/* underline that swipes in: <em class="hl">x<i class="hl-bar" data-anim="grow-x"></i></em> */
+.hl{ position:relative; font-style:normal; display:inline-block; }
+.hl-bar{
+  position:absolute; left:-.04em; right:-.04em; bottom:.02em; height:.14em;
+  background:var(--accent); z-index:-1; display:block; border-radius:2px;
+}
+/* full marker fill */
+.hl.fill .hl-bar{ top:.06em; bottom:.06em; height:auto; }
+.hl.fill{ color:var(--bg); padding:0 .06em; }
+
+/* strike-through for the "không phải là..." rhetoric */
+.strike{ position:relative; color:var(--muted); }
+/* the strike rule must sit ABOVE the glyphs, unlike .hl-bar's default z-index:-1 */
+.strike .hl-bar{ top:50%; bottom:auto; height:.07em; background:currentColor; z-index:2; }
+
+/* ============================================================
+   LAYOUT ARCHETYPES  (designed for a 4:1 canvas)
+   ============================================================ */
+
+/* 1. centred statement — dividers, conclusions */
+.l-center{ flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:48px; }
+
+/* 2. headline left, payload right */
+.l-split{ gap:160px; align-items:center; }
+.l-split > .lead{ flex:0 0 1560px; display:flex; flex-direction:column; gap:44px; justify-content:center; }
+.l-split > .payload{ flex:1; min-width:0; display:flex; flex-direction:column; justify-content:center; gap:36px; }
+
+/* 3. three equal panels — the canvas's natural rhythm */
+.l-triptych{ gap:60px; align-items:stretch; }
+.l-triptych > *{ flex:1; min-width:0; }
+
+/* 4. horizontal rail of N steps / cards */
+.l-rail{ flex-direction:column; justify-content:center; gap:64px; }
+.l-rail .rail{ display:flex; gap:40px; align-items:stretch; }
+.l-rail .rail > *{ flex:1; min-width:0; }
+
+/* 5. headline band on top, content strip below */
+.l-stack{ flex-direction:column; justify-content:center; gap:72px; }
+
+/* 6. eyebrow rail on the left edge, wide content */
+.l-index{ gap:120px; }
+.l-index > .rail-v{
+  flex:0 0 300px; display:flex; flex-direction:column; justify-content:space-between;
+  border-right:2px solid var(--hair); padding-right:60px;
+}
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+
+/* card ----------------------------------------------------- */
+.card{
+  background:var(--card); border:2px solid var(--card-line);
+  border-radius:28px; padding:56px 52px;
+  display:flex; flex-direction:column; gap:26px;
+}
+.card.tall{ justify-content:space-between; min-height:520px; }
+.card .n{
+  font-family:var(--mono); font-size:36px; font-weight:600; color:var(--accent);
+  letter-spacing:.1em;
+}
+.card .k{ font-size:64px; font-weight:800; letter-spacing:-.02em; line-height:1.04; margin:0; }
+.card .v{ font-size:var(--fs-sm); color:var(--muted); line-height:1.38; margin:0; }
+.card.hot{ background:var(--accent); border-color:transparent; color:#170A05; }
+.card.hot .n, .card.hot .v{ color:#170A05; opacity:.72; }
+
+/* chip ----------------------------------------------------- */
+.chip{
+  display:inline-flex; align-items:center; gap:18px;
+  padding:22px 38px; border-radius:999px;
+  border:2px solid var(--hair); background:var(--card);
+  font-size:44px; font-weight:600; letter-spacing:-.01em; white-space:nowrap;
+}
+.chip .ic{ width:16px; height:16px; border-radius:50%; background:var(--accent); flex:none; }
+.chip.solid{ background:var(--fg); color:var(--bg); border-color:transparent; }
+.chip.solid .ic{ background:var(--accent); }
+.chipset{ display:flex; flex-wrap:wrap; gap:24px; }
+
+/* giant stat ----------------------------------------------- */
+.stat{ display:flex; flex-direction:column; gap:18px; }
+.stat .num{
+  margin:0;   /* it is often a <p>; a 1em margin here is 300px and blows the canvas */
+  font-size:var(--fs-stat); font-weight:900; line-height:.82;
+  letter-spacing:-.05em; font-variant-numeric:tabular-nums;
+  display:flex; align-items:baseline;
+}
+.stat .num .den{ font-size:.42em; font-weight:700; color:var(--muted); letter-spacing:-.02em; }
+.stat .cap{ font-size:44px; line-height:1.28; font-weight:500; max-width:22ch; margin:0; }
+.stat.a .num{ color:var(--accent); }
+.stat.b .num{ color:var(--amber); }
+.stat.c .num{ color:var(--mint); }
+
+/* numbered step list --------------------------------------- */
+.steps{ display:flex; flex-direction:column; gap:0; counter-reset:s; }
+.steps > li{
+  list-style:none; counter-increment:s;
+  display:flex; align-items:baseline; gap:40px;
+  padding:34px 0; border-top:2px solid var(--hair);
+  font-size:56px; font-weight:600; letter-spacing:-.015em;
+}
+.steps > li:last-child{ border-bottom:2px solid var(--hair); }
+.steps > li::before{
+  content:counter(s,decimal-leading-zero);
+  font-family:var(--mono); font-size:34px; font-weight:600;
+  color:var(--accent); flex:none; width:70px;
+}
+
+/* question list -------------------------------------------- */
+.qs{ display:flex; flex-direction:column; gap:26px; margin:0; padding:0; }
+.qs > li{
+  list-style:none; display:flex; gap:28px; align-items:flex-start;
+  font-size:52px; font-weight:500; line-height:1.22; letter-spacing:-.012em;
+}
+.qs > li::before{ content:"?"; font-family:var(--mono); font-weight:600; color:var(--accent); flex:none; }
+
+/* key–value grid (the HR-file slide) ----------------------- */
+.kvgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:36px 40px; }
+.kv{ display:flex; flex-direction:column; gap:14px; padding-top:28px; border-top:3px solid var(--accent); }
+.kv .k{ font-size:46px; font-weight:800; letter-spacing:-.02em; line-height:1.06; margin:0; }
+.kv .v{ font-size:32px; color:var(--muted); line-height:1.34; margin:0; }
+
+/* chat bubbles — the recurring motif of the whole deck ----- */
+.thread{ display:flex; flex-direction:column; gap:24px; }
+.bub{
+  max-width:min(1100px,100%); padding:32px 42px; border-radius:34px;
+  font-size:42px; line-height:1.26; font-weight:500;
+  background:var(--card); border:2px solid var(--card-line);
+  align-self:flex-start; border-bottom-left-radius:8px;
+}
+.bub.me{
+  align-self:flex-end; border-bottom-left-radius:34px; border-bottom-right-radius:8px;
+  background:var(--accent); color:#170A05; border-color:transparent; font-weight:600;
+}
+.bub.agent{ background:var(--mint); color:#04241A; border-color:transparent; font-weight:600; }
+.bub .who{
+  display:block; font-family:var(--mono); font-size:24px; letter-spacing:.18em;
+  text-transform:uppercase; opacity:.55; margin-bottom:12px; font-weight:600;
+}
+
+/* handoff arrow ------------------------------------------- */
+.arrow{ display:flex; align-items:center; gap:0; flex:none; }
+.arrow i{ display:block; height:3px; width:120px; background:var(--hair); }
+.arrow::after{
+  content:""; width:0; height:0; flex:none;
+  border:16px solid transparent; border-left-color:var(--accent); border-right:0;
+}
+
+/* speaker plate ------------------------------------------- */
+.speaker{ display:flex; align-items:center; gap:44px; }
+.speaker .av{
+  width:180px; height:180px; border-radius:50%; flex:none;
+  background:linear-gradient(140deg,var(--accent),var(--amber));
+  display:grid; place-items:center; font-size:78px; font-weight:900; color:#170A05;
+}
+.speaker .nm{ font-size:72px; font-weight:800; letter-spacing:-.02em; margin:0; }
+.speaker .ro{ font-size:38px; color:var(--muted); margin:0; }
+
+/* ============================================================
+   DECORATION
+   ============================================================ */
+.deco{ position:absolute; inset:0; z-index:-2; pointer-events:none; overflow:hidden; }
+
+/* 24-column hairline grid — reveals the canvas architecture */
+.deco-grid{
+  position:absolute; inset:0;
+  background-image:repeating-linear-gradient(to right,
+    var(--hair) 0 2px, transparent 2px calc(var(--col) + 40px));
+  background-position: var(--safe-x) 0;
+  background-size: calc(4480px - var(--safe-x)*2) 100%;
+  background-repeat:no-repeat;
+  opacity:.5;
+}
+
+/* soft radial glow */
+.deco-orb{
+  position:absolute; width:1800px; height:1800px; border-radius:50%;
+  background:radial-gradient(circle at center, var(--accent) 0%, transparent 62%);
+  opacity:.16; filter:blur(30px);
+  animation:float 14s var(--ease-in-out) infinite alternate;
+}
+.deco-orb.mint{ background:radial-gradient(circle at center,var(--mint) 0%,transparent 62%); }
+.deco-orb.amber{ background:radial-gradient(circle at center,var(--amber) 0%,transparent 62%); }
+@keyframes float{ from{ transform:translate3d(0,0,0) scale(1); } to{ transform:translate3d(90px,-60px,0) scale(1.12); } }
+
+/* film grain */
+.deco-noise{
+  position:absolute; inset:-50%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  opacity:.05; mix-blend-mode:overlay;
+  animation:grain 1.2s steps(3) infinite;
+}
+@keyframes grain{ 0%{transform:translate(0,0)} 33%{transform:translate(-3%,2%)} 66%{transform:translate(2%,-3%)} 100%{transform:translate(0,0)} }
+
+/* keyword marquee — earns its keep on a 4480px-wide stage */
+.deco-marquee{
+  position:absolute; left:0; right:0; display:flex; gap:0; white-space:nowrap;
+  font-family:var(--mono); font-size:150px; font-weight:600;
+  letter-spacing:-.02em; text-transform:uppercase;
+  color:transparent; -webkit-text-stroke:2px var(--hair);
+  opacity:.9;
+}
+.deco-marquee > span{ padding-right:70px; animation:marq 42s linear infinite; }
+@keyframes marq{ to{ transform:translateX(-100%); } }
+
+/* dotted matrix */
+.deco-dots{
+  position:absolute; inset:0;
+  background-image:radial-gradient(var(--hair) 3px, transparent 3px);
+  background-size:60px 60px; opacity:.7;
+}
+
+/* corner frame */
+.deco-frame{
+  position:absolute; inset:var(--safe-y) var(--safe-x);
+  border:2px solid var(--hair); border-radius:6px;
+}
+
+/* accent bleed bar at an edge */
+.deco-bar{ position:absolute; background:var(--accent); }
+.deco-bar.top{ top:0; left:0; right:0; height:14px; }
+.deco-bar.bottom{ bottom:0; left:0; right:0; height:14px; }
+.deco-bar.left{ top:0; bottom:0; left:0; width:14px; }
+
+/* pulse ring — "live / đang trả lời" */
+.pulse{ position:relative; width:24px; height:24px; flex:none; }
+.pulse i{ position:absolute; inset:0; border-radius:50%; background:currentColor; }
+.pulse::after{
+  content:""; position:absolute; inset:0; border-radius:50%;
+  border:3px solid currentColor; animation:ping 2s var(--ease-out) infinite;
+}
+@keyframes ping{ from{transform:scale(1);opacity:.9} to{transform:scale(3.4);opacity:0} }
+
+/* typing dots */
+.typing{ display:inline-flex; gap:12px; align-items:center; }
+.typing i{ width:16px; height:16px; border-radius:50%; background:currentColor; opacity:.35;
+  animation:blink 1.4s ease-in-out infinite; }
+.typing i:nth-child(2){ animation-delay:.2s } .typing i:nth-child(3){ animation-delay:.4s }
+@keyframes blink{ 0%,100%{opacity:.25;transform:translateY(0)} 50%{opacity:1;transform:translateY(-10px)} }
+
+/* slide corner meta — session + number, on every content slide */
+.meta{
+  position:absolute; top:var(--safe-y); right:var(--safe-x);
+  font-family:var(--mono); font-size:26px; letter-spacing:.24em;
+  text-transform:uppercase; color:var(--muted); display:flex; gap:28px; align-items:center;
+}
+.meta b{ color:var(--fg); font-weight:600; }
+
+/* ============================================================
+   SESSION DIVIDER — slides 03 / 11 / 19 share this one pattern
+   so the three read as a set. Only the text slots differ.
+   ============================================================ */
+.divider .head{
+  position:absolute; top:var(--safe-y); left:var(--safe-x); right:var(--safe-x);
+  display:flex; justify-content:space-between; align-items:center;
+}
+.divider .idx{
+  margin:0; font-family:var(--mono); font-size:var(--fs-label); font-weight:500;
+  letter-spacing:.3em; text-transform:uppercase; color:var(--muted);
+}
+.divider .idx b{ color:var(--fg); font-weight:600; }
+
+.divider .dtitle{
+  margin:0; font-size:216px; font-weight:900; letter-spacing:-.034em;
+  line-height:1; text-align:center;
+}
+.divider .sub{
+  margin:40px 0 0; font-family:var(--mono); font-size:40px; line-height:1.4;
+  color:var(--muted); text-align:center; max-width:3000px;
+}
+.divider .sub b{ color:var(--fg); font-weight:600; }
+
+.divider .strip{
+  position:absolute; bottom:var(--safe-y); left:var(--safe-x); right:var(--safe-x);
+  display:flex; align-items:center;
+}
+.divider .st{
+  flex:none; display:flex; align-items:center; gap:22px;
+  font-family:var(--mono); font-size:38px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; white-space:nowrap;
+}
+.divider .st i{ width:14px; height:14px; border-radius:50%; background:var(--accent); flex:none; }
+.divider .st.dim{ color:var(--muted); }
+.divider .st.dim i{ background:var(--hair); }
+.divider .cx{ flex:1; height:3px; min-width:36px; margin:0 32px; background:var(--hair); }
+
+.divider .band{ font-size:170px; }
+.divider .band.b2 > span{ animation-direction:reverse; animation-duration:56s; }

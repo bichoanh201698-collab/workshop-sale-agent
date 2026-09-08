@@ -1,0 +1,67 @@
+<section class="slide t-ink l-stack" data-slide="5" data-title="Slide 2 — Fact: 3 con số từ khảo sát" id="s05">
+  <style>
+    #s05{ gap:66px; }
+    #s05 .hd{ font-size:106px; line-height:.98; margin:0; }
+    /* the cross-out must sit ON the glyphs, not behind them */
+    #s05 .strike .hl-bar{ z-index:2; height:.085em; border-radius:0; }
+
+    #s05 .strip{ display:flex; align-items:flex-start; }
+    #s05 .strip > .stat{ flex:1; min-width:0; padding:0 70px; }
+    #s05 .strip > .stat:first-child{ padding-left:0; }
+    #s05 .strip > .stat:last-child{ padding-right:0; }
+    #s05 .strip > .stat + .stat{ border-left:3px solid var(--hair); }
+    /* theme.css never zeroes the margin on .stat .num — as a <p> it would
+       inherit a 1em (=280px) block margin and blow the 1120px height. */
+    #s05 .stat .num{ font-size:300px; margin:0; }
+    #s05 .strip > .stat{ gap:28px; }
+    #s05 .stat .cap{ max-width:1180px; font-size:48px; }
+    #s05 .stat .cap b{ color:var(--fg); font-weight:800; }
+    #s05 .stat .cap{ color:var(--muted); }
+
+    #s05 .foot{
+      display:flex; align-items:baseline; justify-content:space-between; gap:80px;
+      border-top:3px solid var(--hair); padding-top:38px;
+      font-family:var(--mono); font-size:34px; font-weight:500;
+      letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+    }
+    #s05 .foot .close{ color:var(--fg); display:flex; align-items:center; gap:26px; }
+    #s05 .foot .src{ white-space:nowrap; }
+    #s05 .foot .src b{ color:var(--am, var(--amber)); font-weight:600; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb amber" style="left:1500px; top:-1240px; opacity:.10;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 01 <b>·</b> Slide 02 <b>·</b> Fact</p>
+
+  <div style="display:flex; flex-direction:column; gap:34px;">
+    <p class="label" data-anim="wipe-r" data-delay="120">Fact <b>·</b> Khảo sát 27 người tham dự</p>
+    <h1 class="h1 hd" data-anim="up-sm" data-delay="260">
+      Bài toán không phải là <span class="strike">tìm thêm khách<i class="hl-bar" data-anim="grow-x" data-delay="900" data-dur="620"></i></span>
+      — mà là <span class="ac">tư vấn kịp số khách đang đến.</span>
+    </h1>
+  </div>
+
+  <div class="strip">
+    <div class="stat a" data-anim="up-sm" data-delay="560">
+      <span class="num">18<span class="den">/27</span></span>
+      <p class="cap">có từ <b>10 khách cần tư vấn mỗi ngày</b> trở lên</p>
+    </div>
+    <div class="stat b" data-anim="up-sm" data-delay="700">
+      <span class="num">14<span class="den">/27</span></span>
+      <p class="cap">phản hồi <b>từ 5 phút trở lên</b>, hoặc chỉ trả lời khi rảnh</p>
+    </div>
+    <div class="stat c" data-anim="up-sm" data-delay="840">
+      <span class="num">20<span class="den">/27</span></span>
+      <p class="cap"><b>ngoài giờ</b> vẫn phải tự trả lời, hoặc chưa có ai trực</p>
+    </div>
+  </div>
+
+  <div class="foot" data-anim="fade" data-delay="1080">
+    <span class="close"><span class="pulse" style="color:var(--accent);"><i></i></span>Khách đã đến rồi — đang ở trong inbox, comment, livestream</span>
+    <span class="src">Nguồn: <b>Khảo sát 27 người tham dự</b> workshop</span>
+  </div>
+</section>

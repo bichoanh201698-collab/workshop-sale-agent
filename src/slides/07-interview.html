@@ -1,0 +1,80 @@
+<section class="slide t-paper l-split" data-slide="7" data-title="Slide 4 — Interview một khách" id="s07">
+  <style>
+    #s07{ gap:140px; }
+    #s07 .lead{ flex:0 0 1900px; gap:48px; }
+    #s07 .payload{ flex:1; gap:38px; }
+    /* balance would leave ~600px of the 1900px column empty; let it fill */
+    #s07 .hd{ font-size:126px; line-height:.96; margin:0; text-wrap:wrap; }
+
+    #s07 .chipset{ align-items:center; gap:26px; }
+    #s07 .chip{ font-size:48px; padding:26px 44px; }
+    #s07 .note{
+      display:flex; flex-direction:column; gap:18px; align-items:flex-start; margin:0;
+      border-top:3px solid color-mix(in srgb, var(--fg) 22%, transparent);
+      padding-top:32px; max-width:1900px;
+      font-family:var(--mono); font-size:32px; font-weight:500;
+      letter-spacing:.06em; line-height:1.42; color:var(--muted);
+    }
+    #s07 .note b{ color:var(--fg); font-weight:600; }
+    #s07 .note .tag{
+      flex:none; color:var(--accent); font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase;
+    }
+
+    #s07 .qs > li{ font-size:58px; align-items:baseline; }
+    #s07 .qs > li + li{ border-top:2px solid var(--hair); padding-top:28px; }
+    #s07 .qs > li:last-child{ border-bottom:2px solid var(--hair); padding-bottom:28px; }
+
+    #s07 .listen{
+      align-self:flex-start; max-width:1900px; margin-top:6px;
+      background:transparent; border:3px dashed color-mix(in srgb, var(--fg) 28%, transparent);
+      color:var(--muted); font-size:38px;
+    }
+    #s07 .listen .who{ color:var(--accent); opacity:1; }
+    #s07 .divide{
+      position:absolute; left:2100px; top:var(--safe-y); bottom:var(--safe-y); width:3px;
+      background:color-mix(in srgb, var(--fg) 16%, transparent);
+    }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="left:-700px; top:-1000px; opacity:.12;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Session 01 <b>·</b> Slide 04 <b>·</b> Interview</p>
+  <span class="divide" data-anim="grow-y" data-delay="400" data-dur="1200"></span>
+
+  <div class="lead">
+    <p class="label" data-anim="wipe-r" data-delay="120">Interview <b>·</b> Một khách mời</p>
+
+    <h1 class="h1 hd" data-anim="up-sm" data-delay="260">
+      Khi khách đến nhiều hơn, shop đang phải <span class="ac">hy sinh điều gì?</span>
+    </h1>
+
+    <div class="chipset" data-anim="up-sm" data-delay="440">
+      <span class="chip solid"><i class="ic"></i>60–90 giây</span>
+      <span class="chip">một anh/chị chia sẻ</span>
+    </div>
+
+    <p class="note" data-anim="fade" data-delay="1120">
+      <span class="tag">Điều phối</span>
+      <span>Nhắc lại đúng <b>1–2 ý khách vừa nói</b>. Không thêm số liệu, không kết luận thay họ.</span>
+    </p>
+  </div>
+
+  <div class="payload">
+    <p class="label bare" style="letter-spacing:.28em;" data-anim="fade" data-delay="560">Câu hỏi đào sâu</p>
+    <ul class="qs">
+      <li data-anim="up-sm" data-delay="660">Lúc đông khách nhất, điều gì xảy ra với inbox?</li>
+      <li data-anim="up-sm" data-delay="760">Ai là người phải gánh phần việc này?</li>
+      <li data-anim="up-sm" data-delay="860">Những câu hỏi nào lặp lại nhiều nhất?</li>
+      <li data-anim="up-sm" data-delay="960">Có khi nào phải trả lời ngoài giờ, hoặc đang làm việc khác không?</li>
+    </ul>
+    <div class="bub listen" data-anim="up-sm" data-delay="1220">
+      <span class="who"><span class="pulse" style="display:inline-block; vertical-align:-4px; margin-right:16px;"><i></i></span>Anh/chị đang chia sẻ</span>
+      <span class="typing"><i></i><i></i><i></i></span>
+    </div>
+  </div>
+</section>
