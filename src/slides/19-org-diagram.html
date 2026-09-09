@@ -1,0 +1,200 @@
+<section class="slide t-paper" data-slide="19" data-title="Công ty số — sơ đồ ba tầng" id="s19">
+  <style>
+    /* ------------------------------------------------------------------
+       Slide 19 — conceptual org chart, three tiers.
+       The client's reference art is 16:9, so the tiers were deep and the
+       chart was centred. On 4:1 the headline takes the left third and the
+       diagram the right two thirds, and each tier is re-cut WIDE + SHALLOW
+       (912px of height has to hold three tiers plus two connector zones).
+       Every coordinate below is local to .dg (2720 x 912).
+       ------------------------------------------------------------------ */
+    #s19{ align-items:center; gap:130px; }
+
+    #s19 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:46px; }
+    #s19 .ttl{
+      margin:0; font-size:130px; font-weight:900;
+      letter-spacing:-.032em; line-height:1.05; text-wrap:balance;
+    }
+    #s19 .lead .sm{ max-width:20ch; }
+
+    #s19 .dg{
+      flex:none; width:2720px; height:912px; position:relative;
+      /* The foundation tier ended exactly on the safe-area edge, where the
+         .ribbon pill sits. Scale the whole chart from its top so the internal
+         geometry stays exact and the bottom tier clears the furniture. */
+      transform:scale(.93); transform-origin:top center;
+    }
+    #s19 .lay{ position:absolute; inset:0; }
+
+    /* thicker rules than the 3px default — 3px vanishes on an LED wall */
+    #s19 .conn.h{ height:5px; margin-top:-2.5px; }
+    #s19 .conn.v{ width:5px;  margin-left:-2.5px; }
+    #s19 .ah{
+      position:absolute; width:0; height:0; margin-left:-18px;
+      border:18px solid transparent; border-top-color:var(--forest); border-bottom:0;
+    }
+
+    #s19 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
+
+    /* tier 1 — the human owner. The ONLY crimson on this slide. */
+    #s19 .owner{ left:1010px; top:0; width:700px; height:152px; border-width:4px; }
+    #s19 .owner .hd{
+      height:100%; display:flex; align-items:center; justify-content:center;
+      gap:30px; font-size:54px; padding:0 40px; line-height:1.14; letter-spacing:-.01em;
+    }
+    #s19 .owner svg{ width:66px; height:66px; flex:none; }
+
+    /* tier 2 — four equal digital roles, icon over label */
+    #s19 .role{ top:372px; width:650px; height:250px; }
+    #s19 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
+    #s19 .role .ic svg{ width:116px; height:116px; }
+    #s19 .role .hd{ font-size:44px; padding:20px 24px; line-height:1.14; letter-spacing:-.008em; }
+
+    /* tier 3 — the shared working platform: solid plates, icon beside label */
+    #s19 .found{
+      top:762px; height:150px; width:880px;
+      flex-direction:row; align-items:center; gap:34px; padding:0 46px;
+      background:var(--forest); border-color:var(--forest); color:#fff;
+    }
+    #s19 .found svg{ width:76px; height:76px; flex:none; }
+    #s19 .found .t{ font-size:46px; font-weight:700; letter-spacing:-.014em; line-height:1.1; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-dots" style="opacity:.42;"></div>
+  </div>
+
+  <p class="meta">Session 04 <b>·</b> Công ty số</p>
+
+  <div class="brandbar">
+    <img src="assets/brand/logo-organizer-openclaw.png" alt="Đơn vị tổ chức — OpenClaw VN">
+    <span class="sep"></span>
+    <img src="assets/brand/logo-sponsor-clawexperts.png" alt="Đơn vị tài trợ — ClawExperts.com">
+  </div>
+
+  <div class="lead">
+    <p class="label bare" data-anim="fade" data-delay="80">Sơ đồ tổ chức</p>
+    <h1 class="ttl">
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="150" data-dur="820">Công ty số là nơi</span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="240" data-dur="820">cả đội phối hợp</span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="330" data-dur="820">làm việc</span></span>
+    </h1>
+  </div>
+
+  <div class="dg">
+
+    <!-- ===== tier 2 → tier 3 connectors (spoken first: roles reach the platform) -->
+    <div class="lay" data-anim="fade" data-delay="700" data-dur="380">
+      <i class="conn v" style="left:325px;  top:622px; height:78px;"></i>
+      <i class="conn v" style="left:1015px; top:622px; height:78px;"></i>
+      <i class="conn v" style="left:1705px; top:622px; height:78px;"></i>
+      <i class="conn v" style="left:2395px; top:622px; height:78px;"></i>
+      <i class="conn h" style="left:325px;  top:700px; width:2070px;"></i>
+      <i class="conn v" style="left:440px;  top:700px; height:45px;"></i>
+      <i class="conn v" style="left:1380px; top:700px; height:45px;"></i>
+      <i class="conn v" style="left:2320px; top:700px; height:45px;"></i>
+      <i class="ah" style="left:440px;  top:744px;"></i>
+      <i class="ah" style="left:1380px; top:744px;"></i>
+      <i class="ah" style="left:2320px; top:744px;"></i>
+    </div>
+
+    <!-- ===== tier 1 → tier 2 connectors (spoken last: the owner runs the team) -->
+    <div class="lay" data-anim="fade" data-delay="1000" data-dur="380">
+      <i class="conn v" style="left:1360px; top:152px; height:110px;"></i>
+      <i class="conn h" style="left:325px;  top:262px; width:2070px;"></i>
+      <i class="conn v" style="left:325px;  top:262px; height:93px;"></i>
+      <i class="conn v" style="left:1015px; top:262px; height:93px;"></i>
+      <i class="conn v" style="left:1705px; top:262px; height:93px;"></i>
+      <i class="conn v" style="left:2395px; top:262px; height:93px;"></i>
+      <i class="ah" style="left:325px;  top:354px;"></i>
+      <i class="ah" style="left:1015px; top:354px;"></i>
+      <i class="ah" style="left:1705px; top:354px;"></i>
+      <i class="ah" style="left:2395px; top:354px;"></i>
+    </div>
+
+    <!-- ===== tier 2 — the four digital roles -->
+    <div class="node role" style="left:0;"      data-anim="up-sm" data-delay="380" data-dur="520">
+      <div class="ic">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 5h17l9 9v29H11z"/><path d="M28 5v9h9"/>
+          <path d="M17 23h14M17 30h14M17 37h9"/>
+        </svg>
+      </div>
+      <div class="hd">Marketing</div>
+    </div>
+
+    <div class="node role" style="left:690px;"  data-anim="up-sm" data-delay="430" data-dur="520">
+      <div class="ic">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 8h6l5.5 22H37"/><path d="M13 14h30l-4.5 12H16"/>
+          <circle cx="18" cy="39" r="3.6"/><circle cx="34" cy="39" r="3.6"/>
+        </svg>
+      </div>
+      <div class="hd">Kinh doanh</div>
+    </div>
+
+    <div class="node role" style="left:1380px;" data-anim="up-sm" data-delay="480" data-dur="520">
+      <div class="ic">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="16" y="5" width="16" height="15" rx="1.5"/><path d="M24 5v6"/>
+          <rect x="4"  y="27" width="16" height="15" rx="1.5"/><path d="M12 27v6"/>
+          <rect x="28" y="27" width="16" height="15" rx="1.5"/><path d="M36 27v6"/>
+        </svg>
+      </div>
+      <div class="hd">Kho</div>
+    </div>
+
+    <div class="node role" style="left:2070px;" data-anim="up-sm" data-delay="530" data-dur="520">
+      <div class="ic">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 5h20v38H5z"/><path d="M11 14h8M11 22h8M11 30h8"/>
+          <rect x="29" y="15" width="14" height="24" rx="2.5"/>
+          <path d="M33 21.5h6"/>
+          <g fill="currentColor" stroke="none">
+            <circle cx="33.6" cy="28.5" r="1.5"/><circle cx="38.4" cy="28.5" r="1.5"/>
+            <circle cx="33.6" cy="34.5" r="1.5"/><circle cx="38.4" cy="34.5" r="1.5"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hd">Kế toán</div>
+    </div>
+
+    <!-- ===== tier 3 — the shared platform -->
+    <div class="node found" style="left:0;"      data-anim="up-sm" data-delay="760" data-dur="500">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true">
+        <ellipse cx="24" cy="12" rx="16" ry="6.4"/>
+        <path d="M8 12v11.5c0 3.5 7.2 6.4 16 6.4s16-2.9 16-6.4V12"/>
+        <path d="M8 23.5V35c0 3.5 7.2 6.4 16 6.4s16-2.9 16-6.4V23.5"/>
+      </svg>
+      <span class="t">Thông tin công ty</span>
+    </div>
+
+    <div class="node found" style="left:920px;"  data-anim="up-sm" data-delay="810" data-dur="500">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linejoin="round" aria-hidden="true">
+        <path d="M24 3.5v7M24 37.5v7M3.5 24h7M37.5 24h7M9.5 9.5l5 5M33.5 33.5l5 5M38.5 9.5l-5 5M14.5 33.5l-5 5"/>
+        <circle cx="24" cy="24" r="13.5"/><circle cx="24" cy="24" r="5"/>
+      </svg>
+      <span class="t">Công cụ làm việc</span>
+    </div>
+
+    <div class="node found" style="left:1840px;" data-anim="up-sm" data-delay="860" data-dur="500">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 13a3.5 3.5 0 0 1 3.5-3.5H18l5.5 6.5h17A3.5 3.5 0 0 1 44 19.5v18A3.5 3.5 0 0 1 40.5 41h-33A3.5 3.5 0 0 1 4 37.5z"/>
+      </svg>
+      <span class="t">Hồ sơ &amp; bàn giao</span>
+    </div>
+
+    <!-- ===== tier 1 — the human owner -->
+    <div class="node owner" data-anim="down" data-delay="1080" data-dur="520">
+      <div class="hd">
+        <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+          <circle cx="24" cy="14" r="8.4"/>
+          <path d="M7.5 43c0-9.1 7.4-16.5 16.5-16.5S40.5 33.9 40.5 43z"/>
+        </svg>
+        <span>Bạn điều hành</span>
+      </div>
+    </div>
+
+  </div>
+  <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
+</section>

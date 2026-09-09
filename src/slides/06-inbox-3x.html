@@ -1,0 +1,101 @@
+<section class="slide t-ink-2 l-split" data-slide="6" data-title="Nếu inbox tăng gấp 3" id="s06">
+  <style>
+    #s06{ gap:150px; }
+    #s06 .lead{ flex:0 0 1600px; gap:44px; }
+    #s06 .payload{ flex:1; min-width:0; flex-direction:row; gap:110px; align-items:center; }
+
+    #s06 .hd{ margin:0; font-size:100px; font-weight:900; letter-spacing:-.03em; line-height:1.06; }
+    #s06 .sb{ margin:0; font-size:38px; line-height:1.32; color:var(--muted); max-width:1560px; }
+
+    /* ---- chart column ------------------------------------------------- */
+    #s06 .chart{ flex:0 0 1240px; display:flex; flex-direction:column; gap:30px; }
+    #s06 .chart svg{ display:block; width:1240px; height:620px; }
+    #s06 .axis{ fill:none; stroke:var(--fg); stroke-width:10; stroke-linecap:square; }
+    #s06 .curve{ fill:none; stroke:var(--accent); stroke-width:8; stroke-linecap:round; }
+    #s06 .alab{
+      fill:var(--fg); font-family:var(--sans); font-size:44px; font-weight:800;
+      letter-spacing:.03em;
+    }
+
+    /* Hard requirement from the speaker guide: the curve is an illustrative
+       relationship, never presented as measured data. */
+    #s06 .illus{
+      display:flex; align-items:center; gap:24px;
+      font-family:var(--mono); font-size:29px; font-weight:600;
+      letter-spacing:.13em; text-transform:uppercase; color:var(--amber);
+      border-top:3px solid var(--hair); padding-top:26px;
+    }
+    #s06 .illus i.d{ width:14px; height:14px; border-radius:50%; background:var(--amber); flex:none; }
+
+    /* ---- conclusion column -------------------------------------------- */
+    #s06 .close{ flex:1; min-width:0; display:flex; flex-direction:column; gap:40px; }
+    #s06 .cc{ margin:0; font-size:54px; font-weight:800; letter-spacing:-.02em; line-height:1.16; }
+    #s06 .plate{
+      background:var(--card); border:2px solid var(--card-line);
+      border-left:8px solid var(--mint); border-radius:0 20px 20px 0;
+      padding:28px 38px; display:flex; flex-direction:column; gap:14px;
+    }
+    #s06 .plate .bl{
+      font-family:var(--mono); font-size:25px; font-weight:600;
+      letter-spacing:.22em; text-transform:uppercase; color:var(--mint);
+    }
+    #s06 .plate p{ margin:0; font-size:34px; line-height:1.3; font-weight:500; color:var(--fg); }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="left:-620px; top:-720px; opacity:.13;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Phần 01 <b>·</b> Câu hỏi giả định</p>
+
+  <div class="lead">
+    <p class="label" data-anim="wipe-r" data-delay="120">Câu hỏi giả định</p>
+
+    <h1 class="hd" data-anim="up-sm" data-delay="260">
+      Nếu inbox <span class="ac">tăng gấp 3</span>, shop có còn giữ được tốc độ phản hồi như hiện tại?
+    </h1>
+
+    <p class="sb" data-anim="up-sm" data-delay="440">
+      Hãy thử tưởng tượng một mùa lễ, một chiến dịch quảng cáo tốt hoặc một nội dung viral
+      khiến lượng tin nhắn tăng gấp 3 lần.
+    </p>
+  </div>
+
+  <div class="payload">
+    <div class="chart">
+      <svg viewBox="0 0 1240 620" role="img" aria-label="Minh hoạ: khách hàng càng nhiều, tốc độ phản hồi càng giảm">
+        <g data-anim="wipe-r" data-delay="620" data-dur="900">
+          <path class="axis" d="M336 46 L336 536 L1180 536"/>
+          <path class="curve" d="M430 84 C478 190 520 262 585 320 C660 388 760 428 880 452 C980 471 1062 477 1140 478"/>
+          <text class="alab" x="366" y="92" text-anchor="start">KHÁCH HÀNG</text>
+          <text class="alab" x="1180" y="606" text-anchor="end">TỐC ĐỘ PHẢN HỒI</text>
+        </g>
+      </svg>
+
+      <p class="illus" data-anim="fade" data-delay="1120">
+        <i class="d"></i>Hình minh hoạ mối quan hệ — không phải dữ liệu đo lường
+      </p>
+    </div>
+
+    <div class="close">
+      <p class="label bare" style="letter-spacing:.26em;" data-anim="fade" data-delay="760">Điều quyết định</p>
+      <p class="cc" data-anim="up-sm" data-delay="860">
+        Khi khách đến nhiều hơn, <span class="ac">năng lực tư vấn</span> mới là thứ quyết định
+        shop có giữ được cơ hội chốt đơn hay không
+      </p>
+      <div class="plate" data-anim="up-sm" data-delay="1020">
+        <span class="bl">Ranh giới</span>
+        <p>Không thay thế con người; tạo thêm một người phụ biết sản phẩm, giữ nhịp tư vấn và gọi người thật khi cần.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="brandbar">
+    <img src="assets/brand/logo-organizer-openclaw.png" alt="Đơn vị tổ chức — OpenClaw VN">
+    <span class="sep"></span>
+    <img src="assets/brand/logo-sponsor-clawexperts.png" alt="Đơn vị tài trợ — ClawExperts.com">
+  </div>
+  <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
+</section>

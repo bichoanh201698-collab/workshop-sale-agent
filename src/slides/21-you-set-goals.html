@@ -1,0 +1,76 @@
+<section class="slide t-ink l-stack" data-slide="21" data-title="Bạn giao mục tiêu. Đội ngũ thực hiện." id="s21">
+  <style>
+    /* Client art direction: headline in the top third; three short lines
+       below, laid along the reading direction, with the VERBS carrying the
+       accent. Explicitly NOT the two-column "AI chuẩn bị / bạn quyết định"
+       table — that framing shrinks the owner's role to a single approval —
+       and no human figures. So each row is one continuous line running the
+       full 4080px, verb phrase → rule → question. */
+    #s21{ justify-content:flex-start; gap:0; }
+
+    #s21 .ttl{
+      /* +26px offsets the .mask negative margin so the diacritics clear the
+         104px safe line. */
+      margin:26px 0 0; font-size:172px; font-weight:900; line-height:.94;
+      letter-spacing:-.04em; flex:none;
+    }
+
+    #s21 .rows{ margin-top:112px; display:flex; flex-direction:column; flex:none; }
+
+    #s21 .r{
+      display:flex; align-items:baseline; gap:56px;
+      padding:44px 0 46px; border-top:2px solid var(--hair);
+    }
+    #s21 .r:last-child{ border-bottom:2px solid var(--hair); }
+
+    #s21 .r .v{
+      flex:none; font-size:106px; font-weight:800; line-height:1.06;
+      letter-spacing:-.03em; white-space:nowrap;
+    }
+    #s21 .r .v b{ color:var(--accent); font-weight:900; }
+
+    /* the rule keeps the row reading as ONE line instead of two columns */
+    #s21 .r .cx{ flex:1; min-width:80px; height:3px; background:var(--hair); }
+
+    #s21 .r .q{
+      flex:none; font-size:82px; font-weight:500; line-height:1.1;
+      letter-spacing:-.02em; color:var(--muted); white-space:nowrap;
+    }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid" style="opacity:.3;"></div>
+    <div class="deco-orb" style="right:-780px; bottom:-1120px; opacity:.11;"></div>
+  </div>
+
+  <p class="meta">Từ nhân viên số <b>·</b> Đến công ty số</p>
+
+  <h1 class="ttl">
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="140" data-dur="900">Bạn giao mục tiêu. Đội ngũ thực hiện.</span></span>
+  </h1>
+
+  <div class="rows">
+    <div class="r" data-anim="up-sm" data-delay="720">
+      <span class="v"><b>Giao</b> mục tiêu</span>
+      <i class="cx"></i>
+      <span class="q">Cần đạt điều gì?</span>
+    </div>
+    <div class="r" data-anim="up-sm" data-delay="860">
+      <span class="v"><b>Xem</b> kết quả</span>
+      <i class="cx"></i>
+      <span class="q">Công việc đến đâu?</span>
+    </div>
+    <div class="r" data-anim="up-sm" data-delay="1000">
+      <span class="v"><b>Quyết định</b></span>
+      <i class="cx"></i>
+      <span class="q">Tiếp tục hay điều chỉnh?</span>
+    </div>
+  </div>
+
+  <div class="brandbar">
+    <img src="assets/brand/logo-organizer-openclaw.png" alt="OpenClaw VN">
+    <i class="sep"></i>
+    <img src="assets/brand/logo-sponsor-clawexperts.png" alt="ClawExperts.com">
+  </div>
+  <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
+</section>

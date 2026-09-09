@@ -13,10 +13,16 @@
   --paper-2:  #E8E3D8;
   --paper-3:  #D8D2C4;
 
-  --accent:   #FF4D1C;   /* vermilion — energy, the "act now" colour */
-  --accent-d: #D93A0C;
+  --brand:    #E61F28;   /* event crimson, never overridden by a theme */
+  --accent:   #E61F28;   /* ClawWeb / OpenClaw crimson — sampled from the event assets */
+  --accent-d: #B8131B;
   --mint:     #00E0A4;   /* the "digital worker" colour            */
   --amber:    #FFC53D;   /* data / facts                           */
+  /* diagram palette (slides 19–20), echoing the client's reference art:
+     forest = a digital role, crimson = the human owner or an exception. */
+  --forest:      #14503A;
+  --forest-2:    #1E6B4E;
+  --forest-pale: #DCE8E1;
 
   /* resolved per-theme below */
   --bg: var(--ink);
@@ -61,9 +67,9 @@
 .t-accent{
   /* --bg MUST be a literal: var(--accent) would resolve against the
      --accent override declared below in this same block. */
-  --bg: #FF4D1C; --fg: #170A05; --muted:#5E2A16;
-  --hair:#170A0533; --card:#170A050D; --card-line:#170A0522;
-  --accent: #170A05; --mint:#170A05;
+  --bg: #E61F28; --fg: #FFFFFF; --muted:#FFD9DB;
+  --hair:#FFFFFF3D; --card:#FFFFFF14; --card-line:#FFFFFF2E;
+  --accent: #FFFFFF; --mint:#FFFFFF;
 }
 .t-mint{
   --bg: #00E0A4; --fg: #04241A; --muted:#0C5741;   /* literal, same reason as .t-accent */
@@ -181,8 +187,9 @@
 }
 .card .k{ font-size:64px; font-weight:800; letter-spacing:-.02em; line-height:1.04; margin:0; }
 .card .v{ font-size:var(--fs-sm); color:var(--muted); line-height:1.38; margin:0; }
-.card.hot{ background:var(--accent); border-color:transparent; color:#170A05; }
-.card.hot .n, .card.hot .v{ color:#170A05; opacity:.72; }
+/* crimson is treated the same everywhere: white sits on it, like .t-accent */
+.card.hot{ background:var(--brand); border-color:transparent; color:#fff; }
+.card.hot .n, .card.hot .v{ color:#fff; opacity:.82; }
 
 /* chip ----------------------------------------------------- */
 .chip{
@@ -405,3 +412,70 @@
 
 .divider .band{ font-size:170px; }
 .divider .band.b2 > span{ animation-direction:reverse; animation-duration:56s; }
+
+
+/* ============================================================
+   EVENT FURNITURE — organiser + sponsor lockups, QR blocks
+   Assets come straight out of the client pptx (assets/brand/).
+   The logos are dark artwork on transparency, so on dark themes
+   they sit on a paper plate rather than being recoloured.
+   ============================================================ */
+.brandbar{
+  position:absolute; left:var(--safe-x); bottom:22px; z-index:3;
+  display:flex; align-items:center; gap:40px;
+}
+.brandbar img{ height:74px; width:auto; display:block; }
+.t-ink .brandbar, .t-ink-2 .brandbar, .t-accent .brandbar, .t-mint .brandbar{
+  background:var(--paper); padding:12px 26px; border-radius:14px; gap:34px;
+}
+.brandbar .sep{ width:2px; height:56px; background:#0A0B0D1F; flex:none; }
+
+/* QR block — join-the-community codes */
+.qr{ display:flex; flex-direction:column; align-items:center; gap:20px; }
+.qr img{ width:290px; height:auto; display:block; border-radius:20px; }
+.qr span{
+  font-family:var(--mono); font-size:27px; font-weight:600; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--muted); text-align:center;
+}
+
+/* ---- diagram primitives for slides 19–20 ------------------- */
+.node{
+  display:flex; flex-direction:column; align-items:stretch;
+  border:3px solid var(--forest); border-radius:22px; overflow:hidden;
+  background:#FFFFFF;
+}
+.node .hd{
+  background:var(--forest); color:#fff; text-align:center;
+  font-size:44px; font-weight:800; letter-spacing:.02em; padding:20px 24px;
+}
+.node .bd{ padding:24px 26px; text-align:center; font-size:38px; font-weight:600; color:var(--forest); line-height:1.24; }
+.node .out{ background:var(--forest-pale); color:var(--forest); text-align:center;
+  font-size:32px; font-weight:600; padding:18px 22px; line-height:1.24; }
+.node .out.warn{ background:var(--accent); color:#fff; }
+.node.owner{ border-color:var(--accent); }
+.node.owner .hd{ background:var(--accent); }
+.node.owner .bd{ color:var(--accent); }
+
+/* orthogonal connectors */
+.conn{ position:absolute; background:var(--forest); }
+.conn.h{ height:3px; } .conn.v{ width:3px; }
+.conn.on-accent{ background:var(--accent); }
+
+
+/* ---- event ribbon -----------------------------------------
+   Rebuilt in CSS rather than using ribbon-clawweb.png, whose
+   baked-in text belonged to the previous deck in the series.
+   Change the label here once and it changes on every slide.
+   ----------------------------------------------------------- */
+.ribbon{
+  position:absolute; right:var(--safe-x); bottom:22px; z-index:3;
+  display:inline-flex; align-items:center; gap:18px;
+  background:var(--brand); color:#fff;
+  padding:15px 40px; border-radius:999px;
+  font-family:var(--mono); font-size:29px; font-weight:600;
+  letter-spacing:.17em; text-transform:uppercase; white-space:nowrap;
+}
+.ribbon .dot{ width:12px; height:12px; border-radius:50%; background:#fff; opacity:.75; flex:none; }
+/* on the crimson flood the pill has to invert to stay visible */
+.t-accent .ribbon{ background:#fff; color:var(--brand); }
+.t-accent .ribbon .dot{ background:var(--brand); opacity:.6; }

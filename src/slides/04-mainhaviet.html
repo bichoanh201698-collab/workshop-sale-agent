@@ -1,0 +1,110 @@
+<section class="slide t-ink l-stack" data-slide="4" data-title="Mái Nhà Việt x3 năng suất — 3 kết quả" id="s04">
+  <style>
+    #s04{ gap:76px; }
+
+    #s04 .band{ display:flex; align-items:flex-end; gap:120px; }
+    #s04 .band .say{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
+    #s04 .hd{ margin:0; font-size:150px; font-weight:900; letter-spacing:-.034em; line-height:1.06; }
+
+    /* customer result, not a marketing promise — this plate is the framing */
+    #s04 .caveat{
+      flex:0 0 1040px; display:flex; flex-direction:column; gap:14px;
+      background:var(--card); border:2px solid var(--card-line);
+      border-left:8px solid var(--amber); border-radius:0 20px 20px 0;
+      padding:28px 38px;
+    }
+    #s04 .caveat .bl{
+      font-family:var(--mono); font-size:25px; font-weight:600;
+      letter-spacing:.22em; text-transform:uppercase; color:var(--amber);
+    }
+    #s04 .caveat p{ margin:0; font-size:34px; line-height:1.3; font-weight:500; color:var(--fg); }
+    #s04 .caveat p b{ font-weight:800; }
+
+    #s04 .strip{ display:flex; align-items:flex-start; }
+    #s04 .strip > .stat{ flex:1; min-width:0; padding:0 70px; gap:30px; }
+    #s04 .strip > .stat:first-child{ padding-left:0; }
+    #s04 .strip > .stat:last-child{ padding-right:0; }
+    #s04 .strip > .stat + .stat{ border-left:3px solid var(--hair); }
+    /* .stat .num is a <p> here; theme.css already zeroes the margin, but a
+       1em margin at 300px would blow the 1120px canvas — keep it explicit. */
+    #s04 .stat .num{ font-size:288px; margin:0; }
+    #s04 .stat .cap{ max-width:1210px; font-size:44px; color:var(--muted); }
+    #s04 .stat .cap b{ color:var(--fg); font-weight:800; }
+
+    /* ---- before → after variant of .stat ------------------------------
+       The first figure is a transition (47m25s → 6s), not a fraction, so
+       .num carries two values at different weights plus a handoff arrow
+       instead of the .den suffix the component was built for. */
+    #s04 .stat.ba .num{ gap:34px; }
+    #s04 .stat.ba .was{
+      font-size:122px; font-weight:800; color:var(--muted);
+      letter-spacing:-.025em; line-height:.82;
+    }
+    #s04 .stat.ba .now{ line-height:.82; }
+    #s04 .stat.ba .to{
+      position:relative; flex:none; align-self:center;
+      width:118px; height:9px; background:var(--hair); margin:0 8px 62px;
+    }
+    #s04 .stat.ba .to::after{
+      content:""; position:absolute; right:-2px; top:50%; transform:translateY(-50%);
+      width:0; height:0; border:25px solid transparent;
+      border-left-color:var(--accent); border-right:0;
+    }
+    #s04 .stat.ba .lbl{
+      display:flex; gap:34px; font-family:var(--mono); font-size:25px; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:-14px 0 0;
+    }
+    #s04 .stat.ba .lbl b{ color:var(--accent); font-weight:600; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb amber" style="left:1240px; top:-1300px; opacity:.10;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Phần 01 <b>·</b> Case study</p>
+
+  <div class="band">
+    <div class="say">
+      <p class="label" data-anim="wipe-r" data-delay="120">Case study <b>·</b> Mái Nhà Việt</p>
+      <h1 class="hd" data-anim="up-sm" data-delay="260">
+        Doanh nghiệp Mái Nhà Việt<br><span class="ac">x3 năng suất</span>
+      </h1>
+    </div>
+
+    <div class="caveat" data-anim="up-sm" data-delay="440">
+      <span class="bl">Kết quả khách hàng</span>
+      <p>Đây là <b>kết quả của một khách hàng cụ thể</b> — không phải cam kết kết quả cho mọi shop.</p>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="stat a ba" data-anim="up-sm" data-delay="620">
+      <p class="num">
+        <span class="was">47m25s</span>
+        <i class="to"></i>
+        <span class="now">6s</span>
+      </p>
+      <p class="lbl"><span>Trước</span><b>Sau</b></p>
+      <p class="cap">thời gian trung bình <b>1 khách hàng được trả lời</b></p>
+    </div>
+
+    <div class="stat b" data-anim="up-sm" data-delay="760">
+      <p class="num">600+</p>
+      <p class="cap"><b>khách hàng được tư vấn</b> xuyên suốt dịp lễ 1–2/9</p>
+    </div>
+
+    <div class="stat c" data-anim="up-sm" data-delay="900">
+      <p class="num">85%<span class="den">&nbsp;/ 15%</span></p>
+      <p class="cap">lọc <b>85%</b> lượng khách hàng không quan tâm · bàn giao chính xác <b>15%</b> khách hàng có nhu cầu</p>
+    </div>
+  </div>
+
+  <div class="brandbar">
+    <img src="assets/brand/logo-organizer-openclaw.png" alt="Đơn vị tổ chức — OpenClaw VN">
+    <span class="sep"></span>
+    <img src="assets/brand/logo-sponsor-clawexperts.png" alt="Đơn vị tài trợ — ClawExperts.com">
+  </div>
+  <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
+</section>

@@ -1,2 +1,10 @@
 .preview-*.html
 out/
+.DS_Store
+**/.DS_Store
+
+# Client source deck. Kept local, not published: the repo is public and the
+# pptx carries internal design briefs ("Chỉ dẫn cho team thiết kế") that were
+# never meant for an outside audience. docs/CONTENT-v2.md captures everything
+# the deck needs from it.
+*.pptx

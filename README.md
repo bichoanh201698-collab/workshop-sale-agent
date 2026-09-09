@@ -1,7 +1,11 @@
-# Workshop Sale Agent — deck HTML
+# Sales Agent Event — deck HTML
 
-Slide cho Session 1–3, người trình bày: **Tín**.
+23 slide, người trình bày: **Tín Trương** — AI Agent Expert, ClawExperts.com.
+Tổ chức: OpenClaw VN · Tài trợ: ClawExperts.com.
 Khổ canvas **4480 × 1120 px** (4:1). Deck tự scale về đúng tỉ lệ trên mọi màn hình.
+
+Nội dung và thứ tự slide lấy từ **`ClawExperts Event in August.pptx`** (bản khách đã dàn lại).
+Bản bóc tách chi tiết: `docs/CONTENT-v2.md`. Bản cũ 28 slide còn trong `src/slides/_v1/`.
 
 ## Chạy deck
 ```bash
@@ -37,7 +41,7 @@ src/css/theme.css     ← design system: màu, type scale, layout, component, tr
 src/css/engine.css    ← khung stage + animation primitives
 src/js/deck.js        ← điều hướng, animation, overview
 docs/DESIGN.md        ← quy ước design, đọc trước khi sửa slide
-docs/CONTENT.md       ← bản bóc tách nội dung 28 slide từ speaker guide
+docs/CONTENT.md       ← bản bóc tách nội dung 23 slide từ pptx của khách
 assets/fonts/         ← Be Vietnam Pro + IBM Plex Mono (self-host, chạy offline)
 ```
 
@@ -49,16 +53,22 @@ assets/fonts/         ← Be Vietnam Pro + IBM Plex Mono (self-host, chạy offl
 
 ## Xuất file ảnh / PDF
 ```bash
-for i in $(seq 1 28); do ./shot.sh $i "out/slide-$(printf %02d $i).png"; done   # PNG 4480×1120
+for i in $(seq 1 23); do ./shot.sh $i "out/slide-$(printf %02d $i).png"; done   # PNG 4480×1120
 ```
 `shot.sh` mở deck ở chế độ `?export=1` nên ảnh xuất ra không có progress bar hay thanh điều khiển.
-Bộ 28 PNG đã render sẵn trong `out/`.
+Bộ 23 PNG đã render sẵn trong `out/`.
 In PDF: mở `index.html` trong Chrome → Print → khổ ngang, tắt margin.
 Cần `.pptx` thì import bộ PNG trên vào PowerPoint với slide size 4480×1120 px.
 
+## Màu brand
+Accent là đỏ **`#E61F28`** — lấy mẫu trực tiếp từ logo và ribbon trong pptx của khách.
+Sơ đồ slide 19–20 dùng thêm xanh rừng `--forest` cho vai trò nhân viên số, và đỏ chỉ dành cho
+người điều hành hoặc trường hợp vướng mắc.
+
 ## Nguyên tắc nội dung (từ rehearsal checklist)
-- "Traffic tăng gấp 3" luôn kèm nhãn **kịch bản giả định**, không phải số liệu đã chứng minh.
+- "Inbox tăng gấp 3" luôn kèm nhãn **kịch bản giả định**; biểu đồ slide 06 là quan hệ minh hoạ, không phải số liệu đo được.
+- Số của Mái Nhà Việt là **kết quả một khách hàng báo lại**, không phải cam kết.
 - Không hứa doanh thu / số đơn — customer value ở đây là **hypothesis cần kiểm chứng**.
 - Không hứa agent thay thế hoàn toàn nhân viên thật.
 - Không mở đầu bằng thuật ngữ AI (model, RAG, vector, MCP, automation).
-- Slide cuối phải chốt bằng **bước tiếp theo 7 ngày**.
+- Slide cuối chốt bằng **câu hỏi mở** cho khán giả, không thêm ý mới.

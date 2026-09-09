@@ -1,0 +1,117 @@
+<section class="slide t-paper l-rail" data-slide="18" data-title="Mỗi nhân viên số đảm nhận một chuyên môn" id="s18">
+  <style>
+    /* Client art direction: four EQUAL, independent specialisms — not four
+       steps of a Sale Agent conversation. So: identical cards, identical
+       type sizes, no numbering, no arrows, no size hierarchy. The only
+       differences allowed are the icon, the words, and the quiet tie-back
+       on "Kinh doanh" (the role the room already met in the Sale Agent part). */
+    #s18{ justify-content:flex-start; gap:74px; }
+
+    #s18 .ttl{
+      /* +30px offsets the .mask negative margin so the diacritics on "Mỗi"
+         still clear the 104px safe line. */
+      margin:30px 0 0; font-size:156px; font-weight:900; line-height:.94;
+      letter-spacing:-.04em; flex:none;
+    }
+
+    #s18 .rail{ flex:none; }
+
+    #s18 .it{
+      background:#FFFFFF; border:2px solid #0A0B0D14;
+      border-radius:30px; padding:56px 50px 58px;
+      display:flex; flex-direction:column;
+      box-shadow:0 24px 60px -34px #0A0B0D26;
+    }
+    #s18 .it .ic{ display:block; width:160px; height:160px; flex:none; }
+    #s18 .it .k{
+      margin:42px 0 0; font-size:88px; font-weight:900; line-height:1.04;
+      letter-spacing:-.03em; color:var(--fg);
+    }
+    #s18 .it .v{
+      margin:26px 0 0; font-size:48px; font-weight:500; line-height:1.24;
+      letter-spacing:-.012em; color:var(--muted); text-wrap:pretty;
+    }
+    /* the tie-back: mono, small, one line — it must not add weight to the card */
+    #s18 .it .tie{
+      margin:32px 0 0; font-family:var(--mono); font-size:26px; font-weight:600;
+      letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
+      display:flex; align-items:center; gap:16px;
+    }
+    #s18 .it .tie i{ width:11px; height:11px; border-radius:50%; background:var(--accent); flex:none; }
+
+    #s18 .arc{
+      position:absolute; left:-520px; top:-680px;
+      width:1500px; height:1500px; border-radius:50%;
+      border:70px solid var(--accent); opacity:.1;
+    }
+  </style>
+
+  <div class="deco">
+    <div class="deco-dots" style="opacity:.45;"></div>
+    <div class="arc"></div>
+  </div>
+
+  <p class="meta">Từ nhân viên số <b>·</b> Đến công ty số</p>
+
+  <h1 class="ttl">
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="140" data-dur="900">Mỗi nhân viên số đảm nhận một chuyên môn</span></span>
+  </h1>
+
+  <div class="rail">
+    <!-- Marketing — document -->
+    <div class="it" data-anim="up-sm" data-delay="740">
+      <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#E61F28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M13 5h17l8 8v30H13z"/>
+        <path d="M30 5v8h8"/>
+        <path d="M19 23h13M19 30h13M19 37h8"/>
+      </svg>
+      <p class="k">Marketing</p>
+      <p class="v">Chuẩn bị nội dung chiến dịch</p>
+    </div>
+
+    <!-- Kinh doanh — order slip -->
+    <div class="it" data-anim="up-sm" data-delay="620">
+      <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#E61F28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M13 5h22v32l-4.4 3.4L26.2 37l-4.4 3.4L17.4 37 13 40.4z"/>
+        <path d="M19 16h10M19 25h10"/>
+      </svg>
+      <p class="k">Kinh doanh</p>
+      <p class="v">Tư vấn và lập đơn hàng</p>
+      <p class="tie"><i></i>Đã gặp ở phần trước</p>
+    </div>
+
+    <!-- Kho — boxes -->
+    <div class="it" data-anim="up-sm" data-delay="860">
+      <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#E61F28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="16.5" y="7" width="15" height="15" rx="1.6"/>
+        <path d="M16.5 12h15"/>
+        <rect x="6" y="26" width="15" height="15" rx="1.6"/>
+        <path d="M6 31h15"/>
+        <rect x="27" y="26" width="15" height="15" rx="1.6"/>
+        <path d="M27 31h15"/>
+      </svg>
+      <p class="k">Kho</p>
+      <p class="v">Kiểm tra tồn, chuẩn bị phiếu xuất</p>
+    </div>
+
+    <!-- Kế toán — ledger -->
+    <div class="it" data-anim="up-sm" data-delay="980">
+      <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#E61F28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M24 13.5 9 10v27l15 3.5z"/>
+        <path d="M24 13.5 39 10v27l-15 3.5z"/>
+        <path d="M24 13.5v27"/>
+        <path d="M13.5 20.5h6.5M13.5 27h6.5"/>
+        <path d="m28 27.5 3 3 6.5-7.5"/>
+      </svg>
+      <p class="k">Kế toán</p>
+      <p class="v">Đối soát đơn và thanh toán</p>
+    </div>
+  </div>
+
+  <div class="brandbar">
+    <img src="assets/brand/logo-organizer-openclaw.png" alt="OpenClaw VN">
+    <i class="sep"></i>
+    <img src="assets/brand/logo-sponsor-clawexperts.png" alt="ClawExperts.com">
+  </div>
+  <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
+</section>

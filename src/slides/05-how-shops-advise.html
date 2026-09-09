@@ -1,0 +1,115 @@
+<section class="slide t-paper l-split" data-slide="5" data-title="Cách các shop đang tư vấn khách hàng" id="s05">
+  <style>
+    #s05{ gap:150px; }
+    #s05 .lead{ flex:0 0 1980px; gap:46px; }
+    #s05 .payload{ flex:1; min-width:0; }
+
+    #s05 .hd{ margin:0; font-size:118px; font-weight:900; letter-spacing:-.032em; line-height:1.06; }
+    #s05 .sb{ margin:0; font-size:41px; line-height:1.32; color:var(--muted); max-width:1900px; }
+    #s05 .sb b{ color:var(--fg); font-weight:700; }
+
+    /* the highlight is the sentence the room must leave with */
+    #s05 .punch{
+      margin:0; font-size:68px; font-weight:800; letter-spacing:-.022em; line-height:1.14;
+      max-width:1930px; border-top:4px solid var(--accent); padding-top:34px;
+    }
+    #s05 .punch .strike .hl-bar{ z-index:2; height:.085em; border-radius:0; }
+
+    /* Open question 3 — the pptx marks this dashboard "ngày cuối sẽ fill hình".
+       The panel is built as type at exactly the size a screenshot can replace. */
+    #s05 .panel{
+      background:#FFFFFF; border:2px solid #0A0B0D14; border-radius:30px;
+      box-shadow:0 26px 64px -36px #0A0B0D26;
+      padding:40px 48px 30px; display:flex; flex-direction:column;
+      min-height:690px;
+    }
+    #s05 .panel .ph{
+      display:flex; align-items:center; justify-content:space-between; gap:40px;
+      padding-bottom:26px; border-bottom:2px solid #0A0B0D14;
+    }
+    #s05 .rows{ flex:1; display:flex; flex-direction:column; }
+    #s05 .r{
+      flex:1; display:flex; align-items:center; gap:44px;
+      border-bottom:2px solid #0A0B0D0F;
+    }
+    #s05 .r .n{
+      flex:0 0 330px; margin:0; font-size:112px; font-weight:900; line-height:1;
+      letter-spacing:-.045em; font-variant-numeric:tabular-nums; color:var(--accent);
+    }
+    #s05 .r .n .d{ font-size:.44em; font-weight:700; color:var(--muted); letter-spacing:-.02em; }
+    #s05 .r:nth-child(2) .n{ color:#B8860B; }
+    #s05 .r:nth-child(3) .n{ color:#0E7A5A; }
+    #s05 .r .c{ margin:0; font-size:41px; font-weight:600; line-height:1.24; letter-spacing:-.012em; }
+    #s05 .r .c b{ font-weight:800; }
+
+    #s05 .pf{
+      display:flex; align-items:baseline; justify-content:space-between; gap:40px;
+      padding-top:22px; font-family:var(--mono); font-size:25px; font-weight:500;
+      letter-spacing:.11em; text-transform:uppercase; color:var(--muted);
+    }
+    #s05 .pf b{ color:var(--fg); font-weight:600; }
+    #s05 .pf .slot{ color:var(--accent); opacity:.75; white-space:nowrap; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="left:-780px; bottom:-1220px; opacity:.11;"></div>
+  </div>
+
+  <p class="meta">Phần 01 <b>·</b> Bối cảnh</p>
+
+  <div class="lead">
+    <p class="label" data-anim="wipe-r" data-delay="120">Bối cảnh</p>
+
+    <h1 class="hd" data-anim="up-sm" data-delay="260">
+      Cùng nhìn lại cách các shop đang <span class="ac">tư vấn khách hàng</span>
+    </h1>
+
+    <p class="sb" data-anim="up-sm" data-delay="440">
+      Mỗi shop có ngành hàng, quy mô và cách vận hành khác nhau. Nhưng đều gặp nhau ở một điểm:
+      <b>khách hàng đang đến bằng
+      <em class="hl">những cuộc trò chuyện.<i class="hl-bar" data-anim="grow-x" data-delay="1180" data-dur="640"></i></em></b>
+    </p>
+
+    <p class="punch" data-anim="up-sm" data-delay="620">
+      Bài toán không phải là <span class="strike">tìm thêm khách<i class="hl-bar" data-anim="grow-x" data-delay="1320" data-dur="620"></i></span>
+      — mà là <span class="ac">tư vấn kịp số khách đang đến.</span>
+    </p>
+  </div>
+
+  <div class="payload">
+    <div class="panel" data-anim="up-sm" data-delay="520">
+      <div class="ph">
+        <p class="label bare" style="letter-spacing:.24em; color:var(--fg);">Khảo sát người tham dự</p>
+        <p class="label bare" style="letter-spacing:.2em; margin:0;">n = 27</p>
+      </div>
+
+      <div class="rows">
+        <div class="r">
+          <p class="n">18<span class="d">/27</span></p>
+          <p class="c">người có từ <b>10 khách cần tư vấn mỗi ngày</b> trở lên</p>
+        </div>
+        <div class="r">
+          <p class="n">14<span class="d">/27</span></p>
+          <p class="c">người phản hồi <b>từ 5 phút trở lên</b> hoặc chỉ trả lời khi rảnh</p>
+        </div>
+        <div class="r" style="border-bottom:0;">
+          <p class="n">20<span class="d">/27</span></p>
+          <p class="c">người <b>ngoài giờ</b> vẫn phải tự trả lời hoặc chưa có ai trực</p>
+        </div>
+      </div>
+
+      <div class="pf">
+        <span>Nguồn: <b>khảo sát 27 người tham dự</b> workshop</span>
+        <span class="slot">Slot ảnh dashboard · fill ngày cuối</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="brandbar">
+    <img src="assets/brand/logo-organizer-openclaw.png" alt="Đơn vị tổ chức — OpenClaw VN">
+    <span class="sep"></span>
+    <img src="assets/brand/logo-sponsor-clawexperts.png" alt="Đơn vị tài trợ — ClawExperts.com">
+  </div>
+  <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
+</section>

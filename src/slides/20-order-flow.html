@@ -1,0 +1,209 @@
+<section class="slide t-paper" data-slide="20" data-title="Một đơn hàng cần nhiều chuyên môn" id="s20">
+  <style>
+    /* ------------------------------------------------------------------
+       Slide 20 — fork / join: one order, three specialisms, one result.
+
+       The client's reference art is 16:9, so the fork had to be crammed
+       vertically and the join arrows ran back uphill. On 4:1 the same
+       graph runs LEFT TO RIGHT: headline column (900px) then a 3100px
+       diagram in four bands — origin · fork · the two parallel branches ·
+       join · result. Every coordinate below is local to .dg (3100 x 912).
+
+       Sibling slide 19 sets the visual language: white .node cards with a
+       forest header strip, icon over label, 5px connectors, 18px solid
+       arrowheads. Reused verbatim here, and the Kho / Kế toán icons are
+       literally slide 19's so the pair reads as one system.
+
+       Colour discipline: forest = a digital role. Crimson appears exactly
+       once, on the "Có vướng mắc" result line, and nowhere else.
+
+       "Trạng thái đơn hàng" must NOT read as a fourth employee, so it is
+       not a .node at all: no header strip, no icon-over-label, no white
+       body. It is a solid forest plate with a 44px radius holding two
+       capsule outcomes — a different shape family from the role cards.
+       ------------------------------------------------------------------ */
+    #s20{ align-items:center; gap:80px; }
+
+    /* ---- headline column ---------------------------------------- */
+    #s20 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:44px; }
+    #s20 .ttl{
+      margin:0; font-size:124px; font-weight:900;
+      letter-spacing:-.032em; line-height:1.06;
+    }
+    #s20 .cap{
+      margin:0; font-size:46px; font-weight:600; line-height:1.24;
+      letter-spacing:-.014em;
+    }
+    #s20 .note{
+      margin:0; display:flex; align-items:center; gap:20px;
+      font-family:var(--mono); font-size:30px; font-weight:500;
+      letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+    }
+    #s20 .note i{ width:52px; height:3px; background:var(--hair); flex:none; }
+
+    /* ---- diagram frame ------------------------------------------ */
+    #s20 .dg{ flex:none; width:3100px; height:912px; position:relative; }
+
+    /* 3px vanishes on an LED wall — same 5px rules as slide 19 */
+    #s20 .conn.h{ height:5px; margin-top:-2.5px; }
+    #s20 .conn.v{ width:5px;  margin-left:-2.5px; }
+    /* grow-y defaults to origin bottom (grows up); .gd grows downward */
+    #s20 .conn.gd[data-anim="grow-y"]{ transform-origin:top center; }
+    #s20 .ar{
+      position:absolute; width:0; height:0; margin-top:-18px;
+      border:18px solid transparent; border-left-color:var(--forest); border-right:0;
+    }
+
+    /* ---- the three role cards ----------------------------------- */
+    #s20 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
+    #s20 .role{ width:740px; height:374px; }
+    #s20 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
+    #s20 .role .ic svg{ width:104px; height:104px; }
+    #s20 .role .hd{ font-size:46px; padding:18px 24px; line-height:1.14; letter-spacing:-.004em; }
+    #s20 .role .bd{ font-size:38px; padding:20px 26px; line-height:1.2; }
+    #s20 .role .out{ font-size:32px; padding:16px 22px; line-height:1.2; }
+
+    /* the order token, repeated identically on BOTH fork arms — the
+       client asked that the two branches visibly receive the same order */
+    #s20 .tok{
+      position:absolute; width:150px; height:52px;
+      display:flex; align-items:center; justify-content:center;
+      background:var(--forest-pale); color:var(--forest);
+      border-radius:999px;
+      font-family:var(--mono); font-size:30px; font-weight:600; letter-spacing:.04em;
+    }
+
+    /* ---- the result plate — deliberately NOT a .node ------------- */
+    #s20 .res{
+      position:absolute; width:940px; height:336px;
+      display:flex; flex-direction:column; gap:26px;
+      padding:34px; border-radius:44px;
+      background:var(--forest); color:#fff;
+      box-shadow:0 30px 66px -30px #14503A73;
+    }
+    #s20 .res .top{ height:82px; display:flex; align-items:center; gap:28px; flex:none; }
+    #s20 .res .top svg{ width:76px; height:76px; flex:none; }
+    #s20 .res .top b{ font-size:52px; font-weight:800; letter-spacing:-.016em; line-height:1.1; }
+    #s20 .res .pill{
+      height:72px; flex:none; border-radius:999px;
+      display:flex; align-items:center; gap:22px; padding:0 34px;
+      font-size:36px; font-weight:600; line-height:1.16; letter-spacing:-.008em;
+      background:var(--forest-pale); color:var(--forest);
+    }
+    #s20 .res .pill s{ width:18px; height:18px; border-radius:50%; background:currentColor; flex:none; }
+    /* the only crimson on the slide */
+    #s20 .res .pill.warn{ background:var(--accent); color:#fff; }
+  </style>
+
+  <div class="deco">
+    <div class="deco-dots" style="opacity:.42;"></div>
+  </div>
+
+  <p class="meta">Từ nhân viên số <b>·</b> Đến công ty số</p>
+
+  <div class="brandbar">
+    <img src="assets/brand/logo-organizer-openclaw.png" alt="Đơn vị tổ chức — OpenClaw VN">
+    <span class="sep"></span>
+    <img src="assets/brand/logo-sponsor-clawexperts.png" alt="Đơn vị tài trợ — ClawExperts.com">
+  </div>
+
+  <div class="lead">
+    <p class="label bare" data-anim="fade" data-delay="80">Sơ đồ phối hợp</p>
+    <h1 class="ttl">
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="150" data-dur="820">Một đơn hàng</span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="240" data-dur="820">cần nhiều</span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="330" data-dur="820">chuyên môn</span></span>
+    </h1>
+    <p class="cap" data-anim="up-sm" data-delay="500">Cùng một đơn hàng.<br>Mỗi nhân viên một chuyên môn.</p>
+    <p class="note" data-anim="fade" data-delay="600"><i></i>Tình huống minh họa</p>
+  </div>
+
+  <div class="dg">
+
+    <!-- ===== 1 · origin — Kinh doanh raises the order -->
+    <div class="node role" style="left:0; top:269px;" data-anim="up-sm" data-delay="300" data-dur="480">
+      <div class="ic">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 3h14l7.5 7.5V27H4z"/><path d="M18 3v7.5h7.5"/>
+          <path d="M9.5 14h9.5M9.5 20h6"/>
+          <path d="M20.6 29h3.8l3.4 11.4h14"/>
+          <path d="M25.6 32.4h19.8l-2.7 6.5H27.6"/>
+          <circle cx="30" cy="43.6" r="1.9"/><circle cx="40.4" cy="43.6" r="1.9"/>
+        </svg>
+      </div>
+      <div class="hd">Kinh doanh</div>
+      <div class="bd">Lập đơn hàng</div>
+      <div class="out">Đơn A: mã hàng, số lượng</div>
+    </div>
+
+    <!-- ===== 2 · the fork — one stem, then two mirrored arms.
+             Both arms grow at the same delay so neither branch reads
+             as coming first. -->
+    <i class="conn h" style="left:740px; top:456px; width:120px;" data-anim="grow-x" data-delay="620" data-dur="200"></i>
+    <i class="conn v" style="left:860px; top:204px; height:252px;" data-anim="grow-y" data-delay="780" data-dur="220"></i>
+    <i class="conn v gd" style="left:860px; top:456px; height:252px;" data-anim="grow-y" data-delay="780" data-dur="220"></i>
+    <i class="conn h" style="left:860px; top:204px; width:222px;" data-anim="grow-x" data-delay="940" data-dur="240"></i>
+    <i class="conn h" style="left:860px; top:708px; width:222px;" data-anim="grow-x" data-delay="940" data-dur="240"></i>
+    <i class="ar" style="left:1082px; top:204px;" data-anim="fade" data-delay="1180" data-dur="180"></i>
+    <i class="ar" style="left:1082px; top:708px;" data-anim="fade" data-delay="1180" data-dur="180"></i>
+    <span class="tok" style="left:895px; top:138px;" data-anim="scale" data-delay="1120" data-dur="300">Đơn A</span>
+    <span class="tok" style="left:895px; top:642px;" data-anim="scale" data-delay="1120" data-dur="300">Đơn A</span>
+
+    <!-- ===== 3 · the two parallel branches — IDENTICAL delay, they land together -->
+    <div class="node role" style="left:1100px; top:17px;" data-anim="up-sm" data-delay="980" data-dur="480">
+      <div class="ic">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="16" y="5" width="16" height="15" rx="1.5"/><path d="M24 5v6"/>
+          <rect x="4"  y="27" width="16" height="15" rx="1.5"/><path d="M12 27v6"/>
+          <rect x="28" y="27" width="16" height="15" rx="1.5"/><path d="M36 27v6"/>
+        </svg>
+      </div>
+      <div class="hd">Kho</div>
+      <div class="bd">Kiểm tra tồn, lập phiếu xuất</div>
+      <div class="out">Hàng đủ hay thiếu?</div>
+    </div>
+
+    <div class="node role" style="left:1100px; top:521px;" data-anim="up-sm" data-delay="980" data-dur="480">
+      <div class="ic">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 5h20v38H5z"/><path d="M11 14h8M11 22h8M11 30h8"/>
+          <rect x="29" y="15" width="14" height="24" rx="2.5"/>
+          <path d="M33 21.5h6"/>
+          <g fill="currentColor" stroke="none">
+            <circle cx="33.6" cy="28.5" r="1.5"/><circle cx="38.4" cy="28.5" r="1.5"/>
+            <circle cx="33.6" cy="34.5" r="1.5"/><circle cx="38.4" cy="34.5" r="1.5"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hd">Kế toán</div>
+      <div class="bd">Đối chiếu đơn và thanh toán</div>
+      <div class="out">Đã thu hay còn thiếu?</div>
+    </div>
+
+    <!-- ===== 4 · the join — the two branches converge on one line -->
+    <i class="conn h" style="left:1840px; top:204px; width:160px;" data-anim="grow-x" data-delay="1400" data-dur="220"></i>
+    <i class="conn h" style="left:1840px; top:708px; width:160px;" data-anim="grow-x" data-delay="1400" data-dur="220"></i>
+    <i class="conn v gd" style="left:2000px; top:204px; height:252px;" data-anim="grow-y" data-delay="1540" data-dur="200"></i>
+    <i class="conn v"    style="left:2000px; top:456px; height:252px;" data-anim="grow-y" data-delay="1540" data-dur="200"></i>
+    <i class="conn h" style="left:2000px; top:456px; width:142px;" data-anim="grow-x" data-delay="1680" data-dur="180"></i>
+    <i class="ar" style="left:2142px; top:456px;" data-anim="fade" data-delay="1880" data-dur="160"></i>
+
+    <!-- ===== 5 · the result — a plate of outcomes, not an employee -->
+    <div class="res" style="left:2160px; top:288px;" data-anim="up-sm" data-delay="1700" data-dur="420">
+      <div class="top">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="10" y="9" width="28" height="35" rx="3.5"/>
+          <path d="M18.5 9V7a2.5 2.5 0 0 1 2.5-2.5h6A2.5 2.5 0 0 1 29.5 7v2"/>
+          <circle cx="24" cy="27" r="9.5"/>
+          <path d="M19.8 27.2l3.2 3.4 5.6-6.2"/>
+        </svg>
+        <b>Trạng thái đơn hàng</b>
+      </div>
+      <span class="pill"><s></s>Đủ điều kiện xử lý tiếp</span>
+      <span class="pill warn" data-anim="up-sm" data-delay="1960" data-dur="240"><s></s>Có vướng mắc: chuyển người phụ trách</span>
+    </div>
+
+  </div>
+
+  <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
+</section>
