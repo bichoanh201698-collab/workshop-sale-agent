@@ -80,32 +80,119 @@
   </div>
 </section>
 
-<!-- ===== 02-message.html ===== -->
-<section class="slide t-accent l-center" data-slide="2" data-title="Thông điệp xuyên suốt" id="s02">
+<!-- ===== 02-agenda.html ===== -->
+<section class="slide t-paper" data-slide="2" data-title="Agenda — 5 phần" id="s02">
+  <style>
+    #s02{ flex-direction:column; justify-content:flex-start; }
+
+    #s02 .top{ display:flex; align-items:flex-end; gap:64px; flex:none; }
+    #s02 .ttl{
+      margin:0; font-size:238px; font-weight:900; line-height:.9;
+      letter-spacing:-.045em;
+    }
+
+    #s02 .row{ display:flex; gap:44px; margin-top:60px; align-items:stretch; flex:1; min-height:0; }
+
+    #s02 .it{
+      flex:1; min-width:0;
+      background:#FFFFFF; border:2px solid #0A0B0D14;
+      border-radius:30px; padding:48px 46px 52px;
+      display:flex; flex-direction:column;
+      box-shadow:0 24px 60px -34px #0A0B0D26;
+    }
+    #s02 .it .bar{
+      display:block; width:96px; height:9px; border-radius:99px;
+      background:var(--accent); transform-origin:left center;
+    }
+    #s02 .it .n{
+      margin:30px 0 0; font-size:128px; font-weight:900; line-height:.86;
+      letter-spacing:-.05em; color:var(--accent); font-variant-numeric:tabular-nums;
+    }
+    #s02 .it .t{
+      margin:32px 0 0; font-size:47px; font-weight:700; line-height:1.24;
+      letter-spacing:-.014em; color:var(--fg); text-wrap:pretty;
+    }
+    /* echo of the arc motif in the reference layout */
+    #s02 .arc{
+      position:absolute; right:-460px; bottom:-620px;
+      width:1560px; height:1560px; border-radius:50%;
+      border:76px solid var(--accent); opacity:.14;
+    }
+    #s02 .arc.two{
+      right:-300px; bottom:-800px; width:1180px; height:1180px;
+      border-width:52px; opacity:.1;
+    }
+  </style>
+
+  <div class="deco">
+    <div class="deco-dots" style="opacity:.5;"></div>
+    <div class="arc"></div>
+    <div class="arc two"></div>
+  </div>
+
+  <p class="meta">Agenda <b>·</b> 5 phần</p>
+
+  <div class="top">
+    <h1 class="ttl">
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="160" data-dur="960">Agenda</span></span>
+    </h1>
+  </div>
+
+  <div class="row">
+    <div class="it" data-anim="up-sm" data-delay="560">
+      <i class="bar" data-anim="grow-x" data-delay="700" data-dur="420"></i>
+      <p class="n">01</p>
+      <p class="t">Case study: Mái Nhà Việt x3 năng suất với Sale Agent</p>
+    </div>
+    <div class="it" data-anim="up-sm" data-delay="660">
+      <i class="bar" data-anim="grow-x" data-delay="800" data-dur="420"></i>
+      <p class="n">02</p>
+      <p class="t">Trước khi tạo nhân viên số, hãy hiểu họ sẽ làm gì</p>
+    </div>
+    <div class="it" data-anim="up-sm" data-delay="760">
+      <i class="bar" data-anim="grow-x" data-delay="900" data-dur="420"></i>
+      <p class="n">03</p>
+      <p class="t">Training nhân viên số đầu tiên của bạn</p>
+    </div>
+    <div class="it" data-anim="up-sm" data-delay="860">
+      <i class="bar" data-anim="grow-x" data-delay="1000" data-dur="420"></i>
+      <p class="n">04</p>
+      <p class="t">Từ nhân viên số đến doanh nghiệp số</p>
+    </div>
+    <div class="it" data-anim="up-sm" data-delay="960">
+      <i class="bar" data-anim="grow-x" data-delay="1100" data-dur="420"></i>
+      <p class="n">05</p>
+      <p class="t">Hỏi đáp &amp; Thảo luận tự do (QnA)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03-message.html ===== -->
+<section class="slide t-accent l-center" data-slide="3" data-title="Thông điệp xuyên suốt" id="s03">
   <style>
     /* theme.css .t-accent computes --bg from var(--accent) *after* shadowing
        --accent to near-black, so the flood collapses to bg == fg.
        Restore the vermilion flood locally; --accent stays dark on purpose
        (that is what makes .hl.fill / hairlines read on this theme). */
-    #s02{ gap:0; }
+    #s03{ gap:0; }
     /* mask-up needs an overflow:hidden line box; the padding/negative-margin
        pair buys headroom for Vietnamese diacritics without moving the line. */
-    #s02 .ln{ display:block; overflow:hidden;
+    #s03 .ln{ display:block; overflow:hidden;
               padding:.24em 0 .14em; margin:-.24em 0 -.14em; }
-    #s02 .mega{ font-size:184px; line-height:1.12; letter-spacing:-.04em; }
+    #s03 .mega{ font-size:184px; line-height:1.12; letter-spacing:-.04em; }
     /* the marker fill must clear ă / ự / ấ above and the dot under ự below */
-    #s02 .hl.fill .hl-bar{ top:-.17em; bottom:-.15em; border-radius:6px; }
-    #s02 .hl.fill{ padding:0 .05em; }
-    #s02 .rule{ align-self:stretch; height:3px;
+    #s03 .hl.fill .hl-bar{ top:-.17em; bottom:-.15em; border-radius:6px; }
+    #s03 .hl.fill{ padding:0 .05em; }
+    #s03 .rule{ align-self:stretch; height:3px;
                background:color-mix(in srgb, var(--fg) 40%, transparent); }
-    #s02 .keys{
+    #s03 .keys{
       align-self:stretch; display:flex; justify-content:space-between; align-items:center;
       border-top:3px solid color-mix(in srgb, var(--fg) 40%, transparent); padding-top:40px;
       font-family:var(--mono); font-size:34px; font-weight:600;
       letter-spacing:.34em; text-transform:uppercase;
     }
-    #s02 .keys span{ display:flex; align-items:center; gap:26px; }
-    #s02 .keys .d{ width:12px; height:12px; border-radius:50%; background:var(--fg); opacity:.55; }
+    #s03 .keys span{ display:flex; align-items:center; gap:26px; }
+    #s03 .keys .d{ width:12px; height:12px; border-radius:50%; background:var(--fg); opacity:.55; }
   </style>
 
   <div class="deco">
@@ -138,8 +225,8 @@
   </div>
 </section>
 
-<!-- ===== 03-session1.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="3" data-title="Session 01 — Shop đang tư vấn khách như thế nào?" id="s03">
+<!-- ===== 04-session1.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="4" data-title="Session 01 — Shop đang tư vấn khách như thế nào?" id="s04">
   <div class="deco">
     <div class="deco-grid"></div>
     <div class="deco-marquee band" style="top:172px;">
@@ -170,27 +257,27 @@
   </div>
 </section>
 
-<!-- ===== 04-intro.html ===== -->
-<section class="slide t-paper l-split" data-slide="4" data-title="Slide 1 — Intro &amp; làm quen" id="s04">
+<!-- ===== 05-intro.html ===== -->
+<section class="slide t-paper l-split" data-slide="5" data-title="Slide 1 — Intro &amp; làm quen" id="s05">
   <style>
-    #s04 .lead{ flex:0 0 1720px; gap:52px; }
-    #s04 .payload{ gap:52px; }
-    #s04 .hd{ font-size:134px; }
-    #s04 .qrow{ display:flex; align-items:center; gap:36px; }
-    #s04 .qrow .chip{ font-size:56px; padding:30px 50px; }
-    #s04 .qrow .ln{
+    #s05 .lead{ flex:0 0 1720px; gap:52px; }
+    #s05 .payload{ gap:52px; }
+    #s05 .hd{ font-size:134px; }
+    #s05 .qrow{ display:flex; align-items:center; gap:36px; }
+    #s05 .qrow .chip{ font-size:56px; padding:30px 50px; }
+    #s05 .qrow .ln{
       flex:1; height:3px; min-width:60px;
       background:color-mix(in srgb, var(--fg) 20%, transparent);
     }
-    #s04 .qn{
+    #s05 .qn{
       flex:none; font-family:var(--mono); font-size:50px; font-weight:600;
       letter-spacing:.1em; color:var(--muted);
     }
-    #s04 .divide{
+    #s05 .divide{
       position:absolute; left:2000px; top:var(--safe-y); bottom:var(--safe-y); width:3px;
       background:color-mix(in srgb, var(--fg) 16%, transparent);
     }
-    #s04 .note{
+    #s05 .note{
       display:flex; align-items:center; gap:26px; margin:14px 0 0;
       font-family:var(--mono); font-size:34px; font-weight:500;
       letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
@@ -242,36 +329,36 @@
   </div>
 </section>
 
-<!-- ===== 05-fact.html ===== -->
-<section class="slide t-ink l-stack" data-slide="5" data-title="Slide 2 — Fact: 3 con số từ khảo sát" id="s05">
+<!-- ===== 06-fact.html ===== -->
+<section class="slide t-ink l-stack" data-slide="6" data-title="Slide 2 — Fact: 3 con số từ khảo sát" id="s06">
   <style>
-    #s05{ gap:66px; }
-    #s05 .hd{ font-size:106px; line-height:.98; margin:0; }
+    #s06{ gap:66px; }
+    #s06 .hd{ font-size:106px; line-height:.98; margin:0; }
     /* the cross-out must sit ON the glyphs, not behind them */
-    #s05 .strike .hl-bar{ z-index:2; height:.085em; border-radius:0; }
+    #s06 .strike .hl-bar{ z-index:2; height:.085em; border-radius:0; }
 
-    #s05 .strip{ display:flex; align-items:flex-start; }
-    #s05 .strip > .stat{ flex:1; min-width:0; padding:0 70px; }
-    #s05 .strip > .stat:first-child{ padding-left:0; }
-    #s05 .strip > .stat:last-child{ padding-right:0; }
-    #s05 .strip > .stat + .stat{ border-left:3px solid var(--hair); }
+    #s06 .strip{ display:flex; align-items:flex-start; }
+    #s06 .strip > .stat{ flex:1; min-width:0; padding:0 70px; }
+    #s06 .strip > .stat:first-child{ padding-left:0; }
+    #s06 .strip > .stat:last-child{ padding-right:0; }
+    #s06 .strip > .stat + .stat{ border-left:3px solid var(--hair); }
     /* theme.css never zeroes the margin on .stat .num — as a <p> it would
        inherit a 1em (=280px) block margin and blow the 1120px height. */
-    #s05 .stat .num{ font-size:300px; margin:0; }
-    #s05 .strip > .stat{ gap:28px; }
-    #s05 .stat .cap{ max-width:1180px; font-size:48px; }
-    #s05 .stat .cap b{ color:var(--fg); font-weight:800; }
-    #s05 .stat .cap{ color:var(--muted); }
+    #s06 .stat .num{ font-size:300px; margin:0; }
+    #s06 .strip > .stat{ gap:28px; }
+    #s06 .stat .cap{ max-width:1180px; font-size:48px; }
+    #s06 .stat .cap b{ color:var(--fg); font-weight:800; }
+    #s06 .stat .cap{ color:var(--muted); }
 
-    #s05 .foot{
+    #s06 .foot{
       display:flex; align-items:baseline; justify-content:space-between; gap:80px;
       border-top:3px solid var(--hair); padding-top:38px;
       font-family:var(--mono); font-size:34px; font-weight:500;
       letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
     }
-    #s05 .foot .close{ color:var(--fg); display:flex; align-items:center; gap:26px; }
-    #s05 .foot .src{ white-space:nowrap; }
-    #s05 .foot .src b{ color:var(--am, var(--amber)); font-weight:600; }
+    #s06 .foot .close{ color:var(--fg); display:flex; align-items:center; gap:26px; }
+    #s06 .foot .src{ white-space:nowrap; }
+    #s06 .foot .src b{ color:var(--am, var(--amber)); font-weight:600; }
   </style>
 
   <div class="deco">
@@ -311,46 +398,46 @@
   </div>
 </section>
 
-<!-- ===== 06-traffic3x.html ===== -->
-<section class="slide t-ink-2 l-split" data-slide="6" data-title="Slide 3 — Nếu traffic tăng gấp 3" id="s06">
+<!-- ===== 07-traffic3x.html ===== -->
+<section class="slide t-ink-2 l-split" data-slide="7" data-title="Slide 3 — Nếu traffic tăng gấp 3" id="s07">
   <style>
-    #s06{ gap:130px; }
-    #s06 .lead{ flex:0 0 2120px; flex-direction:row; align-items:center; gap:86px; }
-    #s06 .payload{ flex:1; gap:40px; }
+    #s07{ gap:130px; }
+    #s07 .lead{ flex:0 0 2120px; flex-direction:row; align-items:center; gap:86px; }
+    #s07 .payload{ flex:1; gap:40px; }
 
-    #s06 .anchor{ flex:none; display:flex; flex-direction:column; align-items:flex-start; gap:22px; }
-    #s06 .anchor .x3{
+    #s07 .anchor{ flex:none; display:flex; flex-direction:column; align-items:flex-start; gap:22px; }
+    #s07 .anchor .x3{
       margin:0; font-size:376px; line-height:.9; letter-spacing:-.06em;
       font-weight:900; color:var(--amber);
     }
-    #s06 .anchor .cp{
+    #s07 .anchor .cp{
       margin:0; font-family:var(--mono); font-size:30px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
       border-top:3px solid var(--amber); padding-top:20px; align-self:stretch;
     }
 
-    #s06 .say{ flex:1; min-width:0; display:flex; flex-direction:column; gap:40px; }
-    #s06 .hd{ font-size:96px; line-height:.98; margin:0; }
-    #s06 .sb{ margin:0; font-size:44px; line-height:1.32; color:var(--muted); max-width:1280px; }
+    #s07 .say{ flex:1; min-width:0; display:flex; flex-direction:column; gap:40px; }
+    #s07 .hd{ font-size:96px; line-height:.98; margin:0; }
+    #s07 .sb{ margin:0; font-size:44px; line-height:1.32; color:var(--muted); max-width:1280px; }
 
-    #s06 .badge{
+    #s07 .badge{
       display:flex; flex-direction:column; gap:14px;
       background:var(--card); border:2px solid var(--card-line);
       border-left:8px solid var(--amber); border-radius:0 20px 20px 0;
       padding:30px 40px; max-width:1560px;
     }
-    #s06 .badge .bl{
+    #s07 .badge .bl{
       font-family:var(--mono); font-size:26px; font-weight:600;
       letter-spacing:.24em; text-transform:uppercase; color:var(--amber);
     }
-    #s06 .badge p{ margin:0; font-size:36px; line-height:1.3; color:var(--fg); font-weight:500; }
-    #s06 .badge p b{ font-weight:800; }
+    #s07 .badge p{ margin:0; font-size:36px; line-height:1.3; color:var(--fg); font-weight:500; }
+    #s07 .badge p b{ font-weight:800; }
 
-    #s06 .qs > li{ font-size:54px; }
-    #s06 .qs > li::before{ font-size:48px; }
-    #s06 .qs > li + li{ border-top:2px solid var(--hair); padding-top:26px; }
-    #s06 .qs > li:last-child{ border-bottom:2px solid var(--hair); padding-bottom:26px; }
-    #s06 .divide{
+    #s07 .qs > li{ font-size:54px; }
+    #s07 .qs > li::before{ font-size:48px; }
+    #s07 .qs > li + li{ border-top:2px solid var(--hair); padding-top:26px; }
+    #s07 .qs > li:last-child{ border-bottom:2px solid var(--hair); padding-bottom:26px; }
+    #s07 .divide{
       position:absolute; left:2320px; top:var(--safe-y); bottom:var(--safe-y); width:3px;
       background:color-mix(in srgb, var(--fg) 14%, transparent);
     }
@@ -397,41 +484,41 @@
   </div>
 </section>
 
-<!-- ===== 07-interview.html ===== -->
-<section class="slide t-paper l-split" data-slide="7" data-title="Slide 4 — Interview một khách" id="s07">
+<!-- ===== 08-interview.html ===== -->
+<section class="slide t-paper l-split" data-slide="8" data-title="Slide 4 — Interview một khách" id="s08">
   <style>
-    #s07{ gap:140px; }
-    #s07 .lead{ flex:0 0 1900px; gap:48px; }
-    #s07 .payload{ flex:1; gap:38px; }
+    #s08{ gap:140px; }
+    #s08 .lead{ flex:0 0 1900px; gap:48px; }
+    #s08 .payload{ flex:1; gap:38px; }
     /* balance would leave ~600px of the 1900px column empty; let it fill */
-    #s07 .hd{ font-size:126px; line-height:.96; margin:0; text-wrap:wrap; }
+    #s08 .hd{ font-size:126px; line-height:.96; margin:0; text-wrap:wrap; }
 
-    #s07 .chipset{ align-items:center; gap:26px; }
-    #s07 .chip{ font-size:48px; padding:26px 44px; }
-    #s07 .note{
+    #s08 .chipset{ align-items:center; gap:26px; }
+    #s08 .chip{ font-size:48px; padding:26px 44px; }
+    #s08 .note{
       display:flex; flex-direction:column; gap:18px; align-items:flex-start; margin:0;
       border-top:3px solid color-mix(in srgb, var(--fg) 22%, transparent);
       padding-top:32px; max-width:1900px;
       font-family:var(--mono); font-size:32px; font-weight:500;
       letter-spacing:.06em; line-height:1.42; color:var(--muted);
     }
-    #s07 .note b{ color:var(--fg); font-weight:600; }
-    #s07 .note .tag{
+    #s08 .note b{ color:var(--fg); font-weight:600; }
+    #s08 .note .tag{
       flex:none; color:var(--accent); font-weight:600;
       letter-spacing:.2em; text-transform:uppercase;
     }
 
-    #s07 .qs > li{ font-size:58px; align-items:baseline; }
-    #s07 .qs > li + li{ border-top:2px solid var(--hair); padding-top:28px; }
-    #s07 .qs > li:last-child{ border-bottom:2px solid var(--hair); padding-bottom:28px; }
+    #s08 .qs > li{ font-size:58px; align-items:baseline; }
+    #s08 .qs > li + li{ border-top:2px solid var(--hair); padding-top:28px; }
+    #s08 .qs > li:last-child{ border-bottom:2px solid var(--hair); padding-bottom:28px; }
 
-    #s07 .listen{
+    #s08 .listen{
       align-self:flex-start; max-width:1900px; margin-top:6px;
       background:transparent; border:3px dashed color-mix(in srgb, var(--fg) 28%, transparent);
       color:var(--muted); font-size:38px;
     }
-    #s07 .listen .who{ color:var(--accent); opacity:1; }
-    #s07 .divide{
+    #s08 .listen .who{ color:var(--accent); opacity:1; }
+    #s08 .divide{
       position:absolute; left:2100px; top:var(--safe-y); bottom:var(--safe-y); width:3px;
       background:color-mix(in srgb, var(--fg) 16%, transparent);
     }
@@ -479,25 +566,25 @@
   </div>
 </section>
 
-<!-- ===== 08-conclusion.html ===== -->
-<section class="slide t-accent l-center" data-slide="8" data-title="Conclusion — Năng lực tư vấn là điểm nghẽn" id="s08">
+<!-- ===== 09-conclusion.html ===== -->
+<section class="slide t-accent l-center" data-slide="9" data-title="Conclusion — Năng lực tư vấn là điểm nghẽn" id="s09">
   <style>
     /* theme.css .t-accent resolves --bg from var(--accent) *after* shadowing
        --accent to near-black, so the vermilion flood collapses to bg == fg.
        Restore the flood locally; --accent stays dark on purpose — that is what
        makes .hl.fill and the bleed bars read on this theme. */
-    #s08{ gap:0; }
-    #s08 .ln{ display:block; overflow:hidden;
+    #s09{ gap:0; }
+    #s09 .ln{ display:block; overflow:hidden;
               padding:.24em 0 .14em; margin:-.24em 0 -.14em; }
-    #s08 .mega{ font-size:228px; line-height:1.1; letter-spacing:-.042em; }
+    #s09 .mega{ font-size:228px; line-height:1.1; letter-spacing:-.042em; }
     /* the marker fill must clear ă / ự / ấ above and the dot under ự below */
-    #s08 .hl.fill .hl-bar{ top:-.17em; bottom:-.15em; border-radius:6px; }
-    #s08 .hl.fill{ padding:0 .05em; }
-    #s08 .sub{ font-size:72px; font-weight:700; line-height:1.16;
+    #s09 .hl.fill .hl-bar{ top:-.17em; bottom:-.15em; border-radius:6px; }
+    #s09 .hl.fill{ padding:0 .05em; }
+    #s09 .sub{ font-size:72px; font-weight:700; line-height:1.16;
                letter-spacing:-.02em; margin:78px 0 0; max-width:4080px; }
-    #s08 .sub b{ font-weight:900; }
+    #s09 .sub b{ font-weight:900; }
     /* filled callout: generous vertical padding so ẽ above and g below clear */
-    #s08 .pinch{
+    #s09 .pinch{
       display:inline-block; background:var(--accent); color:var(--bg);
       padding:.14em .16em .2em; margin:-.14em 0 -.2em; line-height:1;
       border-radius:8px;
@@ -525,8 +612,8 @@
   </p>
 </section>
 
-<!-- ===== 09-why-today.html ===== -->
-<section class="slide t-ink l-split" data-slide="9" data-title="Vì sao chúng ta có mặt hôm nay" id="s09"
+<!-- ===== 10-why-today.html ===== -->
+<section class="slide t-ink l-split" data-slide="10" data-title="Vì sao chúng ta có mặt hôm nay" id="s10"
          style="gap:170px;">
   <div class="deco">
     <div class="deco-dots" style="opacity:.30;"></div>
@@ -536,12 +623,12 @@
   </div>
 
   <style>
-    #s09 .lead{ flex:0 0 1880px; align-self:stretch; justify-content:space-between; gap:0; }
-    #s09 .payload{ align-self:stretch; justify-content:space-between; gap:0; padding:6px 0 10px; }
-    #s09 .cap3{ display:grid; grid-template-columns:repeat(3,1fr); gap:0 48px; }
-    #s09 .cap3 .kv .k{ font-size:56px; min-height:124px; }
-    #s09 .cap3 .kv .v{ font-size:33px; }
-    #s09 .h{ display:flex; flex-direction:column; }
+    #s10 .lead{ flex:0 0 1880px; align-self:stretch; justify-content:space-between; gap:0; }
+    #s10 .payload{ align-self:stretch; justify-content:space-between; gap:0; padding:6px 0 10px; }
+    #s10 .cap3{ display:grid; grid-template-columns:repeat(3,1fr); gap:0 48px; }
+    #s10 .cap3 .kv .k{ font-size:56px; min-height:124px; }
+    #s10 .cap3 .kv .v{ font-size:33px; }
+    #s10 .h{ display:flex; flex-direction:column; }
   </style>
 
   <p class="meta">Session 01 <b>·</b> Mở đầu</p>
@@ -589,8 +676,8 @@
   </div>
 </section>
 
-<!-- ===== 10-bridge-s2.html ===== -->
-<section class="slide t-ink l-center" data-slide="10" data-title="Cầu sang Session 2" id="s10" style="gap:0;">
+<!-- ===== 11-bridge-s2.html ===== -->
+<section class="slide t-ink l-center" data-slide="11" data-title="Cầu sang Session 2" id="s11" style="gap:0;">
   <div class="deco">
     <div class="deco-grid" style="opacity:.34;"></div>
     <div class="deco-orb mint" style="left:1340px; top:-1090px; opacity:.15;"></div>
@@ -599,15 +686,15 @@
   </div>
 
   <style>
-    #s10 .h{ display:flex; flex-direction:column; }
-    #s10 .hl-bar{ background:var(--mint); bottom:.055em; height:.11em; }
-    #s10 .label::before{ background:var(--mint); }
-    #s10 .rail{ display:flex; align-items:center; width:100%; }
-    #s10 .rail i.ln{ flex:1 1 0; height:3px; background:#FFFFFF3D; min-width:80px; }
-    #s10 .rail .chip{ flex:none; font-size:48px; padding:24px 42px; }
-    #s10 .rail .chip .ic{ background:var(--mint); width:18px; height:18px; }
-    #s10 .rail .chip.on{ background:var(--mint); color:#04241A; border-color:transparent; font-weight:700; }
-    #s10 .rail .chip.on .ic{ background:#04241A; }
+    #s11 .h{ display:flex; flex-direction:column; }
+    #s11 .hl-bar{ background:var(--mint); bottom:.055em; height:.11em; }
+    #s11 .label::before{ background:var(--mint); }
+    #s11 .rail{ display:flex; align-items:center; width:100%; }
+    #s11 .rail i.ln{ flex:1 1 0; height:3px; background:#FFFFFF3D; min-width:80px; }
+    #s11 .rail .chip{ flex:none; font-size:48px; padding:24px 42px; }
+    #s11 .rail .chip .ic{ background:var(--mint); width:18px; height:18px; }
+    #s11 .rail .chip.on{ background:var(--mint); color:#04241A; border-color:transparent; font-weight:700; }
+    #s11 .rail .chip.on .ic{ background:#04241A; }
   </style>
 
   <p class="meta">Session 01 <b>→</b> Session 02</p>
@@ -630,8 +717,8 @@
   </div>
 </section>
 
-<!-- ===== 11-session2.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="11" data-title="Session 02 — Nhân viên tư vấn số là gì?" id="s11">
+<!-- ===== 12-session2.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="12" data-title="Session 02 — Nhân viên tư vấn số là gì?" id="s12">
   <div class="deco">
     <div class="deco-grid"></div>
     <div class="deco-marquee band" style="top:172px;">
@@ -661,8 +748,8 @@
   </div>
 </section>
 
-<!-- ===== 12-what-staff-needs.html ===== -->
-<section class="slide t-paper l-stack" data-slide="12" data-title="Một nhân viên thật cần biết gì" id="s12" style="gap:0;">
+<!-- ===== 13-what-staff-needs.html ===== -->
+<section class="slide t-paper l-stack" data-slide="13" data-title="Một nhân viên thật cần biết gì" id="s13" style="gap:0;">
   <div class="deco">
     <div class="deco-grid" style="opacity:.34;"></div>
     <div class="deco-orb" style="right:-1080px; top:-1120px; opacity:.10;"></div>
@@ -670,47 +757,47 @@
   </div>
 
   <style>
-    #s12 .h{ display:flex; flex-direction:column; }
+    #s13 .h{ display:flex; flex-direction:column; }
 
-    #s12 .top{ display:flex; align-items:flex-end; gap:120px; }
-    #s12 .top .hd{ flex:1; min-width:0; display:flex; flex-direction:column; }
-    #s12 .tally{
+    #s13 .top{ display:flex; align-items:flex-end; gap:120px; }
+    #s13 .top .hd{ flex:1; min-width:0; display:flex; flex-direction:column; }
+    #s13 .tally{
       flex:0 0 980px; height:262px; border:3px solid var(--card-line); border-radius:28px;
       background:var(--card); padding:34px 46px;
       display:flex; align-items:center; gap:44px;
     }
-    #s12 .tally .n{
+    #s13 .tally .n{
       font-size:196px; font-weight:900; line-height:.82; letter-spacing:-.05em;
       color:var(--accent); font-variant-numeric:tabular-nums; flex:none;
     }
-    #s12 .tally .t{
+    #s13 .tally .t{
       font-family:var(--mono); font-size:33px; line-height:1.5; letter-spacing:.12em;
       color:var(--muted); text-transform:uppercase; margin:0;
     }
-    #s12 .tally .t b{ color:var(--fg); font-weight:600; }
+    #s13 .tally .t b{ color:var(--fg); font-weight:600; }
 
-    #s12 .chipset{ gap:26px 26px; justify-content:space-between; }
-    #s12 .chip{ font-size:54px; padding:26px 46px; border-width:3px; background:transparent; }
-    #s12 .chip .ic{ width:20px; height:20px; }
-    #s12 .chip .k{ font-family:var(--mono); font-size:26px; letter-spacing:.16em;
+    #s13 .chipset{ gap:26px 26px; justify-content:space-between; }
+    #s13 .chip{ font-size:54px; padding:26px 46px; border-width:3px; background:transparent; }
+    #s13 .chip .ic{ width:20px; height:20px; }
+    #s13 .chip .k{ font-family:var(--mono); font-size:26px; letter-spacing:.16em;
                    color:var(--muted); margin-right:4px; }
 
     /* câu chốt — full-bleed inverted band, the point of the slide */
-    #s12 .clincher{
+    #s13 .clincher{
       background:var(--ink); color:var(--paper);
       margin:0 calc(var(--safe-x) * -1); padding:66px var(--safe-x);
       display:flex; align-items:center; gap:48px;
     }
-    #s12 .clincher .eq{
+    #s13 .clincher .eq{
       flex:none; font-family:var(--mono); font-size:27px; letter-spacing:.2em;
       color:var(--accent); line-height:1.5; text-transform:uppercase;
       border-left:5px solid var(--accent); padding-left:26px;
     }
-    #s12 .clincher .txt{
+    #s13 .clincher .txt{
       margin:0; font-size:77px; font-weight:800; letter-spacing:-.03em; line-height:1.08;
       max-width:none; flex:1;
     }
-    #s12 .clincher .txt .ac{ color:var(--accent); }
+    #s13 .clincher .txt .ac{ color:var(--accent); }
   </style>
 
   <p class="meta">Session 02 <b>·</b> 07</p>
@@ -747,8 +834,8 @@
   </div>
 </section>
 
-<!-- ===== 13-definition.html ===== -->
-<section class="slide t-ink l-center" data-slide="13" data-title="Định nghĩa — nhân viên tư vấn số" id="s13" style="gap:0;">
+<!-- ===== 14-definition.html ===== -->
+<section class="slide t-ink l-center" data-slide="14" data-title="Định nghĩa — nhân viên tư vấn số" id="s14" style="gap:0;">
   <div class="deco">
     <div class="deco-grid" style="opacity:.30;"></div>
     <div class="deco-orb" style="left:640px; top:-1240px; opacity:.13;"></div>
@@ -757,14 +844,14 @@
   </div>
 
   <style>
-    #s13 .def{
+    #s14 .def{
       width:100%; margin:34px 0 0;
       font-size:172px; font-weight:900; line-height:1.14;
       letter-spacing:-.04em; text-align:center; text-wrap:initial;
       display:flex; flex-direction:column;
     }
-    #s13 .def .hl-bar{ bottom:.045em; height:.105em; border-radius:3px; }
-    #s13 .def .lt{ color:var(--muted); font-weight:800; }
+    #s14 .def .hl-bar{ bottom:.045em; height:.105em; border-radius:3px; }
+    #s14 .def .lt{ color:var(--muted); font-weight:800; }
   </style>
 
   <p class="meta">Session 02 <b>·</b> 08</p>
@@ -779,8 +866,8 @@
   </h1>
 </section>
 
-<!-- ===== 14-quote-hire.html ===== -->
-<section class="slide t-accent l-center" data-slide="14" data-title="Ví von — “Em vào trả lời khách đi.”" id="s14" style="gap:0;">
+<!-- ===== 15-quote-hire.html ===== -->
+<section class="slide t-accent l-center" data-slide="15" data-title="Ví von — “Em vào trả lời khách đi.”" id="s15" style="gap:0;">
   <div class="deco">
     <div class="deco-grid" style="opacity:.42;"></div>
     <div class="q q1">“</div>
@@ -790,29 +877,29 @@
 
   <style>
     /* giant faded quotation marks as background decoration */
-    #s14 .q{
+    #s15 .q{
       position:absolute; font-family:var(--sans); font-weight:900;
       font-size:820px; line-height:1; color:var(--fg); opacity:.15;
       letter-spacing:-.06em; user-select:none;
     }
-    #s14 .q1{ left:110px; top:-88px; }
-    #s14 .q2{ right:70px; top:658px; }
+    #s15 .q1{ left:110px; top:-88px; }
+    #s15 .q2{ right:70px; top:658px; }
 
-    #s14 .h{ display:flex; flex-direction:column; }
+    #s15 .h{ display:flex; flex-direction:column; }
 
-    #s14 .eyebrow{ color:var(--fg); opacity:.72; }
-    #s14 .eyebrow::before{ background:var(--fg); width:88px; }
+    #s15 .eyebrow{ color:var(--fg); opacity:.72; }
+    #s15 .eyebrow::before{ background:var(--fg); width:88px; }
 
-    #s14 .sub{
+    #s15 .sub{
       margin:0; font-size:86px; font-weight:700; letter-spacing:-.022em;
       line-height:1.1; color:var(--fg); max-width:none;
     }
-    #s14 .sub .u{ position:relative; display:inline-block; font-weight:800; }
-    #s14 .sub .u i{
+    #s15 .sub .u{ position:relative; display:inline-block; font-weight:800; }
+    #s15 .sub .u i{
       position:absolute; left:-.03em; right:-.03em; bottom:.02em; height:.1em;
       background:var(--fg); display:block; border-radius:3px; z-index:-1;
     }
-    #s14 .rule{ height:3px; background:var(--hair); width:100%; }
+    #s15 .rule{ height:3px; background:var(--hair); width:100%; }
   </style>
 
   <p class="meta" style="color:var(--fg); opacity:.6;">Session 02 <b>·</b> 09</p>
@@ -833,27 +920,27 @@
   </p>
 </section>
 
-<!-- ===== 15-hr-file.html ===== -->
-<section class="slide t-paper l-index" data-slide="15" data-title="Slide 9b — Hồ sơ nhân sự của nhân viên số" id="s15">
+<!-- ===== 16-hr-file.html ===== -->
+<section class="slide t-paper l-index" data-slide="16" data-title="Slide 9b — Hồ sơ nhân sự của nhân viên số" id="s16">
   <style>
-    #s15{ gap:86px; }
-    #s15 > .rail-v{ flex:0 0 268px; padding-right:52px; }
-    #s15 .vt{
+    #s16{ gap:86px; }
+    #s16 > .rail-v{ flex:0 0 268px; padding-right:52px; }
+    #s16 .vt{
       writing-mode:vertical-rl; transform:rotate(180deg);
       font-size:94px; font-weight:900; letter-spacing:-.03em; line-height:.94; margin:0;
     }
-    #s15 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; justify-content:center; gap:56px; }
-    #s15 .kvgrid{ gap:0 40px; align-items:start; }
-    #s15 .kvgrid.r3{ grid-template-columns:repeat(3,1fr); }
-    #s15 .kv{ padding-top:28px; border-top-width:5px; gap:16px; }
-    #s15 .kv .k{ font-size:62px; line-height:1.1; margin:0; }
-    #s15 .kv .v{ font-size:40px; line-height:1.3; }
-    #s15 .kv.b{ border-top-color:var(--ink); }
-    #s15 .kv .no{
+    #s16 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; justify-content:center; gap:56px; }
+    #s16 .kvgrid{ gap:0 40px; align-items:start; }
+    #s16 .kvgrid.r3{ grid-template-columns:repeat(3,1fr); }
+    #s16 .kv{ padding-top:28px; border-top-width:5px; gap:16px; }
+    #s16 .kv .k{ font-size:62px; line-height:1.1; margin:0; }
+    #s16 .kv .v{ font-size:40px; line-height:1.3; }
+    #s16 .kv.b{ border-top-color:var(--ink); }
+    #s16 .kv .no{
       font-family:var(--mono); font-size:24px; font-weight:600;
       letter-spacing:.2em; color:var(--accent); margin:0;
     }
-    #s15 .kv.b .no{ color:var(--ink); opacity:.45; }
+    #s16 .kv.b .no{ color:var(--ink); opacity:.45; }
   </style>
 
   <div class="deco">
@@ -916,47 +1003,47 @@
   </div>
 </section>
 
-<!-- ===== 16-not-chatbot.html ===== -->
-<section class="slide t-ink l-split" data-slide="16" data-title="Slide 9c — Không phải chatbot. Một nhân viên mới." id="s16">
+<!-- ===== 17-not-chatbot.html ===== -->
+<section class="slide t-ink l-split" data-slide="17" data-title="Slide 9c — Không phải chatbot. Một nhân viên mới." id="s17">
   <style>
-    #s16{ gap:120px; }
-    #s16 > .lead{ flex:0 0 1480px; gap:46px; }
-    #s16 .cols{ display:flex; gap:100px; align-items:stretch; }
-    #s16 .col{ flex:1; min-width:0; display:flex; flex-direction:column; gap:0; }
-    #s16 .col > .hd{
+    #s17{ gap:120px; }
+    #s17 > .lead{ flex:0 0 1480px; gap:46px; }
+    #s17 .cols{ display:flex; gap:100px; align-items:stretch; }
+    #s17 .col{ flex:1; min-width:0; display:flex; flex-direction:column; gap:0; }
+    #s17 .col > .hd{
       font-size:80px; font-weight:800; letter-spacing:-.025em; line-height:1;
       margin:0 0 44px; display:flex; align-items:center; gap:26px;
     }
-    #s16 .col.no > .hd{ color:var(--muted); }
-    #s16 .col.yes > .hd{ color:var(--accent); }
-    #s16 .col.yes > .hd .tick{
+    #s17 .col.no > .hd{ color:var(--muted); }
+    #s17 .col.yes > .hd{ color:var(--accent); }
+    #s17 .col.yes > .hd .tick{
       width:26px; height:26px; border-radius:50%; background:var(--accent); flex:none;
     }
-    #s16 .col ul{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; }
-    #s16 .col li{
+    #s17 .col ul{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; }
+    #s17 .col li{
       font-size:54px; font-weight:600; letter-spacing:-.015em; line-height:1.2;
       padding:37px 0; border-top:2px solid var(--hair);
       display:flex; gap:26px; align-items:baseline;
     }
-    #s16 .col li:last-child{ border-bottom:2px solid var(--hair); }
-    #s16 .col.no li{ color:var(--muted); }
-    #s16 .col.no li .x{ font-family:var(--mono); font-weight:600; font-size:32px; opacity:.55; flex:none; width:34px; }
-    #s16 .col.yes li .x{ font-family:var(--mono); font-weight:600; font-size:32px; color:var(--accent); flex:none; width:34px; }
-    #s16 .kicker{
+    #s17 .col li:last-child{ border-bottom:2px solid var(--hair); }
+    #s17 .col.no li{ color:var(--muted); }
+    #s17 .col.no li .x{ font-family:var(--mono); font-weight:600; font-size:32px; opacity:.55; flex:none; width:34px; }
+    #s17 .col.yes li .x{ font-family:var(--mono); font-weight:600; font-size:32px; color:var(--accent); flex:none; width:34px; }
+    #s17 .kicker{
       display:flex; gap:36px; align-items:flex-start;
       border-top:3px solid var(--accent); padding-top:32px; margin-top:8px;
     }
-    #s16 .kicker p{
+    #s17 .kicker p{
       margin:0; font-family:var(--mono); font-size:31px; line-height:1.44;
       color:var(--muted); font-weight:400;
     }
-    #s16 .kicker p b{ color:var(--fg); font-weight:600; }
-    #s16 .kicker .tag{
+    #s17 .kicker p b{ color:var(--fg); font-weight:600; }
+    #s17 .kicker .tag{
       font-family:var(--mono); font-size:28px; font-weight:600; letter-spacing:.24em;
       text-transform:uppercase; color:var(--accent); flex:none; padding-top:2px;
     }
-    #s16 .strike{ font-style:normal; }
-    #s16 .strike .hl-bar{ height:.075em; }
+    #s17 .strike{ font-style:normal; }
+    #s17 .strike .hl-bar{ height:.075em; }
   </style>
 
   <div class="deco">
@@ -1012,24 +1099,24 @@
   </div>
 </section>
 
-<!-- ===== 17-three-jobs.html ===== -->
-<section class="slide t-ink-2 l-rail" data-slide="17" data-title="Slide 10 — Ba việc đầu tiên nên giao" id="s17">
+<!-- ===== 18-three-jobs.html ===== -->
+<section class="slide t-ink-2 l-rail" data-slide="18" data-title="Slide 10 — Ba việc đầu tiên nên giao" id="s18">
   <style>
-    #s17{ gap:60px; }
-    #s17 .band{ display:flex; align-items:flex-end; gap:140px; }
-    #s17 .band .hd{ flex:1 1 auto; min-width:0; }
-    #s17 .band .hd h1{ font-size:118px; line-height:1.09; }
-    #s17 .close{
+    #s18{ gap:60px; }
+    #s18 .band{ display:flex; align-items:flex-end; gap:140px; }
+    #s18 .band .hd{ flex:1 1 auto; min-width:0; }
+    #s18 .band .hd h1{ font-size:118px; line-height:1.09; }
+    #s18 .close{
       flex:0 0 1500px; border-top:3px solid var(--accent); padding-top:30px;
     }
-    #s17 .close p{ margin:0; font-size:42px; line-height:1.34; color:var(--muted); font-weight:500; }
-    #s17 .close p b{ color:var(--fg); font-weight:700; }
-    #s17 .rail{ gap:48px; }
-    #s17 .card{ min-height:490px; padding:52px 54px 54px; border-radius:32px; gap:0; justify-content:flex-start; }
-    #s17 .card .n{ font-size:38px; letter-spacing:.16em; }
-    #s17 .card .k{ font-size:80px; line-height:1.1; margin:44px 0 0; }
-    #s17 .card .v{ font-size:42px; line-height:1.3; margin:auto 0 0; padding-top:38px; border-top:2px solid var(--hair); }
-    #s17 .card.hot .v{ border-top-color:#170A0533; }
+    #s18 .close p{ margin:0; font-size:42px; line-height:1.34; color:var(--muted); font-weight:500; }
+    #s18 .close p b{ color:var(--fg); font-weight:700; }
+    #s18 .rail{ gap:48px; }
+    #s18 .card{ min-height:490px; padding:52px 54px 54px; border-radius:32px; gap:0; justify-content:flex-start; }
+    #s18 .card .n{ font-size:38px; letter-spacing:.16em; }
+    #s18 .card .k{ font-size:80px; line-height:1.1; margin:44px 0 0; }
+    #s18 .card .v{ font-size:42px; line-height:1.3; margin:auto 0 0; padding-top:38px; border-top:2px solid var(--hair); }
+    #s18 .card.hot .v{ border-top-color:#170A0533; }
   </style>
 
   <div class="deco">
@@ -1075,30 +1162,30 @@
   </div>
 </section>
 
-<!-- ===== 18-transition.html ===== -->
-<section class="slide t-mint l-center" data-slide="18" data-title="Transition 10 → 11 — Bước đầu tiên là gì?" id="s18">
+<!-- ===== 19-transition.html ===== -->
+<section class="slide t-mint l-center" data-slide="19" data-title="Transition 10 → 11 — Bước đầu tiên là gì?" id="s19">
   <style>
-    #s18{ gap:78px; }
-    #s18 .q{ font-size:200px; line-height:1.14; letter-spacing:-.038em; max-width:none; }
-    #s18 .flow{
+    #s19{ gap:78px; }
+    #s19 .q{ font-size:200px; line-height:1.14; letter-spacing:-.038em; max-width:none; }
+    #s19 .flow{
       display:flex; align-items:center; width:3560px; max-width:100%;
     }
-    #s18 .flow .chip{
+    #s19 .flow .chip{
       flex:none; font-size:58px; font-weight:700; padding:30px 54px;
       border-width:3px; border-color:#04241A38; background:#04241A0F;
     }
-    #s18 .flow .chip .ic{ width:20px; height:20px; background:#04241A; }
-    #s18 .flow .chip:last-of-type{ background:#04241A; color:var(--mint); border-color:transparent; }
-    #s18 .flow .chip:last-of-type .ic{ background:var(--mint); }
-    #s18 .flow .lnk{ flex:1 1 auto; display:flex; align-items:center; min-width:60px; }
-    #s18 .flow .lnk i{ flex:1 1 auto; height:3px; background:#04241A47; }
-    #s18 .flow .lnk::after{
+    #s19 .flow .chip .ic{ width:20px; height:20px; background:#04241A; }
+    #s19 .flow .chip:last-of-type{ background:#04241A; color:var(--mint); border-color:transparent; }
+    #s19 .flow .chip:last-of-type .ic{ background:var(--mint); }
+    #s19 .flow .lnk{ flex:1 1 auto; display:flex; align-items:center; min-width:60px; }
+    #s19 .flow .lnk i{ flex:1 1 auto; height:3px; background:#04241A47; }
+    #s19 .flow .lnk::after{
       content:""; flex:none; width:0; height:0;
       border:17px solid transparent; border-left-color:#04241A; border-right:0;
     }
-    #s18 .sub{ font-size:68px; line-height:1.16; font-weight:700; max-width:3200px; margin:0; }
-    #s18 .sub b{ font-weight:900; }
-    #s18 .rule{ width:220px; height:6px; background:#04241A; }
+    #s19 .sub{ font-size:68px; line-height:1.16; font-weight:700; max-width:3200px; margin:0; }
+    #s19 .sub b{ font-weight:900; }
+    #s19 .rule{ width:220px; height:6px; background:#04241A; }
   </style>
 
   <div class="deco">
@@ -1133,8 +1220,8 @@
   </p>
 </section>
 
-<!-- ===== 19-session3.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="19" data-title="Session 03 — Nhân viên tư vấn số đầu tiên của bạn" id="s19">
+<!-- ===== 20-session3.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="20" data-title="Session 03 — Nhân viên tư vấn số đầu tiên của bạn" id="s20">
   <div class="deco">
     <div class="deco-grid"></div>
     <div class="deco-marquee band" style="top:172px;">
@@ -1165,34 +1252,34 @@
   </div>
 </section>
 
-<!-- ===== 20-handson.html ===== -->
-<section class="slide t-paper l-rail" data-slide="20" data-title="Slide 11 — Bắt đầu hands-on: 5 bước" id="s20">
+<!-- ===== 21-handson.html ===== -->
+<section class="slide t-paper l-rail" data-slide="21" data-title="Slide 11 — Bắt đầu hands-on: 5 bước" id="s21">
   <style>
-    #s20{ gap:70px; }
-    #s20 .band{ display:flex; align-items:flex-end; gap:120px; }
-    #s20 .band .hd{ flex:1 1 auto; min-width:0; }
-    #s20 .band h1{ font-size:144px; line-height:1.12; letter-spacing:-.034em; }
-    #s20 .band .cue{
+    #s21{ gap:70px; }
+    #s21 .band{ display:flex; align-items:flex-end; gap:120px; }
+    #s21 .band .hd{ flex:1 1 auto; min-width:0; }
+    #s21 .band h1{ font-size:144px; line-height:1.12; letter-spacing:-.034em; }
+    #s21 .band .cue{
       flex:0 0 auto; display:flex; align-items:center; gap:24px;
       font-family:var(--mono); font-size:32px; font-weight:600; letter-spacing:.22em;
       text-transform:uppercase; color:var(--muted); white-space:nowrap; padding-bottom:14px;
     }
-    #s20 .band .cue b{ color:var(--accent); font-weight:700; }
-    #s20 .rail{ gap:38px; }
-    #s20 .card{
+    #s21 .band .cue b{ color:var(--accent); font-weight:700; }
+    #s21 .rail{ gap:38px; }
+    #s21 .card{
       min-height:0; gap:0; border-radius:30px;
       padding:46px 48px 48px; border:2px solid var(--hair);
       background:#0A0B0D0A; border-top:8px solid var(--accent);
     }
-    #s20 .card .n{
+    #s21 .card .n{
       font-family:var(--mono); font-size:152px; font-weight:600; line-height:.9;
       letter-spacing:-.04em; color:var(--accent); margin:0;
     }
-    #s20 .card .k{
+    #s21 .card .k{
       font-size:58px; font-weight:800; line-height:1.18; letter-spacing:-.02em;
       margin:36px 0 0; padding-top:36px; border-top:3px solid #0A0B0D2B; color:var(--fg);
     }
-    #s20 .card .v{ font-size:34px; margin:auto 0 0; padding-top:30px; }
+    #s21 .card .v{ font-size:34px; margin:auto 0 0; padding-top:30px; }
     
   </style>
 
@@ -1238,8 +1325,8 @@
   </div>
 </section>
 
-<!-- ===== 21-feed-data.html ===== -->
-<section class="slide t-ink l-stack" data-slide="21" data-title="Nạp gì để nhân viên trả lời được" id="s21">
+<!-- ===== 22-feed-data.html ===== -->
+<section class="slide t-ink l-stack" data-slide="22" data-title="Nạp gì để nhân viên trả lời được" id="s22">
   <div class="deco">
     <div class="deco-grid"></div>
     <div class="deco-orb amber" style="right:-820px; top:-1120px; opacity:.12;"></div>
@@ -1248,39 +1335,39 @@
   <p class="meta">Session 03 <b>·</b> Hands-on</p>
 
   <style>
-    #s21{ gap:88px; }
-    #s21 .band{ display:flex; align-items:flex-end; gap:140px; }
-    #s21 .band .hd{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
-    #s21 .band .cl{ flex:0 0 1020px; text-align:right; border-top:3px solid var(--amber); padding-top:32px; }
-    #s21 .band .cl p{
+    #s22{ gap:88px; }
+    #s22 .band{ display:flex; align-items:flex-end; gap:140px; }
+    #s22 .band .hd{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
+    #s22 .band .cl{ flex:0 0 1020px; text-align:right; border-top:3px solid var(--amber); padding-top:32px; }
+    #s22 .band .cl p{
       margin:0; font-family:var(--mono); font-size:34px; line-height:1.36; font-weight:500;
       letter-spacing:.01em; color:var(--fg);
     }
-    #s21 .band .cl b{ color:var(--amber); font-weight:600; }
+    #s22 .band .cl b{ color:var(--amber); font-weight:600; }
 
-    #s21 .grid7{ display:grid; grid-template-columns:repeat(7,1fr); gap:34px; }
-    #s21 .it{
+    #s22 .grid7{ display:grid; grid-template-columns:repeat(7,1fr); gap:34px; }
+    #s22 .it{
       display:flex; flex-direction:column;
       min-height:456px; padding:26px 26px 0 0;
       border-top:4px solid #FFFFFF3D;
     }
-    #s21 .it .n{
+    #s22 .it .n{
       font-family:var(--mono); font-size:88px; font-weight:600; letter-spacing:-.03em;
       line-height:1; color:var(--muted); opacity:.72;
     }
-    #s21 .it .k{
+    #s22 .it .k{
       margin:auto 0 0; font-size:56px; font-weight:800; letter-spacing:-.024em; line-height:1.06;
       padding-bottom:26px;
     }
-    #s21 .it .u{ display:block; height:4px; background:var(--accent); border-radius:2px; }
+    #s22 .it .u{ display:block; height:4px; background:var(--accent); border-radius:2px; }
 
-    #s21 .it.last{
+    #s22 .it.last{
       border-top:none; background:var(--accent); color:var(--ink);
       border-radius:28px; padding:26px 32px 32px; margin-top:-4px;
     }
-    #s21 .it.last .n{ color:var(--ink); opacity:.5; }
-    #s21 .it.last .k{ padding-bottom:0; }
-    #s21 .it.last .tag{
+    #s22 .it.last .n{ color:var(--ink); opacity:.5; }
+    #s22 .it.last .k{ padding-bottom:0; }
+    #s22 .it.last .tag{
       display:block; font-family:var(--mono); font-size:27px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; opacity:.72; margin-bottom:16px;
     }
@@ -1330,8 +1417,8 @@
   </div>
 </section>
 
-<!-- ===== 22-test-5.html ===== -->
-<section class="slide t-paper l-split" data-slide="22" data-title="Test bằng 5 câu khách thật sẽ hỏi" id="s22">
+<!-- ===== 23-test-5.html ===== -->
+<section class="slide t-paper l-split" data-slide="23" data-title="Test bằng 5 câu khách thật sẽ hỏi" id="s23">
   <div class="deco">
     <div class="deco-dots" style="opacity:.35;"></div>
     <div class="deco-orb" style="left:1500px; top:-1240px; opacity:.10;"></div>
@@ -1339,32 +1426,32 @@
   <p class="meta">Session 03 <b>·</b> Hands-on</p>
 
   <style>
-    #s22{ gap:130px; }
-    #s22 > .lead{ flex:0 0 1180px; gap:46px; }
-    #s22 > .payload{ flex-direction:row; gap:70px; align-items:flex-start; justify-content:flex-start; }
-    #s22 .col{ flex:0 0 1280px; min-width:0; display:flex; flex-direction:column; gap:34px; }
-    #s22 .col.b{ flex:1; margin-top:252px; align-items:flex-end; }
+    #s23{ gap:130px; }
+    #s23 > .lead{ flex:0 0 1180px; gap:46px; }
+    #s23 > .payload{ flex-direction:row; gap:70px; align-items:flex-start; justify-content:flex-start; }
+    #s23 .col{ flex:0 0 1280px; min-width:0; display:flex; flex-direction:column; gap:34px; }
+    #s23 .col.b{ flex:1; margin-top:252px; align-items:flex-end; }
 
-    #s22 .bub{
+    #s23 .bub{
       max-width:100%; background:#FFFFFF; border:2px solid var(--paper-3);
       padding:36px 46px; font-size:54px; line-height:1.2; font-weight:500;
       box-shadow:0 18px 40px -24px #0A0B0D2E;
     }
-    #s22 .bub .who{ color:var(--muted); opacity:1; font-size:25px; letter-spacing:.2em; margin-bottom:14px; }
-    #s22 .col.b .bub{ width:100%; }
-    #s22 .bub.esc{ border-color:var(--accent); border-width:3px; }
-    #s22 .bub.esc .who{ color:var(--accent); }
+    #s23 .bub .who{ color:var(--muted); opacity:1; font-size:25px; letter-spacing:.2em; margin-bottom:14px; }
+    #s23 .col.b .bub{ width:100%; }
+    #s23 .bub.esc{ border-color:var(--accent); border-width:3px; }
+    #s23 .bub.esc .who{ color:var(--accent); }
 
-    #s22 .chk{
+    #s23 .chk{
       background:var(--accent); color:var(--ink); border-radius:28px; padding:40px 46px 44px;
       display:flex; flex-direction:column; gap:22px;
     }
-    #s22 .chk .t{
+    #s23 .chk .t{
       font-family:var(--mono); font-size:27px; font-weight:600; letter-spacing:.22em;
       text-transform:uppercase; opacity:.68; margin:0;
     }
-    #s22 .chk p{ margin:0; font-size:44px; line-height:1.2; font-weight:600; letter-spacing:-.012em; }
-    #s22 .chk p.two{ padding-top:20px; border-top:2px solid #170A0533; }
+    #s23 .chk p{ margin:0; font-size:44px; line-height:1.2; font-weight:600; letter-spacing:-.012em; }
+    #s23 .chk p.two{ padding-top:20px; border-top:2px solid #170A0533; }
   </style>
 
   <div class="lead">
@@ -1402,8 +1489,8 @@
   </div>
 </section>
 
-<!-- ===== 23-refine.html ===== -->
-<section class="slide t-ink l-split" data-slide="23" data-title="Sửa để nhân viên giống shop hơn" id="s23">
+<!-- ===== 24-refine.html ===== -->
+<section class="slide t-ink l-split" data-slide="24" data-title="Sửa để nhân viên giống shop hơn" id="s24">
   <div class="deco">
     <div class="deco-grid"></div>
     <div class="deco-orb mint" style="right:-700px; bottom:-1160px; opacity:.13;"></div>
@@ -1412,37 +1499,37 @@
   <p class="meta">Session 03 <b>·</b> Hands-on</p>
 
   <style>
-    #s23{ gap:150px; }
-    #s23 > .lead{ flex:0 0 1460px; gap:42px; }
-    #s23 > .payload{ flex-direction:row; align-items:center; gap:48px; }
-    #s23 .arrow i{ width:150px; height:4px; }
+    #s24{ gap:150px; }
+    #s24 > .lead{ flex:0 0 1460px; gap:42px; }
+    #s24 > .payload{ flex-direction:row; align-items:center; gap:48px; }
+    #s24 .arrow i{ width:150px; height:4px; }
 
-    #s23 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
-    #s23 .cap{
+    #s24 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
+    #s24 .cap{
       margin:0; font-family:var(--mono); font-size:29px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
       display:flex; align-items:center; gap:18px;
     }
-    #s23 .cap i{ width:52px; height:3px; background:currentColor; flex:none; }
-    #s23 .pane.after .cap{ color:var(--mint); }
+    #s24 .cap i{ width:52px; height:3px; background:currentColor; flex:none; }
+    #s24 .pane.after .cap{ color:var(--mint); }
 
-    #s23 .bub{
+    #s24 .bub{
       max-width:100%; width:100%; padding:38px 44px; font-size:52px; line-height:1.22;
     }
-    #s23 .bub.bad{ border-style:dashed; border-color:#FFFFFF33; color:var(--muted); }
-    #s23 .bub .who{ font-size:24px; }
+    #s24 .bub.bad{ border-style:dashed; border-color:#FFFFFF33; color:var(--muted); }
+    #s24 .bub .who{ font-size:24px; }
 
-    #s23 .diag{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:18px; }
-    #s23 .diag li{
+    #s24 .diag{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:18px; }
+    #s24 .diag li{
       font-size:38px; line-height:1.24; color:var(--muted);
       display:flex; gap:18px; align-items:flex-start;
     }
-    #s23 .diag li::before{ content:"×"; color:var(--accent); font-weight:700; flex:none; }
-    #s23 .pane.after .diag li::before{ content:"✓"; color:var(--mint); }
+    #s24 .diag li::before{ content:"×"; color:var(--accent); font-weight:700; flex:none; }
+    #s24 .pane.after .diag li::before{ content:"✓"; color:var(--mint); }
 
-    #s23 .badge{ display:flex; align-items:center; gap:30px; }
-    #s23 .badge .chip{ font-family:var(--mono); font-size:32px; letter-spacing:.16em; padding:18px 32px; }
-    #s23 .badge p{ margin:0; font-size:38px; line-height:1.26; color:var(--fg); font-weight:500; }
+    #s24 .badge{ display:flex; align-items:center; gap:30px; }
+    #s24 .badge .chip{ font-family:var(--mono); font-size:32px; letter-spacing:.16em; padding:18px 32px; }
+    #s24 .badge p{ margin:0; font-size:38px; line-height:1.26; color:var(--fg); font-weight:500; }
   </style>
 
   <div class="lead">
@@ -1488,8 +1575,8 @@
   </div>
 </section>
 
-<!-- ===== 24-demo-flow.html ===== -->
-<section class="slide t-ink-2 l-rail" data-slide="24" data-title="Demo flow — 9 bước" id="s24">
+<!-- ===== 25-demo-flow.html ===== -->
+<section class="slide t-ink-2 l-rail" data-slide="25" data-title="Demo flow — 9 bước" id="s25">
   <div class="deco">
     <div class="deco-grid"></div>
     <div class="deco-orb" style="left:-900px; top:-1180px; opacity:.10;"></div>
@@ -1498,34 +1585,34 @@
   <p class="meta">Session 03 <b>·</b> Demo</p>
 
   <style>
-    #s24{ gap:52px; }
-    #s24 .hdr{ display:flex; align-items:flex-end; gap:60px; }
-    #s24 .hdr h1{ margin:0; font-size:96px; font-weight:900; letter-spacing:-.03em; line-height:.9; }
-    #s24 .hdr .sub{
+    #s25{ gap:52px; }
+    #s25 .hdr{ display:flex; align-items:flex-end; gap:60px; }
+    #s25 .hdr h1{ margin:0; font-size:96px; font-weight:900; letter-spacing:-.03em; line-height:.9; }
+    #s25 .hdr .sub{
       margin:0 0 8px; font-family:var(--mono); font-size:30px; font-weight:500;
       letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
     }
-    #s24 .hdr .spacer{ flex:1; height:2px; background:var(--hair); margin-bottom:26px; }
+    #s25 .hdr .spacer{ flex:1; height:2px; background:var(--hair); margin-bottom:26px; }
 
-    #s24 .grp{ display:flex; flex-direction:column; gap:22px; }
-    #s24 .eb{
+    #s25 .grp{ display:flex; flex-direction:column; gap:22px; }
+    #s25 .eb{
       margin:0; font-family:var(--mono); font-size:27px; font-weight:600; letter-spacing:.2em;
       text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:22px;
     }
-    #s24 .eb i{ flex:1; height:2px; background:var(--hair); }
-    #s24 .rail{ gap:36px; }
-    #s24 .st{
+    #s25 .eb i{ flex:1; height:2px; background:var(--hair); }
+    #s25 .rail{ gap:36px; }
+    #s25 .st{
       background:var(--card); border:2px solid var(--card-line); border-radius:24px;
       padding:28px 32px 32px; min-height:268px;
       display:flex; flex-direction:column; justify-content:space-between; gap:24px;
     }
-    #s24 .st .n{
+    #s25 .st .n{
       font-family:var(--mono); font-size:36px; font-weight:600; letter-spacing:.08em; color:var(--accent);
     }
-    #s24 .st .k{ margin:0; font-size:52px; font-weight:700; letter-spacing:-.02em; line-height:1.08; }
-    #s24 .st.hand{ background:var(--mint); border-color:transparent; color:#04241A; }
-    #s24 .st.hand .n{ color:#04241A; opacity:.6; }
-    #s24 .st.hand .k{ font-weight:800; }
+    #s25 .st .k{ margin:0; font-size:52px; font-weight:700; letter-spacing:-.02em; line-height:1.08; }
+    #s25 .st.hand{ background:var(--mint); border-color:transparent; color:#04241A; }
+    #s25 .st.hand .n{ color:#04241A; opacity:.6; }
+    #s25 .st.hand .k{ font-weight:800; }
   </style>
 
   <div class="hdr">
@@ -1574,8 +1661,8 @@
   </div>
 </section>
 
-<!-- ===== 25-emphasis.html ===== -->
-<section class="slide t-accent l-stack" data-slide="25" data-title="Khi demo, nhấn 4 điều này" id="s25">
+<!-- ===== 26-emphasis.html ===== -->
+<section class="slide t-accent l-stack" data-slide="26" data-title="Khi demo, nhấn 4 điều này" id="s26">
   <div class="deco">
     <div class="deco-dots" style="opacity:.45;"></div>
     <div class="deco-bar bottom"></div>
@@ -1583,26 +1670,26 @@
   <p class="meta">Session 03 <b>·</b> Demo</p>
 
   <style>
-    #s25{ gap:94px; }
-    #s25 .hdr{ display:flex; flex-direction:column; gap:28px; }
-    #s25 .hdr .label{ color:#170A05; opacity:.62; }
-    #s25 .hdr .label::before{ background:#170A05; }
+    #s26{ gap:94px; }
+    #s26 .hdr{ display:flex; flex-direction:column; gap:28px; }
+    #s26 .hdr .label{ color:#170A05; opacity:.62; }
+    #s26 .hdr .label::before{ background:#170A05; }
 
-    #s25 .cols{ display:flex; gap:0; align-items:stretch; }
-    #s25 .c{
+    #s26 .cols{ display:flex; gap:0; align-items:stretch; }
+    #s26 .c{
       flex:1; min-width:0; display:flex; flex-direction:column; gap:34px;
       padding:0 50px; border-left:3px solid #170A0533;
     }
-    #s25 .c:first-child{ padding-left:0; border-left:none; }
-    #s25 .c:last-child{ padding-right:0; }
-    #s25 .c .n{
+    #s26 .c:first-child{ padding-left:0; border-left:none; }
+    #s26 .c:last-child{ padding-right:0; }
+    #s26 .c .n{
       font-family:var(--mono); font-size:82px; font-weight:600; line-height:1;
       letter-spacing:-.04em; color:#170A05; opacity:.42;
     }
-    #s25 .c p{
+    #s26 .c p{
       margin:0; font-size:104px; font-weight:900; line-height:1.06; letter-spacing:-.034em;
     }
-    #s25 .c p u{
+    #s26 .c p u{
       text-decoration-line:underline; text-decoration-thickness:8px;
       text-underline-offset:14px; text-decoration-skip-ink:none;
     }
@@ -1635,8 +1722,8 @@
   </div>
 </section>
 
-<!-- ===== 26-bridge-s4.html ===== -->
-<section class="slide t-ink l-center" data-slide="26" data-title="Cầu sang Session 4 — Doanh nghiệp một người" id="s26">
+<!-- ===== 27-bridge-s4.html ===== -->
+<section class="slide t-ink l-center" data-slide="27" data-title="Cầu sang Session 4 — Doanh nghiệp một người" id="s27">
   <div class="deco">
     <div class="deco-grid"></div>
     <div class="deco-orb mint" style="left:1340px; bottom:-1360px; opacity:.16;"></div>
@@ -1646,65 +1733,65 @@
   <p class="meta">Cầu nối <b>·</b> Session 04</p>
 
   <style>
-    #s26{ gap:0; }
-    #s26 .cap{
+    #s27{ gap:0; }
+    #s27 .cap{
       margin:0; font-family:var(--mono); font-size:32px; font-weight:500; letter-spacing:.14em;
       color:var(--muted);
     }
 
     /* one person multiplying into a bench of digital workers, across the full stage */
-    #s26 .spread{
+    #s27 .spread{
       position:relative; width:100%; display:flex; align-items:flex-start;
       justify-content:space-between;
     }
-    #s26 .spread .rl{ position:absolute; left:0; right:0; top:71px; height:2px; background:var(--hair); }
-    #s26 .ag{
+    #s27 .spread .rl{ position:absolute; left:0; right:0; top:71px; height:2px; background:var(--hair); }
+    #s27 .ag{
       position:relative; display:flex; flex-direction:column; align-items:center; gap:24px;
       flex:0 0 auto;
     }
-    #s26 .av{
+    #s27 .av{
       width:144px; height:144px; border-radius:50%; display:grid; place-items:center;
       font-size:60px; font-weight:900; color:#04241A; background:var(--mint);
       box-shadow:0 0 0 14px var(--bg);
     }
-    #s26 .ag.you .av{
+    #s27 .ag.you .av{
       width:168px; height:168px; font-size:70px; margin-top:-12px;
       background:linear-gradient(140deg,var(--accent),var(--amber)); color:#170A05;
     }
-    #s26 .ag .rn{
+    #s27 .ag .rn{
       margin:0; font-family:var(--mono); font-size:26px; line-height:1.34; font-weight:500;
       letter-spacing:.06em; color:var(--muted); max-width:330px; text-align:center;
     }
-    #s26 .ag.you .rn{ color:var(--fg); font-weight:600; }
-    #s26 .ghost{ display:flex; align-items:center; gap:34px; flex:0 0 auto; }
-    #s26 .ghost .av{ background:var(--mint); }
-    #s26 .ghost .g1{ opacity:.52; width:124px; height:124px; margin-top:10px; }
-    #s26 .ghost .g2{ opacity:.30; width:104px; height:104px; margin-top:20px; }
-    #s26 .ghost .g3{ opacity:.15; width:84px;  height:84px;  margin-top:30px; }
-    #s26 .arw{ flex:0 0 auto; margin-top:57px; }
-    #s26 .arw .arrow i{ width:230px; height:4px; background:var(--accent); }
-    #s26 .arw .arrow::after{ border-width:20px; border-right:0; }
+    #s27 .ag.you .rn{ color:var(--fg); font-weight:600; }
+    #s27 .ghost{ display:flex; align-items:center; gap:34px; flex:0 0 auto; }
+    #s27 .ghost .av{ background:var(--mint); }
+    #s27 .ghost .g1{ opacity:.52; width:124px; height:124px; margin-top:10px; }
+    #s27 .ghost .g2{ opacity:.30; width:104px; height:104px; margin-top:20px; }
+    #s27 .ghost .g3{ opacity:.15; width:84px;  height:84px;  margin-top:30px; }
+    #s27 .arw{ flex:0 0 auto; margin-top:57px; }
+    #s27 .arw .arrow i{ width:230px; height:4px; background:var(--accent); }
+    #s27 .arw .arrow::after{ border-width:20px; border-right:0; }
 
     /* footer: the point of Session 4, and the handover */
-    #s26 .foot{
+    #s27 .foot{
       width:100%; display:flex; align-items:flex-end; gap:160px; text-align:left;
       border-top:2px solid var(--hair); padding-top:40px;
     }
-    #s26 .foot .ln{ flex:1; min-width:0; margin:0; font-size:40px; line-height:1.32; color:var(--muted); }
-    #s26 .foot .ln b{ color:var(--fg); font-weight:700; }
-    #s26 .ho{ flex:0 0 1360px; display:flex; align-items:center; gap:36px; }
-    #s26 .ho .sq{
+    #s27 .foot .ln{ flex:1; min-width:0; margin:0; font-size:40px; line-height:1.32; color:var(--muted); }
+    #s27 .foot .ln b{ color:var(--fg); font-weight:700; }
+    #s27 .ho{ flex:0 0 1360px; display:flex; align-items:center; gap:36px; }
+    #s27 .ho .sq{
       flex:none; width:122px; height:122px; border-radius:28px; display:grid; place-items:center;
       background:var(--accent); color:var(--ink); font-size:50px; font-weight:900;
       font-family:var(--mono);
     }
-    #s26 .ho .tx{ min-width:0; }
-    #s26 .ho .t1{
+    #s27 .ho .tx{ min-width:0; }
+    #s27 .ho .t1{
       margin:0 0 8px; font-family:var(--mono); font-size:26px; letter-spacing:.22em;
       text-transform:uppercase; color:var(--accent); font-weight:600;
     }
-    #s26 .ho .t2{ margin:0; font-size:54px; font-weight:800; letter-spacing:-.02em; line-height:1.1; }
-    #s26 .ho .t3{ margin:10px 0 0; font-size:36px; color:var(--muted); }
+    #s27 .ho .t2{ margin:0; font-size:54px; font-weight:800; letter-spacing:-.02em; line-height:1.1; }
+    #s27 .ho .t3{ margin:10px 0 0; font-size:36px; color:var(--muted); }
   </style>
 
   <p class="label bare" style="letter-spacing:.26em;" data-anim="up-sm" data-delay="120">
@@ -1768,8 +1855,8 @@
   </div>
 </section>
 
-<!-- ===== 27-qa.html ===== -->
-<section class="slide t-paper l-stack" data-slide="27" data-title="Q&A + 7 ngày đầu tiên" id="s27">
+<!-- ===== 28-qa.html ===== -->
+<section class="slide t-paper l-stack" data-slide="28" data-title="Q&A + 7 ngày đầu tiên" id="s28">
   <div class="deco">
     <div class="deco-dots" style="opacity:.32;"></div>
     <div class="deco-orb" style="right:-980px; top:-1200px; opacity:.10;"></div>
@@ -1777,58 +1864,58 @@
   <p class="meta">Session 05 <b>·</b> Q&amp;A</p>
 
   <style>
-    #s27{ gap:60px; }
-    #s27 .row{ display:flex; align-items:stretch; gap:80px; }
-    #s27 .z1{ flex:0 0 940px; display:flex; flex-direction:column; gap:34px; }
-    #s27 .z2{ flex:0 0 1560px; display:flex; flex-direction:column; gap:32px; }
-    #s27 .z3{ flex:1; min-width:0; }
+    #s28{ gap:60px; }
+    #s28 .row{ display:flex; align-items:stretch; gap:80px; }
+    #s28 .z1{ flex:0 0 940px; display:flex; flex-direction:column; gap:34px; }
+    #s28 .z2{ flex:0 0 1560px; display:flex; flex-direction:column; gap:32px; }
+    #s28 .z3{ flex:1; min-width:0; }
 
-    #s27 .eb{
+    #s28 .eb{
       margin:0; font-family:var(--mono); font-size:28px; font-weight:600; letter-spacing:.22em;
       text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:20px;
     }
-    #s27 .eb i{ width:56px; height:3px; background:var(--accent); flex:none; }
+    #s28 .eb i{ width:56px; height:3px; background:var(--accent); flex:none; }
 
-    #s27 .qs{ gap:26px; }
-    #s27 .qs > li{ font-size:52px; font-weight:600; line-height:1.16; }
-    #s27 .qs > li::before{ font-size:52px; }
+    #s28 .qs{ gap:26px; }
+    #s28 .qs > li{ font-size:52px; font-weight:600; line-height:1.16; }
+    #s28 .qs > li::before{ font-size:52px; }
 
-    #s27 .safe{
+    #s28 .safe{
       height:100%; background:var(--accent); color:var(--ink); border-radius:30px;
       padding:44px 48px 48px; display:flex; flex-direction:column; gap:30px;
     }
-    #s27 .safe .t{
+    #s28 .safe .t{
       margin:0; font-family:var(--mono); font-size:28px; font-weight:600; letter-spacing:.22em;
       text-transform:uppercase; opacity:.66;
     }
-    #s27 .safe ul{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:0; }
-    #s27 .safe li{
+    #s28 .safe ul{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:0; }
+    #s28 .safe li{
       position:relative; font-size:46px; font-weight:600; line-height:1.16; letter-spacing:-.012em;
       padding:24px 0 24px 56px; border-top:2px solid #170A0526;
     }
-    #s27 .safe li:first-child{ border-top:none; padding-top:0; }
-    #s27 .safe li:last-child{ padding-bottom:0; }
-    #s27 .safe li b{ font-weight:800; }
-    #s27 .safe li::before{
+    #s28 .safe li:first-child{ border-top:none; padding-top:0; }
+    #s28 .safe li:last-child{ padding-bottom:0; }
+    #s28 .safe li b{ font-weight:800; }
+    #s28 .safe li::before{
       content:"→"; position:absolute; left:0; top:24px;
       font-family:var(--mono); font-weight:600; opacity:.6; font-size:38px;
     }
-    #s27 .safe li:first-child::before{ top:0; }
+    #s28 .safe li:first-child::before{ top:0; }
 
-    #s27 .close{
+    #s28 .close{
       display:flex; align-items:center; gap:80px;
       background:var(--ink); color:var(--paper); border-radius:32px; padding:40px 56px 44px;
     }
-    #s27 .close .lt{ flex:none; }
-    #s27 .close .lt .e{
+    #s28 .close .lt{ flex:none; }
+    #s28 .close .lt .e{
       margin:0 0 16px; font-family:var(--mono); font-size:28px; font-weight:600;
       letter-spacing:.22em; text-transform:uppercase; color:var(--accent);
     }
-    #s27 .close .n7{ margin:0; font-size:130px; font-weight:900; letter-spacing:-.038em; line-height:.88; }
-    #s27 .close .vr{ flex:1; height:3px; background:#FFFFFF26; }
-    #s27 .close .cx{ flex:none; text-align:right; }
-    #s27 .close .cx p{ margin:0; font-size:62px; font-weight:600; line-height:1.12; letter-spacing:-.018em; }
-    #s27 .close .cx .hl-bar{ background:var(--accent); }
+    #s28 .close .n7{ margin:0; font-size:130px; font-weight:900; letter-spacing:-.038em; line-height:.88; }
+    #s28 .close .vr{ flex:1; height:3px; background:#FFFFFF26; }
+    #s28 .close .cx{ flex:none; text-align:right; }
+    #s28 .close .cx p{ margin:0; font-size:62px; font-weight:600; line-height:1.12; letter-spacing:-.018em; }
+    #s28 .close .cx .hl-bar{ background:var(--accent); }
   </style>
 
   <div class="row">
@@ -1882,7 +1969,7 @@
   <button data-nav="overview">Overview (O)</button>
   <button data-nav="grid">Grid (G)</button>
   <span>F fullscreen · C fit-mode · R replay</span>
-  <span id="counter">01 / 27</span>
+  <span id="counter">01 / 28</span>
 </div>
 <script src="src/js/deck.js"></script>
 </body>

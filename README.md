@@ -37,7 +37,7 @@ src/css/theme.css     ← design system: màu, type scale, layout, component, tr
 src/css/engine.css    ← khung stage + animation primitives
 src/js/deck.js        ← điều hướng, animation, overview
 docs/DESIGN.md        ← quy ước design, đọc trước khi sửa slide
-docs/CONTENT.md       ← bản bóc tách nội dung 27 slide từ speaker guide
+docs/CONTENT.md       ← bản bóc tách nội dung 28 slide từ speaker guide
 assets/fonts/         ← Be Vietnam Pro + IBM Plex Mono (self-host, chạy offline)
 ```
 
@@ -49,10 +49,10 @@ assets/fonts/         ← Be Vietnam Pro + IBM Plex Mono (self-host, chạy offl
 
 ## Xuất file ảnh / PDF
 ```bash
-for i in $(seq 1 27); do ./shot.sh $i "out/slide-$(printf %02d $i).png"; done   # PNG 4480×1120
+for i in $(seq 1 28); do ./shot.sh $i "out/slide-$(printf %02d $i).png"; done   # PNG 4480×1120
 ```
 `shot.sh` mở deck ở chế độ `?export=1` nên ảnh xuất ra không có progress bar hay thanh điều khiển.
-Bộ 27 PNG đã render sẵn trong `out/`.
+Bộ 28 PNG đã render sẵn trong `out/`.
 In PDF: mở `index.html` trong Chrome → Print → khổ ngang, tắt margin.
 Cần `.pptx` thì import bộ PNG trên vào PowerPoint với slide size 4480×1120 px.
 
