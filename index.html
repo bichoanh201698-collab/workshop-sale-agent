@@ -145,45 +145,142 @@
   </div>
 </section>
 
-<!-- ===== 02-agenda.html ===== -->
-<section class="slide t-paper" data-slide="2" data-title="Agenda — 5 phần" id="s02">
+<!-- ===== 02-speaker.html ===== -->
+<section class="slide t-ink" data-slide="2" data-title="Speaker — Tín Trương" id="s02">
   <style>
-    #s02{ flex-direction:column; justify-content:flex-start; }
+    /* Rebuilt from the client's speaker card (docs/ref/ref-02-speaker-card.png).
+       Their card is 552px square, so blowing it up on a 4480px wall would be
+       soft. The portrait is used at close to native size and the pill, frame
+       and name band are rebuilt live, with the name moved out to carry the
+       left half of the stage instead of being repeated twice. */
+    #s02{ align-items:center; justify-content:center; gap:130px; }
 
-    #s02 .top{ display:flex; align-items:flex-end; gap:64px; flex:none; }
-    #s02 .ttl{
+    #s02 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:44px; }
+    #s02 .nm{
+      margin:0; font-size:252px; font-weight:900; letter-spacing:-.042em; line-height:.94;
+    }
+    #s02 .roles{ display:flex; flex-direction:column; gap:26px; }
+    #s02 .roles p{
+      margin:0; display:flex; align-items:center; gap:26px;
+      font-size:62px; font-weight:700; letter-spacing:-.016em;
+    }
+    #s02 .roles p svg{ width:52px; height:52px; flex:none; stroke:var(--accent); }
+    #s02 .roles p.sub{ font-size:52px; font-weight:500; color:var(--muted); }
+
+    /* --- the card ---------------------------------------------------- */
+    #s02 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
+      margin:120px 0; transform-origin:center top; }
+
+    /* The name lives large on the left, so the card stays a portrait frame
+       with only the client's "Speakers" pill — repeating the name inside a
+       band as their 552px card does would say it twice on one stage. */
+    #s02 .card2{
+      flex:none; width:780px; position:relative;
+      border-radius:56px; background:#A10808;
+      box-shadow:0 0 0 7px var(--brand), 0 0 110px -12px #E61F28AA, 0 54px 130px -44px #000000CC;
+    }
+    #s02 .card2 .ph{ position:relative; border-radius:56px; overflow:hidden; display:block; }
+    #s02 .card2 img{ width:100%; height:auto; display:block; }
+    #s02 .card2 .pill{
+      position:absolute; left:50%; bottom:-38px; transform:translateX(-50%);
+      z-index:3; white-space:nowrap;
+      background:#08080A; color:#fff; border:5px solid var(--brand);
+      border-radius:999px; padding:22px 66px;
+      font-size:52px; font-weight:800; letter-spacing:-.01em;
+      box-shadow:0 0 40px -4px #E61F28CC;
+    }
+    /* slow shine crawling across the frame */
+    #s02 .card2 .ph::after{
+      content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+      background:linear-gradient(115deg, transparent 34%, #FFFFFF1F 47%, #FFFFFF4D 50%, #FFFFFF1F 53%, transparent 66%);
+      transform:translateX(-120%);
+      animation:s02shine 7.5s cubic-bezier(.4,0,.6,1) infinite;
+    }
+    @keyframes s02shine{
+      0%{ transform:translateX(-120%) } 62%{ transform:translateX(120%) } 100%{ transform:translateX(120%) }
+    }
+  </style>
+
+  <div class="deco">
+    <div class="deco-grid"></div>
+    <div class="deco-orb" style="right:-560px; top:-980px; opacity:.17;"></div>
+    <div class="deco-orb" style="left:-840px; bottom:-1240px; opacity:.09;"></div>
+    <div class="deco-noise"></div>
+  </div>
+
+  <p class="meta">Speaker</p>
+
+  <div class="lz">
+    <p class="label" data-anim="wipe-r" data-delay="140">Speakers</p>
+    <h1 class="nm">
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="300" data-dur="1000">Tín Trương</span></span>
+    </h1>
+    <div class="roles">
+      <p data-anim="up-sm" data-delay="640">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Lead Producer
+      </p>
+      <p class="sub" data-anim="up-sm" data-delay="740">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        ClawExperts.com
+      </p>
+    </div>
+  </div>
+
+  <i class="rule" data-anim="grow-y" data-delay="420" data-dur="800"></i>
+
+  <div class="card2" data-anim="scale" data-delay="480" data-dur="1000">
+    <span class="ph"><img src="assets/brand/speaker-tin-portrait.png" alt="Chân dung Tín Trương"></span>
+    <span class="pill">Speakers</span>
+  </div>
+
+  <div class="brandbar">
+    <img src="assets/brand/logo-organizer-openclaw.png" alt="Đơn vị tổ chức — OpenClaw VN">
+    <span class="sep"></span>
+    <img src="assets/brand/logo-sponsor-clawexperts.png" alt="Đơn vị tài trợ — ClawExperts.com">
+  </div>
+  <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
+</section>
+
+<!-- ===== 03-agenda.html ===== -->
+<section class="slide t-paper" data-slide="3" data-title="Agenda — 5 phần" id="s03">
+  <style>
+    #s03{ flex-direction:column; justify-content:flex-start; }
+
+    #s03 .top{ display:flex; align-items:flex-end; gap:64px; flex:none; }
+    #s03 .ttl{
       margin:0; font-size:238px; font-weight:900; line-height:.9;
       letter-spacing:-.045em;
     }
 
-    #s02 .row{ display:flex; gap:44px; margin-top:56px; align-items:stretch; flex:1; min-height:0; margin-bottom:26px; }
+    #s03 .row{ display:flex; gap:44px; margin-top:56px; align-items:stretch; flex:1; min-height:0; margin-bottom:26px; }
 
-    #s02 .it{
+    #s03 .it{
       flex:1; min-width:0;
       background:#FFFFFF; border:2px solid #0A0B0D14;
       border-radius:30px; padding:48px 46px 52px;
       display:flex; flex-direction:column;
       box-shadow:0 24px 60px -34px #0A0B0D26;
     }
-    #s02 .it .bar{
+    #s03 .it .bar{
       display:block; width:96px; height:9px; border-radius:99px;
       background:var(--accent); transform-origin:left center;
     }
-    #s02 .it .n{
+    #s03 .it .n{
       margin:30px 0 0; font-size:128px; font-weight:900; line-height:.86;
       letter-spacing:-.05em; color:var(--accent); font-variant-numeric:tabular-nums;
     }
-    #s02 .it .t{
+    #s03 .it .t{
       margin:32px 0 0; font-size:47px; font-weight:700; line-height:1.24;
       letter-spacing:-.014em; color:var(--fg); text-wrap:pretty;
     }
     /* echo of the arc motif in the reference layout */
-    #s02 .arc{
+    #s03 .arc{
       position:absolute; right:-460px; bottom:-620px;
       width:1560px; height:1560px; border-radius:50%;
       border:76px solid var(--accent); opacity:.14;
     }
-    #s02 .arc.two{
+    #s03 .arc.two{
       right:-300px; bottom:-800px; width:1180px; height:1180px;
       border-width:52px; opacity:.1;
     }
@@ -239,14 +336,14 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 03-divider-casestudy.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="3" data-title="Phần 01 — Case study: Mái Nhà Việt" id="s03">
+<!-- ===== 04-divider-casestudy.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="4" data-title="Phần 01 — Case study: Mái Nhà Việt" id="s04">
   <style>
     /* The shared .divider component sets line-height:1 on .dtitle, which is
        safe for the one-line dividers. This title needs two lines, so it gets
        the DESIGN.md minimum leading for stacked Vietnamese marks
        (ệ dot-below over ă tone-mark). Text slots only otherwise. */
-    #s03 .dtitle{ font-size:198px; line-height:1.07; }
+    #s04 .dtitle{ font-size:198px; line-height:1.07; }
   </style>
 
   <div class="deco">
@@ -286,64 +383,64 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 04-mainhaviet.html ===== -->
-<section class="slide t-ink l-stack" data-slide="4" data-title="Mái Nhà Việt x3 năng suất — 3 kết quả" id="s04">
+<!-- ===== 05-mainhaviet.html ===== -->
+<section class="slide t-ink l-stack" data-slide="5" data-title="Mái Nhà Việt x3 năng suất — 3 kết quả" id="s05">
   <style>
-    #s04{ gap:76px; }
+    #s05{ gap:76px; }
 
-    #s04 .band{ display:flex; align-items:flex-end; gap:120px; }
-    #s04 .band .say{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
-    #s04 .hd{ margin:0; font-size:150px; font-weight:900; letter-spacing:-.034em; line-height:1.06; }
+    #s05 .band{ display:flex; align-items:flex-end; gap:120px; }
+    #s05 .band .say{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
+    #s05 .hd{ margin:0; font-size:150px; font-weight:900; letter-spacing:-.034em; line-height:1.06; }
 
     /* customer result, not a marketing promise — this plate is the framing */
-    #s04 .caveat{
+    #s05 .caveat{
       flex:0 0 1040px; display:flex; flex-direction:column; gap:14px;
       background:var(--card); border:2px solid var(--card-line);
       border-left:8px solid var(--amber); border-radius:0 20px 20px 0;
       padding:28px 38px;
     }
-    #s04 .caveat .bl{
+    #s05 .caveat .bl{
       font-family:var(--mono); font-size:25px; font-weight:600;
       letter-spacing:.22em; text-transform:uppercase; color:var(--amber);
     }
-    #s04 .caveat p{ margin:0; font-size:34px; line-height:1.3; font-weight:500; color:var(--fg); }
-    #s04 .caveat p b{ font-weight:800; }
+    #s05 .caveat p{ margin:0; font-size:34px; line-height:1.3; font-weight:500; color:var(--fg); }
+    #s05 .caveat p b{ font-weight:800; }
 
-    #s04 .strip{ display:flex; align-items:flex-start; }
-    #s04 .strip > .stat{ flex:1; min-width:0; padding:0 70px; gap:30px; }
-    #s04 .strip > .stat:first-child{ padding-left:0; }
-    #s04 .strip > .stat:last-child{ padding-right:0; }
-    #s04 .strip > .stat + .stat{ border-left:3px solid var(--hair); }
+    #s05 .strip{ display:flex; align-items:flex-start; }
+    #s05 .strip > .stat{ flex:1; min-width:0; padding:0 70px; gap:30px; }
+    #s05 .strip > .stat:first-child{ padding-left:0; }
+    #s05 .strip > .stat:last-child{ padding-right:0; }
+    #s05 .strip > .stat + .stat{ border-left:3px solid var(--hair); }
     /* .stat .num is a <p> here; theme.css already zeroes the margin, but a
        1em margin at 300px would blow the 1120px canvas — keep it explicit. */
-    #s04 .stat .num{ font-size:288px; margin:0; }
-    #s04 .stat .cap{ max-width:1210px; font-size:44px; color:var(--muted); }
-    #s04 .stat .cap b{ color:var(--fg); font-weight:800; }
+    #s05 .stat .num{ font-size:288px; margin:0; }
+    #s05 .stat .cap{ max-width:1210px; font-size:44px; color:var(--muted); }
+    #s05 .stat .cap b{ color:var(--fg); font-weight:800; }
 
     /* ---- before → after variant of .stat ------------------------------
        The first figure is a transition (47m25s → 6s), not a fraction, so
        .num carries two values at different weights plus a handoff arrow
        instead of the .den suffix the component was built for. */
-    #s04 .stat.ba .num{ gap:34px; }
-    #s04 .stat.ba .was{
+    #s05 .stat.ba .num{ gap:34px; }
+    #s05 .stat.ba .was{
       font-size:122px; font-weight:800; color:var(--muted);
       letter-spacing:-.025em; line-height:.82;
     }
-    #s04 .stat.ba .now{ line-height:.82; }
-    #s04 .stat.ba .to{
+    #s05 .stat.ba .now{ line-height:.82; }
+    #s05 .stat.ba .to{
       position:relative; flex:none; align-self:center;
       width:118px; height:9px; background:var(--hair); margin:0 8px 62px;
     }
-    #s04 .stat.ba .to::after{
+    #s05 .stat.ba .to::after{
       content:""; position:absolute; right:-2px; top:50%; transform:translateY(-50%);
       width:0; height:0; border:25px solid transparent;
       border-left-color:var(--accent); border-right:0;
     }
-    #s04 .stat.ba .lbl{
+    #s05 .stat.ba .lbl{
       display:flex; gap:34px; font-family:var(--mono); font-size:25px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:-14px 0 0;
     }
-    #s04 .stat.ba .lbl b{ color:var(--accent); font-weight:600; }
+    #s05 .stat.ba .lbl b{ color:var(--accent); font-weight:600; }
   </style>
 
   <div class="deco">
@@ -398,58 +495,58 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 05-how-shops-advise.html ===== -->
-<section class="slide t-paper l-split" data-slide="5" data-title="Cách các shop đang tư vấn khách hàng" id="s05">
+<!-- ===== 06-how-shops-advise.html ===== -->
+<section class="slide t-paper l-split" data-slide="6" data-title="Cách các shop đang tư vấn khách hàng" id="s06">
   <style>
-    #s05{ gap:150px; }
-    #s05 .lead{ flex:0 0 1980px; gap:46px; }
-    #s05 .payload{ flex:1; min-width:0; }
+    #s06{ gap:150px; }
+    #s06 .lead{ flex:0 0 1980px; gap:46px; }
+    #s06 .payload{ flex:1; min-width:0; }
 
-    #s05 .hd{ margin:0; font-size:118px; font-weight:900; letter-spacing:-.032em; line-height:1.06; }
-    #s05 .sb{ margin:0; font-size:41px; line-height:1.32; color:var(--muted); max-width:1900px; }
-    #s05 .sb b{ color:var(--fg); font-weight:700; }
+    #s06 .hd{ margin:0; font-size:118px; font-weight:900; letter-spacing:-.032em; line-height:1.06; }
+    #s06 .sb{ margin:0; font-size:41px; line-height:1.32; color:var(--muted); max-width:1900px; }
+    #s06 .sb b{ color:var(--fg); font-weight:700; }
 
     /* the highlight is the sentence the room must leave with */
-    #s05 .punch{
+    #s06 .punch{
       margin:0; font-size:68px; font-weight:800; letter-spacing:-.022em; line-height:1.14;
       max-width:1930px; border-top:4px solid var(--accent); padding-top:34px;
     }
-    #s05 .punch .strike .hl-bar{ z-index:2; height:.085em; border-radius:0; }
+    #s06 .punch .strike .hl-bar{ z-index:2; height:.085em; border-radius:0; }
 
     /* Open question 3 — the pptx marks this dashboard "ngày cuối sẽ fill hình".
        The panel is built as type at exactly the size a screenshot can replace. */
-    #s05 .panel{
+    #s06 .panel{
       background:#FFFFFF; border:2px solid #0A0B0D14; border-radius:30px;
       box-shadow:0 26px 64px -36px #0A0B0D26;
       padding:40px 48px 30px; display:flex; flex-direction:column;
       min-height:690px;
     }
-    #s05 .panel .ph{
+    #s06 .panel .ph{
       display:flex; align-items:center; justify-content:space-between; gap:40px;
       padding-bottom:26px; border-bottom:2px solid #0A0B0D14;
     }
-    #s05 .rows{ flex:1; display:flex; flex-direction:column; }
-    #s05 .r{
+    #s06 .rows{ flex:1; display:flex; flex-direction:column; }
+    #s06 .r{
       flex:1; display:flex; align-items:center; gap:44px;
       border-bottom:2px solid #0A0B0D0F;
     }
-    #s05 .r .n{
+    #s06 .r .n{
       flex:0 0 330px; margin:0; font-size:112px; font-weight:900; line-height:1;
       letter-spacing:-.045em; font-variant-numeric:tabular-nums; color:var(--accent);
     }
-    #s05 .r .n .d{ font-size:.44em; font-weight:700; color:var(--muted); letter-spacing:-.02em; }
-    #s05 .r:nth-child(2) .n{ color:#B8860B; }
-    #s05 .r:nth-child(3) .n{ color:#0E7A5A; }
-    #s05 .r .c{ margin:0; font-size:41px; font-weight:600; line-height:1.24; letter-spacing:-.012em; }
-    #s05 .r .c b{ font-weight:800; }
+    #s06 .r .n .d{ font-size:.44em; font-weight:700; color:var(--muted); letter-spacing:-.02em; }
+    #s06 .r:nth-child(2) .n{ color:#B8860B; }
+    #s06 .r:nth-child(3) .n{ color:#0E7A5A; }
+    #s06 .r .c{ margin:0; font-size:41px; font-weight:600; line-height:1.24; letter-spacing:-.012em; }
+    #s06 .r .c b{ font-weight:800; }
 
-    #s05 .pf{
+    #s06 .pf{
       display:flex; align-items:baseline; justify-content:space-between; gap:40px;
       padding-top:22px; font-family:var(--mono); font-size:25px; font-weight:500;
       letter-spacing:.11em; text-transform:uppercase; color:var(--muted);
     }
-    #s05 .pf b{ color:var(--fg); font-weight:600; }
-    #s05 .pf .slot{ color:var(--accent); opacity:.75; white-space:nowrap; }
+    #s06 .pf b{ color:var(--fg); font-weight:600; }
+    #s06 .pf .slot{ color:var(--accent); opacity:.75; white-space:nowrap; }
   </style>
 
   <div class="deco">
@@ -515,49 +612,49 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 06-inbox-3x.html ===== -->
-<section class="slide t-ink-2 l-split" data-slide="6" data-title="Nếu inbox tăng gấp 3" id="s06">
+<!-- ===== 07-inbox-3x.html ===== -->
+<section class="slide t-ink-2 l-split" data-slide="7" data-title="Nếu inbox tăng gấp 3" id="s07">
   <style>
-    #s06{ gap:150px; }
-    #s06 .lead{ flex:0 0 1600px; gap:44px; }
-    #s06 .payload{ flex:1; min-width:0; flex-direction:row; gap:110px; align-items:center; }
+    #s07{ gap:150px; }
+    #s07 .lead{ flex:0 0 1600px; gap:44px; }
+    #s07 .payload{ flex:1; min-width:0; flex-direction:row; gap:110px; align-items:center; }
 
-    #s06 .hd{ margin:0; font-size:100px; font-weight:900; letter-spacing:-.03em; line-height:1.06; }
-    #s06 .sb{ margin:0; font-size:38px; line-height:1.32; color:var(--muted); max-width:1560px; }
+    #s07 .hd{ margin:0; font-size:100px; font-weight:900; letter-spacing:-.03em; line-height:1.06; }
+    #s07 .sb{ margin:0; font-size:38px; line-height:1.32; color:var(--muted); max-width:1560px; }
 
     /* ---- chart column ------------------------------------------------- */
-    #s06 .chart{ flex:0 0 1240px; display:flex; flex-direction:column; gap:30px; }
-    #s06 .chart svg{ display:block; width:1240px; height:620px; }
-    #s06 .axis{ fill:none; stroke:var(--fg); stroke-width:10; stroke-linecap:square; }
-    #s06 .curve{ fill:none; stroke:var(--accent); stroke-width:8; stroke-linecap:round; }
-    #s06 .alab{
+    #s07 .chart{ flex:0 0 1240px; display:flex; flex-direction:column; gap:30px; }
+    #s07 .chart svg{ display:block; width:1240px; height:620px; }
+    #s07 .axis{ fill:none; stroke:var(--fg); stroke-width:10; stroke-linecap:square; }
+    #s07 .curve{ fill:none; stroke:var(--accent); stroke-width:8; stroke-linecap:round; }
+    #s07 .alab{
       fill:var(--fg); font-family:var(--sans); font-size:44px; font-weight:800;
       letter-spacing:.03em;
     }
 
     /* Hard requirement from the speaker guide: the curve is an illustrative
        relationship, never presented as measured data. */
-    #s06 .illus{
+    #s07 .illus{
       display:flex; align-items:center; gap:24px;
       font-family:var(--mono); font-size:29px; font-weight:600;
       letter-spacing:.13em; text-transform:uppercase; color:var(--amber);
       border-top:3px solid var(--hair); padding-top:26px;
     }
-    #s06 .illus i.d{ width:14px; height:14px; border-radius:50%; background:var(--amber); flex:none; }
+    #s07 .illus i.d{ width:14px; height:14px; border-radius:50%; background:var(--amber); flex:none; }
 
     /* ---- conclusion column -------------------------------------------- */
-    #s06 .close{ flex:1; min-width:0; display:flex; flex-direction:column; gap:40px; }
-    #s06 .cc{ margin:0; font-size:54px; font-weight:800; letter-spacing:-.02em; line-height:1.16; }
-    #s06 .plate{
+    #s07 .close{ flex:1; min-width:0; display:flex; flex-direction:column; gap:40px; }
+    #s07 .cc{ margin:0; font-size:54px; font-weight:800; letter-spacing:-.02em; line-height:1.16; }
+    #s07 .plate{
       background:var(--card); border:2px solid var(--card-line);
       border-left:8px solid var(--mint); border-radius:0 20px 20px 0;
       padding:28px 38px; display:flex; flex-direction:column; gap:14px;
     }
-    #s06 .plate .bl{
+    #s07 .plate .bl{
       font-family:var(--mono); font-size:25px; font-weight:600;
       letter-spacing:.22em; text-transform:uppercase; color:var(--mint);
     }
-    #s06 .plate p{ margin:0; font-size:34px; line-height:1.3; font-weight:500; color:var(--fg); }
+    #s07 .plate p{ margin:0; font-size:34px; line-height:1.3; font-weight:500; color:var(--fg); }
   </style>
 
   <div class="deco">
@@ -618,15 +715,15 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 07-divider-understand.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="7" data-title="Phần 02 — Trước khi tạo nhân viên số" id="s07">
+<!-- ===== 08-divider-understand.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="8" data-title="Phần 02 — Trước khi tạo nhân viên số" id="s08">
   <style>
     /* two-line divider title: the component ships line-height:1 (single-line),
        which collides ạ/ộ dot-belows with the next line's tone marks. */
-    #s07 .dtitle{ font-size:214px; line-height:1.06; }
-    #s07 .dtitle .ln{ display:block; }
+    #s08 .dtitle{ font-size:214px; line-height:1.06; }
+    #s08 .dtitle .ln{ display:block; }
     /* lift the strip clear of the .brandbar plate (bottom:34px, ~70px tall) */
-    #s07 .strip{ bottom:182px; }
+    #s08 .strip{ bottom:182px; }
   </style>
 
   <div class="deco">
@@ -664,60 +761,60 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 08-what-is-agent.html ===== -->
-<section class="slide t-ink l-stack" data-slide="8" data-title="Nhân viên tư vấn số là gì?" id="s08">
+<!-- ===== 09-what-is-agent.html ===== -->
+<section class="slide t-ink l-stack" data-slide="9" data-title="Nhân viên tư vấn số là gì?" id="s09">
   <style>
-    #s08{ gap:0; }
+    #s09{ gap:0; }
 
     /* ---- beat 1 + 2: headline (loud) and sub (support) ---- */
-    #s08 .top{ display:flex; align-items:flex-end; gap:130px; }
-    #s08 .top .hd{ flex:1 1 auto; min-width:0; }
-    #s08 .top .hd h1{
+    #s09 .top{ display:flex; align-items:flex-end; gap:130px; }
+    #s09 .top .hd{ flex:1 1 auto; min-width:0; }
+    #s09 .top .hd h1{
       margin:36px 0 0; font-size:180px; font-weight:900;
       letter-spacing:-.042em; line-height:.92; white-space:nowrap;
     }
-    #s08 .top .sub{
+    #s09 .top .sub{
       flex:0 0 1620px; margin:0 0 22px; padding-left:56px;
       border-left:4px solid var(--hair);
       font-size:44px; line-height:1.34; font-weight:400; color:var(--muted);
       max-width:none;
     }
-    #s08 .top .sub b{ color:var(--fg); font-weight:600; }
+    #s09 .top .sub b{ color:var(--fg); font-weight:600; }
 
     /* ---- beat 3 + 4: the question and its answer chipset ---- */
-    #s08 .qa{ margin-top:146px; }
-    #s08 .q{
+    #s09 .qa{ margin-top:146px; }
+    #s09 .q{
       display:flex; align-items:baseline; gap:32px; margin:0;
       font-size:76px; font-weight:700; letter-spacing:-.022em; line-height:1.06;
     }
-    #s08 .q .mk{
+    #s09 .q .mk{
       font-family:var(--mono); font-weight:600; color:var(--accent); flex:none;
       font-size:66px;
     }
-    #s08 .chipset{ margin-top:40px; gap:22px; justify-content:space-between; }
-    #s08 .chip{
+    #s09 .chipset{ margin-top:40px; gap:22px; justify-content:space-between; }
+    #s09 .chip{
       font-size:52px; padding:24px 40px; border-width:3px; background:transparent;
     }
-    #s08 .chip .ic{ width:18px; height:18px; }
-    #s08 .chip .k{
+    #s09 .chip .ic{ width:18px; height:18px; }
+    #s09 .chip .k{
       font-family:var(--mono); font-size:25px; letter-spacing:.16em;
       color:var(--muted); margin-right:2px;
     }
 
     /* ---- beat 5: câu chốt — the second thing that must read from the back.
            Full-bleed crimson band; it stops above the .brandbar plate. ---- */
-    #s08 .clincher{
+    #s09 .clincher{
       margin:78px calc(var(--safe-x) * -1) 0;
       background:var(--accent); color:#FFFFFF;
       padding:48px var(--safe-x) 52px;
       display:flex; align-items:center; gap:52px;
     }
-    #s08 .clincher .eq{
+    #s09 .clincher .eq{
       flex:none; margin:0; font-family:var(--mono); font-size:27px;
       letter-spacing:.2em; text-transform:uppercase; line-height:1.5;
       border-left:5px solid #FFFFFF; padding-left:26px;
     }
-    #s08 .clincher .txt{
+    #s09 .clincher .txt{
       flex:1; margin:0; font-size:74px; font-weight:800;
       letter-spacing:-.028em; line-height:1.1; max-width:none; text-wrap:initial;
     }
@@ -773,32 +870,32 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 09-hr-file.html ===== -->
-<section class="slide t-paper" data-slide="9" data-title="Nhân viên số cũng cần một hồ sơ nhân sự" id="s09">
+<!-- ===== 10-hr-file.html ===== -->
+<section class="slide t-paper" data-slide="10" data-title="Nhân viên số cũng cần một hồ sơ nhân sự" id="s10">
   <style>
-    #s09{ flex-direction:column; justify-content:center; gap:0; }
+    #s10{ flex-direction:column; justify-content:center; gap:0; }
 
-    #s09 .band{ display:flex; align-items:flex-start; gap:150px; }
-    #s09 .band h1{ flex:1 1 auto; min-width:0; font-size:116px; line-height:1.1; margin:0; }
-    #s09 .subs{ flex:0 0 1720px; display:flex; flex-direction:column; gap:24px; padding-top:14px; }
-    #s09 .subs p{ margin:0; font-size:36px; line-height:1.36; color:var(--muted); }
-    #s09 .subs p b{ color:var(--fg); font-weight:700; }
+    #s10 .band{ display:flex; align-items:flex-start; gap:150px; }
+    #s10 .band h1{ flex:1 1 auto; min-width:0; font-size:116px; line-height:1.1; margin:0; }
+    #s10 .subs{ flex:0 0 1720px; display:flex; flex-direction:column; gap:24px; padding-top:14px; }
+    #s10 .subs p{ margin:0; font-size:36px; line-height:1.36; color:var(--muted); }
+    #s10 .subs p b{ color:var(--fg); font-weight:700; }
 
-    #s09 .lead{ margin:58px 0 0; display:flex; align-items:center; gap:26px;
+    #s10 .lead{ margin:58px 0 0; display:flex; align-items:center; gap:26px;
       font-size:40px; font-weight:700; }
-    #s09 .lead i{ display:block; width:74px; height:4px; background:var(--accent); flex:none; }
+    #s10 .lead i{ display:block; width:74px; height:4px; background:var(--accent); flex:none; }
 
-    #s09 .items{ display:flex; gap:32px; margin-top:42px; align-items:stretch; min-height:330px; }
-    #s09 .it{
+    #s10 .items{ display:flex; gap:32px; margin-top:42px; align-items:stretch; min-height:330px; }
+    #s10 .it{
       flex:1; min-width:0; padding-top:26px; border-top:5px solid var(--accent);
       display:flex; flex-direction:column; gap:18px;
     }
-    #s09 .it .no{ margin:0; font-family:var(--mono); font-size:25px; font-weight:600;
+    #s10 .it .no{ margin:0; font-family:var(--mono); font-size:25px; font-weight:600;
       letter-spacing:.2em; color:var(--accent); }
-    #s09 .it .k{ margin:0; font-size:53px; font-weight:800; letter-spacing:-.018em; line-height:1.14; }
+    #s10 .it .k{ margin:0; font-size:53px; font-weight:800; letter-spacing:-.018em; line-height:1.14; }
     /* the last item is the loop that keeps the whole file alive */
-    #s09 .it.last{ border-top-color:var(--ink); }
-    #s09 .it.last .no{ color:var(--ink); opacity:.5; }
+    #s10 .it.last{ border-top-color:var(--ink); }
+    #s10 .it.last .no{ color:var(--ink); opacity:.5; }
   </style>
 
   <div class="deco">
@@ -840,25 +937,25 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 10-fb-page.html ===== -->
-<section class="slide t-ink" data-slide="10" data-title="Quét mã — Facebook page" id="s10">
+<!-- ===== 11-fb-page.html ===== -->
+<section class="slide t-ink" data-slide="11" data-title="Quét mã — Facebook page" id="s11">
   <style>
     /* The QR is the whole point of this slide, so it sits dead centre and the
        two text zones balance it left and right across the 4:1 stage. */
-    #s10{ align-items:center; gap:150px; }
+    #s11{ align-items:center; gap:150px; }
 
-    #s10 .lz{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:40px; }
-    #s10 .lz h1{ margin:0; font-size:158px; font-weight:900; letter-spacing:-.034em; line-height:1.07; }
+    #s11 .lz{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:40px; }
+    #s11 .lz h1{ margin:0; font-size:158px; font-weight:900; letter-spacing:-.034em; line-height:1.07; }
 
-    #s10 .plate{
+    #s11 .plate{
       flex:none; position:relative; width:600px; height:600px; border-radius:42px;
       background:#fff; padding:40px; box-sizing:border-box;
       box-shadow:0 0 0 8px var(--accent), 0 40px 110px -28px #E61F28AA;
       overflow:hidden;
     }
-    #s10 .plate img{ width:100%; height:100%; display:block; object-fit:contain; }
+    #s11 .plate img{ width:100%; height:100%; display:block; object-fit:contain; }
     /* the one moving thing on the slide */
-    #s10 .plate .scan{
+    #s11 .plate .scan{
       position:absolute; left:0; right:0; height:160px; pointer-events:none;
       background:linear-gradient(to bottom,#E61F2800,#E61F2830 45%,#E61F28CC 50%,#E61F2830 55%,#E61F2800);
       animation:s10scan 3.4s cubic-bezier(.45,0,.55,1) infinite;
@@ -869,18 +966,18 @@
       100%{ transform:translateY(600px); opacity:0 }
     }
 
-    #s10 .rz{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:34px; }
-    #s10 .rz .big{
+    #s11 .rz{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:34px; }
+    #s11 .rz .big{
       margin:0; font-size:80px; font-weight:800; letter-spacing:-.02em; line-height:1.14; max-width:20ch;
     }
-    #s10 .rz .steps2{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:20px; }
-    #s10 .rz .steps2 li{
+    #s11 .rz .steps2{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:20px; }
+    #s11 .rz .steps2 li{
       display:flex; align-items:baseline; gap:22px;
       font-family:var(--mono); font-size:33px; font-weight:600; letter-spacing:.06em;
       text-transform:uppercase; color:var(--muted);
     }
-    #s10 .rz .steps2 li b{ color:var(--accent); font-weight:600; }
-    #s10 .tag{
+    #s11 .rz .steps2 li b{ color:var(--accent); font-weight:600; }
+    #s11 .tag{
       display:inline-flex; align-items:center; gap:20px; align-self:flex-start;
       background:var(--accent); color:#fff; border-radius:999px; padding:20px 40px;
       font-size:46px; font-weight:800; letter-spacing:-.012em;
@@ -926,28 +1023,28 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 11-divider-training.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="11" data-title="Phần 03 — Training nhân viên số đầu tiên của bạn" id="s11">
+<!-- ===== 12-divider-training.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="12" data-title="Phần 03 — Training nhân viên số đầu tiên của bạn" id="s12">
   <style>
-    #s11 .dtitle{ font-size:196px; }
+    #s12 .dtitle{ font-size:196px; }
     /* lift the strip clear of the .brandbar plate (bottom:34px, ~70px tall) */
-    #s11 .strip{ bottom:182px; }
+    #s12 .strip{ bottom:182px; }
 
     /* trial code — attendees type this in, so it gets the one solid plate
        on the slide instead of living in the .sub slot as a footnote. */
-    #s11 .code{
+    #s12 .code{
       margin:66px 0 0; display:flex; align-items:stretch;
       border-radius:22px; overflow:hidden;
       box-shadow:0 34px 90px -40px #00000099;
     }
-    #s11 .code .lb{
+    #s12 .code .lb{
       flex:none; display:flex; align-items:center;
       background:var(--accent); color:#fff;
       font-family:var(--mono); font-size:44px; font-weight:600;
       letter-spacing:.24em; text-transform:uppercase;
       padding:0 44px;
     }
-    #s11 .code .val{
+    #s12 .code .val{
       flex:none; display:flex; align-items:center;
       background:var(--paper); color:var(--ink);
       font-family:var(--mono); font-size:158px; font-weight:700;
@@ -996,22 +1093,22 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 12-three-jobs.html ===== -->
-<section class="slide t-ink-2 l-rail" data-slide="12" data-title="Bắt đầu bằng những việc lặp lại nhưng quan trọng" id="s12">
+<!-- ===== 13-three-jobs.html ===== -->
+<section class="slide t-ink-2 l-rail" data-slide="13" data-title="Bắt đầu bằng những việc lặp lại nhưng quan trọng" id="s13">
   <style>
-    #s12{ gap:56px; }
-    #s12 .band{ display:flex; align-items:flex-end; gap:140px; }
-    #s12 .band .hd{ flex:1 1 auto; min-width:0; }
-    #s12 .band .hd h1{ font-size:118px; line-height:1.09; }
-    #s12 .close{ flex:0 0 1500px; border-top:3px solid var(--accent); padding-top:30px; }
-    #s12 .close p{ margin:0; font-size:42px; line-height:1.34; color:var(--muted); font-weight:500; }
-    #s12 .close p b{ color:var(--fg); font-weight:700; }
-    #s12 .rail{ gap:48px; }
-    #s12 .card{ min-height:436px; padding:48px 54px 50px; border-radius:32px; gap:0; justify-content:flex-start; }
-    #s12 .card .n{ font-size:38px; letter-spacing:.16em; }
-    #s12 .card .k{ font-size:76px; line-height:1.1; margin:38px 0 0; }
-    #s12 .card .v{ font-size:40px; line-height:1.3; margin:auto 0 0; padding-top:34px; border-top:2px solid var(--hair); }
-    #s12 .card.hot .v{ border-top-color:#FFFFFF3D; }
+    #s13{ gap:56px; }
+    #s13 .band{ display:flex; align-items:flex-end; gap:140px; }
+    #s13 .band .hd{ flex:1 1 auto; min-width:0; }
+    #s13 .band .hd h1{ font-size:118px; line-height:1.09; }
+    #s13 .close{ flex:0 0 1500px; border-top:3px solid var(--accent); padding-top:30px; }
+    #s13 .close p{ margin:0; font-size:42px; line-height:1.34; color:var(--muted); font-weight:500; }
+    #s13 .close p b{ color:var(--fg); font-weight:700; }
+    #s13 .rail{ gap:48px; }
+    #s13 .card{ min-height:436px; padding:48px 54px 50px; border-radius:32px; gap:0; justify-content:flex-start; }
+    #s13 .card .n{ font-size:38px; letter-spacing:.16em; }
+    #s13 .card .k{ font-size:76px; line-height:1.1; margin:38px 0 0; }
+    #s13 .card .v{ font-size:40px; line-height:1.3; margin:auto 0 0; padding-top:34px; border-top:2px solid var(--hair); }
+    #s13 .card.hot .v{ border-top-color:#FFFFFF3D; }
   </style>
 
   <div class="deco">
@@ -1062,26 +1159,26 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 13-create-agent.html ===== -->
-<section class="slide t-paper l-rail" data-slide="13" data-title="Hãy tạo một nhân viên cho chính shop của mình" id="s13">
+<!-- ===== 14-create-agent.html ===== -->
+<section class="slide t-paper l-rail" data-slide="14" data-title="Hãy tạo một nhân viên cho chính shop của mình" id="s14">
   <style>
-    #s13{ justify-content:flex-start; gap:58px; padding-bottom:148px; }
+    #s14{ justify-content:flex-start; gap:58px; padding-bottom:148px; }
 
-    #s13 .band{ flex:none; }
-        #s13 .band h1{ font-size:132px; line-height:1.1; letter-spacing:-.034em; }
+    #s14 .band{ flex:none; }
+        #s14 .band h1{ font-size:132px; line-height:1.1; letter-spacing:-.034em; }
 
-    #s13 .rail{ flex:1; min-height:0; gap:38px; }
-    #s13 .card{
+    #s14 .rail{ flex:1; min-height:0; gap:38px; }
+    #s14 .card{
       min-height:0; gap:0; border-radius:30px;
       padding:38px 44px 44px;
       background:#FFFFFF; border:2px solid #0A0B0D14; border-top:9px solid var(--accent);
       box-shadow:0 24px 60px -34px #0A0B0D26;
     }
-    #s13 .card .n{
+    #s14 .card .n{
       font-family:var(--mono); font-size:196px; font-weight:600; line-height:.88;
       letter-spacing:-.04em; color:var(--accent); margin:0;
     }
-    #s13 .card .k{
+    #s14 .card .k{
       font-size:56px; font-weight:800; line-height:1.16; letter-spacing:-.022em;
       margin:auto 0 0; padding-top:32px; border-top:3px solid #0A0B0D1F; color:var(--fg);
       text-wrap:pretty;
@@ -1135,51 +1232,51 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 14-feed-data.html ===== -->
-<section class="slide t-ink l-stack" data-slide="14" data-title="Nạp gì để nhân viên trả lời được?" id="s14">
+<!-- ===== 15-feed-data.html ===== -->
+<section class="slide t-ink l-stack" data-slide="15" data-title="Nạp gì để nhân viên trả lời được?" id="s15">
   <style>
-    #s14{ gap:76px; padding-bottom:150px; }
+    #s15{ gap:76px; padding-bottom:150px; }
 
-    #s14 .band{ display:flex; align-items:flex-end; gap:120px; flex:none; }
-    #s14 .band .hd{ flex:1; min-width:0; display:flex; flex-direction:column; gap:30px; }
-    #s14 .band h1{ line-height:1.06; }
-    #s14 .band .cnt{
+    #s15 .band{ display:flex; align-items:flex-end; gap:120px; flex:none; }
+    #s15 .band .hd{ flex:1; min-width:0; display:flex; flex-direction:column; gap:30px; }
+    #s15 .band h1{ line-height:1.06; }
+    #s15 .band .cnt{
       flex:0 0 auto; display:flex; align-items:baseline; gap:26px;
       border-top:3px solid var(--accent); padding-top:26px;
     }
-    #s14 .band .cnt .b{
+    #s15 .band .cnt .b{
       font-family:var(--mono); font-size:96px; font-weight:600; line-height:.82;
       letter-spacing:-.04em; color:var(--accent); margin:0;
     }
-    #s14 .band .cnt .t{
+    #s15 .band .cnt .t{
       margin:0; font-family:var(--mono); font-size:32px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
       line-height:1; white-space:nowrap;
     }
 
-    #s14 .grid7{ display:grid; grid-template-columns:repeat(7,1fr); gap:34px; flex:1; min-height:0; }
-    #s14 .it{
+    #s15 .grid7{ display:grid; grid-template-columns:repeat(7,1fr); gap:34px; flex:1; min-height:0; }
+    #s15 .it{
       display:flex; flex-direction:column;
       padding:26px 24px 0 0;
       border-top:4px solid #FFFFFF3D;
     }
-    #s14 .it .n{
+    #s15 .it .n{
       font-family:var(--mono); font-size:84px; font-weight:600; letter-spacing:-.03em;
       line-height:1; color:var(--muted); opacity:.7;
     }
-    #s14 .it .k{
+    #s15 .it .k{
       margin:auto 0 0; font-size:54px; font-weight:800; letter-spacing:-.024em; line-height:1.08;
       padding-bottom:24px; text-wrap:pretty;
     }
-    #s14 .it .u{ display:block; height:4px; background:var(--accent); border-radius:2px; }
+    #s15 .it .u{ display:block; height:4px; background:var(--accent); border-radius:2px; }
 
-    #s14 .it.last{
+    #s15 .it.last{
       border-top:none; background:var(--accent); color:#FFFFFF;
       border-radius:26px; padding:26px 30px 30px; margin-top:-4px;
     }
-    #s14 .it.last .n{ color:#FFFFFF; opacity:.62; }
-    #s14 .it.last .k{ padding-bottom:0; }
-    #s14 .it.last .tag{
+    #s15 .it.last .n{ color:#FFFFFF; opacity:.62; }
+    #s15 .it.last .k{ padding-bottom:0; }
+    #s15 .it.last .tag{
       display:block; font-family:var(--mono); font-size:27px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; opacity:.8; margin-bottom:14px;
     }
@@ -1245,38 +1342,38 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 15-test-5.html ===== -->
-<section class="slide t-paper l-split" data-slide="15" data-title="Test bằng 5 câu khách thật sẽ hỏi" id="s15">
+<!-- ===== 16-test-5.html ===== -->
+<section class="slide t-paper l-split" data-slide="16" data-title="Test bằng 5 câu khách thật sẽ hỏi" id="s16">
   <style>
-    #s15{ gap:120px; padding-bottom:140px; }
-    #s15 > .lead{ flex:0 0 1420px; gap:46px; }
-    #s15 > .lead h1{ font-size:126px; line-height:1.08; }
-    #s15 > .payload{ flex-direction:row; gap:60px; align-items:flex-start; justify-content:flex-start; }
-    #s15 .col{ flex:1; min-width:0; display:flex; flex-direction:column; gap:44px; }
-    #s15 .col.b{ margin-top:214px; }
+    #s16{ gap:120px; padding-bottom:140px; }
+    #s16 > .lead{ flex:0 0 1420px; gap:46px; }
+    #s16 > .lead h1{ font-size:126px; line-height:1.08; }
+    #s16 > .payload{ flex-direction:row; gap:60px; align-items:flex-start; justify-content:flex-start; }
+    #s16 .col{ flex:1; min-width:0; display:flex; flex-direction:column; gap:44px; }
+    #s16 .col.b{ margin-top:214px; }
 
-    #s15 .bub{
+    #s16 .bub{
       max-width:100%; width:100%; background:#FFFFFF; border:2px solid var(--paper-3);
       padding:38px 46px 40px; font-size:58px; line-height:1.2; font-weight:500;
       letter-spacing:-.014em; border-radius:34px; border-bottom-left-radius:8px;
       box-shadow:0 20px 46px -26px #0A0B0D2E;
     }
-    #s15 .bub .who{ color:var(--muted); opacity:1; font-size:26px; letter-spacing:.2em; margin-bottom:16px; }
-    #s15 .bub.esc{ border-color:var(--accent); border-width:3px; }
-    #s15 .bub.esc .who{ color:var(--accent); }
+    #s16 .bub .who{ color:var(--muted); opacity:1; font-size:26px; letter-spacing:.2em; margin-bottom:16px; }
+    #s16 .bub.esc{ border-color:var(--accent); border-width:3px; }
+    #s16 .bub.esc .who{ color:var(--accent); }
 
-    #s15 .chk{
+    #s16 .chk{
       background:var(--accent); color:#FFFFFF; border-radius:30px; padding:40px 46px 44px;
       display:flex; flex-direction:column; gap:22px;
       box-shadow:0 28px 64px -34px #E61F2866;
     }
-    #s15 .chk .t{
+    #s16 .chk .t{
       font-family:var(--mono); font-size:27px; font-weight:600; letter-spacing:.22em;
       text-transform:uppercase; opacity:.78; margin:0;
     }
-    #s15 .chk p{ margin:0; font-size:44px; line-height:1.22; font-weight:600; letter-spacing:-.012em; }
-    #s15 .chk p b{ font-weight:800; }
-    #s15 .chk p.two{ padding-top:22px; border-top:2px solid #FFFFFF52; }
+    #s16 .chk p{ margin:0; font-size:44px; line-height:1.22; font-weight:600; letter-spacing:-.012em; }
+    #s16 .chk p b{ font-weight:800; }
+    #s16 .chk p.two{ padding-top:22px; border-top:2px solid #FFFFFF52; }
   </style>
 
   <div class="deco">
@@ -1329,8 +1426,8 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 16-refine.html ===== -->
-<section class="slide t-ink l-split" data-slide="16" data-title="Nhân viên số không cần hoàn hảo ngay từ lần đầu" id="s16">
+<!-- ===== 17-refine.html ===== -->
+<section class="slide t-ink l-split" data-slide="17" data-title="Nhân viên số không cần hoàn hảo ngay từ lần đầu" id="s17">
   <div class="deco">
     <div class="deco-grid"></div>
     <div class="deco-orb mint" style="right:-700px; bottom:-1160px; opacity:.13;"></div>
@@ -1339,23 +1436,23 @@
   <p class="meta">Training <b>·</b> Sửa &amp; train lại</p>
 
   <style>
-    #s16{ gap:150px; }
-    #s16 > .lead{ flex:0 0 1560px; gap:44px; }
-    #s16 > .payload{ flex-direction:row; align-items:center; gap:56px; }
-    #s16 .arrow i{ width:150px; height:4px; }
+    #s17{ gap:150px; }
+    #s17 > .lead{ flex:0 0 1560px; gap:44px; }
+    #s17 > .payload{ flex-direction:row; align-items:center; gap:56px; }
+    #s17 .arrow i{ width:150px; height:4px; }
 
-    #s16 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; gap:34px; }
-    #s16 .cap{
+    #s17 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; gap:34px; }
+    #s17 .cap{
       margin:0; font-family:var(--mono); font-size:29px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
       display:flex; align-items:center; gap:18px;
     }
-    #s16 .cap i{ width:52px; height:3px; background:currentColor; flex:none; }
-    #s16 .pane.after .cap{ color:var(--mint); }
+    #s17 .cap i{ width:52px; height:3px; background:currentColor; flex:none; }
+    #s17 .pane.after .cap{ color:var(--mint); }
 
-    #s16 .bub{ max-width:100%; width:100%; padding:44px 48px; font-size:56px; line-height:1.24; }
-    #s16 .bub.bad{ border-style:dashed; border-color:#FFFFFF33; color:var(--muted); }
-    #s16 .bub .who{ font-size:25px; }
+    #s17 .bub{ max-width:100%; width:100%; padding:44px 48px; font-size:56px; line-height:1.24; }
+    #s17 .bub.bad{ border-style:dashed; border-color:#FFFFFF33; color:var(--muted); }
+    #s17 .bub .who{ font-size:25px; }
   </style>
 
   <div class="lead">
@@ -1396,16 +1493,16 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 17-divider-company.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="17" data-title="Phần 04 — Từ nhân viên số đến công ty số" id="s17">
+<!-- ===== 18-divider-company.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="18" data-title="Phần 04 — Từ nhân viên số đến công ty số" id="s18">
   <style>
     /* two-line divider title: the shared component ships line-height:1
        (single-line), which drops the ố/ộ dot-belows of line 1 into line 2's
        tone-mark zone. 1.06 clears it. */
-    #s17 .dtitle{ font-size:232px; line-height:1.06; }
-    #s17 .dtitle .ln{ display:block; }
+    #s18 .dtitle{ font-size:232px; line-height:1.06; }
+    #s18 .dtitle .ln{ display:block; }
     /* lift the strip clear of the .brandbar plate (bottom:22px, ~98px tall) */
-    #s17 .strip{ bottom:182px; }
+    #s18 .strip{ bottom:182px; }
   </style>
 
   <div class="deco">
@@ -1443,19 +1540,19 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 18-opener-company.html ===== -->
-<section class="slide t-ink l-center" data-slide="18" data-title="Bạn vừa có một nhân viên số. Còn cả một công ty thì sao?" id="s18">
+<!-- ===== 19-opener-company.html ===== -->
+<section class="slide t-ink l-center" data-slide="19" data-title="Bạn vừa có một nhân viên số. Còn cả một công ty thì sao?" id="s19">
   <style>
     /* Client art direction: exactly two lines, accent on "nhân viên số" and
        "công ty", a real beat between them, and nothing else on the slide.
        The emptiness is the brief — no eyebrow, no sub, no role list. */
-    #s18{ gap:0; }
+    #s19{ gap:0; }
 
-    #s18 .say{ margin:0; font-weight:900; letter-spacing:-.038em; white-space:nowrap; }
-    #s18 .one{ font-size:212px; line-height:1.06; }
-    #s18 .two{ font-size:264px; line-height:1.08; margin-top:132px; letter-spacing:-.042em; }
+    #s19 .say{ margin:0; font-weight:900; letter-spacing:-.038em; white-space:nowrap; }
+    #s19 .one{ font-size:212px; line-height:1.06; }
+    #s19 .two{ font-size:264px; line-height:1.08; margin-top:132px; letter-spacing:-.042em; }
     /* the accent words are the only colour on the slide */
-    #s18 .say .ac{ color:var(--accent); }
+    #s19 .say .ac{ color:var(--accent); }
   </style>
 
   <div class="deco">
@@ -1479,49 +1576,49 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 19-four-roles.html ===== -->
-<section class="slide t-paper l-rail" data-slide="19" data-title="Mỗi nhân viên số đảm nhận một chuyên môn" id="s19">
+<!-- ===== 20-four-roles.html ===== -->
+<section class="slide t-paper l-rail" data-slide="20" data-title="Mỗi nhân viên số đảm nhận một chuyên môn" id="s20">
   <style>
     /* Client art direction: four EQUAL, independent specialisms — not four
        steps of a Sale Agent conversation. So: identical cards, identical
        type sizes, no numbering, no arrows, no size hierarchy. The only
        differences allowed are the icon, the words, and the quiet tie-back
        on "Kinh doanh" (the role the room already met in the Sale Agent part). */
-    #s19{ justify-content:flex-start; gap:74px; }
+    #s20{ justify-content:flex-start; gap:74px; }
 
-    #s19 .ttl{
+    #s20 .ttl{
       /* +30px offsets the .mask negative margin so the diacritics on "Mỗi"
          still clear the 104px safe line. */
       margin:30px 0 0; font-size:156px; font-weight:900; line-height:.94;
       letter-spacing:-.04em; flex:none;
     }
 
-    #s19 .rail{ flex:none; }
+    #s20 .rail{ flex:none; }
 
-    #s19 .it{
+    #s20 .it{
       background:#FFFFFF; border:2px solid #0A0B0D14;
       border-radius:30px; padding:56px 50px 58px;
       display:flex; flex-direction:column;
       box-shadow:0 24px 60px -34px #0A0B0D26;
     }
-    #s19 .it .ic{ display:block; width:160px; height:160px; flex:none; }
-    #s19 .it .k{
+    #s20 .it .ic{ display:block; width:160px; height:160px; flex:none; }
+    #s20 .it .k{
       margin:42px 0 0; font-size:88px; font-weight:900; line-height:1.04;
       letter-spacing:-.03em; color:var(--fg);
     }
-    #s19 .it .v{
+    #s20 .it .v{
       margin:26px 0 0; font-size:48px; font-weight:500; line-height:1.24;
       letter-spacing:-.012em; color:var(--muted); text-wrap:pretty;
     }
     /* the tie-back: mono, small, one line — it must not add weight to the card */
-    #s19 .it .tie{
+    #s20 .it .tie{
       margin:32px 0 0; font-family:var(--mono); font-size:26px; font-weight:600;
       letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
       display:flex; align-items:center; gap:16px;
     }
-    #s19 .it .tie i{ width:11px; height:11px; border-radius:50%; background:var(--accent); flex:none; }
+    #s20 .it .tie i{ width:11px; height:11px; border-radius:50%; background:var(--accent); flex:none; }
 
-    #s19 .arc{
+    #s20 .arc{
       position:absolute; left:-520px; top:-680px;
       width:1500px; height:1500px; border-radius:50%;
       border:70px solid var(--accent); opacity:.1;
@@ -1598,8 +1695,8 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 20-org-diagram.html ===== -->
-<section class="slide t-paper" data-slide="20" data-title="Công ty số — sơ đồ ba tầng" id="s20">
+<!-- ===== 21-org-diagram.html ===== -->
+<section class="slide t-paper" data-slide="21" data-title="Công ty số — sơ đồ ba tầng" id="s21">
   <style>
     /* ------------------------------------------------------------------
        Slide 19 — conceptual org chart, three tiers.
@@ -1609,56 +1706,56 @@
        (912px of height has to hold three tiers plus two connector zones).
        Every coordinate below is local to .dg (2720 x 912).
        ------------------------------------------------------------------ */
-    #s20{ align-items:center; gap:130px; }
+    #s21{ align-items:center; gap:130px; }
 
-    #s20 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:46px; }
-    #s20 .ttl{
+    #s21 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:46px; }
+    #s21 .ttl{
       margin:0; font-size:130px; font-weight:900;
       letter-spacing:-.032em; line-height:1.05; text-wrap:balance;
     }
-    #s20 .lead .sm{ max-width:20ch; }
+    #s21 .lead .sm{ max-width:20ch; }
 
-    #s20 .dg{
+    #s21 .dg{
       flex:none; width:2720px; height:912px; position:relative;
       /* The foundation tier ended exactly on the safe-area edge, where the
          .ribbon pill sits. Scale the whole chart from its top so the internal
          geometry stays exact and the bottom tier clears the furniture. */
       transform:scale(.93); transform-origin:top center;
     }
-    #s20 .lay{ position:absolute; inset:0; }
+    #s21 .lay{ position:absolute; inset:0; }
 
     /* thicker rules than the 3px default — 3px vanishes on an LED wall */
-    #s20 .conn.h{ height:5px; margin-top:-2.5px; }
-    #s20 .conn.v{ width:5px;  margin-left:-2.5px; }
-    #s20 .ah{
+    #s21 .conn.h{ height:5px; margin-top:-2.5px; }
+    #s21 .conn.v{ width:5px;  margin-left:-2.5px; }
+    #s21 .ah{
       position:absolute; width:0; height:0; margin-left:-18px;
       border:18px solid transparent; border-top-color:var(--forest); border-bottom:0;
     }
 
-    #s20 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
+    #s21 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
 
     /* tier 1 — the human owner. The ONLY crimson on this slide. */
-    #s20 .owner{ left:1010px; top:0; width:700px; height:152px; border-width:4px; }
-    #s20 .owner .hd{
+    #s21 .owner{ left:1010px; top:0; width:700px; height:152px; border-width:4px; }
+    #s21 .owner .hd{
       height:100%; display:flex; align-items:center; justify-content:center;
       gap:30px; font-size:54px; padding:0 40px; line-height:1.14; letter-spacing:-.01em;
     }
-    #s20 .owner svg{ width:66px; height:66px; flex:none; }
+    #s21 .owner svg{ width:66px; height:66px; flex:none; }
 
     /* tier 2 — four equal digital roles, icon over label */
-    #s20 .role{ top:372px; width:650px; height:250px; }
-    #s20 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
-    #s20 .role .ic svg{ width:116px; height:116px; }
-    #s20 .role .hd{ font-size:44px; padding:20px 24px; line-height:1.14; letter-spacing:-.008em; }
+    #s21 .role{ top:372px; width:650px; height:250px; }
+    #s21 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
+    #s21 .role .ic svg{ width:116px; height:116px; }
+    #s21 .role .hd{ font-size:44px; padding:20px 24px; line-height:1.14; letter-spacing:-.008em; }
 
     /* tier 3 — the shared working platform: solid plates, icon beside label */
-    #s20 .found{
+    #s21 .found{
       top:762px; height:150px; width:880px;
       flex-direction:row; align-items:center; gap:34px; padding:0 46px;
       background:var(--forest); border-color:var(--forest); color:#fff;
     }
-    #s20 .found svg{ width:76px; height:76px; flex:none; }
-    #s20 .found .t{ font-size:46px; font-weight:700; letter-spacing:-.014em; line-height:1.1; }
+    #s21 .found svg{ width:76px; height:76px; flex:none; }
+    #s21 .found .t{ font-size:46px; font-weight:700; letter-spacing:-.014em; line-height:1.1; }
   </style>
 
   <div class="deco">
@@ -1800,8 +1897,8 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 21-order-flow.html ===== -->
-<section class="slide t-paper" data-slide="21" data-title="Một đơn hàng cần nhiều chuyên môn" id="s21">
+<!-- ===== 22-order-flow.html ===== -->
+<section class="slide t-paper" data-slide="22" data-title="Một đơn hàng cần nhiều chuyên môn" id="s22">
   <style>
     /* ------------------------------------------------------------------
        Slide 20 — fork / join: one order, three specialisms, one result.
@@ -1825,50 +1922,50 @@
        body. It is a solid forest plate with a 44px radius holding two
        capsule outcomes — a different shape family from the role cards.
        ------------------------------------------------------------------ */
-    #s21{ align-items:center; gap:80px; }
+    #s22{ align-items:center; gap:80px; }
 
     /* ---- headline column ---------------------------------------- */
-    #s21 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:44px; }
-    #s21 .ttl{
+    #s22 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:44px; }
+    #s22 .ttl{
       margin:0; font-size:124px; font-weight:900;
       letter-spacing:-.032em; line-height:1.06;
     }
-    #s21 .cap{
+    #s22 .cap{
       margin:0; font-size:46px; font-weight:600; line-height:1.24;
       letter-spacing:-.014em;
     }
-    #s21 .note{
+    #s22 .note{
       margin:0; display:flex; align-items:center; gap:20px;
       font-family:var(--mono); font-size:30px; font-weight:500;
       letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
     }
-    #s21 .note i{ width:52px; height:3px; background:var(--hair); flex:none; }
+    #s22 .note i{ width:52px; height:3px; background:var(--hair); flex:none; }
 
     /* ---- diagram frame ------------------------------------------ */
-    #s21 .dg{ flex:none; width:3100px; height:912px; position:relative; }
+    #s22 .dg{ flex:none; width:3100px; height:912px; position:relative; }
 
     /* 3px vanishes on an LED wall — same 5px rules as slide 19 */
-    #s21 .conn.h{ height:5px; margin-top:-2.5px; }
-    #s21 .conn.v{ width:5px;  margin-left:-2.5px; }
+    #s22 .conn.h{ height:5px; margin-top:-2.5px; }
+    #s22 .conn.v{ width:5px;  margin-left:-2.5px; }
     /* grow-y defaults to origin bottom (grows up); .gd grows downward */
-    #s21 .conn.gd[data-anim="grow-y"]{ transform-origin:top center; }
-    #s21 .ar{
+    #s22 .conn.gd[data-anim="grow-y"]{ transform-origin:top center; }
+    #s22 .ar{
       position:absolute; width:0; height:0; margin-top:-18px;
       border:18px solid transparent; border-left-color:var(--forest); border-right:0;
     }
 
     /* ---- the three role cards ----------------------------------- */
-    #s21 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
-    #s21 .role{ width:740px; height:374px; }
-    #s21 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
-    #s21 .role .ic svg{ width:104px; height:104px; }
-    #s21 .role .hd{ font-size:46px; padding:18px 24px; line-height:1.14; letter-spacing:-.004em; }
-    #s21 .role .bd{ font-size:38px; padding:20px 26px; line-height:1.2; }
-    #s21 .role .out{ font-size:32px; padding:16px 22px; line-height:1.2; }
+    #s22 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
+    #s22 .role{ width:740px; height:374px; }
+    #s22 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
+    #s22 .role .ic svg{ width:104px; height:104px; }
+    #s22 .role .hd{ font-size:46px; padding:18px 24px; line-height:1.14; letter-spacing:-.004em; }
+    #s22 .role .bd{ font-size:38px; padding:20px 26px; line-height:1.2; }
+    #s22 .role .out{ font-size:32px; padding:16px 22px; line-height:1.2; }
 
     /* the order token, repeated identically on BOTH fork arms — the
        client asked that the two branches visibly receive the same order */
-    #s21 .tok{
+    #s22 .tok{
       position:absolute; width:150px; height:52px;
       display:flex; align-items:center; justify-content:center;
       background:var(--forest-pale); color:var(--forest);
@@ -1877,25 +1974,25 @@
     }
 
     /* ---- the result plate — deliberately NOT a .node ------------- */
-    #s21 .res{
+    #s22 .res{
       position:absolute; width:940px; height:336px;
       display:flex; flex-direction:column; gap:26px;
       padding:34px; border-radius:44px;
       background:var(--forest); color:#fff;
       box-shadow:0 30px 66px -30px #14503A73;
     }
-    #s21 .res .top{ height:82px; display:flex; align-items:center; gap:28px; flex:none; }
-    #s21 .res .top svg{ width:76px; height:76px; flex:none; }
-    #s21 .res .top b{ font-size:52px; font-weight:800; letter-spacing:-.016em; line-height:1.1; }
-    #s21 .res .pill{
+    #s22 .res .top{ height:82px; display:flex; align-items:center; gap:28px; flex:none; }
+    #s22 .res .top svg{ width:76px; height:76px; flex:none; }
+    #s22 .res .top b{ font-size:52px; font-weight:800; letter-spacing:-.016em; line-height:1.1; }
+    #s22 .res .pill{
       height:72px; flex:none; border-radius:999px;
       display:flex; align-items:center; gap:22px; padding:0 34px;
       font-size:36px; font-weight:600; line-height:1.16; letter-spacing:-.008em;
       background:var(--forest-pale); color:var(--forest);
     }
-    #s21 .res .pill s{ width:18px; height:18px; border-radius:50%; background:currentColor; flex:none; }
+    #s22 .res .pill s{ width:18px; height:18px; border-radius:50%; background:currentColor; flex:none; }
     /* the only crimson on the slide */
-    #s21 .res .pill.warn{ background:var(--accent); color:#fff; }
+    #s22 .res .pill.warn{ background:var(--accent); color:#fff; }
   </style>
 
   <div class="deco">
@@ -2011,8 +2108,8 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 22-you-set-goals.html ===== -->
-<section class="slide t-ink l-stack" data-slide="22" data-title="Bạn giao mục tiêu. Đội ngũ thực hiện." id="s22">
+<!-- ===== 23-you-set-goals.html ===== -->
+<section class="slide t-ink l-stack" data-slide="23" data-title="Bạn giao mục tiêu. Đội ngũ thực hiện." id="s23">
   <style>
     /* Client art direction: headline in the top third; three short lines
        below, laid along the reading direction, with the VERBS carrying the
@@ -2020,33 +2117,33 @@
        table — that framing shrinks the owner's role to a single approval —
        and no human figures. So each row is one continuous line running the
        full 4080px, verb phrase → rule → question. */
-    #s22{ justify-content:flex-start; gap:0; }
+    #s23{ justify-content:flex-start; gap:0; }
 
-    #s22 .ttl{
+    #s23 .ttl{
       /* +26px offsets the .mask negative margin so the diacritics clear the
          104px safe line. */
       margin:26px 0 0; font-size:172px; font-weight:900; line-height:.94;
       letter-spacing:-.04em; flex:none;
     }
 
-    #s22 .rows{ margin-top:112px; display:flex; flex-direction:column; flex:none; }
+    #s23 .rows{ margin-top:112px; display:flex; flex-direction:column; flex:none; }
 
-    #s22 .r{
+    #s23 .r{
       display:flex; align-items:baseline; gap:56px;
       padding:44px 0 46px; border-top:2px solid var(--hair);
     }
-    #s22 .r:last-child{ border-bottom:2px solid var(--hair); }
+    #s23 .r:last-child{ border-bottom:2px solid var(--hair); }
 
-    #s22 .r .v{
+    #s23 .r .v{
       flex:none; font-size:106px; font-weight:800; line-height:1.06;
       letter-spacing:-.03em; white-space:nowrap;
     }
-    #s22 .r .v b{ color:var(--accent); font-weight:900; }
+    #s23 .r .v b{ color:var(--accent); font-weight:900; }
 
     /* the rule keeps the row reading as ONE line instead of two columns */
-    #s22 .r .cx{ flex:1; min-width:80px; height:3px; background:var(--hair); }
+    #s23 .r .cx{ flex:1; min-width:80px; height:3px; background:var(--hair); }
 
-    #s22 .r .q{
+    #s23 .r .q{
       flex:none; font-size:82px; font-weight:500; line-height:1.1;
       letter-spacing:-.02em; color:var(--muted); white-space:nowrap;
     }
@@ -2089,24 +2186,24 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 23-closing-question.html ===== -->
-<section class="slide t-accent l-center" data-slide="23" data-title="Bạn đã có nhân viên số đầu tiên. Bạn muốn xây đội ngũ nào tiếp theo?" id="s23">
+<!-- ===== 24-closing-question.html ===== -->
+<section class="slide t-accent l-center" data-slide="24" data-title="Bạn đã có nhân viên số đầu tiên. Bạn muốn xây đội ngũ nào tiếp theo?" id="s24">
   <style>
     /* Client art direction: two large lines, generous emptiness so the
        question carries weight, accent on "đội ngũ", line one first then a
        beat before the question, and nothing added — no image, no new idea.
        On t-accent --accent resolves to white, so the accent on "đội ngũ" is
        carried by an inverted white plate (crimson type on white). */
-    #s23{ gap:0; }
+    #s24{ gap:0; }
 
-    #s23 .say{ margin:0; font-weight:900; letter-spacing:-.038em; white-space:nowrap; }
-    #s23 .one{ font-size:186px; line-height:1.06; }
-    #s23 .two{ font-size:230px; line-height:1.08; margin-top:138px; letter-spacing:-.042em; }
+    #s24 .say{ margin:0; font-weight:900; letter-spacing:-.038em; white-space:nowrap; }
+    #s24 .one{ font-size:186px; line-height:1.06; }
+    #s24 .two{ font-size:230px; line-height:1.08; margin-top:138px; letter-spacing:-.042em; }
 
     /* the plate has to clear the circumflex on ộ and the tilde on ũ above,
        and the dot below ộ underneath */
-    #s23 .hl.fill .hl-bar{ top:-.15em; bottom:-.13em; border-radius:10px; }
-    #s23 .hl.fill{ padding:0 .07em; }
+    #s24 .hl.fill .hl-bar{ top:-.15em; bottom:-.13em; border-radius:10px; }
+    #s24 .hl.fill{ padding:0 .07em; }
   </style>
 
   <div class="deco">
@@ -2130,33 +2227,33 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 24-qa.html ===== -->
-<section class="slide t-paper" data-slide="24" data-title="Q&amp;A — tham gia cộng đồng" id="s24">
+<!-- ===== 25-qa.html ===== -->
+<section class="slide t-paper" data-slide="25" data-title="Q&amp;A — tham gia cộng đồng" id="s25">
   <style>
-    #s24{ gap:150px; align-items:center; }
+    #s25{ gap:150px; align-items:center; }
 
-    #s24 .lz{ flex:0 0 1500px; display:flex; flex-direction:column; gap:40px; }
-    #s24 .qa{ margin:0; font-size:336px; font-weight:900; letter-spacing:-.055em; line-height:.86; }
-    #s24 .lz p.t{ margin:0; font-size:44px; line-height:1.32; color:var(--muted); max-width:24ch; }
-    #s24 .lz p.t b{ color:var(--fg); font-weight:700; }
+    #s25 .lz{ flex:0 0 1500px; display:flex; flex-direction:column; gap:40px; }
+    #s25 .qa{ margin:0; font-size:336px; font-weight:900; letter-spacing:-.055em; line-height:.86; }
+    #s25 .lz p.t{ margin:0; font-size:44px; line-height:1.32; color:var(--muted); max-width:24ch; }
+    #s25 .lz p.t b{ color:var(--fg); font-weight:700; }
 
-    #s24 .rz{ flex:1; min-width:0; display:flex; flex-direction:column; gap:46px; }
-    #s24 .hd{ display:flex; align-items:center; gap:26px; border-bottom:3px solid var(--hair); padding-bottom:26px; }
-    #s24 .hd h2{ margin:0; font-size:72px; font-weight:800; letter-spacing:-.02em; }
-    #s24 .hd i{ display:block; width:80px; height:5px; background:var(--accent); flex:none; }
+    #s25 .rz{ flex:1; min-width:0; display:flex; flex-direction:column; gap:46px; }
+    #s25 .hd{ display:flex; align-items:center; gap:26px; border-bottom:3px solid var(--hair); padding-bottom:26px; }
+    #s25 .hd h2{ margin:0; font-size:72px; font-weight:800; letter-spacing:-.02em; }
+    #s25 .hd i{ display:block; width:80px; height:5px; background:var(--accent); flex:none; }
 
-    #s24 .codes{ display:flex; gap:60px; align-items:flex-start; justify-content:space-between; }
-    #s24 .codes .qr img{ width:322px; border:3px solid #0A0B0D14; }
-    #s24 .codes .qr span{ color:var(--fg); font-size:29px; }
+    #s25 .codes{ display:flex; gap:60px; align-items:flex-start; justify-content:space-between; }
+    #s25 .codes .qr img{ width:322px; border:3px solid #0A0B0D14; }
+    #s25 .codes .qr span{ color:var(--fg); font-size:29px; }
 
     /* the client lists three communities but shipped two codes — show the gap, don't hide it */
-    #s24 .todo{
+    #s25 .todo{
       width:322px; height:322px; border-radius:22px; border:4px dashed #0A0B0D33;
       display:flex; flex-direction:column; align-items:center; justify-content:center;
       gap:14px; text-align:center; padding:22px;
     }
-    #s24 .todo b{ font-size:60px; font-weight:900; color:#0A0B0D2E; line-height:1; }
-    #s24 .todo em{
+    #s25 .todo b{ font-size:60px; font-weight:900; color:#0A0B0D2E; line-height:1; }
+    #s25 .todo em{
       font-style:normal; font-family:var(--mono); font-size:22px; font-weight:600;
       letter-spacing:.1em; color:var(--muted); line-height:1.4;
     }
