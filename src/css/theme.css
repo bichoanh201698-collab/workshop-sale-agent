@@ -506,7 +506,8 @@
 }
 
 .press .bento{
-  flex:1; min-width:0; height:912px;
+  /* 912 would run the bottom cards under the .ribbon pill at y=1000 */
+  flex:1; min-width:0; height:868px;
   display:grid; grid-template-columns:1.18fr 1fr 1fr; grid-template-rows:1fr 1fr;
   gap:26px;
 }
@@ -547,5 +548,10 @@
 .press .clip.side .tx{ flex:1; min-width:0; padding:24px 26px; display:flex; flex-direction:column; gap:14px; }
 .press .clip.side h3{
   font-size:34px; line-height:1.2;
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+}
+.press .clip.side .lede{
+  margin:auto 0 0; padding-top:18px; border-top:2px solid #0A0B0D12;
+  font-size:24px; line-height:1.4; color:#0A0B0D8F;
   display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden;
 }

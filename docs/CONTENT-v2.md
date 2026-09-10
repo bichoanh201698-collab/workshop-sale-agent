@@ -174,6 +174,8 @@ Port `_v1/24-refine.html`. **Its before/after bubble copy and ×/✓ lists were 
 ### and again at 27, immediately before Q&A
 A press-clipping **bento** built for FOMO: five real articles with their own cover photos — one feature
 clipping spanning both rows, four smaller ones beside it, so the wall reads as "lots of coverage".
+**All five carry headline *and* lead** — the four side cards were headline-only at first and read as
+half-empty; their leads are verbatim from the same articles.
 **Every headline and lead is verbatim from the published article** and every thumbnail is that article's
 own cover image, pulled from the live page. Dates are the articles' own.
 
