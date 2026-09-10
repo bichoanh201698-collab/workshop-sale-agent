@@ -21,20 +21,29 @@
 
     /* --- the card ---------------------------------------------------- */
     #s02 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
-      margin:120px 0; transform-origin:center top; }
+      margin:150px 0; transform-origin:center top; }
 
-    /* The name lives large on the left, so the card stays a portrait frame
-       with only the client's "Speakers" pill — repeating the name inside a
+    /* Portrait card: the client's half-body cutout (transparent PNG) stands
+       on the red ground, anchored to the bottom edge so the frame reads as a
+       proper speaker card. The name lives large on the left, so the card
+       carries only the client's "Speakers" pill — repeating the name in a
        band as their 552px card does would say it twice on one stage. */
     #s02 .card2{
-      flex:none; width:780px; position:relative;
+      flex:none; width:640px; height:790px; position:relative;
       border-radius:56px; background:#A10808;
       box-shadow:0 0 0 7px var(--brand), 0 0 110px -12px #E61F28AA, 0 54px 130px -44px #000000CC;
     }
-    #s02 .card2 .ph{ position:relative; border-radius:56px; overflow:hidden; display:block; }
-    #s02 .card2 img{ width:100%; height:auto; display:block; }
+    #s02 .card2 .ph{
+      position:absolute; inset:0; border-radius:56px; overflow:hidden; display:block;
+    }
+    #s02 .card2 img{
+      /* 97%, not 100+%: at full height the crop's top padding disappears and
+         the hair clips against the card edge. */
+      position:absolute; left:50%; bottom:0; transform:translateX(-50%);
+      height:97%; width:auto; display:block;
+    }
     #s02 .card2 .pill{
-      position:absolute; left:50%; bottom:-38px; transform:translateX(-50%);
+      position:absolute; left:50%; bottom:-34px; transform:translateX(-50%);
       z-index:3; white-space:nowrap;
       background:#08080A; color:#fff; border:5px solid var(--brand);
       border-radius:999px; padding:22px 66px;
@@ -82,7 +91,7 @@
   <i class="rule" data-anim="grow-y" data-delay="420" data-dur="800"></i>
 
   <div class="card2" data-anim="scale" data-delay="480" data-dur="1000">
-    <span class="ph"><img src="assets/brand/speaker-tin-portrait.png" alt="Chân dung Tín Trương"></span>
+    <span class="ph"><img src="assets/brand/speaker-tin-halfbody.png" alt="Tín Trương"></span>
     <span class="pill">Speakers</span>
   </div>
 

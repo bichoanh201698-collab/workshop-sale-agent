@@ -46,17 +46,20 @@ It also carries **no QR codes** — the client's reference has none, so the comm
 slides 10 and 24.
 
 ## 02 · Speaker — Tín Trương — `t-ink` — **NEW, client request**
-Reference: `docs/ref/ref-02-speaker-card.png` (the client's own 552px speaker card).
 **Copy — nothing beyond this is on the slide, and nothing was invented:**
 Speakers · **Tín Trương** · Lead Producer · ClawExperts.com
 
-Rebuilt rather than pasted: their card is 552px square, so it would be soft blown up on a 4480px wall.
-The portrait is cropped out of it (`assets/brand/speaker-tin-portrait.png`, 446×316, centred on the
-subject) and used at ~1.75× — about the most that stays acceptable — while the crimson glow frame and
-the "Speakers" pill are rebuilt live. Their card repeats the name in a black band underneath; that band
-is dropped, because the name is already the largest thing on the stage. Name + roles and the portrait sit
-as one centred pair with a hairline between them, so the composition reads as deliberate rather than as
-two blocks pushed to opposite edges. The only motion is a slow shine crawling across the frame.
+**Photo:** `assets/brand/speaker-tin-halfbody.png` — the client's half-body cutout, a transparent PNG
+(source `docs/ref/ref-02-speaker-halfbody.png`, 552×698, subject 425×649). It replaced the head crop
+taken out of their 552px speaker card, which had only ~316px of subject and had to be pushed 1.75×.
+The cutout stands on the red ground anchored to the card's bottom edge, at 97% of card height — at 100%
+or more the crop's top padding vanishes and the hair clips against the frame.
+
+Card is 640×790 portrait with the crimson glow frame and the client's "Speakers" pill straddling the
+bottom edge. Their card repeats the name in a black band under the photo; that band is dropped, because
+the name is already the largest thing on the stage. Name + roles and the card sit as one centred pair
+with a hairline between them, so the composition reads as deliberate rather than as two blocks pushed to
+opposite edges. The only motion is a slow shine crawling across the frame.
 
 **⚠ Role discrepancy to resolve:** this card says **Lead Producer**, but the earlier cover lockup
 (`assets/brand/speaker-tin-truong.png`, from `ClawExperts Event in August.pptx`) says **AI Agent Expert**,
@@ -102,7 +105,7 @@ Port from `_v1/12-session2.html`. Strip items: Là gì → Cần giao những g�
 Removed: the sub-line *"Chuyển cách nghĩ từ 'chatbot' sang một vai trò nhân viên cụ thể…"*, and the
 câu chốt, which is now its own slide (09).
 
-## 09 · Câu chốt — `t-paper` (pure white) · `l-center` — **NEW, split out of 08 at the client's request**
+## 09 · Câu chốt — `t-paper` · `l-center` — **NEW, split out of 08 at the client's request**
 Nothing on the slide but the sentence, three balanced lines at 184px:
 > Những điều một **nhân viên thật** cần biết cũng chính là những điều chúng ta cần chuẩn bị cho **nhân viên số**.
 
@@ -111,8 +114,8 @@ highlight lands on the two things the sentence equates — *nhân viên thật* 
 on the connective, since that pairing is the whole point of the line. The underline swipe is gone; the
 red weight is the emphasis now.
 
-*Note:* this is the only pure-white slide in the deck — the other light slides use the warm `--paper`
-`#F6F3ED`. That contrast is deliberate here, but say the word and it can match the rest.
+The ground is the deck's warm `--paper` `#F6F3ED`, matching every other light slide — a pure-white
+version was tried first and the client asked for the warm tone instead.
 
 ## 10 · Nhân viên số cũng cần một "hồ sơ nhân sự" — `t-paper`
 **Trimmed at the client's request** to headline + the seven items:
