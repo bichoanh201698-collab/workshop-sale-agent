@@ -261,8 +261,11 @@ Two lines, generous emptiness, accent on "đội ngũ", a real beat between the 
 
 ## 25 · Cùng xây đội ngũ số phía sau bạn — `t-ink` — **NEW, S7 of the brief**
 **Copy:** eyebrow *ClawExperts · Đồng hành triển khai* · headline **Cùng xây đội ngũ số phía sau bạn.** ·
-*Bắt đầu từ một phần việc thực tế của công ty.* · *Quét QR để trao đổi về nhu cầu triển khai* ·
-**Hoàng Lê** — Program Manager — AI Agent Business Solution
+*Bắt đầu từ một phần việc thực tế của công ty.* · *Quét QR để trao đổi về nhu cầu triển khai*
+
+The speaker name and title block was **removed at the client'''s request** — the brief had it here, but
+slide 18 already introduces him, so the name now appears once in the deck. The QR grew to 560px with the
+space that freed up.
 
 The brief's own instruction is that headline and QR are the two focal points and nothing else competes:
 no map, no policy figures, no international examples.
