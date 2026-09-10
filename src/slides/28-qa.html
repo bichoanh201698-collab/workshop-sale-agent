@@ -18,8 +18,13 @@
     /* Two codes, both real. They no longer need to stretch to the far edge —
        a fixed gap keeps the pair inside one eye fixation. */
     #s28 .codes{ display:flex; gap:120px; align-items:flex-start; justify-content:center; }
+    /* Both codes now sit in an identical crimson frame. qr-zalo.png shipped with
+       a red frame baked into the bitmap, which made the pair look mismatched, so
+       it was stripped and the code rebuilt on a clean white canvas. */
     #s28 .codes .qr img{
-      width:404px; border:3px solid #0A0B0D14; border-radius:18px; background:#fff;
+      width:404px; height:404px; display:block; background:#fff;
+      border:8px solid var(--brand); border-radius:26px; box-sizing:border-box;
+      padding:14px;
     }
     #s28 .codes .qr span{ color:var(--fg); font-size:31px; }
   </style>
@@ -49,8 +54,8 @@
 
     <div class="codes">
       <div class="qr" data-anim="up-sm" data-delay="820">
-        <img src="assets/brand/qr-zalo.png" alt="Mã QR cộng đồng Zalo">
-        <span>Cộng đồng Zalo</span>
+        <img src="assets/brand/qr-zalo-community.png" alt="Mã QR cộng đồng AI Agents Việt Nam">
+        <span>Cộng đồng AI Agents Việt Nam</span>
       </div>
       <div class="qr" data-anim="up-sm" data-delay="940">
         <img src="assets/brand/qr-zalo-group-saleagent.png" alt="Mã QR nhóm Zalo ClawExperts — Sale Agent">

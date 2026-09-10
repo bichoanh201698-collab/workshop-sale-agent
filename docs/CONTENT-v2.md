@@ -172,9 +172,17 @@ Port `_v1/24-refine.html`. **Its before/after bubble copy and ×/✓ lists were 
 
 ## 17 · Báo chí đang nói về nhân viên số — `t-paper` · `.press` — **NEW, client request**
 ### and again at 27, immediately before Q&A
-A press-clipping wall built for FOMO: five real articles, each shown as outlet · date · headline · lead.
-**Every headline and lead is verbatim from the published article** — fetched from the live pages, not
-written here. Dates are the articles' own.
+A press-clipping **bento** built for FOMO: five real articles with their own cover photos — one feature
+clipping spanning both rows, four smaller ones beside it, so the wall reads as "lots of coverage".
+**Every headline and lead is verbatim from the published article** and every thumbnail is that article's
+own cover image, pulled from the live page. Dates are the articles' own.
+
+Covers live in `assets/press/` (normalised to JPEG ≤900px, 311KB for all five — VTV's shipped as WEBP
+behind a .jpg name, which would not have rendered reliably when served by extension).
+
+**⚠ One thumbnail is a best guess:** VnEconomy's 11/04/2026 article exposes no `og:image` to a plain
+fetch, so `vneconomy1.jpg` is the first article-body image from that page, dated 09/04. If the client
+wants the exact cover, it needs to come from them.
 
 | Outlet | Date | Headline |
 |---|---|---|
@@ -191,8 +199,8 @@ The slide appears **twice, identically** (17 and 27). Its CSS is the `.press` co
 rather than a scoped block, precisely so the repeat cannot drift out of sync with the first showing —
 the two partials differ only in `id`, `data-slide` and `data-title`.
 
-**⚠ Check before the event:** these are third-party headlines about the market, not about ClawExperts or
-this product. Nothing on the slide claims otherwise, and it should stay that way.
+**⚠ Check before the event:** these are third-party headlines and cover photos about the market, not
+about ClawExperts or this product. Nothing on the slide claims otherwise, and it should stay that way.
 
 ## 18 · Divider — `t-ink` · `.divider`
 **Title (verbatim, two lines):** Từ nhân viên số / Đến công ty số
@@ -312,12 +320,16 @@ slide 18. Confirm which is right.
 
 ## 28 · Q&A — `t-paper` · centred pair
 **Headline:** Q&A · **Sub:** Hỏi đáp & thảo luận tự do — cứ hỏi thẳng về shop của mình.
-**Two community codes**, both real:
-- `assets/brand/qr-zalo.png` → **Cộng đồng Zalo**
+**Two community codes**, both real, in identical crimson frames:
+- `assets/brand/qr-zalo-community.png` → **Cộng đồng AI Agents Việt Nam**
 - `assets/brand/qr-zalo-group-saleagent.png` → **Cộng đồng Sale Agent** (Zalo group *ClawExperts - Sale Agent*)
 
-**Changed at the client's request:** the *Cộng đồng Facebook* block and its code were removed, and the
-Sale Agent slot — previously a dashed "mã QR chưa có" placeholder — now holds the real group code. With
+**Changed at the client's request:** the *Cộng đồng Facebook* block and its code were removed, the
+Sale Agent slot — previously a dashed "mã QR chưa có" placeholder — now holds the real group code, and
+the first label became **Cộng đồng AI Agents Việt Nam**. The two frames are now identical: the original
+`qr-zalo.png` had a red frame baked into the bitmap, which made the pair look mismatched, so it was
+stripped and the code rebuilt on a clean white canvas (`qr-zalo-community.png`) with the frame drawn
+in CSS for both. With
 two codes instead of three the pair no longer stretches to the far edge: Q&A block, hairline, then the
 heading plus both codes, all centred as one unit.
 
