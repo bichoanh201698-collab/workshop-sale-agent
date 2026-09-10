@@ -1,7 +1,9 @@
 # Sales Agent Event — deck HTML
 
-24 slide, người trình bày: **Tín Trương** — Lead Producer, ClawExperts.com.
-*(Chức danh lấy theo card speaker mới nhất khách gửi; asset cũ ghi "AI Agent Expert" — cần khách chốt.)*
+25 slide. Người trình bày:
+- **Tín Trương** — Lead Producer, AI Agent Business Solutions (ClawExperts.com)
+- **Hoàng Lê** — Program Manager, AI Agent Business Solution
+
 Tổ chức: OpenClaw VN · Tài trợ: ClawExperts.com.
 Khổ canvas **4480 × 1120 px** (4:1). Deck tự scale về đúng tỉ lệ trên mọi màn hình.
 
@@ -43,7 +45,7 @@ src/css/theme.css     ← design system: màu, type scale, layout, component, tr
 src/css/engine.css    ← khung stage + animation primitives
 src/js/deck.js        ← điều hướng, animation, overview
 docs/DESIGN.md        ← quy ước design, đọc trước khi sửa slide
-docs/CONTENT.md       ← bản bóc tách nội dung 24 slide từ pptx của khách
+docs/CONTENT.md       ← bản bóc tách nội dung 25 slide từ pptx của khách
 assets/fonts/         ← Be Vietnam Pro + IBM Plex Mono (self-host, chạy offline)
 ```
 
@@ -55,10 +57,10 @@ assets/fonts/         ← Be Vietnam Pro + IBM Plex Mono (self-host, chạy offl
 
 ## Xuất file ảnh / PDF
 ```bash
-for i in $(seq 1 24); do ./shot.sh $i "out/slide-$(printf %02d $i).png"; done   # PNG 4480×1120
+for i in $(seq 1 25); do ./shot.sh $i "out/slide-$(printf %02d $i).png"; done   # PNG 4480×1120
 ```
 `shot.sh` mở deck ở chế độ `?export=1` nên ảnh xuất ra không có progress bar hay thanh điều khiển.
-Bộ 24 PNG đã render sẵn trong `out/`.
+Bộ 25 PNG đã render sẵn trong `out/`.
 In PDF: mở `index.html` trong Chrome → Print → khổ ngang, tắt margin.
 Cần `.pptx` thì import bộ PNG trên vào PowerPoint với slide size 4480×1120 px.
 

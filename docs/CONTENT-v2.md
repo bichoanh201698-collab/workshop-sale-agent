@@ -1,4 +1,4 @@
-# Content spec v2 — 24 slides
+# Content spec v2 — 25 slides
 
 Source of truth: **`ClawExperts Event in August.pptx`** (client, 4480×1120 — same canvas as this deck).
 It re-orders and re-scopes the earlier speaker guide, so v2 replaces `docs/CONTENT.md` entirely.
@@ -45,9 +45,9 @@ The cover carries **no `.brandbar` and no `.ribbon`**: the partner strip and the
 It also carries **no QR codes** — the client's reference has none, so the community codes now live only on
 slides 10 and 24.
 
-## 02 · Speaker — Tín Trương — `t-ink` — **NEW, client request**
+## 02 · Speaker — Tín Trương — `t-ink` — file `02-speaker-tin.html`
 **Copy — nothing beyond this is on the slide, and nothing was invented:**
-Speakers · **Tín Trương** · Lead Producer · ClawExperts.com
+Speakers · **Tín Trương** · Lead Producer — AI Agent Business Solutions · ClawExperts.com
 
 **Photo:** `assets/brand/speaker-tin-halfbody.png` — the client's half-body cutout, a transparent PNG
 (source `docs/ref/ref-02-speaker-halfbody.png`, 552×698, subject 425×649). It replaced the head crop
@@ -61,10 +61,9 @@ the name is already the largest thing on the stage. Name + roles and the card si
 with a hairline between them, so the composition reads as deliberate rather than as two blocks pushed to
 opposite edges. The only motion is a slow shine crawling across the frame.
 
-**⚠ Role discrepancy to resolve:** this card says **Lead Producer**, but the earlier cover lockup
-(`assets/brand/speaker-tin-truong.png`, from `ClawExperts Event in August.pptx`) says **AI Agent Expert**,
-and the original speaker guide says *"Chuyên gia thiết kế giải pháp AI Agent cho doanh nghiệp"*.
-The slide follows the newest reference. Confirm which title the client wants.
+**Role settled by the client:** *Lead Producer — AI Agent Business Solutions*. The older
+*AI Agent Expert* (cover lockup) and *Chuyên gia thiết kế giải pháp AI Agent cho doanh nghiệp*
+(original speaker guide) are superseded.
 
 ## 03 · Agenda — `t-paper` — **DONE, do not touch** (`03-agenda.html`)
 
@@ -171,14 +170,32 @@ Port `_v1/24-refine.html`. **Its before/after bubble copy and ×/✓ lists were 
 **Title (verbatim, two lines):** Từ nhân viên số / Đến công ty số
 Port from `_v1/12-session2.html` or `_v1/20-session3.html`. Strip items: Một nhân viên → Bốn chuyên môn → Cả đội phối hợp.
 
-## 18 · Bạn vừa có một nhân viên số. Còn cả một công ty thì sao? — `t-ink` · `l-center` — **NEW**
+## 18 · Speaker — Hoàng Lê — `t-ink` — **NEW, client request** — file `18-speaker-hoang.html`
+Placed immediately after the *Từ nhân viên số → Đến công ty số* divider, which is the section he presents.
+**Copy — all of it:** Speakers · **Hoàng Lê** · Program Manager — AI Agent Business Solution
+
+Built with the same construction as slide 02 so the two speaker slides read as a pair: centred name/role,
+hairline, portrait card with the crimson glow frame and the "Speakers" pill straddling the bottom edge.
+Photo is `assets/brand/speaker-hoang-halfbody.png`, the client's transparent cutout
+(`docs/ref/ref-18-speaker-hoang.png`, subject 426×528). His crop is a wider frame than Tín's — 0.79 against
+0.66 — so it is sized to **84%** of card height rather than 97%; that lands his head at the same size as
+Tín's and keeps a comfortable red margin at the sides.
+
+**Two things not on the slide, deliberately:**
+- **No organisation line.** Tín's card carries *ClawExperts.com* because the client's own card did; nothing
+  was supplied for Hoàng, and his employer is not ours to assume. Send it and it takes one line.
+- The client's two titles differ by one letter — Tín is *…Business **Solutions***, Hoàng is
+  *…Business **Solution***. Both are reproduced exactly as given. **Worth a look** — if it is a typo,
+  these are the only two places it appears.
+
+## 19 · Bạn vừa có một nhân viên số. Còn cả một công ty thì sao? — `t-ink` · `l-center` — **NEW**
 **Copy (verbatim, exactly two lines):**
 Bạn vừa có một nhân viên số.
 Còn cả một công ty thì sao?
 **Client art direction:** *"Dùng chữ lớn làm điểm mở. Đặt 'nhân viên số' ở dòng đầu và 'công ty' ở dòng sau với màu nhấn. Không cần hình văn phòng. Khán giả vừa trải nghiệm Sale Agent nên hai dòng này đã có ngữ cảnh cụ thể. Cho dòng đầu xuất hiện trước; dừng một nhịp rồi hiện câu hỏi. Nếu không dùng hiệu ứng, giữ khoảng cách rõ giữa hai dòng. Không bổ sung định nghĩa hay danh sách vai trò vào slide mở."*
 So: two lines only, accent on "nhân viên số" and "công ty", a real beat between them (≥700ms), nothing else on the slide.
 
-## 19 · Mỗi nhân viên số đảm nhận một chuyên môn — `t-paper` · `l-rail` — **NEW**
+## 20 · Mỗi nhân viên số đảm nhận một chuyên môn — `t-paper` · `l-rail` — **NEW**
 **Headline (verbatim):** Mỗi nhân viên số đảm nhận một chuyên môn
 **Four roles (verbatim, role — output):**
 - Marketing — Chuẩn bị nội dung chiến dịch
@@ -188,7 +205,7 @@ So: two lines only, accent on "nhân viên số" and "công ty", a real beat bet
 **Client art direction:** *"Bốn chức năng ngang hàng… Mỗi chức năng có một đầu ra và một biểu tượng riêng. Đây là các chuyên môn độc lập, không phải bốn bước hội thoại của Sale Agent. Giữ kinh doanh là điểm nối với phần trước, sau đó mở sang marketing, kho và kế toán. Không tách tư vấn, chăm khách, báo cáo thành ba nhân viên chỉ để tăng số lượng. Nhãn trên slide là chức năng, không khẳng định mỗi chức năng thay thế được cả phòng ban."*
 So: four **equal** cards, never a numbered sequence and never arrows between them. One simple inline-SVG icon each (document / order / boxes / ledger). "Kinh doanh" may carry a quiet "đã gặp ở phần trước" tie-back; do not make it bigger than the other three.
 
-## 20 · Công ty số là nơi cả đội phối hợp làm việc — `t-paper` — **NEW, diagram slide**
+## 21 · Công ty số là nơi cả đội phối hợp làm việc — `t-paper` — **NEW, diagram slide**
 **Headline (verbatim):** Công ty số là nơi cả đội phối hợp làm việc
 **Three tiers (verbatim labels):**
 - top: **Bạn điều hành**
@@ -198,7 +215,7 @@ So: four **equal** cards, never a numbered sequence and never arrows between the
 Reference art: `docs/ref/ref-19-org.png` (16:9 — **you must re-lay it out for 4:1**, not letterbox it).
 Build with `.node` / `.conn` primitives + inline SVG icons. Crimson **only** on "Bạn điều hành". Diagram ≈ two thirds of the stage, headline the remaining third.
 
-## 21 · Một đơn hàng cần nhiều chuyên môn — `t-paper` — **NEW, diagram slide**
+## 22 · Một đơn hàng cần nhiều chuyên môn — `t-paper` — **NEW, diagram slide**
 **Headline (verbatim):** Một đơn hàng cần nhiều chuyên môn
 **Nodes (verbatim):**
 - **Kinh doanh** — Lập đơn hàng — output: *Đơn A: mã hàng, số lượng*
@@ -210,7 +227,7 @@ Build with `.node` / `.conn` primitives + inline SVG icons. Crimson **only** on 
 **Client art direction:** *"Sơ đồ phân nhánh rồi hợp kết quả… Vẽ rõ hai nhánh kho và kế toán cùng nhận mã đơn. Không vẽ thành chuỗi tư vấn–chăm khách–báo cáo. Hai nhánh có thể làm song song theo quy trình thực tế. Dùng biểu tượng đơn hàng, hàng tồn và sổ đối soát để phân biệt nghiệp vụ. Trạng thái tổng hợp là kết quả, không phải một nhân viên thứ tư."*
 Reference art: `docs/ref/ref-20-order.png`. A 4:1 stage suits this fork-join far better than the reference's 16:9 — let it run left-to-right across the full width. **Trạng thái đơn hàng must not look like a fourth employee** — give it a visibly different shape from the three role nodes.
 
-## 22 · Bạn giao mục tiêu. Đội ngũ thực hiện. — `t-ink` · `l-stack` — **NEW**
+## 23 · Bạn giao mục tiêu. Đội ngũ thực hiện. — `t-ink` · `l-stack` — **NEW**
 **Headline (verbatim):** Bạn giao mục tiêu. Đội ngũ thực hiện.
 **Three lines (verbatim, verb + question):**
 - Giao mục tiêu — Cần đạt điều gì?
@@ -219,14 +236,14 @@ Reference art: `docs/ref/ref-20-order.png`. A 4:1 stage suits this fork-join far
 **Client art direction:** *"Ba câu hỏi điều hành đặt theo chiều đọc… Không dùng lại bảng hai cột 'AI chuẩn bị / bạn quyết định' vì bảng đó thu hẹp vai trò người chủ vào một lần phê duyệt. Tiêu đề chiếm một phần ba trên cùng. Phần dưới có ba dòng ngắn; nhấn động từ 'Giao', 'Xem', 'Quyết định'. Không thêm hình người."*
 So: headline occupies the top third; three lines below with the **verbs** carrying the accent; no human figures, no two-column table.
 
-## 23 · Bạn đã có nhân viên số đầu tiên — `t-accent` · `l-center` — **NEW**
+## 24 · Bạn đã có nhân viên số đầu tiên — `t-accent` · `l-center` — **NEW**
 **Copy (verbatim, exactly two lines):**
 Bạn đã có nhân viên số đầu tiên.
 Bạn muốn xây đội ngũ nào tiếp theo?
 **Client art direction:** *"Hai dòng chữ lớn. Dòng đầu ghi nhận trải nghiệm vừa có; dòng sau mở ra câu hỏi về đội ngũ của khán giả. Dùng màu nhấn cho 'đội ngũ'. Giữ nhiều khoảng trống để câu hỏi có sức nặng. Cho dòng đầu xuất hiện trước, dừng một nhịp rồi hiện câu hỏi… Không thêm hình hoặc ý mới. Kết bằng câu hỏi để khán giả tự hình dung."*
 Two lines, generous emptiness, accent on "đội ngũ", a real beat between the lines, nothing else.
 
-## 24 · Q&A — `t-paper` · `l-split`
+## 25 · Q&A — `t-paper` · `l-split`
 **Headline (verbatim):** Q&A
 **Also on the slide (verbatim):** QR code join cộng đồng Zalo, cộng đồng Facebook, cộng đồng Sale Agent
 The pptx names **three** communities but ships **two** QR images (`qr-facebook.png`, `qr-zalo.png`).
