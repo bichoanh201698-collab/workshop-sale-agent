@@ -1608,7 +1608,7 @@
           <path d="M14 25h11M14 32h20"/>
         </svg>
       </div>
-      <div class="hd">Quản lý nội dung Fanpage</div>
+      <div class="hd">NV Quản lý nội dung Fanpage</div>
     </div>
 
     <div class="node role" style="left:690px;"  data-anim="up-sm" data-delay="430" data-dur="520">
@@ -1618,7 +1618,7 @@
           <path d="M17 24h14M17 31h9"/>
         </svg>
       </div>
-      <div class="hd">Tư vấn khách hàng</div>
+      <div class="hd">NV Tư vấn khách hàng</div>
     </div>
 
     <div class="node role" style="left:1380px;" data-anim="up-sm" data-delay="480" data-dur="520">
@@ -1629,7 +1629,7 @@
           <rect x="28" y="27" width="16" height="15" rx="1.5"/><path d="M36 27v6"/>
         </svg>
       </div>
-      <div class="hd">Theo dõi hàng hóa</div>
+      <div class="hd">NV Theo dõi hàng hóa</div>
     </div>
 
     <div class="node role" style="left:2070px;" data-anim="up-sm" data-delay="530" data-dur="520">
@@ -1642,7 +1642,7 @@
           <path d="m28 27.5 3 3 6.5-7.5"/>
         </svg>
       </div>
-      <div class="hd">Đối soát thanh toán</div>
+      <div class="hd">NV Đối soát thanh toán</div>
     </div>
 
     <!-- ===== tier 3 — the shared platform -->
@@ -2200,7 +2200,7 @@
     #s23 .rows{ margin-top:78px; display:flex; flex-direction:column; flex:none; }
 
     #s23 .r{
-      display:flex; align-items:baseline; gap:46px;
+      display:flex; align-items:baseline; justify-content:center; gap:46px;
       padding:36px 0 38px; border-top:2px solid var(--hair);
     }
     #s23 .r:last-child{ border-bottom:2px solid var(--hair); }
@@ -2375,33 +2375,28 @@
 <!-- ===== 26-qa.html ===== -->
 <section class="slide t-paper" data-slide="26" data-title="Q&amp;A — tham gia cộng đồng" id="s26">
   <style>
-    #s26{ gap:150px; align-items:center; }
+    #s26{ gap:140px; align-items:center; justify-content:center; }
 
-    #s26 .lz{ flex:0 0 1500px; display:flex; flex-direction:column; gap:40px; }
+    #s26 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:40px; }
     #s26 .qa{ margin:0; font-size:336px; font-weight:900; letter-spacing:-.055em; line-height:.86; }
     #s26 .lz p.t{ margin:0; font-size:44px; line-height:1.32; color:var(--muted); max-width:24ch; }
     #s26 .lz p.t b{ color:var(--fg); font-weight:700; }
 
-    #s26 .rz{ flex:1; min-width:0; display:flex; flex-direction:column; gap:46px; }
+    #s26 .rz{ flex:0 0 auto; display:flex; flex-direction:column; gap:44px; }
+    #s26 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
+      margin:132px 0; transform-origin:center top; }
+
     #s26 .hd{ display:flex; align-items:center; gap:26px; border-bottom:3px solid var(--hair); padding-bottom:26px; }
     #s26 .hd h2{ margin:0; font-size:72px; font-weight:800; letter-spacing:-.02em; }
     #s26 .hd i{ display:block; width:80px; height:5px; background:var(--accent); flex:none; }
 
-    #s26 .codes{ display:flex; gap:60px; align-items:flex-start; justify-content:space-between; }
-    #s26 .codes .qr img{ width:322px; border:3px solid #0A0B0D14; }
-    #s26 .codes .qr span{ color:var(--fg); font-size:29px; }
-
-    /* the client lists three communities but shipped two codes — show the gap, don't hide it */
-    #s26 .todo{
-      width:322px; height:322px; border-radius:22px; border:4px dashed #0A0B0D33;
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      gap:14px; text-align:center; padding:22px;
+    /* Two codes, both real. They no longer need to stretch to the far edge —
+       a fixed gap keeps the pair inside one eye fixation. */
+    #s26 .codes{ display:flex; gap:120px; align-items:flex-start; justify-content:center; }
+    #s26 .codes .qr img{
+      width:404px; border:3px solid #0A0B0D14; border-radius:18px; background:#fff;
     }
-    #s26 .todo b{ font-size:60px; font-weight:900; color:#0A0B0D2E; line-height:1; }
-    #s26 .todo em{
-      font-style:normal; font-family:var(--mono); font-size:22px; font-weight:600;
-      letter-spacing:.1em; color:var(--muted); line-height:1.4;
-    }
+    #s26 .codes .qr span{ color:var(--fg); font-size:31px; }
   </style>
 
   <div class="deco">
@@ -2419,6 +2414,8 @@
     <p class="t" data-anim="up-sm" data-delay="560">Hỏi đáp &amp; <b>thảo luận tự do</b> — cứ hỏi thẳng về shop của mình.</p>
   </div>
 
+  <i class="rule" data-anim="grow-y" data-delay="440" data-dur="820"></i>
+
   <div class="rz">
     <div class="hd" data-anim="up-sm" data-delay="660">
       <i></i>
@@ -2430,12 +2427,8 @@
         <img src="assets/brand/qr-zalo.png" alt="Mã QR cộng đồng Zalo">
         <span>Cộng đồng Zalo</span>
       </div>
-      <div class="qr" data-anim="up-sm" data-delay="920">
-        <img src="assets/brand/qr-facebook.png" alt="Mã QR cộng đồng Facebook">
-        <span>Cộng đồng Facebook</span>
-      </div>
-      <div class="qr" data-anim="up-sm" data-delay="1020">
-        <div class="todo"><b>?</b><em>Mã QR<br>chưa có</em></div>
+      <div class="qr" data-anim="up-sm" data-delay="940">
+        <img src="assets/brand/qr-zalo-group-saleagent.png" alt="Mã QR nhóm Zalo ClawExperts — Sale Agent">
         <span>Cộng đồng Sale Agent</span>
       </div>
     </div>

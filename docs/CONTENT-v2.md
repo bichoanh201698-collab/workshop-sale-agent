@@ -215,7 +215,9 @@ with the other three.
 ### 21 · Công ty số là nơi cả đội phối hợp làm việc — `t-paper`
 Same three-tier chart, relabelled to the brief:
 - top: **Bạn & người phụ trách** — Giao ưu tiên · Duyệt · Quyết định *(the only crimson on the slide)*
-- middle: the four scopes above, icons now matching slide 20's set exactly
+- middle: the four scopes above, each prefixed **NV** at the client's request so the nodes read as
+  employees rather than functions; icons match slide 20's set exactly
+  *(slide 20 needs no prefix — its cards already carry a "Nhân viên số" eyebrow)*
 - bottom: **Thông tin công ty** (Cùng bản đang có hiệu lực) · **Công cụ kết nối** (Quyền theo phần việc) ·
   **Hồ sơ công việc** (Kết quả & người tiếp nhận)
 
@@ -243,10 +245,10 @@ so the slide no longer marks the A102 story and the Zalo UI as illustrative. The
 - Giao mục tiêu — Cần đạt điều gì?
 - Xem kết quả — Công việc đến đâu?
 - Quyết định — Tiếp tục hay điều chỉnh?
-**Layout note (client feedback):** the connector between verb and question was elastic, which threw the
-question to the far right edge — on a 4480px wall that is a full head-turn per row. It is now a short
-fixed rule, so each row reads inside one eye fixation; the full-width hairlines carry the stage width
-instead. Checked the rest of the deck for the same pattern: every other `flex:1` is an independent
+**Layout note (client feedback, two rounds):** the connector between verb and question was elastic, which
+threw the question to the far right edge — on a 4480px wall that is a full head-turn per row. It is now a
+short fixed rule, and the rows are **centred** (the headline stays left), so each row reads inside one eye
+fixation while the full-width hairlines carry the stage width. Checked the rest of the deck for the same pattern: every other `flex:1` is an independent
 content column (three stats, six chips, three QR blocks), not a phrase split across the stage.
 
 **Client art direction:** *"Ba câu hỏi điều hành đặt theo chiều đọc… Không dùng lại bảng hai cột 'AI chuẩn bị / bạn quyết định' vì bảng đó thu hẹp vai trò người chủ vào một lần phê duyệt. Tiêu đề chiếm một phần ba trên cùng. Phần dưới có ba dòng ngắn; nhấn động từ 'Giao', 'Xem', 'Quyết định'. Không thêm hình người."*
@@ -280,15 +282,21 @@ phone once before the event**, which is what the brief asks for anyway.
 *Program Manager - AI Agent Business Solution*. The slide follows the later message so it matches
 slide 18. Confirm which is right.
 
-## 26 · Q&A — `t-paper` · `l-split`
-**Headline (verbatim):** Q&A
-**Also on the slide (verbatim):** QR code join cộng đồng Zalo, cộng đồng Facebook, cộng đồng Sale Agent
-The pptx names **three** communities but ships **two** QR images (`qr-facebook.png`, `qr-zalo.png`).
-Lay out the two codes you have, label them from the client's list, and **flag the missing third code in your report** — do not duplicate a code to fill the gap and do not invent a URL.
-Port the Q&A question list from `_v1/28-qa.html` only if it still fits; the client's slide is just the headline plus the codes, so the questions are optional support, not required copy.
+## 26 · Q&A — `t-paper` · centred pair
+**Headline:** Q&A · **Sub:** Hỏi đáp & thảo luận tự do — cứ hỏi thẳng về shop của mình.
+**Two community codes**, both real:
+- `assets/brand/qr-zalo.png` → **Cộng đồng Zalo**
+- `assets/brand/qr-zalo-group-saleagent.png` → **Cộng đồng Sale Agent** (Zalo group *ClawExperts - Sale Agent*)
 
----
+**Changed at the client's request:** the *Cộng đồng Facebook* block and its code were removed, and the
+Sale Agent slot — previously a dashed "mã QR chưa có" placeholder — now holds the real group code. With
+two codes instead of three the pair no longer stretches to the far edge: Q&A block, hairline, then the
+heading plus both codes, all centred as one unit.
 
+*This is the only QR in the deck a local decoder could read:* it resolves to
+`https://zaloapp.com/qr/g/z594ovekvacc5rdqduml`, so the crop is verified scannable. It was cut out of a
+full-screen Zalo invite screenshot — the square was derived from the code's own geometry rather than
+guessed, since the card's title text sits directly above it.
 
 ## Removed after client review
 - **"Bắt đầu bằng những việc lặp lại nhưng quan trọng"** (was slide 13) — removed at the client's
