@@ -102,11 +102,17 @@ Port from `_v1/12-session2.html`. Strip items: Là gì → Cần giao những g�
 Removed: the sub-line *"Chuyển cách nghĩ từ 'chatbot' sang một vai trò nhân viên cụ thể…"*, and the
 câu chốt, which is now its own slide (09).
 
-## 09 · Câu chốt — `t-accent` · `l-center` — **NEW, split out of 08 at the client's request**
-Nothing on the slide but the sentence, three balanced lines at 184px, white on the event crimson:
-> **Những điều một nhân viên thật cần biết cũng chính là những điều chúng ta cần chuẩn bị cho nhân viên số.**
+## 09 · Câu chốt — `t-paper` (pure white) · `l-center` — **NEW, split out of 08 at the client's request**
+Nothing on the slide but the sentence, three balanced lines at 184px:
+> Những điều một **nhân viên thật** cần biết cũng chính là những điều chúng ta cần chuẩn bị cho **nhân viên số**.
 
-`cũng chính là` carries a white `grow-x` underline that lands after the lines are read.
+Restyled at the client's request: **white ground, black body copy, crimson bold on the highlight.** The
+highlight lands on the two things the sentence equates — *nhân viên thật* and *nhân viên số* — rather than
+on the connective, since that pairing is the whole point of the line. The underline swipe is gone; the
+red weight is the emphasis now.
+
+*Note:* this is the only pure-white slide in the deck — the other light slides use the warm `--paper`
+`#F6F3ED`. That contrast is deliberate here, but say the word and it can match the rest.
 
 ## 10 · Nhân viên số cũng cần một "hồ sơ nhân sự" — `t-paper`
 **Trimmed at the client's request** to headline + the seven items:
@@ -132,7 +138,8 @@ a stylised dot-matrix code no local decoder can read. The slide now names An as 
 **worth one phone check that this code really opens a chat with An.**
 
 ## 12 · Divider — `t-ink` · `.divider`
-**Title (verbatim):** Training nhân viên số đầu tiên của bạn
+**Title (client's wording, revised):** Tuyển dụng và đào tạo nhân viên **đầu tiên của bạn**
+Broken over two balanced lines; on one line it ran to the safe edge and orphaned "của bạn".
 **Also on the slide (verbatim, must be legible from the back — attendees type it in):** Trial code: `CE_SALEWS1`
 Port from `_v1/20-session3.html`. Give the trial code its own high-contrast plate; it is the one thing on this slide the room has to act on.
 

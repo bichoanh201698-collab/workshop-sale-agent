@@ -622,27 +622,31 @@
 </section>
 
 <!-- ===== 09-clincher-staff.html ===== -->
-<section class="slide t-accent l-center" data-slide="9" data-title="Câu chốt — nhân viên thật và nhân viên số" id="s09">
+<section class="slide t-paper l-center" data-slide="9" data-title="Câu chốt — nhân viên thật và nhân viên số" id="s09">
   <style>
-    #s09{ gap:0; }
+    /* White ground, black body copy, crimson on the two things the sentence
+       equates. t-paper supplies the light tokens; only --bg is pushed to pure
+       white, which is what sets this statement apart from the warm-paper
+       content slides. */
+    #s09{ --bg:#FFFFFF; gap:0; }
     #s09 .cl{
-      margin:0; font-size:184px; font-weight:900; letter-spacing:-.036em;
-      line-height:1.12; text-align:center;
+      margin:0; font-size:184px; font-weight:600; letter-spacing:-.032em;
+      line-height:1.12; text-align:center; color:var(--fg);
     }
-    #s09 .cl .hl-bar{ background:#FFFFFF; height:.1em; bottom:.03em; }
+    #s09 .cl b{ font-weight:900; color:var(--accent); }
   </style>
 
   <div class="deco">
-    <div class="deco-dots" style="opacity:.35;"></div>
-    <div class="deco-noise" style="opacity:.06;"></div>
+    <div class="deco-dots" style="opacity:.5;"></div>
+    <div class="deco-orb" style="right:-980px; bottom:-1300px; opacity:.07;"></div>
   </div>
 
   <p class="meta">Phần 02 <b>·</b> Câu chốt</p>
 
   <h1 class="cl">
-    <span class="mask"><span style="display:block; white-space:nowrap" data-anim="mask-up" data-delay="200" data-dur="1000">Những điều một nhân viên thật cần biết</span></span>
-    <span class="mask"><span style="display:block; white-space:nowrap" data-anim="mask-up" data-delay="330" data-dur="1000"><em class="hl">cũng chính là<i class="hl-bar" data-anim="grow-x" data-delay="1180" data-dur="560"></i></em> những điều chúng ta</span></span>
-    <span class="mask"><span style="display:block; white-space:nowrap" data-anim="mask-up" data-delay="460" data-dur="1000">cần chuẩn bị cho nhân viên số.</span></span>
+    <span class="mask"><span style="display:block; white-space:nowrap" data-anim="mask-up" data-delay="200" data-dur="1000">Những điều một <b>nhân viên thật</b> cần biết</span></span>
+    <span class="mask"><span style="display:block; white-space:nowrap" data-anim="mask-up" data-delay="330" data-dur="1000">cũng chính là những điều chúng ta</span></span>
+    <span class="mask"><span style="display:block; white-space:nowrap" data-anim="mask-up" data-delay="460" data-dur="1000">cần chuẩn bị cho <b>nhân viên số</b>.</span></span>
   </h1>
 
   <div class="brandbar">
@@ -774,7 +778,7 @@
 </section>
 
 <!-- ===== 12-divider-training.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="12" data-title="Phần 03 — Training nhân viên số đầu tiên của bạn" id="s12">
+<section class="slide t-ink l-center divider" data-slide="12" data-title="Phần 03 — Tuyển dụng và đào tạo nhân viên đầu tiên của bạn" id="s12">
   <style>
     #s12 .dtitle{ font-size:196px; }
     /* lift the strip clear of the .brandbar plate (bottom:34px, ~70px tall) */
@@ -819,7 +823,7 @@
   </div>
 
   <h1 class="dtitle">
-    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="300" data-dur="980">Training nhân viên số <span class="ac">đầu tiên của bạn</span></span></span>
+    <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="300" data-dur="980">Tuyển dụng và đào tạo<br>nhân viên <span class="ac">đầu tiên của bạn</span></span></span>
   </h1>
 
   <div class="code" data-anim="up-sm" data-delay="640">
