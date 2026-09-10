@@ -1,4 +1,4 @@
-<section class="slide t-paper" data-slide="22" data-title="Một đơn hàng cần nhiều chuyên môn" id="s22">
+<section class="slide t-paper" data-slide="21" data-title="Một đơn hàng cần nhiều chuyên môn" id="s21">
   <style>
     /* ------------------------------------------------------------------
        Slide 20 — fork / join: one order, three specialisms, one result.
@@ -22,50 +22,50 @@
        body. It is a solid forest plate with a 44px radius holding two
        capsule outcomes — a different shape family from the role cards.
        ------------------------------------------------------------------ */
-    #s22{ align-items:center; gap:80px; }
+    #s21{ align-items:center; gap:80px; }
 
     /* ---- headline column ---------------------------------------- */
-    #s22 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:44px; }
-    #s22 .ttl{
+    #s21 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:44px; }
+    #s21 .ttl{
       margin:0; font-size:124px; font-weight:900;
       letter-spacing:-.032em; line-height:1.06;
     }
-    #s22 .cap{
+    #s21 .cap{
       margin:0; font-size:46px; font-weight:600; line-height:1.24;
       letter-spacing:-.014em;
     }
-    #s22 .note{
+    #s21 .note{
       margin:0; display:flex; align-items:center; gap:20px;
       font-family:var(--mono); font-size:30px; font-weight:500;
       letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
     }
-    #s22 .note i{ width:52px; height:3px; background:var(--hair); flex:none; }
+    #s21 .note i{ width:52px; height:3px; background:var(--hair); flex:none; }
 
     /* ---- diagram frame ------------------------------------------ */
-    #s22 .dg{ flex:none; width:3100px; height:912px; position:relative; }
+    #s21 .dg{ flex:none; width:3100px; height:912px; position:relative; }
 
     /* 3px vanishes on an LED wall — same 5px rules as slide 19 */
-    #s22 .conn.h{ height:5px; margin-top:-2.5px; }
-    #s22 .conn.v{ width:5px;  margin-left:-2.5px; }
+    #s21 .conn.h{ height:5px; margin-top:-2.5px; }
+    #s21 .conn.v{ width:5px;  margin-left:-2.5px; }
     /* grow-y defaults to origin bottom (grows up); .gd grows downward */
-    #s22 .conn.gd[data-anim="grow-y"]{ transform-origin:top center; }
-    #s22 .ar{
+    #s21 .conn.gd[data-anim="grow-y"]{ transform-origin:top center; }
+    #s21 .ar{
       position:absolute; width:0; height:0; margin-top:-18px;
       border:18px solid transparent; border-left-color:var(--forest); border-right:0;
     }
 
     /* ---- the three role cards ----------------------------------- */
-    #s22 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
-    #s22 .role{ width:740px; height:374px; }
-    #s22 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
-    #s22 .role .ic svg{ width:104px; height:104px; }
-    #s22 .role .hd{ font-size:46px; padding:18px 24px; line-height:1.14; letter-spacing:-.004em; }
-    #s22 .role .bd{ font-size:38px; padding:20px 26px; line-height:1.2; }
-    #s22 .role .out{ font-size:32px; padding:16px 22px; line-height:1.2; }
+    #s21 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
+    #s21 .role{ width:740px; height:374px; }
+    #s21 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
+    #s21 .role .ic svg{ width:104px; height:104px; }
+    #s21 .role .hd{ font-size:46px; padding:18px 24px; line-height:1.14; letter-spacing:-.004em; }
+    #s21 .role .bd{ font-size:38px; padding:20px 26px; line-height:1.2; }
+    #s21 .role .out{ font-size:32px; padding:16px 22px; line-height:1.2; }
 
     /* the order token, repeated identically on BOTH fork arms — the
        client asked that the two branches visibly receive the same order */
-    #s22 .tok{
+    #s21 .tok{
       position:absolute; width:150px; height:52px;
       display:flex; align-items:center; justify-content:center;
       background:var(--forest-pale); color:var(--forest);
@@ -74,25 +74,25 @@
     }
 
     /* ---- the result plate — deliberately NOT a .node ------------- */
-    #s22 .res{
+    #s21 .res{
       position:absolute; width:940px; height:336px;
       display:flex; flex-direction:column; gap:26px;
       padding:34px; border-radius:44px;
       background:var(--forest); color:#fff;
       box-shadow:0 30px 66px -30px #14503A73;
     }
-    #s22 .res .top{ height:82px; display:flex; align-items:center; gap:28px; flex:none; }
-    #s22 .res .top svg{ width:76px; height:76px; flex:none; }
-    #s22 .res .top b{ font-size:52px; font-weight:800; letter-spacing:-.016em; line-height:1.1; }
-    #s22 .res .pill{
+    #s21 .res .top{ height:82px; display:flex; align-items:center; gap:28px; flex:none; }
+    #s21 .res .top svg{ width:76px; height:76px; flex:none; }
+    #s21 .res .top b{ font-size:52px; font-weight:800; letter-spacing:-.016em; line-height:1.1; }
+    #s21 .res .pill{
       height:72px; flex:none; border-radius:999px;
       display:flex; align-items:center; gap:22px; padding:0 34px;
       font-size:36px; font-weight:600; line-height:1.16; letter-spacing:-.008em;
       background:var(--forest-pale); color:var(--forest);
     }
-    #s22 .res .pill s{ width:18px; height:18px; border-radius:50%; background:currentColor; flex:none; }
+    #s21 .res .pill s{ width:18px; height:18px; border-radius:50%; background:currentColor; flex:none; }
     /* the only crimson on the slide */
-    #s22 .res .pill.warn{ background:var(--accent); color:#fff; }
+    #s21 .res .pill.warn{ background:var(--accent); color:#fff; }
   </style>
 
   <div class="deco">

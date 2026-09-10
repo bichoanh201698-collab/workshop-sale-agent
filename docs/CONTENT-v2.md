@@ -1,4 +1,4 @@
-# Content spec v2 — 25 slides
+# Content spec v2 — 24 slides
 
 Source of truth: **`ClawExperts Event in August.pptx`** (client, 4480×1120 — same canvas as this deck).
 It re-orders and re-scopes the earlier speaker guide, so v2 replaces `docs/CONTENT.md` entirely.
@@ -78,18 +78,7 @@ Kết quả → Bối cảnh → Inbox tăng gấp 3. Marquee keywords: X3 NĂNG
 - `85% / 15%` — lọc 85% lượng khách hàng không quan tâm · bàn giao chính xác 15% khách hàng có nhu cầu
 Port the stat treatment from `_v1/06-fact.html` — but note the first figure is a *before → after*, not a fraction, so `.stat .num` needs a variant. Mark the slide as a customer result, not a promise.
 
-## 06 · Cùng nhìn lại cách các shop đang tư vấn khách hàng — `t-paper` · `l-split`
-**Headline (verbatim):** Cùng nhìn lại cách các shop đang tư vấn khách hàng
-**Sub (verbatim):** Mỗi shop có ngành hàng, quy mô và cách vận hành khác nhau. Nhưng đều gặp nhau ở một điểm: khách hàng đang đến bằng những cuộc trò chuyện.
-**Highlight (verbatim, give it real weight):** Bài toán không phải là tìm thêm khách — mà là tư vấn kịp số khách đang đến.
-**Survey figures (verbatim), as the dashboard stand-in:**
-- 18/27 người có từ 10 khách cần tư vấn mỗi ngày trở lên
-- 14/27 người phản hồi từ 5 phút trở lên hoặc chỉ trả lời khi rảnh
-- 20/27 người ngoài giờ vẫn phải tự trả lời hoặc chưa có ai trực
-Cite the source on the slide. Port headline/sub from `_v1/05-intro.html`, figures from `_v1/06-fact.html`.
-See open question 3 about the image slot.
-
-## 07 · Nếu inbox tăng gấp 3 — `t-ink-2` · `l-split`
+## 06 · Nếu inbox tăng gấp 3 — `t-ink-2` · `l-split`
 **Headline (verbatim):** Nếu inbox tăng gấp 3, shop có còn giữ được tốc độ phản hồi như hiện tại?
 **Sub (verbatim):** Hãy thử tưởng tượng một mùa lễ, một chiến dịch quảng cáo tốt hoặc một nội dung viral khiến lượng tin nhắn tăng gấp 3 lần.
 **Chart** — the pptx says *"add chart giống cái bên phải"* and ships the reference as a dark panel plotting a falling curve, y-axis **KHÁCH HÀNG**, x-axis **TỐC ĐỘ PHẢN HỒI**. Rebuild it as **inline SVG**, not an image:
@@ -99,11 +88,11 @@ It is an **illustrative relationship, not measured data** — label it so on the
 **Closing line (verbatim):** Không thay thế con người; tạo thêm một người phụ biết sản phẩm, giữ nhịp tư vấn và gọi người thật khi cần.
 Port question framing from `_v1/07-traffic3x.html`.
 
-## 08 · Divider — `t-ink` · `.divider`
+## 07 · Divider — `t-ink` · `.divider`
 **Title (verbatim):** Trước khi tạo nhân viên số, hãy hiểu nhân viên đó sẽ làm gì.
 Port from `_v1/12-session2.html`. Strip items: Là gì → Cần giao những gì → Hồ sơ nhân sự.
 
-## 09 · Nhân viên tư vấn số là gì? — `t-ink` · `l-split` or `l-stack`
+## 08 · Nhân viên tư vấn số là gì? — `t-ink` · `l-split` or `l-stack`
 Merge of two v1 slides — `_v1/14-definition.html` and `_v1/13-what-staff-needs.html`.
 **Headline (verbatim):** Nhân viên tư vấn số là gì?
 **Sub (verbatim):** Chuyển cách nghĩ từ "chatbot" sang một vai trò nhân viên cụ thể trong quy trình tư vấn của shop.
@@ -112,7 +101,7 @@ Merge of two v1 slides — `_v1/14-definition.html` and `_v1/13-what-staff-needs
 **Câu chốt (verbatim):** Những điều một nhân viên thật cần biết cũng chính là những điều chúng ta cần chuẩn bị cho nhân viên số.
 This slide now carries four beats — the headline and the câu chốt are the two that must read from the back of the room.
 
-## 10 · Nhân viên số cũng cần một "hồ sơ nhân sự" — `t-paper` · `l-index`
+## 09 · Nhân viên số cũng cần một "hồ sơ nhân sự" — `t-paper` · `l-index`
 **Headline (verbatim):** Nhân viên số cũng cần một "hồ sơ nhân sự"
 **Sub (verbatim):** Nhân viên số cũng cần được thiết kế như một nhân viên vừa mới gia nhập công ty của bạn.
 **Second sub (verbatim):** Điểm quan trọng không phải là một bên là người, một bên là công nghệ. Cả hai đều cần được giao đúng vai trò, học đúng dữ liệu và làm việc trong một quy trình rõ ràng.
@@ -121,7 +110,7 @@ This slide now carries four beats — the headline and the câu chốt are the t
 Mô tả công việc · KPI và tiêu chuẩn làm việc · Quy trình bán hàng · Đào tạo và học sản phẩm · Đào tạo qua tình huống thật · Quy trình phối hợp và bàn giao · Đánh giá và đào tạo lại
 Port `_v1/16-hr-file.html`; it has the 4+3 grid solved. Drop its `.v` descriptions — the client's version is headings only, which frees room for the two subs.
 
-## 11 · Quét mã — Facebook page — `t-ink` — **NEW, client request**
+## 10 · Quét mã — Facebook page — `t-ink` — **NEW, client request**
 Sits immediately before the Session 3 divider so the room can follow the page while the hands-on is being set up.
 **Copy:** eyebrow *Trước khi vào hands-on* · headline **Quét mã để theo dõi Facebook page** ·
 *Mở camera điện thoại và quét mã bên cạnh* · a 3-step mono list (Mở camera / Hướng vào mã QR / Mở link và theo dõi page).
@@ -131,12 +120,12 @@ The QR is `assets/brand/qr-facebook-page.png`, supplied by the client. It is a s
 Layout puts the code dead centre as the hero with the headline left and the instructions right, so the 4:1
 stage reads as one composition. The only motion is a scan line sweeping the code.
 
-## 12 · Divider — `t-ink` · `.divider`
+## 11 · Divider — `t-ink` · `.divider`
 **Title (verbatim):** Training nhân viên số đầu tiên của bạn
 **Also on the slide (verbatim, must be legible from the back — attendees type it in):** Trial code: `CE_SALEWS1`
 Port from `_v1/20-session3.html`. Give the trial code its own high-contrast plate; it is the one thing on this slide the room has to act on.
 
-## 13 · Bắt đầu bằng những việc lặp lại nhưng quan trọng — `t-ink-2` · `l-rail`
+## 12 · Bắt đầu bằng những việc lặp lại nhưng quan trọng — `t-ink-2` · `l-rail`
 **Headline (verbatim):** Bắt đầu bằng những việc lặp lại nhưng quan trọng
 **Ba nhiệm vụ (verbatim):**
 1. Trả lời câu hỏi thường gặp: giá, tồn kho, size, ship, đổi trả.
@@ -145,39 +134,39 @@ Port from `_v1/20-session3.html`. Give the trial code its own high-contrast plat
 **Câu chốt (verbatim):** Nhân viên tư vấn số không thay chủ shop. Nhân viên đó giữ nhịp tư vấn để chủ shop không bỏ lỡ khách.
 Port `_v1/18-three-jobs.html` almost as-is.
 
-## 14 · Hãy tạo một nhân viên cho chính shop của mình — `t-paper` · `l-rail`
+## 13 · Hãy tạo một nhân viên cho chính shop của mình — `t-paper` · `l-rail`
 **Headline (verbatim):** Hãy tạo một nhân viên cho chính shop của mình.
 **Five steps (verbatim):** Chọn vai trò và đặt tên cho nhân viên. · Chọn ngành hàng hoặc nhóm sản phẩm đầu tiên. · Nạp kiến thức tối thiểu. · Test bằng câu hỏi thật. · Sửa một câu trả lời và test lại.
 Port `_v1/21-handson.html`.
 
-## 15 · Nạp gì để nhân viên trả lời được? — `t-ink` · `l-stack`
+## 14 · Nạp gì để nhân viên trả lời được? — `t-ink` · `l-stack`
 **Headline (verbatim):** Nạp gì để nhân viên trả lời được?
 **Seven items (verbatim):** Tên shop và ngành hàng. · 5–10 sản phẩm đầu tiên. · Giá, thuộc tính và tình trạng hàng. · Chính sách giao hàng, đổi trả, thanh toán. · Câu hỏi thường gặp. · Giọng nói và cách xưng hô của shop. · Ranh giới: trường hợp nào phải chuyển cho người thật.
 Port `_v1/22-feed-data.html`. Keep item 07 emphasised.
 
-## 16 · Test bằng 5 câu khách thật sẽ hỏi — `t-paper` · `l-split`
+## 15 · Test bằng 5 câu khách thật sẽ hỏi — `t-paper` · `l-split`
 **Headline (verbatim):** Test bằng 5 câu khách thật sẽ hỏi
 **Five questions (verbatim):** Shop còn mẫu này không? · Giá bao nhiêu? · Sản phẩm nào phù hợp với nhu cầu của em? · Có freeship hoặc đổi trả không? · Cho chị đặt hàng hoặc chuyển người thật tư vấn.
 **Checklist (verbatim):** Agent trả lời đúng và an toàn ít nhất 3 câu đầu tiên; câu hỏi vượt phạm vi phải biết chuyển người thật.
 Port `_v1/23-test-5.html` — it already solves five bubbles on one ultrawide stage.
 
-## 17 · Nhân viên số không cần hoàn hảo ngay từ lần đầu — `t-ink` · `l-split`
+## 16 · Nhân viên số không cần hoàn hảo ngay từ lần đầu — `t-ink` · `l-split`
 **Headline (verbatim):** Nhân viên số không cần hoàn hảo ngay từ lần đầu.
 **Sub (verbatim):** Điều quan trọng là mình biết cách kiểm tra, sửa và train lại sau mỗi lần test
 Port `_v1/24-refine.html`. **Its before/after bubble copy and ×/✓ lists were written by a builder, not the client** — keep the before/after device (it earns the slide) but the invented lines are yours to justify; if in doubt, cut them down to the two verbatim sentences plus the device.
 
-## 18 · Divider — `t-ink` · `.divider`
+## 17 · Divider — `t-ink` · `.divider`
 **Title (verbatim, two lines):** Từ nhân viên số / Đến công ty số
 Port from `_v1/12-session2.html` or `_v1/20-session3.html`. Strip items: Một nhân viên → Bốn chuyên môn → Cả đội phối hợp.
 
-## 19 · Bạn vừa có một nhân viên số. Còn cả một công ty thì sao? — `t-ink` · `l-center` — **NEW**
+## 18 · Bạn vừa có một nhân viên số. Còn cả một công ty thì sao? — `t-ink` · `l-center` — **NEW**
 **Copy (verbatim, exactly two lines):**
 Bạn vừa có một nhân viên số.
 Còn cả một công ty thì sao?
 **Client art direction:** *"Dùng chữ lớn làm điểm mở. Đặt 'nhân viên số' ở dòng đầu và 'công ty' ở dòng sau với màu nhấn. Không cần hình văn phòng. Khán giả vừa trải nghiệm Sale Agent nên hai dòng này đã có ngữ cảnh cụ thể. Cho dòng đầu xuất hiện trước; dừng một nhịp rồi hiện câu hỏi. Nếu không dùng hiệu ứng, giữ khoảng cách rõ giữa hai dòng. Không bổ sung định nghĩa hay danh sách vai trò vào slide mở."*
 So: two lines only, accent on "nhân viên số" and "công ty", a real beat between them (≥700ms), nothing else on the slide.
 
-## 20 · Mỗi nhân viên số đảm nhận một chuyên môn — `t-paper` · `l-rail` — **NEW**
+## 19 · Mỗi nhân viên số đảm nhận một chuyên môn — `t-paper` · `l-rail` — **NEW**
 **Headline (verbatim):** Mỗi nhân viên số đảm nhận một chuyên môn
 **Four roles (verbatim, role — output):**
 - Marketing — Chuẩn bị nội dung chiến dịch
@@ -187,7 +176,7 @@ So: two lines only, accent on "nhân viên số" and "công ty", a real beat bet
 **Client art direction:** *"Bốn chức năng ngang hàng… Mỗi chức năng có một đầu ra và một biểu tượng riêng. Đây là các chuyên môn độc lập, không phải bốn bước hội thoại của Sale Agent. Giữ kinh doanh là điểm nối với phần trước, sau đó mở sang marketing, kho và kế toán. Không tách tư vấn, chăm khách, báo cáo thành ba nhân viên chỉ để tăng số lượng. Nhãn trên slide là chức năng, không khẳng định mỗi chức năng thay thế được cả phòng ban."*
 So: four **equal** cards, never a numbered sequence and never arrows between them. One simple inline-SVG icon each (document / order / boxes / ledger). "Kinh doanh" may carry a quiet "đã gặp ở phần trước" tie-back; do not make it bigger than the other three.
 
-## 21 · Công ty số là nơi cả đội phối hợp làm việc — `t-paper` — **NEW, diagram slide**
+## 20 · Công ty số là nơi cả đội phối hợp làm việc — `t-paper` — **NEW, diagram slide**
 **Headline (verbatim):** Công ty số là nơi cả đội phối hợp làm việc
 **Three tiers (verbatim labels):**
 - top: **Bạn điều hành**
@@ -197,7 +186,7 @@ So: four **equal** cards, never a numbered sequence and never arrows between the
 Reference art: `docs/ref/ref-19-org.png` (16:9 — **you must re-lay it out for 4:1**, not letterbox it).
 Build with `.node` / `.conn` primitives + inline SVG icons. Crimson **only** on "Bạn điều hành". Diagram ≈ two thirds of the stage, headline the remaining third.
 
-## 22 · Một đơn hàng cần nhiều chuyên môn — `t-paper` — **NEW, diagram slide**
+## 21 · Một đơn hàng cần nhiều chuyên môn — `t-paper` — **NEW, diagram slide**
 **Headline (verbatim):** Một đơn hàng cần nhiều chuyên môn
 **Nodes (verbatim):**
 - **Kinh doanh** — Lập đơn hàng — output: *Đơn A: mã hàng, số lượng*
@@ -209,7 +198,7 @@ Build with `.node` / `.conn` primitives + inline SVG icons. Crimson **only** on 
 **Client art direction:** *"Sơ đồ phân nhánh rồi hợp kết quả… Vẽ rõ hai nhánh kho và kế toán cùng nhận mã đơn. Không vẽ thành chuỗi tư vấn–chăm khách–báo cáo. Hai nhánh có thể làm song song theo quy trình thực tế. Dùng biểu tượng đơn hàng, hàng tồn và sổ đối soát để phân biệt nghiệp vụ. Trạng thái tổng hợp là kết quả, không phải một nhân viên thứ tư."*
 Reference art: `docs/ref/ref-20-order.png`. A 4:1 stage suits this fork-join far better than the reference's 16:9 — let it run left-to-right across the full width. **Trạng thái đơn hàng must not look like a fourth employee** — give it a visibly different shape from the three role nodes.
 
-## 23 · Bạn giao mục tiêu. Đội ngũ thực hiện. — `t-ink` · `l-stack` — **NEW**
+## 22 · Bạn giao mục tiêu. Đội ngũ thực hiện. — `t-ink` · `l-stack` — **NEW**
 **Headline (verbatim):** Bạn giao mục tiêu. Đội ngũ thực hiện.
 **Three lines (verbatim, verb + question):**
 - Giao mục tiêu — Cần đạt điều gì?
@@ -218,14 +207,14 @@ Reference art: `docs/ref/ref-20-order.png`. A 4:1 stage suits this fork-join far
 **Client art direction:** *"Ba câu hỏi điều hành đặt theo chiều đọc… Không dùng lại bảng hai cột 'AI chuẩn bị / bạn quyết định' vì bảng đó thu hẹp vai trò người chủ vào một lần phê duyệt. Tiêu đề chiếm một phần ba trên cùng. Phần dưới có ba dòng ngắn; nhấn động từ 'Giao', 'Xem', 'Quyết định'. Không thêm hình người."*
 So: headline occupies the top third; three lines below with the **verbs** carrying the accent; no human figures, no two-column table.
 
-## 24 · Bạn đã có nhân viên số đầu tiên — `t-accent` · `l-center` — **NEW**
+## 23 · Bạn đã có nhân viên số đầu tiên — `t-accent` · `l-center` — **NEW**
 **Copy (verbatim, exactly two lines):**
 Bạn đã có nhân viên số đầu tiên.
 Bạn muốn xây đội ngũ nào tiếp theo?
 **Client art direction:** *"Hai dòng chữ lớn. Dòng đầu ghi nhận trải nghiệm vừa có; dòng sau mở ra câu hỏi về đội ngũ của khán giả. Dùng màu nhấn cho 'đội ngũ'. Giữ nhiều khoảng trống để câu hỏi có sức nặng. Cho dòng đầu xuất hiện trước, dừng một nhịp rồi hiện câu hỏi… Không thêm hình hoặc ý mới. Kết bằng câu hỏi để khán giả tự hình dung."*
 Two lines, generous emptiness, accent on "đội ngũ", a real beat between the lines, nothing else.
 
-## 25 · Q&A — `t-paper` · `l-split`
+## 24 · Q&A — `t-paper` · `l-split`
 **Headline (verbatim):** Q&A
 **Also on the slide (verbatim):** QR code join cộng đồng Zalo, cộng đồng Facebook, cộng đồng Sale Agent
 The pptx names **three** communities but ships **two** QR images (`qr-facebook.png`, `qr-zalo.png`).
@@ -233,6 +222,18 @@ Lay out the two codes you have, label them from the client's list, and **flag th
 Port the Q&A question list from `_v1/28-qa.html` only if it still fits; the client's slide is just the headline plus the codes, so the questions are optional support, not required copy.
 
 ---
+
+
+## Removed after client review
+- **"Cùng nhìn lại cách các shop đang tư vấn khách hàng"** (was slide 06) — removed at the client's
+  request; the partial is parked in `src/slides/_removed/` rather than deleted. **The audience-survey
+  figures went with it** (18/27 · 14/27 · 20/27 from the workshop CSV), so those numbers no longer
+  appear anywhere in the deck. The open question about the "fill hình dashboard" slot is moot as a result.
+- **Slide 04's footnote strip** (Kết quả · Bối cảnh · Inbox tăng gấp 3) — removed at the client's request.
+  Note the other three session dividers (07 / 11 / 17) still carry theirs, so the four no longer match.
+- **Slide 05's "Kết quả khách hàng" caveat plate** — removed at the client's request. It carried the
+  *"kết quả của một khách hàng cụ thể — không phải cam kết"* framing that the original speaker guide's
+  rehearsal checklist asked for; the Mái Nhà Việt figures are now presented without that qualifier.
 
 ## Rules carried over from v1 (still binding)
 - Never present "inbox tăng gấp 3" as measured data — it is a scenario.
