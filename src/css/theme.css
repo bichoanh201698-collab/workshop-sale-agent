@@ -479,3 +479,47 @@
 /* on the crimson flood the pill has to invert to stay visible */
 .t-accent .ribbon{ background:#fff; color:var(--brand); }
 .t-accent .ribbon .dot{ background:var(--brand); opacity:.6; }
+
+/* ============================================================
+   PRESS CLIPPINGS — used by the two identical "dư luận" slides.
+   Lives here rather than in a partial so the repeat cannot drift
+   out of sync with the first appearance.
+   ============================================================ */
+.press{ flex-direction:column; justify-content:flex-start; gap:0; }
+
+.press .ttl{
+  /* +26px offsets the .mask negative margin so diacritics clear the safe line */
+  margin:26px 0 0; font-size:150px; font-weight:900; line-height:.96;
+  letter-spacing:-.038em; flex:none;
+}
+.press .kicker{
+  margin:0; font-family:var(--mono); font-size:30px; font-weight:600;
+  letter-spacing:.24em; text-transform:uppercase; color:var(--muted);
+  display:flex; align-items:center; gap:22px;
+}
+.press .kicker i{ display:block; width:64px; height:3px; background:var(--accent); flex:none; }
+
+.press .clips{ display:flex; gap:34px; margin-top:60px; align-items:stretch; flex:none; height:592px; }
+
+.press .clip{
+  flex:1; min-width:0; background:#FFFFFF;
+  border:2px solid #0A0B0D14; border-top:6px solid var(--accent);
+  border-radius:0 0 18px 18px; padding:34px 32px 36px;
+  display:flex; flex-direction:column; gap:20px;
+  box-shadow:0 22px 54px -34px #0A0B0D33;
+}
+.press .clip .src{
+  display:flex; align-items:baseline; justify-content:space-between; gap:16px;
+  font-family:var(--mono); font-size:24px; font-weight:600; letter-spacing:.1em;
+}
+.press .clip .src b{ color:var(--accent); text-transform:uppercase; }
+.press .clip .src span{ color:#0A0B0D6B; letter-spacing:.06em; }
+.press .clip h3{
+  margin:0; font-size:44px; font-weight:900; line-height:1.16;
+  letter-spacing:-.022em; color:var(--ink);
+}
+.press .clip p{
+  margin:auto 0 0; padding-top:22px; border-top:2px solid #0A0B0D12;
+  font-size:26px; line-height:1.38; color:#0A0B0D96;
+  display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden;
+}

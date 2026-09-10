@@ -96,12 +96,14 @@
     #s01 .stack{
       position:relative; z-index:1; width:100%; height:100%;
       display:flex; flex-direction:column; align-items:center;
-      padding-top:34px;
+      /* At 80% the stack no longer fills the stage, so it centres vertically
+         instead of hanging from the top edge with a hole underneath. */
+      justify-content:center;
     }
-    #s01 .partners{ width:1766px; height:auto; display:block; }
-    #s01 .badge{ width:668px; height:auto; display:block; margin-top:60px; }
+    #s01 .partners{ width:1413px; height:auto; display:block; }
+    #s01 .badge{ width:534px; height:auto; display:block; margin-top:48px; }
     #s01 .title{
-      width:3529px; height:auto; display:block; margin-top:22px;
+      width:2823px; height:auto; display:block; margin-top:18px;
       filter:drop-shadow(0 30px 70px #00000080);
     }
   </style>

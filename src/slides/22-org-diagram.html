@@ -1,4 +1,4 @@
-<section class="slide t-paper" data-slide="21" data-title="Công ty số — sơ đồ ba tầng" id="s21">
+<section class="slide t-paper" data-slide="22" data-title="Công ty số — sơ đồ ba tầng" id="s22">
   <style>
     /* ------------------------------------------------------------------
        Slide 19 — conceptual org chart, three tiers.
@@ -8,58 +8,58 @@
        (912px of height has to hold three tiers plus two connector zones).
        Every coordinate below is local to .dg (2720 x 912).
        ------------------------------------------------------------------ */
-    #s21{ align-items:center; gap:130px; }
+    #s22{ align-items:center; gap:130px; }
 
-    #s21 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:46px; }
-    #s21 .ttl{
+    #s22 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:46px; }
+    #s22 .ttl{
       margin:0; font-size:130px; font-weight:900;
       letter-spacing:-.032em; line-height:1.05; text-wrap:balance;
     }
-    #s21 .lead .sm{ max-width:20ch; }
+    #s22 .lead .sm{ max-width:20ch; }
 
-    #s21 .dg{
+    #s22 .dg{
       flex:none; width:2720px; height:912px; position:relative;
       /* The foundation tier ended exactly on the safe-area edge, where the
          .ribbon pill sits. Scale the whole chart from its top so the internal
          geometry stays exact and the bottom tier clears the furniture. */
       transform:scale(.93); transform-origin:top center;
     }
-    #s21 .lay{ position:absolute; inset:0; }
+    #s22 .lay{ position:absolute; inset:0; }
 
     /* thicker rules than the 3px default — 3px vanishes on an LED wall */
-    #s21 .conn.h{ height:5px; margin-top:-2.5px; }
-    #s21 .conn.v{ width:5px;  margin-left:-2.5px; }
-    #s21 .ah{
+    #s22 .conn.h{ height:5px; margin-top:-2.5px; }
+    #s22 .conn.v{ width:5px;  margin-left:-2.5px; }
+    #s22 .ah{
       position:absolute; width:0; height:0; margin-left:-18px;
       border:18px solid transparent; border-top-color:var(--forest); border-bottom:0;
     }
 
-    #s21 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
+    #s22 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
 
     /* tier 1 — the human owner. The ONLY crimson on this slide. */
-    #s21 .owner{ left:930px; top:0; width:860px; height:182px; border-width:4px; }
-    #s21 .owner .hd{
+    #s22 .owner{ left:930px; top:0; width:860px; height:182px; border-width:4px; }
+    #s22 .owner .hd{
       height:100%; display:flex; align-items:center; justify-content:center;
       gap:30px; font-size:54px; padding:0 40px; line-height:1.14; letter-spacing:-.01em;
     }
-    #s21 .owner svg{ width:66px; height:66px; flex:none; }
+    #s22 .owner svg{ width:66px; height:66px; flex:none; }
 
     /* tier 2 — four equal digital roles, icon over label */
-    #s21 .role{ top:372px; width:650px; height:250px; }
-    #s21 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
-    #s21 .role .ic svg{ width:116px; height:116px; }
-    #s21 .role .hd{ font-size:37px; padding:18px 20px; line-height:1.16; letter-spacing:-.008em; }
+    #s22 .role{ top:372px; width:650px; height:250px; }
+    #s22 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
+    #s22 .role .ic svg{ width:116px; height:116px; }
+    #s22 .role .hd{ font-size:37px; padding:18px 20px; line-height:1.16; letter-spacing:-.008em; }
 
     /* tier 3 — the shared working platform: solid plates, icon beside label */
-    #s21 .found{
+    #s22 .found{
       top:756px; height:176px; width:880px;
       flex-direction:row; align-items:center; gap:34px; padding:0 46px;
       background:var(--forest); border-color:var(--forest); color:#fff;
     }
-    #s21 .found svg{ width:76px; height:76px; flex:none; }
-    #s21 .found .t{ font-size:44px; font-weight:700; letter-spacing:-.014em; line-height:1.1;
+    #s22 .found svg{ width:76px; height:76px; flex:none; }
+    #s22 .found .t{ font-size:44px; font-weight:700; letter-spacing:-.014em; line-height:1.1;
       display:flex; flex-direction:column; gap:10px; }
-    #s21 .found .t em{
+    #s22 .found .t em{
       font-style:normal; font-family:var(--mono); font-size:25px; font-weight:600;
       letter-spacing:.08em; opacity:.72;
     }

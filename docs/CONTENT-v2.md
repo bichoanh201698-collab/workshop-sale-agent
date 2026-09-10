@@ -1,4 +1,4 @@
-# Content spec v2 — 26 slides
+# Content spec v2 — 28 slides
 
 Source of truth: **`ClawExperts Event in August.pptx`** (client, 4480×1120 — same canvas as this deck).
 It re-orders and re-scopes the earlier speaker guide, so v2 replaces `docs/CONTENT.md` entirely.
@@ -31,6 +31,10 @@ centred stack over a dark hex-network field. Layout and assets follow it exactly
 - `assets/brand/cover-partners.png` — organiser + sponsor strip (OpenClaw · ClawExperts · Firegroup), top centre
 - `assets/brand/cover-badge-workshop.png` — the "Workshop" pill
 - `assets/brand/cover-title-x3.png` — the title lockup: *X3 NĂNG SUẤT BÁN HÀNG / NHỜ AI TƯ VẤN & HỖ TRỢ CHỐT ĐƠN 24/7*
+
+**Sized to 80% at the client's request** — the three stacked assets and their gaps were scaled down
+rather than transformed, so the layout maths stays honest, and the stack now centres vertically instead
+of hanging from the top edge with a hole underneath.
 
 **The background is rebuilt live in CSS + SVG, not their flattened PNG.** Their bitmap is 836×1881 and
 would need a 2.4× upscale to fill a 4480px wall; rebuilding it keeps it crisp and lets it move, which is
@@ -166,11 +170,35 @@ Port `_v1/23-test-5.html` — it already solves five bubbles on one ultrawide st
 **Sub (verbatim):** Điều quan trọng là mình biết cách kiểm tra, sửa và train lại sau mỗi lần test
 Port `_v1/24-refine.html`. **Its before/after bubble copy and ×/✓ lists were written by a builder, not the client** — keep the before/after device (it earns the slide) but the invented lines are yours to justify; if in doubt, cut them down to the two verbatim sentences plus the device.
 
-## 17 · Divider — `t-ink` · `.divider`
+## 17 · Báo chí đang nói về nhân viên số — `t-paper` · `.press` — **NEW, client request**
+### and again at 27, immediately before Q&A
+A press-clipping wall built for FOMO: five real articles, each shown as outlet · date · headline · lead.
+**Every headline and lead is verbatim from the published article** — fetched from the live pages, not
+written here. Dates are the articles' own.
+
+| Outlet | Date | Headline |
+|---|---|---|
+| baochinhphu.vn | 04/05/2026 | 'Doanh nghiệp một người': Cú hích chính sách cho làn sóng khởi nghiệp số |
+| VnEconomy | 11/04/2026 | "Nhân viên số": Lời giải cho bài toán năng suất trong kỷ nguyên AI |
+| VTV.vn | 16/06/2026 | Công nghệ AI mở ra kỷ nguyên làm việc cùng "đồng nghiệp số" |
+| Tuổi Trẻ · KTSG | 16/04/2026 | Công ty chỉ với AI và hai nhân viên tạo ra doanh thu 1,8 tỉ đô la Mỹ |
+| VnEconomy | 31/07/2026 | Những công ty triệu USD chỉ có một nhân viên trong kỷ nguyên AI |
+
+**The title — *"Báo chí đang nói về nhân viên số."* — is ours, not the client's.** It is deliberately
+flat: the clippings do the persuading, so the headline only has to name what the room is looking at.
+
+The slide appears **twice, identically** (17 and 27). Its CSS is the `.press` component in `theme.css`
+rather than a scoped block, precisely so the repeat cannot drift out of sync with the first showing —
+the two partials differ only in `id`, `data-slide` and `data-title`.
+
+**⚠ Check before the event:** these are third-party headlines about the market, not about ClawExperts or
+this product. Nothing on the slide claims otherwise, and it should stay that way.
+
+## 18 · Divider — `t-ink` · `.divider`
 **Title (verbatim, two lines):** Từ nhân viên số / Đến công ty số
 Port from `_v1/12-session2.html` or `_v1/20-session3.html`. Strip items: Một nhân viên → Bốn chuyên môn → Cả đội phối hợp.
 
-## 18 · Speaker — Hoàng Lê — `t-ink` — **NEW, client request** — file `18-speaker-hoang.html`
+## 19 · Speaker — Hoàng Lê — `t-ink` — **NEW, client request** — file `18-speaker-hoang.html`
 Placed immediately after the *Từ nhân viên số → Đến công ty số* divider, which is the section he presents.
 **Copy — all of it:** Speakers · **Hoàng Lê** · Program Manager — AI Agent Business Solution
 
@@ -188,7 +216,7 @@ Tín's and keeps a comfortable red margin at the sides.
   *…Business **Solution***. Both are reproduced exactly as given. **Worth a look** — if it is a typo,
   these are the only two places it appears.
 
-## 19 · Bạn vừa có một nhân viên số. Còn cả một công ty thì sao? — `t-ink` · `l-center` — **NEW**
+## 20 · Bạn vừa có một nhân viên số. Còn cả một công ty thì sao? — `t-ink` · `l-center` — **NEW**
 **Copy (verbatim, exactly two lines):**
 Bạn vừa có một nhân viên số.
 Còn cả một công ty thì sao?
@@ -200,7 +228,7 @@ The brief re-scoped Hoàng Lê's session to **7 slides** and renamed the four di
 department names. It is kept local, not committed — it carries the full speaker script.
 Section map: **19** = S1 · **20** = S2 · **21** = S3 · **22** = S4 · **23** = S5 · **24** = S6 · **25** = S7.
 
-### 20 · Mỗi nhân viên số, một phần việc rõ ràng. — `t-paper` · `l-rail`
+### 21 · Mỗi nhân viên số, một phần việc rõ ràng. — `t-paper` · `l-rail`
 Four **equal** cards, each an employee's job scope — the brief is explicit: *"Tên nhân viên là phần nổi
 bật. Không dùng tên phòng ban làm tiêu đề thẻ."* So each card is eyebrow **Nhân viên số** + scope + output:
 - **Quản lý nội dung Fanpage** — Chuẩn bị bài · Lịch nội dung · Chờ duyệt
@@ -212,7 +240,7 @@ No numbering, no arrows, no size hierarchy. The tie-back sits *above* the divide
 lines keep a common baseline — below it, the card with a tie-back pushed its output line out of alignment
 with the other three.
 
-### 21 · Công ty số là nơi cả đội phối hợp làm việc — `t-paper`
+### 22 · Công ty số là nơi cả đội phối hợp làm việc — `t-paper`
 Same three-tier chart, relabelled to the brief:
 - top: **Bạn & người phụ trách** — Giao ưu tiên · Duyệt · Quyết định *(the only crimson on the slide)*
 - middle: the four scopes above, each prefixed **NV** at the client's request so the nodes read as
@@ -224,7 +252,7 @@ Same three-tier chart, relabelled to the brief:
 The brief's constraint stands: the connectors show organisational relationships, **not message flow**, and
 the tools tier must not imply every employee can read every piece of data.
 
-### 22 · Từ tin nhắn Zalo đến công việc của cả đội — `t-paper` — **replaces the old fork-join slide**
+### 23 · Từ tin nhắn Zalo đến công việc của cả đội — `t-paper` — **replaces the old fork-join slide**
 S4 changed completely: the *"Một đơn hàng cần nhiều chuyên môn"* diamond is retired to
 `src/slides/_removed/22-order-flow-fork-join.html`. The new slide walks one illustrated case in four
 numbered steps across two simulated Zalo phone screens — customer request and transfer photo → two
@@ -239,7 +267,7 @@ not proof of a shipped integration.
 brief lists keeping that label under its **Team slide** rules (*"Giữ nhãn Tình huống minh họa ở slide 4"*),
 so the slide no longer marks the A102 story and the Zalo UI as illustrative. The speaker now has to say it.
 
-## 23 · Bạn giao mục tiêu. Đội ngũ thực hiện. — `t-ink` · `l-stack` — **NEW**
+## 24 · Bạn giao mục tiêu. Đội ngũ thực hiện. — `t-ink` · `l-stack` — **NEW**
 **Headline (verbatim):** Bạn giao mục tiêu. Đội ngũ thực hiện.
 **Three lines (verbatim, verb + question):**
 - Giao mục tiêu — Cần đạt điều gì?
@@ -254,14 +282,14 @@ content column (three stats, six chips, three QR blocks), not a phrase split acr
 **Client art direction:** *"Ba câu hỏi điều hành đặt theo chiều đọc… Không dùng lại bảng hai cột 'AI chuẩn bị / bạn quyết định' vì bảng đó thu hẹp vai trò người chủ vào một lần phê duyệt. Tiêu đề chiếm một phần ba trên cùng. Phần dưới có ba dòng ngắn; nhấn động từ 'Giao', 'Xem', 'Quyết định'. Không thêm hình người."*
 So: headline occupies the top third; three lines below with the **verbs** carrying the accent; no human figures, no two-column table.
 
-## 24 · Bạn đã có nhân viên số đầu tiên — `t-accent` · `l-center` — **NEW**
+## 25 · Bạn đã có nhân viên số đầu tiên — `t-accent` · `l-center` — **NEW**
 **Copy (verbatim, exactly two lines):**
 Bạn đã có nhân viên số đầu tiên.
 Bạn muốn xây đội ngũ nào tiếp theo?
 **Client art direction:** *"Hai dòng chữ lớn. Dòng đầu ghi nhận trải nghiệm vừa có; dòng sau mở ra câu hỏi về đội ngũ của khán giả. Dùng màu nhấn cho 'đội ngũ'. Giữ nhiều khoảng trống để câu hỏi có sức nặng. Cho dòng đầu xuất hiện trước, dừng một nhịp rồi hiện câu hỏi… Không thêm hình hoặc ý mới. Kết bằng câu hỏi để khán giả tự hình dung."*
 Two lines, generous emptiness, accent on "đội ngũ", a real beat between the lines, nothing else.
 
-## 25 · Cùng xây đội ngũ số phía sau bạn — `t-ink` — **NEW, S7 of the brief**
+## 26 · Cùng xây đội ngũ số phía sau bạn — `t-ink` — **NEW, S7 of the brief**
 **Copy:** eyebrow *ClawExperts · Đồng hành triển khai* · headline **Cùng xây đội ngũ số phía sau bạn.** ·
 *Bắt đầu từ một phần việc thực tế của công ty.* · *Quét QR để trao đổi về nhu cầu triển khai*
 
@@ -282,7 +310,7 @@ phone once before the event**, which is what the brief asks for anyway.
 *Program Manager - AI Agent Business Solution*. The slide follows the later message so it matches
 slide 18. Confirm which is right.
 
-## 26 · Q&A — `t-paper` · centred pair
+## 28 · Q&A — `t-paper` · centred pair
 **Headline:** Q&A · **Sub:** Hỏi đáp & thảo luận tự do — cứ hỏi thẳng về shop của mình.
 **Two community codes**, both real:
 - `assets/brand/qr-zalo.png` → **Cộng đồng Zalo**
