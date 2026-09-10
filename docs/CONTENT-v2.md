@@ -78,15 +78,17 @@ Kết quả → Bối cảnh → Inbox tăng gấp 3. Marquee keywords: X3 NĂNG
 - `85% / 15%` — lọc 85% lượng khách hàng không quan tâm · bàn giao chính xác 15% khách hàng có nhu cầu
 Port the stat treatment from `_v1/06-fact.html` — but note the first figure is a *before → after*, not a fraction, so `.stat .num` needs a variant. Mark the slide as a customer result, not a promise.
 
-## 06 · Nếu inbox tăng gấp 3 — `t-ink-2` · `l-split`
-**Headline (verbatim):** Nếu inbox tăng gấp 3, shop có còn giữ được tốc độ phản hồi như hiện tại?
-**Sub (verbatim):** Hãy thử tưởng tượng một mùa lễ, một chiến dịch quảng cáo tốt hoặc một nội dung viral khiến lượng tin nhắn tăng gấp 3 lần.
-**Chart** — the pptx says *"add chart giống cái bên phải"* and ships the reference as a dark panel plotting a falling curve, y-axis **KHÁCH HÀNG**, x-axis **TỐC ĐỘ PHẢN HỒI**. Rebuild it as **inline SVG**, not an image:
-one smooth decaying curve, two axis lines, those two labels, no gridlines, no ticks, no numbers.
-It is an **illustrative relationship, not measured data** — label it so on the slide (the speaker guide forbids presenting ×3 as proven).
-**Conclusion (verbatim):** Khi khách đến nhiều hơn, năng lực tư vấn mới là thứ quyết định shop có giữ được cơ hội chốt đơn hay không
-**Closing line (verbatim):** Không thay thế con người; tạo thêm một người phụ biết sản phẩm, giữ nhịp tư vấn và gọi người thật khi cần.
-Port question framing from `_v1/07-traffic3x.html`.
+## 06 · Nếu inbox tăng gấp 3 — `t-ink-2` · `l-center`
+**Cut to a single sentence at the client's request.** The slide now carries nothing but:
+> **Nếu inbox tăng gấp 3, shop có còn giữ được tốc độ phản hồi như hiện tại?**
+
+Two balanced lines at 162px, `tăng gấp 3` accented with a `grow-x` underline. Gone with the trim: the
+sub-line about mùa lễ/viral, the inline-SVG response-speed curve, the *"Khi khách đến nhiều hơn…"*
+conclusion, the *"Không thay thế con người…"* line, and the **"kịch bản giả định" badge**.
+
+**⚠** That badge was an explicit requirement from the client's own rehearsal checklist — *"Trình bày
+'traffic tăng gấp 3' như số liệu đã chứng minh"* is listed under **cần tránh**. As a single bare
+question the slide no longer states that ×3 is a hypothetical, so the speaker now has to say it aloud.
 
 ## 07 · Divider — `t-ink` · `.divider`
 **Title (verbatim):** Trước khi tạo nhân viên số, hãy hiểu nhân viên đó sẽ làm gì.
