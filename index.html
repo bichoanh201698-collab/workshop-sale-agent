@@ -70,19 +70,24 @@
     }
 
     /* the diagonal light edge from the reference, as a sweeping beam */
+    /* The sweep travels in SCREEN space: translateX has to come BEFORE
+       rotate, or the beam slides along its own 24deg axis, drifts off the
+       bottom and reads as a crop bug. The run also has to clear the whole
+       4480px stage plus the rotation overhang (half of a 2464px-tall box
+       rotated 24deg is ~500px each side), hence -1100 -> 5600. */
     #s01 .bg-streak{
-      position:absolute; top:-60%; bottom:-60%; left:-10%; width:640px;
-      transform:rotate(24deg);
+      position:absolute; top:-60%; bottom:-60%; left:0; width:620px;
+      transform:translateX(-1100px) rotate(24deg);
       background:linear-gradient(to right,
-        transparent 0%, #FF2A3520 38%, #FF5A62 49%, #FFD9DC 50%, #FF5A62 51%, #FF2A3520 62%, transparent 100%);
-      filter:blur(2px);
-      animation:s01sweep 9s cubic-bezier(.55,0,.45,1) infinite;
+        transparent 0%, #FF2A3518 34%, #FF5A62 48%, #FFE3E6 50%, #FF5A62 52%, #FF2A3518 66%, transparent 100%);
+      filter:blur(3px);
+      animation:s01sweep 11s cubic-bezier(.42,0,.58,1) infinite;
     }
     @keyframes s01sweep{
-      0%   { transform:rotate(24deg) translateX(-260px); opacity:0; }
-      14%  { opacity:.9; }
-      70%  { opacity:.9; }
-      100% { transform:rotate(24deg) translateX(2600px); opacity:0; }
+      0%   { transform:translateX(-1100px) rotate(24deg); opacity:0; }
+      10%  { opacity:.85; }
+      82%  { opacity:.85; }
+      100% { transform:translateX(5600px)  rotate(24deg); opacity:0; }
     }
     /* a second, static edge so the composition still reads between sweeps */
     #s01 .bg-edge{
