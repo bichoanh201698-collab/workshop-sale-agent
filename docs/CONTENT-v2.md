@@ -267,10 +267,10 @@ Two lines, generous emptiness, accent on "đội ngũ", a real beat between the 
 The brief's own instruction is that headline and QR are the two focal points and nothing else competes:
 no map, no policy figures, no international examples.
 
-**⚠ The QR is a placeholder slot, deliberately.** The brief ships a sample code pointing at
-`https://example.com` and says to swap it and test-scan before showing. Rather than reproduce a
-real-looking code that goes nowhere, the slide renders a dashed slot reading *"Thay bằng mã liên hệ diễn
-giả"*. **The client must supply the real contact QR.**
+**QR — supplied and in place.** `assets/brand/qr-hoang-zalo.png` (1920×1920, the speaker'''s Zalo code)
+replaced the brief'''s example.com sample. White surround kept per the brief so it scans from a distance.
+It is a styled dot-matrix code with a logo overlay, so no local decoder can read it — **test-scan with a
+phone once before the event**, which is what the brief asks for anyway.
 
 **⚠ Name and title differ between sources.** The brief's S7 says *Hoàng Nguyễn Lê* /
 *AI – Agent Solutions Program Manager*; the client's later message says *Hoàng Lê* /

@@ -2322,24 +2322,15 @@
 
     #s25 .rz{ flex:none; display:flex; flex-direction:column; align-items:center; gap:34px; }
 
-    /* The brief ships a placeholder QR pointing at example.com and says to swap
-       it before showing. A dashed slot is honest; a real-looking code that goes
-       nowhere is not. */
+    /* The brief's sample code pointed at example.com; this is the speaker's real
+       Zalo QR, supplied by the client. White surround kept per the brief so it
+       scans from a distance. */
     #s25 .qrslot{
       width:496px; height:496px; border-radius:30px;
-      background:#FFFFFF; padding:26px; box-sizing:border-box;
-      display:flex; align-items:center; justify-content:center;
+      background:#FFFFFF; padding:24px; box-sizing:border-box;
+      box-shadow:0 0 0 6px var(--brand), 0 40px 110px -34px #000000CC;
     }
-    #s25 .qrslot .inner{
-      width:100%; height:100%; border:5px dashed #0A0B0D33; border-radius:16px;
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      gap:16px; text-align:center; padding:22px;
-    }
-    #s25 .qrslot b{ font-size:86px; font-weight:900; color:#0A0B0D2E; line-height:1; }
-    #s25 .qrslot em{
-      font-style:normal; font-family:var(--mono); font-size:25px; font-weight:600;
-      letter-spacing:.1em; color:#0A0B0D8A; line-height:1.45;
-    }
+    #s25 .qrslot img{ width:100%; height:100%; display:block; object-fit:contain; }
     #s25 .rz .cue{
       margin:0; font-family:var(--mono); font-size:28px; font-weight:600;
       letter-spacing:.12em; text-transform:uppercase; color:var(--accent); text-align:center;
@@ -2374,10 +2365,7 @@
 
   <div class="rz">
     <div class="qrslot" data-anim="scale" data-delay="620" data-dur="900">
-      <span class="inner">
-        <b>QR</b>
-        <em>Thay bằng mã<br>liên hệ diễn giả</em>
-      </span>
+      <img src="assets/brand/qr-hoang-zalo.png" alt="Mã QR Zalo của Hoàng Lê">
     </div>
     <p class="cue" data-anim="up-sm" data-delay="880">Quét QR để trao đổi<br>về nhu cầu triển khai</p>
     <p class="who" data-anim="up-sm" data-delay="980">
