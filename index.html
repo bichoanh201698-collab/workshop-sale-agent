@@ -2197,25 +2197,28 @@
       letter-spacing:-.04em; flex:none;
     }
 
-    #s23 .rows{ margin-top:112px; display:flex; flex-direction:column; flex:none; }
+    #s23 .rows{ margin-top:78px; display:flex; flex-direction:column; flex:none; }
 
     #s23 .r{
-      display:flex; align-items:baseline; gap:56px;
-      padding:44px 0 46px; border-top:2px solid var(--hair);
+      display:flex; align-items:baseline; gap:46px;
+      padding:36px 0 38px; border-top:2px solid var(--hair);
     }
     #s23 .r:last-child{ border-bottom:2px solid var(--hair); }
 
     #s23 .r .v{
-      flex:none; font-size:106px; font-weight:800; line-height:1.06;
+      flex:none; font-size:120px; font-weight:800; line-height:1.06;
       letter-spacing:-.03em; white-space:nowrap;
     }
     #s23 .r .v b{ color:var(--accent); font-weight:900; }
 
-    /* the rule keeps the row reading as ONE line instead of two columns */
-    #s23 .r .cx{ flex:1; min-width:80px; height:3px; background:var(--hair); }
+    /* The rule used to be flex:1, which threw the question out to the far
+       right edge — on a 4480px wall that is a full head-turn per row. It is
+       now a short fixed connector, so verb and question sit inside one eye
+       fixation. The full-width hairlines above/below carry the stage width. */
+    #s23 .r .cx{ flex:none; width:104px; height:3px; background:var(--hair); }
 
     #s23 .r .q{
-      flex:none; font-size:82px; font-weight:500; line-height:1.1;
+      flex:none; font-size:94px; font-weight:500; line-height:1.1;
       letter-spacing:-.02em; color:var(--muted); white-space:nowrap;
     }
   </style>

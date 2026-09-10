@@ -243,6 +243,12 @@ so the slide no longer marks the A102 story and the Zalo UI as illustrative. The
 - Giao mục tiêu — Cần đạt điều gì?
 - Xem kết quả — Công việc đến đâu?
 - Quyết định — Tiếp tục hay điều chỉnh?
+**Layout note (client feedback):** the connector between verb and question was elastic, which threw the
+question to the far right edge — on a 4480px wall that is a full head-turn per row. It is now a short
+fixed rule, so each row reads inside one eye fixation; the full-width hairlines carry the stage width
+instead. Checked the rest of the deck for the same pattern: every other `flex:1` is an independent
+content column (three stats, six chips, three QR blocks), not a phrase split across the stage.
+
 **Client art direction:** *"Ba câu hỏi điều hành đặt theo chiều đọc… Không dùng lại bảng hai cột 'AI chuẩn bị / bạn quyết định' vì bảng đó thu hẹp vai trò người chủ vào một lần phê duyệt. Tiêu đề chiếm một phần ba trên cùng. Phần dưới có ba dòng ngắn; nhấn động từ 'Giao', 'Xem', 'Quyết định'. Không thêm hình người."*
 So: headline occupies the top third; three lines below with the **verbs** carrying the accent; no human figures, no two-column table.
 
