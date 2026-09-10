@@ -229,9 +229,13 @@ numbered steps across two simulated Zalo phone screens — customer request and 
 digital employees check order A102 → the reconciliation employee reports *chưa ghép được khoản thu* →
 a **real accountant** verifies and records the result → A102's new state goes back to the advisor.
 Colour discipline: deep green = digital employee, Zalo blue = the channel, crimson = the human.
-Constraints from the brief: phone frames keep the 310:660 ratio, the "Tình huống minh họa" note stays,
-the 10:25 message is *before* verification and 10:28 is the result *after*, and no verification badges —
-the Zalo UI is a simulation, not proof of a shipped integration.
+Constraints from the brief: phone frames keep the 310:660 ratio, the 10:25 message is *before*
+verification and 10:28 is the result *after*, and no verification badges — the Zalo UI is a simulation,
+not proof of a shipped integration.
+
+**⚠ Removed at the client'''s request:** the *"Tình huống minh họa · Giao diện Zalo mô phỏng"* note. The
+brief lists keeping that label under its **Team slide** rules (*"Giữ nhãn Tình huống minh họa ở slide 4"*),
+so the slide no longer marks the A102 story and the Zalo UI as illustrative. The speaker now has to say it.
 
 ## 23 · Bạn giao mục tiêu. Đội ngũ thực hiện. — `t-ink` · `l-stack` — **NEW**
 **Headline (verbatim):** Bạn giao mục tiêu. Đội ngũ thực hiện.
