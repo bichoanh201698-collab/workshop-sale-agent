@@ -1,79 +1,124 @@
-<section class="slide t-ink" data-slide="1" data-title="Cover — Sales Agent Event" id="s01">
+<section class="slide t-ink" data-slide="1" data-title="Cover — X3 năng suất bán hàng" id="s01">
   <style>
-    /* Cover is the only slide without .brandbar — it carries the two
-       lockups larger instead (see CONTENT-v2, deck-level notes). */
-    #s01{ gap:120px; align-items:stretch; }
+    /* ------------------------------------------------------------------
+       Cover rebuilt from the client's "slide mo dau.pptx". Their layout is
+       a centred stack (partners / Workshop badge / title lockup) over a
+       dark hex-network field with a red glow and a diagonal light streak.
+       The background is rebuilt live in CSS+SVG instead of using their
+       flattened 836x1881 PNG: on a 4480px wall that bitmap would have to
+       be upscaled 2.4x, and rebuilding it keeps it crisp AND lets it move.
+       The speaker portrait from the previous cover is gone, per the client.
+       ------------------------------------------------------------------ */
+    #s01{ padding:0; overflow:hidden; }
 
-    #s01 .idz{ flex:0 0 1880px; display:flex; flex-direction:column; }
-    #s01 .ttl{
-      margin:0; font-size:300px; font-weight:900; line-height:.94;
-      letter-spacing:-.042em;
-    }
-    #s01 .sub{
-      margin:56px 0 0; font-size:52px; line-height:1.28; font-weight:500;
-      color:var(--fg); max-width:1810px;
-    }
-    #s01 .logos{
-      margin-top:auto; align-self:flex-start;
-      display:flex; align-items:center; gap:48px;
-      background:var(--paper); border-radius:24px; padding:26px 46px;
-    }
-    #s01 .logos img{ height:88px; width:auto; display:block; }
-    #s01 .logos .sep{ width:3px; height:72px; background:#0A0B0D2E; flex:none; }
+    /* --- background layers ------------------------------------------- */
+    #s01 .bg{ position:absolute; inset:0; z-index:-3; overflow:hidden; }
 
-    #s01 .rz{
-      flex:1; min-width:0; display:flex; flex-direction:column;
-      align-items:flex-end; justify-content:center; gap:46px;
+    #s01 .bg-base{
+      position:absolute; inset:0;
+      background:
+        radial-gradient(1900px 1400px at 6% 18%,  #7E0A12 0%, #3A050A 34%, #120406 62%, #08080A 100%),
+        linear-gradient(105deg, #14060A 0%, #0B0B0E 46%, #0E1013 74%, #0A0A0C 100%);
     }
-    #s01 .lockup{ width:1840px; height:auto; display:block; }
-    #s01 .qrs{ display:flex; align-items:flex-start; gap:96px; padding:0 34px; }
-    #s01 .qr{ gap:18px; }
-    #s01 .qr img{ width:240px; border-radius:14px; }
-    #s01 .qr span{ font-size:29px; color:var(--fg); opacity:.82; letter-spacing:.12em; }
+
+    /* honeycomb field — drifts slowly and for ever */
+    #s01 .bg-hex{
+      position:absolute; inset:-260px;
+      background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2246.77%22%20height=%2281.00%22%20viewBox=%220%200%2046.77%2081.00%22%3E%3Cg%20fill=%22none%22%20stroke=%22%23ffffff%22%20stroke-width=%221.05%22%3E%3Cpath%20d=%22M23.38%20-6.75%20L46.77%206.75%20L46.77%2033.75%20L23.38%2047.25%20L0.00%2033.75%20L0.00%206.75%20Z%22/%3E%3Cpath%20d=%22M0.00%2033.75%20L23.38%2047.25%20L23.38%2074.25%20L0.00%2087.75%20L-23.38%2074.25%20L-23.38%2047.25%20Z%22/%3E%3Cpath%20d=%22M46.77%2033.75%20L70.15%2047.25%20L70.15%2074.25%20L46.77%2087.75%20L23.38%2074.25%20L23.38%2047.25%20Z%22/%3E%3C/g%3E%3Cg%20fill=%22%23ffffff%22%3E%3Ccircle%20cx=%2223.38%22%20cy=%22-6.75%22%20r=%221.7%22/%3E%3Ccircle%20cx=%220.00%22%20cy=%2233.75%22%20r=%221.7%22/%3E%3Ccircle%20cx=%2246.77%22%20cy=%2233.75%22%20r=%221.7%22/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat:repeat;
+      opacity:.10;
+      animation:s01drift 64s linear infinite;
+    }
+    @keyframes s01drift{ to{ transform:translate3d(-46.77px, -81.00px, 0); } }
+
+    /* the field is brightest on the red side, fading out to the right */
+    #s01 .bg-hex.warm{
+      opacity:.38;
+      -webkit-mask-image:radial-gradient(1500px 1200px at 8% 22%, #000 0%, transparent 72%);
+      mask-image:radial-gradient(1500px 1200px at 8% 22%, #000 0%, transparent 72%);
+      animation-duration:48s;
+    }
+
+    /* breathing red bloom, top-left, exactly where the client put it */
+    #s01 .bg-glow{
+      position:absolute; left:-620px; top:-820px; width:2900px; height:2900px;
+      border-radius:50%;
+      background:radial-gradient(circle at center, #FF1A2699 0%, #C4101C55 32%, transparent 66%);
+      filter:blur(26px);
+      animation:s01breathe 11s ease-in-out infinite alternate;
+    }
+    @keyframes s01breathe{
+      from{ transform:scale(1)    translate3d(0,0,0); opacity:.72; }
+      to  { transform:scale(1.12) translate3d(120px,60px,0); opacity:1; }
+    }
+
+    /* the diagonal light edge from the reference, as a sweeping beam */
+    #s01 .bg-streak{
+      position:absolute; top:-60%; bottom:-60%; left:-10%; width:640px;
+      transform:rotate(24deg);
+      background:linear-gradient(to right,
+        transparent 0%, #FF2A3520 38%, #FF5A62 49%, #FFD9DC 50%, #FF5A62 51%, #FF2A3520 62%, transparent 100%);
+      filter:blur(2px);
+      animation:s01sweep 9s cubic-bezier(.55,0,.45,1) infinite;
+    }
+    @keyframes s01sweep{
+      0%   { transform:rotate(24deg) translateX(-260px); opacity:0; }
+      14%  { opacity:.9; }
+      70%  { opacity:.9; }
+      100% { transform:rotate(24deg) translateX(2600px); opacity:0; }
+    }
+    /* a second, static edge so the composition still reads between sweeps */
+    #s01 .bg-edge{
+      position:absolute; top:-60%; bottom:-60%; left:26%; width:5px;
+      transform:rotate(24deg);
+      background:linear-gradient(to bottom, transparent, #FF3B45 22%, #FF6B73 50%, #FF3B45 78%, transparent);
+      opacity:.55; filter:blur(1px);
+    }
+
+    /* This slide already animates three large layers; a continuously
+       re-rendering grain over the whole 4480x1120 stage on top of that is
+       what would drop frames on an event laptop. Keep the texture, stop
+       the animation, and hint the compositor about the movers. */
+    #s01 .deco-noise{ animation:none; opacity:.045; }
+    #s01 .bg-hex, #s01 .bg-glow, #s01 .bg-streak{ will-change:transform; }
+
+    #s01 .bg-vig{
+      position:absolute; inset:0;
+      background:radial-gradient(1600px 900px at 50% 52%, transparent 30%, #00000073 100%);
+    }
+
+    /* --- centred content stack --------------------------------------- */
+    #s01 .stack{
+      position:relative; z-index:1; width:100%; height:100%;
+      display:flex; flex-direction:column; align-items:center;
+      padding-top:34px;
+    }
+    #s01 .partners{ width:1766px; height:auto; display:block; }
+    #s01 .badge{ width:668px; height:auto; display:block; margin-top:60px; }
+    #s01 .title{
+      width:3529px; height:auto; display:block; margin-top:22px;
+      filter:drop-shadow(0 30px 70px #00000080);
+    }
   </style>
 
-  <div class="deco">
-    <div class="deco-grid"></div>
-    <div class="deco-orb" style="left:-660px; bottom:-1140px;"></div>
-    <div class="deco-orb mint" style="right:-820px; top:-1200px; opacity:.07;"></div>
+  <div class="bg">
+    <div class="bg-base"></div>
+    <div class="bg-hex"></div>
+    <div class="bg-hex warm"></div>
+    <div class="bg-glow"></div>
+    <div class="bg-edge"></div>
+    <div class="bg-streak"></div>
+    <div class="bg-vig"></div>
     <div class="deco-noise"></div>
   </div>
 
-  <!-- identity -->
-  <div class="idz">
-    <h1 class="ttl">
-      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="220" data-dur="980">Sales <span class="ac">Agent</span></span></span>
-      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="330" data-dur="980">Event</span></span>
-    </h1>
-
-    <!-- Open question 1: this sub-line is the pptx's own wording and looks like a
-         leftover from the previous session. Kept in one element so one edit swaps it. -->
-    <p class="sub" data-anim="up-sm" data-delay="660">
-      Tạo nhân viên tư vấn số đầu tiên cho shop của bạn
-    </p>
-
-    <div class="logos" data-anim="up-sm" data-delay="1180">
-      <img src="assets/brand/logo-organizer-openclaw.png" alt="Đơn vị tổ chức — OpenClaw VN">
-      <span class="sep"></span>
-      <img src="assets/brand/logo-sponsor-clawexperts.png" alt="Đơn vị tài trợ — ClawExperts.com">
-    </div>
-  </div>
-
-  <!-- speaker lockup + communities -->
-  <div class="rz">
-    <img class="lockup" src="assets/brand/speaker-tin-truong.png"
-         alt="Speaker · Tín Trương · AI Agent Expert · ClawExperts.com"
-         data-anim="left" data-delay="520" data-dur="1100">
-
-    <div class="qrs">
-      <div class="qr" data-anim="up-sm" data-delay="900">
-        <img src="assets/brand/qr-facebook.png" alt="Mã QR cộng đồng">
-        <span>Cộng đồng Facebook</span>
-      </div>
-      <div class="qr" data-anim="up-sm" data-delay="1000">
-        <img src="assets/brand/qr-zalo.png" alt="Mã QR cộng đồng">
-        <span>Cộng đồng Zalo</span>
-      </div>
-    </div>
+  <div class="stack">
+    <img class="partners" src="assets/brand/cover-partners.png"
+         alt="Claw · Firegroup" data-anim="up-sm" data-delay="180">
+    <img class="badge" src="assets/brand/cover-badge-workshop.png"
+         alt="Workshop" data-anim="scale" data-delay="380" data-dur="900">
+    <img class="title" src="assets/brand/cover-title-x3.png"
+         alt="X3 năng suất bán hàng nhờ AI tư vấn &amp; hỗ trợ chốt đơn 24/7"
+         data-anim="up" data-delay="560" data-dur="1200">
   </div>
 </section>

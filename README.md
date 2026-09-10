@@ -1,10 +1,11 @@
 # Sales Agent Event — deck HTML
 
-23 slide, người trình bày: **Tín Trương** — AI Agent Expert, ClawExperts.com.
+24 slide, người trình bày: **Tín Trương** — AI Agent Expert, ClawExperts.com.
 Tổ chức: OpenClaw VN · Tài trợ: ClawExperts.com.
 Khổ canvas **4480 × 1120 px** (4:1). Deck tự scale về đúng tỉ lệ trên mọi màn hình.
 
-Nội dung và thứ tự slide lấy từ **`ClawExperts Event in August.pptx`** (bản khách đã dàn lại).
+Nội dung và thứ tự slide lấy từ **`ClawExperts Event in August.pptx`**; cover lấy từ
+**`slide mo dau.pptx`** (cả hai đều là bản khách gửi, giữ ở máy chứ không đưa lên repo).
 Bản bóc tách chi tiết: `docs/CONTENT-v2.md`. Bản cũ 28 slide còn trong `src/slides/_v1/`.
 
 ## Chạy deck
@@ -41,7 +42,7 @@ src/css/theme.css     ← design system: màu, type scale, layout, component, tr
 src/css/engine.css    ← khung stage + animation primitives
 src/js/deck.js        ← điều hướng, animation, overview
 docs/DESIGN.md        ← quy ước design, đọc trước khi sửa slide
-docs/CONTENT.md       ← bản bóc tách nội dung 23 slide từ pptx của khách
+docs/CONTENT.md       ← bản bóc tách nội dung 24 slide từ pptx của khách
 assets/fonts/         ← Be Vietnam Pro + IBM Plex Mono (self-host, chạy offline)
 ```
 
@@ -53,12 +54,18 @@ assets/fonts/         ← Be Vietnam Pro + IBM Plex Mono (self-host, chạy offl
 
 ## Xuất file ảnh / PDF
 ```bash
-for i in $(seq 1 23); do ./shot.sh $i "out/slide-$(printf %02d $i).png"; done   # PNG 4480×1120
+for i in $(seq 1 24); do ./shot.sh $i "out/slide-$(printf %02d $i).png"; done   # PNG 4480×1120
 ```
 `shot.sh` mở deck ở chế độ `?export=1` nên ảnh xuất ra không có progress bar hay thanh điều khiển.
-Bộ 23 PNG đã render sẵn trong `out/`.
+Bộ 24 PNG đã render sẵn trong `out/`.
 In PDF: mở `index.html` trong Chrome → Print → khổ ngang, tắt margin.
 Cần `.pptx` thì import bộ PNG trên vào PowerPoint với slide size 4480×1120 px.
+
+## Cover
+Cover dựng lại theo `slide mo dau.pptx`: strip đối tác + pill "Workshop" + lockup tiêu đề X3, đặt trên
+**background động dựng bằng CSS/SVG** — lưới tổ ong trôi chậm, vầng sáng đỏ thở, và một tia sáng chéo
+quét ngang mỗi 9 giây. Không dùng ảnh nền bitmap của khách vì nó chỉ 836×1881, phóng lên 4480px sẽ mờ.
+Ảnh chân dung speaker đã bỏ theo yêu cầu.
 
 ## Màu brand
 Accent là đỏ **`#E61F28`** — lấy mẫu trực tiếp từ logo và ribbon trong pptx của khách.
