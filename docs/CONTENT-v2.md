@@ -136,8 +136,8 @@ a stylised dot-matrix code no local decoder can read. The slide now names An as 
 **Also on the slide (verbatim, must be legible from the back — attendees type it in):** Trial code: `CE_SALEWS1`
 Port from `_v1/20-session3.html`. Give the trial code its own high-contrast plate; it is the one thing on this slide the room has to act on.
 
-## 13 · Hãy tạo một nhân viên cho chính shop của mình — `t-paper` · `l-rail`
-**Headline (verbatim):** Hãy tạo một nhân viên cho chính shop của mình.
+## 13 · Hãy tạo một nhân viên tư vấn số đầu tiên — `t-paper` · `l-rail`
+**Headline (client's wording, revised):** Hãy tạo một nhân viên tư vấn số đầu tiên
 **Five steps (verbatim):** Chọn vai trò và đặt tên cho nhân viên. · Chọn ngành hàng hoặc nhóm sản phẩm đầu tiên. · Nạp kiến thức tối thiểu. · Test bằng câu hỏi thật. · Sửa một câu trả lời và test lại.
 Port `_v1/21-handson.html`.
 
