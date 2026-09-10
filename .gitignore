@@ -8,3 +8,6 @@ out/
 # never meant for an outside audience. docs/CONTENT-v2.md captures everything
 # the deck needs from it.
 *.pptx
+
+# Client briefs: kept local, not published — they carry the full speaker script.
+docs/ref/brief-*.html

@@ -1,4 +1,4 @@
-# Content spec v2 — 25 slides
+# Content spec v2 — 26 slides
 
 Source of truth: **`ClawExperts Event in August.pptx`** (client, 4480×1120 — same canvas as this deck).
 It re-orders and re-scopes the earlier speaker guide, so v2 replaces `docs/CONTENT.md` entirely.
@@ -195,37 +195,43 @@ Còn cả một công ty thì sao?
 **Client art direction:** *"Dùng chữ lớn làm điểm mở. Đặt 'nhân viên số' ở dòng đầu và 'công ty' ở dòng sau với màu nhấn. Không cần hình văn phòng. Khán giả vừa trải nghiệm Sale Agent nên hai dòng này đã có ngữ cảnh cụ thể. Cho dòng đầu xuất hiện trước; dừng một nhịp rồi hiện câu hỏi. Nếu không dùng hiệu ứng, giữ khoảng cách rõ giữa hai dòng. Không bổ sung định nghĩa hay danh sách vai trò vào slide mở."*
 So: two lines only, accent on "nhân viên số" and "công ty", a real beat between them (≥700ms), nothing else on the slide.
 
-## 20 · Mỗi nhân viên số đảm nhận một chuyên môn — `t-paper` · `l-rail` — **NEW**
-**Headline (verbatim):** Mỗi nhân viên số đảm nhận một chuyên môn
-**Four roles (verbatim, role — output):**
-- Marketing — Chuẩn bị nội dung chiến dịch
-- Kinh doanh — Tư vấn và lập đơn hàng
-- Kho — Kiểm tra tồn, chuẩn bị phiếu xuất
-- Kế toán — Đối soát đơn và thanh toán
-**Client art direction:** *"Bốn chức năng ngang hàng… Mỗi chức năng có một đầu ra và một biểu tượng riêng. Đây là các chuyên môn độc lập, không phải bốn bước hội thoại của Sale Agent. Giữ kinh doanh là điểm nối với phần trước, sau đó mở sang marketing, kho và kế toán. Không tách tư vấn, chăm khách, báo cáo thành ba nhân viên chỉ để tăng số lượng. Nhãn trên slide là chức năng, không khẳng định mỗi chức năng thay thế được cả phòng ban."*
-So: four **equal** cards, never a numbered sequence and never arrows between them. One simple inline-SVG icon each (document / order / boxes / ledger). "Kinh doanh" may carry a quiet "đã gặp ở phần trước" tie-back; do not make it bigger than the other three.
+## 20–22 · rebuilt from `docs/ref/brief-hoang-le.html` (client brief, bản biên tập 13)
+The brief re-scoped Hoàng Lê's session to **7 slides** and renamed the four digital roles away from
+department names. It is kept local, not committed — it carries the full speaker script.
+Section map: **19** = S1 · **20** = S2 · **21** = S3 · **22** = S4 · **23** = S5 · **24** = S6 · **25** = S7.
 
-## 21 · Công ty số là nơi cả đội phối hợp làm việc — `t-paper` — **NEW, diagram slide**
-**Headline (verbatim):** Công ty số là nơi cả đội phối hợp làm việc
-**Three tiers (verbatim labels):**
-- top: **Bạn điều hành**
-- middle: Marketing · Kinh doanh · Kho · Kế toán
-- bottom: Thông tin công ty · Công cụ làm việc · Hồ sơ & bàn giao
-**Client art direction:** *"Sơ đồ ba tầng: người điều hành ở trên; các vai trò ở giữa; nền tảng làm việc chung ở dưới. Đường nối thể hiện vai trò tiếp cận nền tảng và người chủ điều hành đội ngũ. Đây là sơ đồ tổ chức khái niệm, không phải kiến trúc hệ thống… Giữ hình này là trọng tâm, chiếm khoảng hai phần ba slide. Khi nói, đi từ các vai trò ở giữa xuống nền tảng, rồi lên người điều hành. Có thể dựng lại bằng đối tượng chỉnh sửa được. Không thêm cây, bàn ghế, tòa nhà hoặc hiệu ứng công nghệ. Không vẽ mũi tên giữa mọi cặp nhân viên."*
-Reference art: `docs/ref/ref-19-org.png` (16:9 — **you must re-lay it out for 4:1**, not letterbox it).
-Build with `.node` / `.conn` primitives + inline SVG icons. Crimson **only** on "Bạn điều hành". Diagram ≈ two thirds of the stage, headline the remaining third.
+### 20 · Mỗi nhân viên số, một phần việc rõ ràng. — `t-paper` · `l-rail`
+Four **equal** cards, each an employee's job scope — the brief is explicit: *"Tên nhân viên là phần nổi
+bật. Không dùng tên phòng ban làm tiêu đề thẻ."* So each card is eyebrow **Nhân viên số** + scope + output:
+- **Quản lý nội dung Fanpage** — Chuẩn bị bài · Lịch nội dung · Chờ duyệt
+- **Tư vấn khách hàng** — Tư vấn · Ghi nhận nhu cầu đặt hàng *(carries the quiet "Đã gặp ở phần trước" tie-back)*
+- **Theo dõi hàng hóa** — Nhập–xuất–tồn · Báo hàng cần bổ sung
+- **Đối soát thanh toán** — Khớp khoản thu · Nêu chênh lệch
 
-## 22 · Một đơn hàng cần nhiều chuyên môn — `t-paper` — **NEW, diagram slide**
-**Headline (verbatim):** Một đơn hàng cần nhiều chuyên môn
-**Nodes (verbatim):**
-- **Kinh doanh** — Lập đơn hàng — output: *Đơn A: mã hàng, số lượng*
-- **Kho** — Kiểm tra tồn, lập phiếu xuất — output: *Hàng đủ hay thiếu?*
-- **Kế toán** — Đối chiếu đơn và thanh toán — output: *Đã thu hay còn thiếu?*
-- **Trạng thái đơn hàng** — *Đủ điều kiện xử lý tiếp* / crimson: *Có vướng mắc: chuyển người phụ trách*
-**Caption (verbatim):** Cùng một đơn hàng. Mỗi nhân viên một chuyên môn.
-**Also required (verbatim from the brief):** the note "Tình huống minh họa", set small.
-**Client art direction:** *"Sơ đồ phân nhánh rồi hợp kết quả… Vẽ rõ hai nhánh kho và kế toán cùng nhận mã đơn. Không vẽ thành chuỗi tư vấn–chăm khách–báo cáo. Hai nhánh có thể làm song song theo quy trình thực tế. Dùng biểu tượng đơn hàng, hàng tồn và sổ đối soát để phân biệt nghiệp vụ. Trạng thái tổng hợp là kết quả, không phải một nhân viên thứ tư."*
-Reference art: `docs/ref/ref-20-order.png`. A 4:1 stage suits this fork-join far better than the reference's 16:9 — let it run left-to-right across the full width. **Trạng thái đơn hàng must not look like a fourth employee** — give it a visibly different shape from the three role nodes.
+No numbering, no arrows, no size hierarchy. The tie-back sits *above* the divider rule so the four output
+lines keep a common baseline — below it, the card with a tie-back pushed its output line out of alignment
+with the other three.
+
+### 21 · Công ty số là nơi cả đội phối hợp làm việc — `t-paper`
+Same three-tier chart, relabelled to the brief:
+- top: **Bạn & người phụ trách** — Giao ưu tiên · Duyệt · Quyết định *(the only crimson on the slide)*
+- middle: the four scopes above, icons now matching slide 20's set exactly
+- bottom: **Thông tin công ty** (Cùng bản đang có hiệu lực) · **Công cụ kết nối** (Quyền theo phần việc) ·
+  **Hồ sơ công việc** (Kết quả & người tiếp nhận)
+
+The brief's constraint stands: the connectors show organisational relationships, **not message flow**, and
+the tools tier must not imply every employee can read every piece of data.
+
+### 22 · Từ tin nhắn Zalo đến công việc của cả đội — `t-paper` — **replaces the old fork-join slide**
+S4 changed completely: the *"Một đơn hàng cần nhiều chuyên môn"* diamond is retired to
+`src/slides/_removed/22-order-flow-fork-join.html`. The new slide walks one illustrated case in four
+numbered steps across two simulated Zalo phone screens — customer request and transfer photo → two
+digital employees check order A102 → the reconciliation employee reports *chưa ghép được khoản thu* →
+a **real accountant** verifies and records the result → A102's new state goes back to the advisor.
+Colour discipline: deep green = digital employee, Zalo blue = the channel, crimson = the human.
+Constraints from the brief: phone frames keep the 310:660 ratio, the "Tình huống minh họa" note stays,
+the 10:25 message is *before* verification and 10:28 is the result *after*, and no verification badges —
+the Zalo UI is a simulation, not proof of a shipped integration.
 
 ## 23 · Bạn giao mục tiêu. Đội ngũ thực hiện. — `t-ink` · `l-stack` — **NEW**
 **Headline (verbatim):** Bạn giao mục tiêu. Đội ngũ thực hiện.
@@ -243,7 +249,25 @@ Bạn muốn xây đội ngũ nào tiếp theo?
 **Client art direction:** *"Hai dòng chữ lớn. Dòng đầu ghi nhận trải nghiệm vừa có; dòng sau mở ra câu hỏi về đội ngũ của khán giả. Dùng màu nhấn cho 'đội ngũ'. Giữ nhiều khoảng trống để câu hỏi có sức nặng. Cho dòng đầu xuất hiện trước, dừng một nhịp rồi hiện câu hỏi… Không thêm hình hoặc ý mới. Kết bằng câu hỏi để khán giả tự hình dung."*
 Two lines, generous emptiness, accent on "đội ngũ", a real beat between the lines, nothing else.
 
-## 25 · Q&A — `t-paper` · `l-split`
+## 25 · Cùng xây đội ngũ số phía sau bạn — `t-ink` — **NEW, S7 of the brief**
+**Copy:** eyebrow *ClawExperts · Đồng hành triển khai* · headline **Cùng xây đội ngũ số phía sau bạn.** ·
+*Bắt đầu từ một phần việc thực tế của công ty.* · *Quét QR để trao đổi về nhu cầu triển khai* ·
+**Hoàng Lê** — Program Manager — AI Agent Business Solution
+
+The brief's own instruction is that headline and QR are the two focal points and nothing else competes:
+no map, no policy figures, no international examples.
+
+**⚠ The QR is a placeholder slot, deliberately.** The brief ships a sample code pointing at
+`https://example.com` and says to swap it and test-scan before showing. Rather than reproduce a
+real-looking code that goes nowhere, the slide renders a dashed slot reading *"Thay bằng mã liên hệ diễn
+giả"*. **The client must supply the real contact QR.**
+
+**⚠ Name and title differ between sources.** The brief's S7 says *Hoàng Nguyễn Lê* /
+*AI – Agent Solutions Program Manager*; the client's later message says *Hoàng Lê* /
+*Program Manager - AI Agent Business Solution*. The slide follows the later message so it matches
+slide 18. Confirm which is right.
+
+## 26 · Q&A — `t-paper` · `l-split`
 **Headline (verbatim):** Q&A
 **Also on the slide (verbatim):** QR code join cộng đồng Zalo, cộng đồng Facebook, cộng đồng Sale Agent
 The pptx names **three** communities but ships **two** QR images (`qr-facebook.png`, `qr-zalo.png`).
