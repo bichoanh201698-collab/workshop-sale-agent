@@ -658,24 +658,17 @@
   <style>
     #s10{ flex-direction:column; justify-content:center; gap:0; }
 
-    #s10 .band{ display:flex; align-items:flex-start; gap:150px; }
-    #s10 .band h1{ flex:1 1 auto; min-width:0; font-size:116px; line-height:1.1; margin:0; }
-    #s10 .subs{ flex:0 0 1720px; display:flex; flex-direction:column; gap:24px; padding-top:14px; }
-    #s10 .subs p{ margin:0; font-size:36px; line-height:1.36; color:var(--muted); }
-    #s10 .subs p b{ color:var(--fg); font-weight:700; }
+    #s10 .band{ display:flex; align-items:flex-start; }
+    #s10 .band h1{ flex:1 1 auto; min-width:0; font-size:172px; line-height:1.08; margin:0; }
 
-    #s10 .lead{ margin:58px 0 0; display:flex; align-items:center; gap:26px;
-      font-size:40px; font-weight:700; }
-    #s10 .lead i{ display:block; width:74px; height:4px; background:var(--accent); flex:none; }
-
-    #s10 .items{ display:flex; gap:32px; margin-top:42px; align-items:stretch; min-height:330px; }
+    #s10 .items{ display:flex; gap:32px; margin-top:132px; align-items:stretch; }
     #s10 .it{
-      flex:1; min-width:0; padding-top:26px; border-top:5px solid var(--accent);
-      display:flex; flex-direction:column; gap:18px;
+      flex:1; min-width:0; padding-top:30px; border-top:6px solid var(--accent);
+      display:flex; flex-direction:column; gap:22px;
     }
-    #s10 .it .no{ margin:0; font-family:var(--mono); font-size:25px; font-weight:600;
+    #s10 .it .no{ margin:0; font-family:var(--mono); font-size:28px; font-weight:600;
       letter-spacing:.2em; color:var(--accent); }
-    #s10 .it .k{ margin:0; font-size:53px; font-weight:800; letter-spacing:-.018em; line-height:1.14; }
+    #s10 .it .k{ margin:0; font-size:68px; font-weight:800; letter-spacing:-.018em; line-height:1.14; }
     /* the last item is the loop that keeps the whole file alive */
     #s10 .it.last{ border-top-color:var(--ink); }
     #s10 .it.last .no{ color:var(--ink); opacity:.5; }
@@ -694,22 +687,16 @@
       Nhân viên số cũng cần một
       <em class="hl">“hồ sơ nhân sự”<i class="hl-bar" data-anim="grow-x" data-delay="820"></i></em>
     </h1>
-    <div class="subs">
-      <p data-anim="up-sm" data-delay="420">Nhân viên số cũng cần được thiết kế <b>như một nhân viên vừa mới gia nhập công ty của bạn.</b></p>
-      <p data-anim="up-sm" data-delay="540">Điểm quan trọng không phải là một bên là người, một bên là công nghệ. Cả hai đều cần được <b>giao đúng vai trò</b>, <b>học đúng dữ liệu</b> và làm việc trong <b>một quy trình rõ ràng</b>.</p>
-    </div>
   </div>
 
-  <p class="lead" data-anim="up-sm" data-delay="700"><i></i>Nếu ví nhân viên số như một nhân sự mới, shop cần chuẩn bị:</p>
-
   <div class="items" data-stagger="80">
-    <div class="it" data-anim="up-sm" data-delay="860"><p class="no">01</p><p class="k">Mô tả công việc</p></div>
-    <div class="it" data-anim="up-sm" data-delay="940"><p class="no">02</p><p class="k">KPI và tiêu chuẩn làm việc</p></div>
-    <div class="it" data-anim="up-sm" data-delay="1020"><p class="no">03</p><p class="k">Quy trình bán hàng</p></div>
-    <div class="it" data-anim="up-sm" data-delay="1100"><p class="no">04</p><p class="k">Đào tạo và học sản phẩm</p></div>
-    <div class="it" data-anim="up-sm" data-delay="1180"><p class="no">05</p><p class="k">Đào tạo qua tình huống thật</p></div>
-    <div class="it" data-anim="up-sm" data-delay="1260"><p class="no">06</p><p class="k">Quy trình phối hợp và bàn giao</p></div>
-    <div class="it last" data-anim="up-sm" data-delay="1340"><p class="no">07</p><p class="k">Đánh giá và đào tạo lại</p></div>
+    <div class="it" data-anim="up-sm" data-delay="520"><p class="no">01</p><p class="k">Mô tả công việc</p></div>
+    <div class="it" data-anim="up-sm" data-delay="600"><p class="no">02</p><p class="k">KPI và tiêu chuẩn làm việc</p></div>
+    <div class="it" data-anim="up-sm" data-delay="680"><p class="no">03</p><p class="k">Quy trình bán hàng</p></div>
+    <div class="it" data-anim="up-sm" data-delay="760"><p class="no">04</p><p class="k">Đào tạo và học sản phẩm</p></div>
+    <div class="it" data-anim="up-sm" data-delay="840"><p class="no">05</p><p class="k">Đào tạo qua tình huống thật</p></div>
+    <div class="it" data-anim="up-sm" data-delay="920"><p class="no">06</p><p class="k">Quy trình phối hợp và bàn giao</p></div>
+    <div class="it last" data-anim="up-sm" data-delay="1000"><p class="no">07</p><p class="k">Đánh giá và đào tạo lại</p></div>
   </div>
 
   <div class="brandbar">
@@ -720,82 +707,62 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 11-fb-page.html ===== -->
-<section class="slide t-ink" data-slide="11" data-title="Quét mã — Facebook page" id="s11">
+<!-- ===== 11-chat-with-an.html ===== -->
+<section class="slide t-ink" data-slide="11" data-title="Quét mã để chat với An" id="s11">
   <style>
-    /* The QR is the whole point of this slide, so it sits dead centre and the
-       two text zones balance it left and right across the 4:1 stage. */
-    #s11{ align-items:center; gap:150px; }
+    /* Two elements only, so they sit as one centred pair with a hairline
+       between them — the same recipe as the speaker slide. Anchoring each
+       to its own safe edge would leave a hole in the middle of a 4:1 stage. */
+    #s11{ align-items:center; justify-content:center; gap:150px; }
 
-    #s11 .lz{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:40px; }
-    #s11 .lz h1{ margin:0; font-size:158px; font-weight:900; letter-spacing:-.034em; line-height:1.07; }
+    #s11 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:46px; }
+    #s11 .lz h1{
+      margin:0; font-size:196px; font-weight:900; letter-spacing:-.038em; line-height:1.08;
+    }
+
+    #s11 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
+      margin:118px 0; transform-origin:center top; }
 
     #s11 .plate{
-      flex:none; position:relative; width:600px; height:600px; border-radius:42px;
-      background:#fff; padding:40px; box-sizing:border-box;
-      box-shadow:0 0 0 8px var(--accent), 0 40px 110px -28px #E61F28AA;
+      flex:none; position:relative; width:660px; height:660px; border-radius:44px;
+      background:#fff; padding:44px; box-sizing:border-box;
+      box-shadow:0 0 0 8px var(--brand), 0 44px 120px -30px #E61F28AA;
       overflow:hidden;
     }
     #s11 .plate img{ width:100%; height:100%; display:block; object-fit:contain; }
-    /* the one moving thing on the slide */
     #s11 .plate .scan{
-      position:absolute; left:0; right:0; height:160px; pointer-events:none;
+      position:absolute; left:0; right:0; height:170px; pointer-events:none;
       background:linear-gradient(to bottom,#E61F2800,#E61F2830 45%,#E61F28CC 50%,#E61F2830 55%,#E61F2800);
-      animation:s10scan 3.4s cubic-bezier(.45,0,.55,1) infinite;
+      animation:s11scan 3.4s cubic-bezier(.45,0,.55,1) infinite;
     }
-    @keyframes s10scan{
-      0%{ transform:translateY(-160px); opacity:0 }
+    @keyframes s11scan{
+      0%{ transform:translateY(-170px); opacity:0 }
       12%{ opacity:1 } 88%{ opacity:1 }
-      100%{ transform:translateY(600px); opacity:0 }
-    }
-
-    #s11 .rz{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:34px; }
-    #s11 .rz .big{
-      margin:0; font-size:80px; font-weight:800; letter-spacing:-.02em; line-height:1.14; max-width:20ch;
-    }
-    #s11 .rz .steps2{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:20px; }
-    #s11 .rz .steps2 li{
-      display:flex; align-items:baseline; gap:22px;
-      font-family:var(--mono); font-size:33px; font-weight:600; letter-spacing:.06em;
-      text-transform:uppercase; color:var(--muted);
-    }
-    #s11 .rz .steps2 li b{ color:var(--accent); font-weight:600; }
-    #s11 .tag{
-      display:inline-flex; align-items:center; gap:20px; align-self:flex-start;
-      background:var(--accent); color:#fff; border-radius:999px; padding:20px 40px;
-      font-size:46px; font-weight:800; letter-spacing:-.012em;
+      100%{ transform:translateY(660px); opacity:0 }
     }
   </style>
 
   <div class="deco">
     <div class="deco-grid"></div>
-    <div class="deco-orb" style="left:50%; top:-1180px; margin-left:-900px; opacity:.17;"></div>
+    <div class="deco-orb" style="left:50%; margin-left:-940px; top:-1180px; opacity:.16;"></div>
     <div class="deco-noise"></div>
   </div>
 
-  <p class="meta">Trước hands-on <b>·</b> Facebook page</p>
+  <p class="meta">Trước hands-on</p>
 
   <div class="lz">
-    <p class="label bare" style="letter-spacing:.3em;" data-anim="wipe-r" data-delay="120">Trước khi vào hands-on</p>
+    <p class="label" data-anim="wipe-r" data-delay="120">Trước khi vào hands-on</p>
     <h1>
-      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="280" data-dur="960">Quét mã để</span></span>
-      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="380" data-dur="960">theo dõi <span class="ac">Facebook page</span></span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="280" data-dur="980">Quét mã để</span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="390" data-dur="980">chat với <span class="ac">An</span></span></span>
     </h1>
   </div>
 
-  <div class="plate" data-anim="scale" data-delay="600" data-dur="900">
-    <img src="assets/brand/qr-facebook-page.png" alt="Mã QR Facebook page">
-    <span class="scan"></span>
-  </div>
+  <i class="rule" data-anim="grow-y" data-delay="480" data-dur="820"></i>
 
-  <div class="rz">
-    <span class="tag" data-anim="up-sm" data-delay="880"><span class="pulse"><i></i></span>Facebook page</span>
-    <p class="big" data-anim="up-sm" data-delay="980">Mở camera điện thoại và quét mã bên cạnh.</p>
-    <ul class="steps2">
-      <li data-anim="up-sm" data-delay="1100"><b>01</b>Mở camera</li>
-      <li data-anim="up-sm" data-delay="1180"><b>02</b>Hướng vào mã QR</li>
-      <li data-anim="up-sm" data-delay="1260"><b>03</b>Mở link và theo dõi page</li>
-    </ul>
+  <div class="plate" data-anim="scale" data-delay="560" data-dur="960">
+    <img src="assets/brand/qr-facebook-page.png" alt="Mã QR để chat với An">
+    <span class="scan"></span>
   </div>
 
   <div class="brandbar">
@@ -2083,7 +2050,7 @@
   <button data-nav="overview">Overview (O)</button>
   <button data-nav="grid">Grid (G)</button>
   <span>F fullscreen · C fit-mode · R replay</span>
-  <span id="counter">01 / 24</span>
+  <span id="counter">01 / 25</span>
 </div>
 <script src="src/js/deck.js"></script>
 </body>

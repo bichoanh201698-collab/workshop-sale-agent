@@ -108,24 +108,29 @@ Nothing on the slide but the sentence, three balanced lines at 184px, white on t
 
 `cũng chính là` carries a white `grow-x` underline that lands after the lines are read.
 
-## 10 · Nhân viên số cũng cần một "hồ sơ nhân sự" — `t-paper` · `l-index`
-**Headline (verbatim):** Nhân viên số cũng cần một "hồ sơ nhân sự"
-**Sub (verbatim):** Nhân viên số cũng cần được thiết kế như một nhân viên vừa mới gia nhập công ty của bạn.
-**Second sub (verbatim):** Điểm quan trọng không phải là một bên là người, một bên là công nghệ. Cả hai đều cần được giao đúng vai trò, học đúng dữ liệu và làm việc trong một quy trình rõ ràng.
-**Lead-in (verbatim):** Nếu ví nhân viên số như một nhân sự mới, shop cần chuẩn bị:
-**Seven items — headings only this time, no sub-copy (that is how the pptx has it):**
-Mô tả công việc · KPI và tiêu chuẩn làm việc · Quy trình bán hàng · Đào tạo và học sản phẩm · Đào tạo qua tình huống thật · Quy trình phối hợp và bàn giao · Đánh giá và đào tạo lại
-Port `_v1/16-hr-file.html`; it has the 4+3 grid solved. Drop its `.v` descriptions — the client's version is headings only, which frees room for the two subs.
+## 10 · Nhân viên số cũng cần một "hồ sơ nhân sự" — `t-paper`
+**Trimmed at the client's request** to headline + the seven items:
+**Headline:** Nhân viên số cũng cần một "hồ sơ nhân sự"
+**Seven items (headings only):** Mô tả công việc · KPI và tiêu chuẩn làm việc · Quy trình bán hàng ·
+Đào tạo và học sản phẩm · Đào tạo qua tình huống thật · Quy trình phối hợp và bàn giao · Đánh giá và đào tạo lại
 
-## 11 · Quét mã — Facebook page — `t-ink` — **NEW, client request**
-Sits immediately before the Session 3 divider so the room can follow the page while the hands-on is being set up.
-**Copy:** eyebrow *Trước khi vào hands-on* · headline **Quét mã để theo dõi Facebook page** ·
-*Mở camera điện thoại và quét mã bên cạnh* · a 3-step mono list (Mở camera / Hướng vào mã QR / Mở link và theo dõi page).
-The QR is `assets/brand/qr-facebook-page.png`, supplied by the client. It is a stylised dot-matrix code that
-**no local decoder could read**, so nothing on the slide claims a URL or a page name beyond "Facebook page" —
-*no descriptive copy about what gets posted there was invented.* Add a line if the client wants one.
-Layout puts the code dead centre as the hero with the headline left and the instructions right, so the 4:1
-stage reads as one composition. The only motion is a scan line sweeping the code.
+Removed: both sub-paragraphs (*"Nhân viên số cũng cần được thiết kế như một nhân viên vừa mới gia nhập…"*
+and *"Điểm quan trọng không phải là một bên là người, một bên là công nghệ…"*) and the lead-in
+*"Nếu ví nhân viên số như một nhân sự mới, shop cần chuẩn bị:"*. With four beats cut to two, the headline
+went to 172px and the item headings to 68px so the slide still fills its height.
+
+## 11 · Quét mã để chat với An — `t-ink` — file `11-chat-with-an.html`
+**Re-scoped at the client's request.** Headline is now **Quét mã để chat với An** (was "Quét mã để theo
+dõi Facebook page"), and the whole right-hand instruction block is gone — the "Facebook page" tag, the
+*"Mở camera điện thoại và quét mã bên cạnh"* line and the three-step list.
+
+What is left is the eyebrow, the headline and the code, laid out as one centred pair with a hairline
+between them (the speaker slide's recipe) rather than anchored to opposite safe edges, which would leave
+a hole mid-stage. QR is `assets/brand/qr-facebook-page.png` at 660px with the scan line still sweeping it.
+
+**Note:** the QR image is unchanged — it is still the code the client supplied for the Facebook page, and
+it is a stylised dot-matrix code no local decoder can read. Nothing on the slide now says where it leads
+beyond the name "An", so **worth one phone check that this code does open a chat with An.**
 
 ## 12 · Divider — `t-ink` · `.divider`
 **Title (verbatim):** Training nhân viên số đầu tiên của bạn
