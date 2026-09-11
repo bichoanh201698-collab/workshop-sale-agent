@@ -375,6 +375,10 @@ slide 18. Confirm which is right.
 - `assets/brand/qr-zalo-community.png` → **Cộng đồng AI Agents Việt Nam**
 - `assets/brand/qr-zalo-group-saleagent.png` → **Cộng đồng Sale Agent** (Zalo group *ClawExperts - Sale Agent*)
 
+**Lifted off centre at the client's request** — extra bottom padding moves the centring axis up, raising
+the block 130px without touching its internal spacing. That is the most it can rise before the Q&A block
+crosses the top safe line; going further would mean shrinking the wordmark and the codes.
+
 **Changed at the client's request:** the *Cộng đồng Facebook* block and its code were removed, the
 Sale Agent slot — previously a dashed "mã QR chưa có" placeholder — now holds the real group code, and
 the first label became **Cộng đồng AI Agents Việt Nam**. The two frames are now identical: the original

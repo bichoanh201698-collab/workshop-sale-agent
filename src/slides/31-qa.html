@@ -1,6 +1,9 @@
 <section class="slide t-paper" data-slide="31" data-title="Q&amp;A — tham gia cộng đồng" id="s31">
   <style>
-    #s31{ gap:140px; align-items:center; justify-content:center; }
+    /* Lifted off centre: extra bottom padding moves the centring axis up, which
+       raises the block without touching any of its internal spacing. 130px is
+       the most it can rise before the Q&A block crosses the top safe line. */
+    #s31{ gap:140px; align-items:center; justify-content:center; padding-bottom:364px; }
 
     #s31 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:40px; }
     #s31 .qa{ margin:0; font-size:336px; font-weight:900; letter-spacing:-.055em; line-height:.86; }
