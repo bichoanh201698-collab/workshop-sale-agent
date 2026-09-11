@@ -94,14 +94,14 @@ opposite edges. The only motion is a slow shine crawling across the frame.
 ## 05 · Divider — Bài Toán Kinh Doanh: Mái Nhà Việt — `t-ink` · `.divider`
 **Retitled by the client.** Was *"Case study: Mái Nhà Việt / X3 năng suất với Sale Agent"*; now:
 **Title:** Bài Toán Kinh Doanh: **Mái Nhà Việt**
-**Sub:** Hơn **3.000 sản phẩm**, **1-2 nhân sự**, traffic mỗi ngày **80-100 tin nhắn**.
+**Sub:** Hơn **3.000 sản phẩm**, **1-2 nhân sự**, traffic mỗi ngày **80-100 khách hàng**.
 
 Single line now, so the component's `line-height:1` is fine again; the sub-line is pulled up to 50px
 because those three numbers are the point of the slide.
 
 **Marquee changed to match the reframing:** it used to shout the *results* (X3 năng suất · 47m25s → 6s ·
 600 khách · 85%/15%), which contradicts a divider that now frames the *problem*. It carries the problem's
-own numbers instead — 3.000 sản phẩm · 1–2 nhân sự · 80–100 tin nhắn/ngày, and inbox dồn · tồn kho · giá ·
+own numbers instead — 3.000 sản phẩm · 1–2 nhân sự · 80–100 khách/ngày, and inbox dồn · tồn kho · giá ·
 chính sách · ngoài giờ. The results still appear on slide 05, where they belong.
 
 ## 06 · Mái Nhà Việt x3 năng suất — `t-ink` · `l-stack` + `.stat` — **NEW**
