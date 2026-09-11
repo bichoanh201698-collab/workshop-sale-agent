@@ -154,8 +154,8 @@ Port from `_v1/20-session3.html`. Give the trial code its own high-contrast plat
 **Five steps (verbatim):** Chọn vai trò và đặt tên cho nhân viên. · Chọn ngành hàng hoặc nhóm sản phẩm đầu tiên. · Nạp kiến thức tối thiểu. · Test bằng câu hỏi thật. · Sửa một câu trả lời và test lại.
 Port `_v1/21-handson.html`.
 
-## 14 · Nạp gì để nhân viên trả lời được? — `t-ink` · `l-stack`
-**Headline (verbatim):** Nạp gì để nhân viên trả lời được?
+## 14 · Nhân viên cần biết những gì để trả lời được? — `t-ink` · `l-stack`
+**Headline (reworded by the client):** Nhân viên cần biết những gì để trả lời được?
 **Seven items (verbatim):** Tên shop và ngành hàng. · 5–10 sản phẩm đầu tiên. · Giá, thuộc tính và tình trạng hàng. · Chính sách giao hàng, đổi trả, thanh toán. · Câu hỏi thường gặp. · Giọng nói và cách xưng hô của shop. · Ranh giới: trường hợp nào phải chuyển cho người thật.
 Port `_v1/22-feed-data.html`. Keep item 07 emphasised.
 
