@@ -1,4 +1,4 @@
-# Content spec v2 — 31 slides
+# Content spec v2 — 22 slides
 
 Source of truth: **`ClawExperts Event in August.pptx`** (client, 4480×1120 — same canvas as this deck).
 It re-orders and re-scopes the earlier speaker guide, so v2 replaces `docs/CONTENT.md` entirely.
@@ -25,6 +25,33 @@ do not add sentences of your own. Where the pptx carried a design brief ("Ý tư
 5. QR pairing was not stated anywhere, so it was derived from the shape coordinates on the pptx cover: `qr-facebook.png` sat above "Cộng đồng Facebook", `qr-zalo.png` above "Cộng đồng Zalo". The files are renamed accordingly. The codes are stylised dot-matrix QRs that no local decoder could read, so this pairing is positional evidence, not a decode — **worth one phone check before the event.**
 
 ---
+
+
+## ⚠ Nine slides removed in one pass — read this before the run-through
+At the client's request these were pulled and parked in `src/slides/_removed/`:
+
+| was | slide |
+|---|---|
+| 07 | Nếu inbox tăng gấp 3… |
+| 08 | Scale traffic, Scale năng lực |
+| 10 | Divider — Phần 02, Trước khi tạo nhân viên số |
+| 12 | Câu chốt — nhân viên thật và nhân viên số |
+| 13 | Nhân viên số cũng cần một "hồ sơ nhân sự" |
+| 16 | Hãy tạo một nhân viên tư vấn số đầu tiên |
+| 17 | Nhân viên cần biết những gì để trả lời được? |
+| 18 | Test bằng 5 câu khách thật sẽ hỏi |
+| 19 | Nhân viên số không cần hoàn hảo ngay từ lần đầu |
+
+**What this does to the structure:**
+- **The whole hands-on build is gone** — create the agent, feed it data, test it with five real
+  questions, fix and retrain. Slide 10 is still the Session 3 divider *"Tuyển dụng và đào tạo nhân viên
+  đầu tiên của bạn"* carrying the trial code **CE_SALEWS1**, and it is now followed straight by the press
+  wall. **The divider announces a section that no longer has slides.**
+- **Session 2 lost its divider**, so *"Nhân viên tư vấn số là gì?"* now follows the reveal directly.
+- The deck no longer explains what to prepare for an agent, or what "test it" means in practice.
+
+None of this is wrong — it is the client's call — but the running order now jumps from naming the digital
+employee to the press wall, and the speaker has to carry the hands-on part live.
 
 ## 01 · Backdrop — check-in — `t-ink` — **NEW, client request**
 The wall behind check-in while guests arrive, laid out the way a real event backdrop is (the client sent

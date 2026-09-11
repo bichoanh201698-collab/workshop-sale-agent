@@ -1,4 +1,4 @@
-<section class="slide t-paper" data-slide="26" data-title="Từ tin nhắn Zalo đến công việc của cả đội" id="s26">
+<section class="slide t-paper" data-slide="17" data-title="Từ tin nhắn Zalo đến công việc của cả đội" id="s17">
   <style>
     /* ------------------------------------------------------------------
        Slide 22 — the four-step Zalo coordination story.
@@ -29,38 +29,38 @@
        Step badges are neutral ink so they never borrow crimson.
        No verification badges, no numbers beyond the brief.
        ------------------------------------------------------------------ */
-    #s26{ align-items:stretch; gap:120px; }
+    #s17{ align-items:stretch; gap:120px; }
 
     /* ---- lead ------------------------------------------------------- */
-    #s26 .lead{
+    #s17 .lead{
       flex:none; width:1500px; min-width:0;
       display:flex; flex-direction:column; justify-content:center; gap:40px;
     }
-    #s26 .ttl{
+    #s17 .ttl{
       margin:0; font-size:148px; font-weight:900;
       letter-spacing:-.036em; line-height:1.06;
     }
-    #s26 .spine{
+    #s17 .spine{
       margin:0; font-size:40px; line-height:1.34; font-weight:500;
       letter-spacing:-.012em; color:var(--fg); max-width:1170px;
     }
-    #s26 .spine b{ font-weight:800; color:var(--forest); }
-    #s26 .spine i{ font-style:normal; color:var(--brand); font-weight:800; }
-    #s26 .spine em{ font-style:normal; color:var(--muted); font-weight:700; padding:0 .1em; }
+    #s17 .spine b{ font-weight:800; color:var(--forest); }
+    #s17 .spine i{ font-style:normal; color:var(--brand); font-weight:800; }
+    #s17 .spine em{ font-style:normal; color:var(--muted); font-weight:700; padding:0 .1em; }
 
     /* ---- flow region ------------------------------------------------
        gaps are asymmetric on purpose: the wider right gap is where the
        crimson "người thật" tag breaks out of phone 03. */
-    #s26 .flow{ flex:1; min-width:0; display:flex; align-items:stretch; }
-    #s26 .flow > .ph:first-child{ margin-right:130px; }
-    #s26 .flow > .ph:last-child{ margin-left:170px; }
+    #s17 .flow{ flex:1; min-width:0; display:flex; align-items:stretch; }
+    #s17 .flow > .ph:first-child{ margin-right:130px; }
+    #s17 .flow > .ph:last-child{ margin-left:170px; }
 
     /* ---- phone: the reference's 310:660, driven off available height - */
-    #s26 .ph{
+    #s17 .ph{
       flex:none; width:402px; aspect-ratio:310 / 660;
       align-self:flex-end; margin-bottom:26px; position:relative;
     }
-    #s26 .phone{
+    #s17 .phone{
       position:absolute; inset:0; overflow:visible;   /* the tags break the frame */
       display:flex; flex-direction:column;
       border:9px solid #FCFCFD; border-radius:44px;
@@ -69,85 +69,85 @@
     }
     /* the blue bar and the home bar carry the frame's rounding, so .phone
        itself can stay overflow:visible for the callout tags */
-    #s26 .blue{
+    #s17 .blue{
       flex:none; color:#fff; border-radius:35px 35px 0 0;
       background:linear-gradient(108deg,#277DFF 0%,#139AFF 55%,#00BDEB 100%);
     }
-    #s26 .stt{
+    #s17 .stt{
       display:flex; justify-content:space-between; align-items:center;
       padding:9px 20px 3px; font-size:21px; font-weight:600; line-height:1.14;
     }
-    #s26 .stt svg{ width:54px; height:15px; }
-    #s26 .hd{ display:flex; align-items:center; gap:12px; padding:5px 16px 12px; }
-    #s26 .hd > svg{ width:28px; height:28px; flex:none; }
-    #s26 .hd .who{ flex:1; min-width:0; }
-    #s26 .hd .nm{
+    #s17 .stt svg{ width:54px; height:15px; }
+    #s17 .hd{ display:flex; align-items:center; gap:12px; padding:5px 16px 12px; }
+    #s17 .hd > svg{ width:28px; height:28px; flex:none; }
+    #s17 .hd .who{ flex:1; min-width:0; }
+    #s17 .hd .nm{
       margin:0; font-size:30px; font-weight:700; letter-spacing:-.018em; line-height:1.14;
       white-space:nowrap; overflow:hidden;
     }
-    #s26 .hd .rm{
+    #s17 .hd .rm{
       margin:2px 0 0; font-family:var(--mono); font-size:20px; font-weight:600;
       letter-spacing:.06em; text-transform:uppercase; opacity:.92; line-height:1.2;
       white-space:nowrap;
     }
-    #s26 .hd .dt{ width:26px; height:26px; flex:none; }
+    #s17 .hd .dt{ width:26px; height:26px; flex:none; }
 
     /* real chats sit on the bottom edge — flex-end keeps the slack up top
        instead of letting a long thread push out through the header */
-    #s26 .chat{
+    #s17 .chat{
       flex:1; min-height:0; background:#E3E6F2;
       display:flex; flex-direction:column; justify-content:flex-end; gap:8px;
       padding:10px 12px 8px;
     }
-    #s26 .in{ display:flex; align-items:flex-start; gap:10px; }
-    #s26 .av{
+    #s17 .in{ display:flex; align-items:flex-start; gap:10px; }
+    #s17 .av{
       width:40px; height:40px; border-radius:50%; flex:none;
       display:grid; place-items:center; background:#0068FF; color:#fff;
       font-size:20px; font-weight:700;
     }
-    #s26 .bub{
+    #s17 .bub{
       background:#fff; border-radius:17px; padding:10px 14px;
       font-size:27px; line-height:1.2; font-weight:500; max-width:300px;
     }
-    #s26 .bub small{
+    #s17 .bub small{
       display:block; font-size:20px; font-weight:600; color:#7E8D98;
       margin-bottom:2px; line-height:1.16;
     }
-    #s26 .bub time{ display:block; font-size:20px; color:#98A1AA; margin-top:3px; font-weight:600; line-height:1.16; }
-    #s26 .bub strong{ font-weight:800; }
-    #s26 .out{ display:flex; justify-content:flex-end; }
+    #s17 .bub time{ display:block; font-size:20px; color:#98A1AA; margin-top:3px; font-weight:600; line-height:1.16; }
+    #s17 .bub strong{ font-weight:800; }
+    #s17 .out{ display:flex; justify-content:flex-end; }
     /* "tin gửi vẫn xanh nhạt" — the human's reply keeps Zalo's sent colour;
        only its label is crimson. */
-    #s26 .out .bub{ background:#D3F2FB; border:2px solid #E4F8FC; max-width:324px; }
+    #s17 .out .bub{ background:#D3F2FB; border:2px solid #E4F8FC; max-width:324px; }
 
-    #s26 .file{
+    #s17 .file{
       display:flex; align-items:center; gap:11px; margin-left:50px;
       background:#fff; border-radius:15px; padding:8px 13px; max-width:300px;
     }
-    #s26 .file svg{ width:32px; height:32px; flex:none; color:#1685DB; }
-    #s26 .file b{ display:block; font-size:24px; font-weight:700; line-height:1.14; }
-    #s26 .file small{ display:block; font-size:19px; color:#98A1AA; font-weight:600; line-height:1.14; margin-top:1px; }
+    #s17 .file svg{ width:32px; height:32px; flex:none; color:#1685DB; }
+    #s17 .file b{ display:block; font-size:24px; font-weight:700; line-height:1.14; }
+    #s17 .file small{ display:block; font-size:19px; color:#98A1AA; font-weight:600; line-height:1.14; margin-top:1px; }
 
-    #s26 .chips{ display:flex; justify-content:center; gap:10px; padding-top:2px; }
-    #s26 .chips span{
+    #s17 .chips{ display:flex; justify-content:center; gap:10px; padding-top:2px; }
+    #s17 .chips span{
       background:#fff; border-radius:999px; padding:7px 14px;
       font-size:20px; font-weight:600; color:#52606D; white-space:nowrap; line-height:1.2;
     }
 
-    #s26 .cmp{
+    #s17 .cmp{
       flex:none; display:flex; align-items:center; gap:11px;
       padding:6px 15px; background:#fff; color:#9096A0;
     }
-    #s26 .cmp svg{ width:29px; height:29px; flex:none; }
-    #s26 .cmp span{ flex:1; font-size:24px; font-weight:500; }
-    #s26 .home{
+    #s17 .cmp svg{ width:29px; height:29px; flex:none; }
+    #s17 .cmp span{ flex:1; font-size:24px; font-weight:500; }
+    #s17 .home{
       flex:none; height:24px; border-radius:0 0 35px 35px; background:#fff;
       display:flex; align-items:center; justify-content:center;
     }
-    #s26 .home i{ width:148px; height:6px; border-radius:99px; background:#DADCE4; display:block; }
+    #s17 .home i{ width:148px; height:6px; border-radius:99px; background:#DADCE4; display:block; }
 
     /* ---- annotation layer: which kind of worker is on the other end -- */
-    #s26 .bdg{
+    #s17 .bdg{
       position:absolute; left:-50px; top:20px; z-index:4;
       width:68px; height:68px; border-radius:20px;
       background:var(--ink); color:#fff;
@@ -155,91 +155,91 @@
       font-family:var(--mono); font-size:34px; font-weight:600; font-style:normal;
       box-shadow:0 14px 30px -12px #0A0B0D8C;
     }
-    #s26 .tag{
+    #s17 .tag{
       margin:0; position:relative; z-index:3;
       display:inline-flex; align-items:center; gap:12px;
       border-radius:13px; padding:9px 18px; white-space:nowrap;
       font-size:28px; font-weight:800; letter-spacing:-.01em; color:#fff;
       box-shadow:0 12px 26px -12px #0A0B0D66;
     }
-    #s26 .tag::after{
+    #s17 .tag::after{
       content:""; position:absolute; bottom:-10px;
       width:0; height:0; border:10px solid transparent; border-bottom:0;
     }
-    #s26 .tag i{ width:12px; height:12px; border-radius:50%; background:#FFFFFFB3; flex:none; }
-    #s26 .tag.dig{ align-self:flex-end; background:var(--forest); }
-    #s26 .tag.dig::after{ right:30px; border-top-color:var(--forest); }
+    #s17 .tag i{ width:12px; height:12px; border-radius:50%; background:#FFFFFFB3; flex:none; }
+    #s17 .tag.dig{ align-self:flex-end; background:var(--forest); }
+    #s17 .tag.dig::after{ right:30px; border-top-color:var(--forest); }
     /* the real human is the one thing allowed to break the phone frame */
-    #s26 .tag.man{ align-self:flex-start; margin-left:-150px; background:var(--brand); }
-    #s26 .tag.man::after{ right:34px; border-top-color:var(--brand); }
+    #s17 .tag.man{ align-self:flex-start; margin-left:-150px; background:var(--brand); }
+    #s17 .tag.man::after{ right:34px; border-top-color:var(--brand); }
 
     /* ---- middle column --------------------------------------------- */
-    #s26 .mid{
+    #s17 .mid{
       flex:1; min-width:0; display:flex; flex-direction:column;
       justify-content:center; gap:22px;
     }
-    #s26 .bn{
+    #s17 .bn{
       flex:none; width:68px; height:68px; border-radius:20px;
       background:var(--ink); color:#fff; display:grid; place-items:center;
       font-family:var(--mono); font-size:34px; font-weight:600; font-style:normal;
     }
-    #s26 .srow{ display:flex; align-items:center; gap:24px; }
-    #s26 .srow .st{
+    #s17 .srow{ display:flex; align-items:center; gap:24px; }
+    #s17 .srow .st{
       margin:0; font-family:var(--mono); font-size:33px; font-weight:600;
       letter-spacing:.15em; text-transform:uppercase; color:var(--fg); white-space:nowrap;
     }
-    #s26 .srow .ln{ flex:1; height:3px; background:#0A0B0D26; transform-origin:left center; }
+    #s17 .srow .ln{ flex:1; height:3px; background:#0A0B0D26; transform-origin:left center; }
 
-    #s26 .chk{
+    #s17 .chk{
       background:var(--forest); border-radius:26px; padding:26px 30px;
       box-shadow:0 26px 60px -34px #14503A80;
     }
-    #s26 .chk .top{ display:flex; align-items:center; gap:22px; }
-    #s26 .chk .ic{ flex:none; width:66px; height:66px; }
-    #s26 .chk .rl{
+    #s17 .chk .top{ display:flex; align-items:center; gap:22px; }
+    #s17 .chk .ic{ flex:none; width:66px; height:66px; }
+    #s17 .chk .rl{
       margin:0; font-size:44px; font-weight:800; color:#fff;
       letter-spacing:-.022em; line-height:1.1;
     }
-    #s26 .chk .jb{
+    #s17 .chk .jb{
       margin:8px 0 0; font-size:31px; font-weight:500; color:#BEDACB;
       letter-spacing:-.005em; line-height:1.2;
     }
-    #s26 .chk .rs{
+    #s17 .chk .rs{
       display:flex; align-items:center; gap:18px;
       margin:18px 0 0; padding:16px 0 0; border-top:2px solid #FFFFFF29;
       font-size:40px; font-weight:800; letter-spacing:-.02em; line-height:1.14;
       color:#8FE9B8;
     }
-    #s26 .chk .rs svg{ width:42px; height:42px; flex:none; }
-    #s26 .chk .rs.pend{ color:var(--amber); }
+    #s17 .chk .rs svg{ width:42px; height:42px; flex:none; }
+    #s17 .chk .rs.pend{ color:var(--amber); }
 
-    #s26 .hand{
+    #s17 .hand{
       display:flex; align-items:center; gap:20px;
       font-family:var(--mono); font-size:31px; font-weight:600;
       letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
     }
-    #s26 .hand .ln{ flex:1; height:3px; background:#0A0B0D26; transform-origin:left center; }
-    #s26 .hand .ar{ width:40px; height:40px; flex:none; color:var(--forest); }
+    #s17 .hand .ln{ flex:1; height:3px; background:#0A0B0D26; transform-origin:left center; }
+    #s17 .hand .ar{ width:40px; height:40px; flex:none; color:var(--forest); }
 
-    #s26 .res{
+    #s17 .res{
       display:flex; align-items:flex-start; gap:28px;
       background:var(--forest-pale); border:3px solid #A9C5B4;
       border-radius:26px; padding:24px 30px; margin-top:6px;
     }
-    #s26 .res .tx{ flex:1; min-width:0; }
-    #s26 .res .lb{
+    #s17 .res .tx{ flex:1; min-width:0; }
+    #s17 .res .lb{
       margin:0; font-family:var(--mono); font-size:30px; font-weight:600;
       letter-spacing:.15em; text-transform:uppercase; color:var(--forest-2);
     }
-    #s26 .res .vl{
+    #s17 .res .vl{
       margin:11px 0 0; font-size:42px; font-weight:700; line-height:1.2;
       letter-spacing:-.02em; color:#0F3F2D; text-wrap:balance;
     }
-    #s26 .res .vl b{ font-weight:800; color:var(--forest); }
+    #s17 .res .vl b{ font-weight:800; color:var(--forest); }
 
     /* Phone 03 stands in the top-right corner where .meta normally lives, so
        this slide's section marker is the lead eyebrow instead. */
-    #s26 .meta{ display:none; }
+    #s17 .meta{ display:none; }
   </style>
 
   <div class="deco">
