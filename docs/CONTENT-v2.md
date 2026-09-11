@@ -105,7 +105,7 @@ Port from `_v1/12-session2.html`. Strip items: Là gì → Cần giao những g�
 ## 08 · Nhân viên tư vấn số là gì? — `t-ink` · `l-stack`
 **Trimmed at the client's request** to headline + question + answer chipset:
 **Headline:** Nhân viên tư vấn số là gì?
-**Question:** Trước khi trả lời khách, một nhân viên cần được giao những gì?
+**Question (reworded by the client):** Muốn giao việc tư vấn cho một nhân viên số, shop cần chuẩn bị gì?
 **Chipset:** Sản phẩm · Giá · Tình trạng hàng · Chính sách · Cách nói chuyện · Lúc nào cần chuyển cho chủ shop
 Removed: the sub-line *"Chuyển cách nghĩ từ 'chatbot' sang một vai trò nhân viên cụ thể…"*, and the
 câu chốt, which is now its own slide (09).
