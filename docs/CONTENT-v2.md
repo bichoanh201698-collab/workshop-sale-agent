@@ -343,6 +343,9 @@ numbered steps across two simulated Zalo phone screens — customer request and 
 digital employees check order A102 → the reconciliation employee reports *chưa ghép được khoản thu* →
 a **real accountant** verifies and records the result → A102's new state goes back to the advisor.
 Colour discipline: deep green = digital employee, Zalo blue = the channel, crimson = the human.
+The one-line summary that ran under the headline (*Zalo khách và chứng từ → kiểm tra A102 → kế toán thật
+xác minh → …*) was **removed at the client'''s request** — it was the only copy on this slide taken from
+the brief'''s agenda table rather than its "Chữ dùng trên slide" block.
 Constraints from the brief: phone frames keep the 310:660 ratio, the 10:25 message is *before*
 verification and 10:28 is the result *after*, and no verification badges — the Zalo UI is a simulation,
 not proof of a shipped integration.
