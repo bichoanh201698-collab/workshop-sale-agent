@@ -26,21 +26,23 @@ do not add sentences of your own. Where the pptx carried a design brief ("Ý tư
 ---
 
 ## 01 · Backdrop — check-in — `t-ink` — **NEW, client request**
-The screen that stands behind check-in while guests arrive. Built as a **step-and-repeat**, which is what
-an event wall physically is: the event name and the two partner names tiled, rotated ‑9°, sunk to ~5%
-opacity, with a second brighter pass masked to the centre so the wall has depth. The whole field drifts.
+The wall behind check-in while guests arrive, laid out the way a real event backdrop is (client supplied
+a photo of one as reference): **partner marks tiled down both sides, the event lockup in the middle.**
 
-Ground is a dark red gradient with a bloom that breathes on a 13s cycle; a scrim pulls the centre back
-down so the partner lockup — dark artwork — keeps its contrast against the bloom. Legible in the middle:
-partner strip, the Workshop pill, and the wordmark **Sale Agent Event** with *Agent* in brand crimson.
+The centre uses **the same `cover-title-x3.png` the cover uses** — the client's note was that the
+backdrop's title did not match the opening slide, and it now does, so the room sees one identity from
+the moment they walk in. Above it, the partner strip and the Workshop pill.
 
-**The drift oscillates rather than loops.** A looping translate would have to equal exactly one tile width
-to avoid a visible snap, and here the tile width is set by text metrics; drifting out and back has no seam
-at all. Both passes run on the same 46s clock — at different durations they separate and read as doubled
-text rather than depth.
+Side walls are the two partner logos alternating in a grid, silhouetted white
+(`filter:brightness(0) invert(1)`) at 14% so the wall reads as one flat texture rather than a row of
+competing logos, and they bleed past the safe area on purpose — it is a wall, not a content slide.
+Both walls drift vertically in opposite directions on a 40s oscillation.
 
-Nothing on this slide is meant to be read from the back of the room. It is furniture, and it carries no
-`.brandbar` or `.ribbon`: the partner names are already in the pattern and in the lockup.
+Ground is a dark red gradient with a bloom breathing on 13s, plus a scrim that pulls the centre down so
+the dark partner artwork keeps its contrast against the bloom.
+
+**The drift oscillates rather than loops** — a looping translate would need to equal exactly one tile
+height to avoid a visible snap. No `.brandbar` or `.ribbon`: the partner names are already the wall.
 
 ## 02 · Cover — `t-ink` — **rebuilt from the client's `slide mo dau.pptx`**
 The client replaced the cover and asked for the speaker portrait to be dropped. Their reference is a
