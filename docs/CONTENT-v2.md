@@ -26,23 +26,24 @@ do not add sentences of your own. Where the pptx carried a design brief ("Ý tư
 ---
 
 ## 01 · Backdrop — check-in — `t-ink` — **NEW, client request**
-The wall behind check-in while guests arrive, laid out the way a real event backdrop is (client supplied
-a photo of one as reference): **partner marks tiled down both sides, the event lockup in the middle.**
+The wall behind check-in while guests arrive, laid out the way a real event backdrop is (the client sent
+a photo of one): **partner marks tiled down both sides, the event lockup in the middle.**
 
-The centre uses **the same `cover-title-x3.png` the cover uses** — the client's note was that the
-backdrop's title did not match the opening slide, and it now does, so the room sees one identity from
-the moment they walk in. Above it, the partner strip and the Workshop pill.
+The centre uses **the same `cover-title-x3.png` the cover uses**, plus the Workshop pill — nothing else.
+The organiser/sponsor strip was removed at the client's request, and the lockup is lifted 172px above
+centre so the **lower half stays clear for people standing in front of it for photos**.
 
-Side walls are the two partner logos alternating in a grid, silhouetted white
-(`filter:brightness(0) invert(1)`) at 14% so the wall reads as one flat texture rather than a row of
-competing logos, and they bleed past the safe area on purpose — it is a wall, not a content slide.
-Both walls drift vertically in opposite directions on a 40s oscillation.
+**The side marks are set in type, not the logo PNGs.** The OpenClaw lockup has a mascot with a white
+outline baked into the artwork: silhouetted for the wall it collapsed into a white blob with a ragged
+edge — the "lỗi viền" the client spotted — and the mascot's claw overlaps the wordmark, so it cannot be
+cropped off cleanly either. Type gives crisp marks at any size with no artwork artefact. Marks are
+OPENCLAW VN · CLAWEXPERTS.COM · SALE AGENT EVENT · FIREGROUP at 17% opacity, two per row with alternating
+indent so the grid does not read as a rigid table.
 
-Ground is a dark red gradient with a bloom breathing on 13s, plus a scrim that pulls the centre down so
-the dark partner artwork keeps its contrast against the bloom.
-
-**The drift oscillates rather than loops** — a looping translate would need to equal exactly one tile
-height to avoid a visible snap. No `.brandbar` or `.ribbon`: the partner names are already the wall.
+Ground is a dark red gradient with a bloom breathing on 13s, plus a scrim keeping the centre calm. Both
+walls drift vertically in opposite directions on a 44s **oscillation** — a looping translate would need to
+equal exactly one tile height to avoid a visible snap. No `.brandbar` or `.ribbon`: the partner names are
+already the wall.
 
 ## 02 · Cover — `t-ink` — **rebuilt from the client's `slide mo dau.pptx`**
 The client replaced the cover and asked for the speaker portrait to be dropped. Their reference is a

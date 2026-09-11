@@ -17,11 +17,15 @@
 <!-- ===== 01-backdrop.html ===== -->
 <section class="slide t-ink" data-slide="1" data-title="Backdrop — check-in" id="s01">
   <style>
-    /* Slide 0: the wall behind check-in, laid out the way a real event backdrop
-       is — partner marks tiled down both sides, the event lockup in the middle.
-       The title is the SAME asset the cover uses, so the room sees one identity
-       from the moment they walk in. Nothing here is meant to be read from the
-       back; the side walls are texture. */
+    /* Slide 0: the wall behind check-in, laid out like a real event backdrop —
+       partner marks tiled down both sides, the event lockup in the middle and
+       sitting high, so the lower half stays clear for people standing in front
+       of it for photos.
+
+       The marks are SET IN TYPE, not the logo PNGs. The OpenClaw lockup has a
+       mascot with a white outline baked into the artwork: silhouetted for the
+       wall it collapsed into a white blob with a ragged edge, and the mascot
+       overlaps the wordmark so it cannot be cropped off cleanly either. */
     #s01{ padding:0; overflow:hidden; align-items:center; justify-content:center; }
 
     /* --- ground ------------------------------------------------------- */
@@ -29,11 +33,11 @@
     #s01 .bg-base{
       position:absolute; inset:0;
       background:
-        radial-gradient(2300px 1500px at 50% 48%, #7A0A12 0%, #3A050A 34%, #140406 64%, #08080A 100%),
+        radial-gradient(2300px 1500px at 50% 40%, #7A0A12 0%, #3A050A 34%, #140406 64%, #08080A 100%),
         linear-gradient(180deg, #0B0B0E 0%, #120609 55%, #0A0A0C 100%);
     }
     #s01 .bloom{
-      position:absolute; left:50%; top:50%; width:3200px; height:2000px;
+      position:absolute; left:50%; top:40%; width:3200px; height:2000px;
       margin:-1000px 0 0 -1600px; border-radius:50%;
       background:radial-gradient(closest-side, #FF1A2673 0%, #C4101C3D 42%, transparent 72%);
       filter:blur(60px);
@@ -44,47 +48,43 @@
       to  { transform:scale(1.09); opacity:.9; }
     }
     #s01 .scrim{
-      position:absolute; left:50%; top:50%; width:2600px; height:1160px;
-      margin:-580px 0 0 -1300px;
-      background:radial-gradient(closest-side, #0A0508E0 0%, #0A0508A6 46%, transparent 76%);
+      position:absolute; left:50%; top:36%; width:2500px; height:980px;
+      margin:-490px 0 0 -1250px;
+      background:radial-gradient(closest-side, #0A0508CC 0%, #0A050880 48%, transparent 78%);
     }
     #s01 .vig{
       position:absolute; inset:0;
-      background:radial-gradient(2000px 1050px at 50% 50%, transparent 28%, #000000B3 100%);
+      background:radial-gradient(2100px 1100px at 50% 46%, transparent 30%, #000000B3 100%);
     }
 
     /* --- the tiled partner walls -------------------------------------- */
     #s01 .wall{
-      position:absolute; top:-90px; bottom:-90px; width:1010px;
-      display:flex; flex-direction:column; justify-content:space-between;
-      z-index:-2; pointer-events:none;
-      will-change:transform;
+      position:absolute; top:-70px; bottom:-70px; width:1120px;
+      display:flex; flex-direction:column; justify-content:space-around;
+      z-index:-2; pointer-events:none; will-change:transform;
     }
-    #s01 .wall.left { left:96px;  animation:s01wallA 40s ease-in-out infinite alternate; }
-    #s01 .wall.right{ right:96px; animation:s01wallB 40s ease-in-out infinite alternate; }
-    @keyframes s01wallA{ from{ transform:translate3d(0,0,0) } to{ transform:translate3d(0,-46px,0) } }
-    @keyframes s01wallB{ from{ transform:translate3d(0,-46px,0) } to{ transform:translate3d(0,0,0) } }
+    #s01 .wall.left { left:70px;  animation:s01wallA 44s ease-in-out infinite alternate; }
+    #s01 .wall.right{ right:70px; animation:s01wallB 44s ease-in-out infinite alternate; }
+    @keyframes s01wallA{ from{ transform:translate3d(0,0,0) } to{ transform:translate3d(0,-40px,0) } }
+    @keyframes s01wallB{ from{ transform:translate3d(0,-40px,0) } to{ transform:translate3d(0,0,0) } }
 
-    #s01 .wr{ display:flex; justify-content:space-between; align-items:center; }
-    #s01 .mk{ display:block; }
-    /* the marks are dark artwork; silhouetting them keeps one flat tone so the
-       wall reads as texture rather than as a row of competing logos */
-    #s01 .mk img{
-      display:block; height:62px; width:auto;
-      filter:brightness(0) invert(1);
-      opacity:.14;
+    #s01 .wr{ display:flex; justify-content:space-between; align-items:center; gap:90px; }
+    #s01 .wr:nth-child(even){ padding-left:190px; }
+    #s01 .mk{
+      font-family:var(--mono); font-size:34px; font-weight:600;
+      letter-spacing:.2em; white-space:nowrap;
+      color:#FFFFFF; opacity:.17;
     }
 
-    /* --- the legible centre ------------------------------------------- */
+    /* --- the legible centre, lifted off the middle --------------------- */
     #s01 .plate{
-      position:relative; z-index:1;
+      position:relative; z-index:1; transform:translateY(-172px);
       display:flex; flex-direction:column; align-items:center;
     }
-    #s01 .partners{ width:1100px; height:auto; display:block; }
-    #s01 .badge{ width:400px; height:auto; display:block; margin-top:40px; }
+    #s01 .badge{ width:420px; height:auto; display:block; }
     #s01 .title{
-      width:2000px; height:auto; display:block; margin-top:26px;
-      filter:drop-shadow(0 28px 70px #000000A6);
+      width:2180px; height:auto; display:block; margin-top:40px;
+      filter:drop-shadow(0 30px 74px #000000B3);
     }
   </style>
 
@@ -97,30 +97,31 @@
   </div>
 
       <div class="wall left">
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span></div>
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span></div>
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span></div>
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span></div>
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span></div>
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span></div>
+        <div class="wr"><span class="mk">OPENCLAW VN</span><span class="mk">CLAWEXPERTS.COM</span></div>
+        <div class="wr"><span class="mk">SALE AGENT EVENT</span><span class="mk">FIREGROUP</span></div>
+        <div class="wr"><span class="mk">OPENCLAW VN</span><span class="mk">CLAWEXPERTS.COM</span></div>
+        <div class="wr"><span class="mk">SALE AGENT EVENT</span><span class="mk">FIREGROUP</span></div>
+        <div class="wr"><span class="mk">OPENCLAW VN</span><span class="mk">CLAWEXPERTS.COM</span></div>
+        <div class="wr"><span class="mk">SALE AGENT EVENT</span><span class="mk">FIREGROUP</span></div>
+        <div class="wr"><span class="mk">OPENCLAW VN</span><span class="mk">CLAWEXPERTS.COM</span></div>
       </div>
+
       <div class="wall right">
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span></div>
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span></div>
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span></div>
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span></div>
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span></div>
-        <div class="wr"><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span><span class="mk"><img src="assets/brand/logo-sponsor-clawexperts.png" alt=""></span><span class="mk"><img src="assets/brand/logo-organizer-openclaw.png" alt=""></span></div>
+        <div class="wr"><span class="mk">SALE AGENT EVENT</span><span class="mk">FIREGROUP</span></div>
+        <div class="wr"><span class="mk">OPENCLAW VN</span><span class="mk">CLAWEXPERTS.COM</span></div>
+        <div class="wr"><span class="mk">SALE AGENT EVENT</span><span class="mk">FIREGROUP</span></div>
+        <div class="wr"><span class="mk">OPENCLAW VN</span><span class="mk">CLAWEXPERTS.COM</span></div>
+        <div class="wr"><span class="mk">SALE AGENT EVENT</span><span class="mk">FIREGROUP</span></div>
+        <div class="wr"><span class="mk">OPENCLAW VN</span><span class="mk">CLAWEXPERTS.COM</span></div>
+        <div class="wr"><span class="mk">SALE AGENT EVENT</span><span class="mk">FIREGROUP</span></div>
       </div>
 
   <div class="plate">
-    <img class="partners" src="assets/brand/cover-partners.png"
-         alt="OpenClaw VN · ClawExperts.com · Firegroup" data-anim="up-sm" data-delay="200">
     <img class="badge" src="assets/brand/cover-badge-workshop.png"
-         alt="Workshop" data-anim="scale" data-delay="360" data-dur="900">
+         alt="Workshop" data-anim="scale" data-delay="260" data-dur="900">
     <img class="title" src="assets/brand/cover-title-x3.png"
          alt="X3 năng suất bán hàng nhờ AI tư vấn &amp; hỗ trợ chốt đơn 24/7"
-         data-anim="up" data-delay="500" data-dur="1200">
+         data-anim="up" data-delay="420" data-dur="1200">
   </div>
 </section>
 
