@@ -71,10 +71,18 @@ opposite edges. The only motion is a slow shine crawling across the frame.
 
 ## 03 · Agenda — `t-paper` — **DONE, do not touch** (`03-agenda.html`)
 
-## 04 · Divider — `t-ink` · `.divider`
-**Title (verbatim):** Case study: Mái Nhà Việt X3 năng suất với Sale Agent
-Use the shared `.divider` pattern. Port from `_v1/04-session1.html`. Strip items for this session:
-Kết quả → Bối cảnh → Inbox tăng gấp 3. Marquee keywords: X3 NĂNG SUẤT · 47M25S → 6S · 600 KHÁCH · 85% / 15%.
+## 04 · Divider — Bài Toán Kinh Doanh: Mái Nhà Việt — `t-ink` · `.divider`
+**Retitled by the client.** Was *"Case study: Mái Nhà Việt / X3 năng suất với Sale Agent"*; now:
+**Title:** Bài Toán Kinh Doanh: **Mái Nhà Việt**
+**Sub:** Hơn **3.000 sản phẩm**, **1-2 nhân sự**, traffic mỗi ngày **80-100 tin nhắn**.
+
+Single line now, so the component's `line-height:1` is fine again; the sub-line is pulled up to 50px
+because those three numbers are the point of the slide.
+
+**Marquee changed to match the reframing:** it used to shout the *results* (X3 năng suất · 47m25s → 6s ·
+600 khách · 85%/15%), which contradicts a divider that now frames the *problem*. It carries the problem's
+own numbers instead — 3.000 sản phẩm · 1–2 nhân sự · 80–100 tin nhắn/ngày, and inbox dồn · tồn kho · giá ·
+chính sách · ngoài giờ. The results still appear on slide 05, where they belong.
 
 ## 05 · Mái Nhà Việt x3 năng suất — `t-ink` · `l-stack` + `.stat` — **NEW**
 **Headline (verbatim):** Doanh nghiệp Mái Nhà Việt x3 năng suất
