@@ -21,8 +21,11 @@
       font-size:66px;
     }
     #s08 .chipset{ margin-top:52px; gap:22px; justify-content:space-between; }
+    /* With one chip gone, space-between left wildly uneven gaps — "Giá" is a
+       third the width of its neighbours. A floor on the width evens the row out. */
     #s08 .chip{
       font-size:52px; padding:24px 40px; border-width:3px; background:transparent;
+      min-width:430px; justify-content:center;
     }
     #s08 .chip .ic{ width:18px; height:18px; }
     #s08 .chip .k{
@@ -61,8 +64,7 @@
       <div class="chip" data-anim="up-sm" data-delay="930"><span class="ic"></span><span class="k">02</span>Giá</div>
       <div class="chip" data-anim="up-sm" data-delay="980"><span class="ic"></span><span class="k">03</span>Tình trạng hàng</div>
       <div class="chip" data-anim="up-sm" data-delay="1030"><span class="ic"></span><span class="k">04</span>Chính sách</div>
-      <div class="chip" data-anim="up-sm" data-delay="1080"><span class="ic"></span><span class="k">05</span>Cách nói chuyện</div>
-      <div class="chip" data-anim="up-sm" data-delay="1130"><span class="ic"></span><span class="k">06</span>Lúc nào cần chuyển cho chủ shop</div>
+      <div class="chip" data-anim="up-sm" data-delay="1080"><span class="ic"></span><span class="k">05</span>Qui trình tư vấn</div>
     </div>
   </div>
 

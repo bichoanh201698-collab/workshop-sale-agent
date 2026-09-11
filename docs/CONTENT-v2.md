@@ -178,7 +178,8 @@ Port from `_v1/12-session2.html`. Strip items: Là gì → Cần giao những g�
 **Trimmed at the client's request** to headline + question + answer chipset:
 **Headline:** Nhân viên tư vấn số là gì?
 **Question (reworded by the client):** Muốn giao việc tư vấn cho một nhân viên số, shop cần chuẩn bị gì?
-**Chipset:** Sản phẩm · Giá · Tình trạng hàng · Chính sách · Cách nói chuyện · Lúc nào cần chuyển cho chủ shop
+**Chipset (client edit):** Sản phẩm · Giá · Tình trạng hàng · Chính sách · **Qui trình tư vấn**
+*"Lúc nào cần chuyển cho chủ shop" was removed and "Cách nói chuyện" became "Qui trình tư vấn". With five chips instead of six, space-between left wildly uneven gaps, so the chips now carry a minimum width.*
 Removed: the sub-line *"Chuyển cách nghĩ từ 'chatbot' sang một vai trò nhân viên cụ thể…"*, and the
 câu chốt, which is now its own slide (09).
 
