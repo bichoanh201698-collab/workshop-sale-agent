@@ -11,9 +11,10 @@ do not add sentences of your own. Where the pptx carried a design brief ("Ý tư
 ## What changed at the deck level
 - **Accent is now the event crimson `#E61F28`** (sampled from the client's own logo/ribbon art), not the old vermilion. It is already swapped in `theme.css`; use `var(--accent)`.
 - **`t-accent` is now white-on-crimson**, not ink-on-vermilion. Check contrast on those slides.
-- **`.brandbar`** puts the organiser (OpenClaw VN) + sponsor (ClawExperts.com) lockups bottom-left. Put it on **every slide except the cover** (the cover carries them larger). On dark themes it self-plates.
+- **`.brandbar`** puts the organiser (OpenClaw VN) + sponsor (ClawExperts.com) lockups **bottom-right**, at 80% scale. On every slide except the backdrop and the cover, which carry their own branding. On dark themes it self-plates.
+- **The `.ribbon` ("Sale Agent Event") is retired** — removed from every slide at the client's request, and the brandbar moved into the corner it used to occupy. Its CSS is still in `theme.css`, marked retired, so restoring it is one line of markup per slide.
 - **Diagram palette** for slides 19–20: `--forest` = a digital role, `--accent` crimson = the human owner or an exception. Primitives `.node`, `.node .hd/.bd/.out`, `.node.owner`, `.conn` are in `theme.css`.
-- Assets in `assets/brand/`: `logo-organizer-openclaw.png`, `logo-sponsor-clawexperts.png`, `speaker-tin-truong.png`, `qr-facebook.png`, `qr-zalo.png`, `ribbon-clawweb.png` (all transparent PNG).
+- Assets in `assets/brand/`: `logo-organizer-openclaw.png`, `logo-sponsor-clawexperts.png`, `speaker-tin-truong.png`, `qr-facebook.png`, `qr-zalo.png`, `ribbon-clawweb.png` — the ribbon asset is unused (all transparent PNG).
 
 ## Open questions flagged to the client — do NOT invent answers
 **All three were answered by the client — resolved as follows:**
@@ -42,8 +43,7 @@ indent so the grid does not read as a rigid table.
 
 Ground is a dark red gradient with a bloom breathing on 13s, plus a scrim keeping the centre calm. Both
 walls drift vertically in opposite directions on a 44s **oscillation** — a looping translate would need to
-equal exactly one tile height to avoid a visible snap. No `.brandbar` or `.ribbon`: the partner names are
-already the wall.
+equal exactly one tile height to avoid a visible snap. No `.brandbar`: the partner names are already the wall.
 
 ## 02 · Cover — `t-ink` — **rebuilt from the client's `slide mo dau.pptx`**
 The client replaced the cover and asked for the speaker portrait to be dropped. Their reference is a
@@ -65,7 +65,7 @@ light edge plus a beam that sweeps across every 9s. Reference kept at `docs/ref/
 The grain layer is deliberately *not* animated on this slide and the bloom's blur is reduced — three large
 moving layers plus a full-stage re-rendering grain is what would drop frames on an event laptop.
 
-The cover carries **no `.brandbar` and no `.ribbon`**: the partner strip and the Workshop pill do that job.
+The cover carries **no `.brandbar`**: the partner strip and the Workshop pill do that job.
 It also carries **no QR codes** — the client's reference has none, so the community codes now live only on
 slides 10 and 24.
 

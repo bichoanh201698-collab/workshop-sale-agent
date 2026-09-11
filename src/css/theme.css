@@ -420,15 +420,17 @@
    The logos are dark artwork on transparency, so on dark themes
    they sit on a paper plate rather than being recoloured.
    ============================================================ */
+/* Moved to the bottom-right corner the ribbon used to occupy, and scaled to
+   80% — the ribbon itself is gone from the deck. */
 .brandbar{
-  position:absolute; left:var(--safe-x); bottom:22px; z-index:3;
-  display:flex; align-items:center; gap:40px;
+  position:absolute; right:var(--safe-x); bottom:22px; z-index:3;
+  display:flex; align-items:center; gap:32px;
 }
-.brandbar img{ height:74px; width:auto; display:block; }
+.brandbar img{ height:59px; width:auto; display:block; }
 .t-ink .brandbar, .t-ink-2 .brandbar, .t-accent .brandbar, .t-mint .brandbar{
-  background:var(--paper); padding:12px 26px; border-radius:14px; gap:34px;
+  background:var(--paper); padding:10px 21px; border-radius:12px; gap:27px;
 }
-.brandbar .sep{ width:2px; height:56px; background:#0A0B0D1F; flex:none; }
+.brandbar .sep{ width:2px; height:45px; background:#0A0B0D1F; flex:none; }
 
 /* QR block — join-the-community codes */
 .qr{ display:flex; flex-direction:column; align-items:center; gap:20px; }
@@ -462,10 +464,10 @@
 .conn.on-accent{ background:var(--accent); }
 
 
-/* ---- event ribbon -----------------------------------------
-   Rebuilt in CSS rather than using ribbon-clawweb.png, whose
-   baked-in text belonged to the previous deck in the series.
-   Change the label here once and it changes on every slide.
+/* ---- event ribbon — RETIRED ------------------------------
+   Removed from every slide at the client's request; the
+   organiser/sponsor lockup took over its bottom-right corner.
+   The rules stay so putting it back is one line of markup.
    ----------------------------------------------------------- */
 .ribbon{
   position:absolute; right:var(--safe-x); bottom:22px; z-index:3;
