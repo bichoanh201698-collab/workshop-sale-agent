@@ -1,48 +1,39 @@
-<section class="slide t-ink" data-slide="2" data-title="Speaker — Tín Trương" id="s02">
+<section class="slide t-ink" data-slide="22" data-title="Speaker — Hoàng Lê" id="s22">
   <style>
-    /* Rebuilt from the client's speaker card (docs/ref/ref-02-speaker-card.png).
-       Their card is 552px square, so blowing it up on a 4480px wall would be
-       soft. The portrait is used at close to native size and the pill, frame
-       and name band are rebuilt live, with the name moved out to carry the
-       left half of the stage instead of being repeated twice. */
-    #s02{ align-items:center; justify-content:center; gap:130px; }
+    /* Same construction as slide 02 (Tín Trương) so the two speaker slides
+       read as a pair: centred name/role + hairline + portrait card. */
+    #s22{ align-items:center; justify-content:center; gap:130px; }
 
-    #s02 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:44px; }
-    #s02 .nm{
+    #s22 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:44px; }
+    #s22 .nm{
       margin:0; font-size:252px; font-weight:900; letter-spacing:-.042em; line-height:.94;
     }
-    #s02 .roles{ display:flex; flex-direction:column; gap:26px; }
-    #s02 .roles p{
+    #s22 .roles{ display:flex; flex-direction:column; gap:26px; }
+    #s22 .roles p{
       margin:0; display:flex; align-items:center; gap:26px;
       font-size:54px; font-weight:700; letter-spacing:-.016em;
     }
-    #s02 .roles p svg{ width:52px; height:52px; flex:none; stroke:var(--accent); }
-    #s02 .roles p.sub{ font-size:52px; font-weight:500; color:var(--muted); }
+    #s22 .roles p svg{ width:52px; height:52px; flex:none; stroke:var(--accent); }
 
-    /* --- the card ---------------------------------------------------- */
-    #s02 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
+    #s22 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
       margin:150px 0; transform-origin:center top; }
 
-    /* Portrait card: the client's half-body cutout (transparent PNG) stands
-       on the red ground, anchored to the bottom edge so the frame reads as a
-       proper speaker card. The name lives large on the left, so the card
-       carries only the client's "Speakers" pill — repeating the name in a
-       band as their 552px card does would say it twice on one stage. */
-    #s02 .card2{
+    #s22 .card2{
       flex:none; width:640px; height:790px; position:relative;
       border-radius:56px; background:#A10808;
       box-shadow:0 0 0 7px var(--brand), 0 0 110px -12px #E61F28AA, 0 54px 130px -44px #000000CC;
     }
-    #s02 .card2 .ph{
+    #s22 .card2 .ph{
       position:absolute; inset:0; border-radius:56px; overflow:hidden; display:block;
     }
-    #s02 .card2 img{
-      /* 97%, not 100+%: at full height the crop's top padding disappears and
-         the hair clips against the card edge. */
+    /* his crop is a wider frame than Tín's (0.79 vs 0.66), so it is sized to
+       84% of card height — that lands his head at the same size as Tín's and
+       keeps a comfortable red margin at the sides. */
+    #s22 .card2 img{
       position:absolute; left:50%; bottom:0; transform:translateX(-50%);
-      height:97%; width:auto; display:block;
+      height:84%; width:auto; display:block;
     }
-    #s02 .card2 .pill{
+    #s22 .card2 .pill{
       position:absolute; left:50%; bottom:-34px; transform:translateX(-50%);
       z-index:3; white-space:nowrap;
       background:#08080A; color:#fff; border:5px solid var(--brand);
@@ -50,14 +41,13 @@
       font-size:52px; font-weight:800; letter-spacing:-.01em;
       box-shadow:0 0 40px -4px #E61F28CC;
     }
-    /* slow shine crawling across the frame */
-    #s02 .card2 .ph::after{
+    #s22 .card2 .ph::after{
       content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
       background:linear-gradient(115deg, transparent 34%, #FFFFFF1F 47%, #FFFFFF4D 50%, #FFFFFF1F 53%, transparent 66%);
       transform:translateX(-120%);
-      animation:s02shine 7.5s cubic-bezier(.4,0,.6,1) infinite;
+      animation:s18shine 7.5s cubic-bezier(.4,0,.6,1) infinite;
     }
-    @keyframes s02shine{
+    @keyframes s18shine{
       0%{ transform:translateX(-120%) } 62%{ transform:translateX(120%) } 100%{ transform:translateX(120%) }
     }
   </style>
@@ -74,16 +64,12 @@
   <div class="lz">
     <p class="label" data-anim="wipe-r" data-delay="140">Speakers</p>
     <h1 class="nm">
-      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="300" data-dur="1000">Tín Trương</span></span>
+      <span class="mask"><span style="display:block" data-anim="mask-up" data-delay="300" data-dur="1000">Hoàng Lê</span></span>
     </h1>
     <div class="roles">
       <p data-anim="up-sm" data-delay="640">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        Lead Producer — AI Agent Business Solutions
-      </p>
-      <p class="sub" data-anim="up-sm" data-delay="740">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-        ClawExperts.com
+        Program Manager — AI Agent Business Solution
       </p>
     </div>
   </div>
@@ -91,7 +77,7 @@
   <i class="rule" data-anim="grow-y" data-delay="420" data-dur="800"></i>
 
   <div class="card2" data-anim="scale" data-delay="480" data-dur="1000">
-    <span class="ph"><img src="assets/brand/speaker-tin-halfbody.png" alt="Tín Trương"></span>
+    <span class="ph"><img src="assets/brand/speaker-hoang-halfbody.png" alt="Hoàng Lê"></span>
     <span class="pill">Speakers</span>
   </div>
 

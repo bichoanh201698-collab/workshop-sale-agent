@@ -1,4 +1,4 @@
-<section class="slide t-ink" data-slide="1" data-title="Cover — X3 năng suất bán hàng" id="s01">
+<section class="slide t-ink" data-slide="2" data-title="Cover — X3 năng suất bán hàng" id="s02">
   <style>
     /* ------------------------------------------------------------------
        Cover rebuilt from the client's "slide mo dau.pptx". Their layout is
@@ -9,12 +9,12 @@
        be upscaled 2.4x, and rebuilding it keeps it crisp AND lets it move.
        The speaker portrait from the previous cover is gone, per the client.
        ------------------------------------------------------------------ */
-    #s01{ padding:0; overflow:hidden; }
+    #s02{ padding:0; overflow:hidden; }
 
     /* --- background layers ------------------------------------------- */
-    #s01 .bg{ position:absolute; inset:0; z-index:-3; overflow:hidden; }
+    #s02 .bg{ position:absolute; inset:0; z-index:-3; overflow:hidden; }
 
-    #s01 .bg-base{
+    #s02 .bg-base{
       position:absolute; inset:0;
       background:
         radial-gradient(1900px 1400px at 6% 18%,  #7E0A12 0%, #3A050A 34%, #120406 62%, #08080A 100%),
@@ -22,7 +22,7 @@
     }
 
     /* honeycomb field — drifts slowly and for ever */
-    #s01 .bg-hex{
+    #s02 .bg-hex{
       position:absolute; inset:-260px;
       background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2246.77%22%20height=%2281.00%22%20viewBox=%220%200%2046.77%2081.00%22%3E%3Cg%20fill=%22none%22%20stroke=%22%23ffffff%22%20stroke-width=%221.05%22%3E%3Cpath%20d=%22M23.38%20-6.75%20L46.77%206.75%20L46.77%2033.75%20L23.38%2047.25%20L0.00%2033.75%20L0.00%206.75%20Z%22/%3E%3Cpath%20d=%22M0.00%2033.75%20L23.38%2047.25%20L23.38%2074.25%20L0.00%2087.75%20L-23.38%2074.25%20L-23.38%2047.25%20Z%22/%3E%3Cpath%20d=%22M46.77%2033.75%20L70.15%2047.25%20L70.15%2074.25%20L46.77%2087.75%20L23.38%2074.25%20L23.38%2047.25%20Z%22/%3E%3C/g%3E%3Cg%20fill=%22%23ffffff%22%3E%3Ccircle%20cx=%2223.38%22%20cy=%22-6.75%22%20r=%221.7%22/%3E%3Ccircle%20cx=%220.00%22%20cy=%2233.75%22%20r=%221.7%22/%3E%3Ccircle%20cx=%2246.77%22%20cy=%2233.75%22%20r=%221.7%22/%3E%3C/g%3E%3C/svg%3E");
       background-repeat:repeat;
@@ -32,7 +32,7 @@
     @keyframes s01drift{ to{ transform:translate3d(-46.77px, -81.00px, 0); } }
 
     /* the field is brightest on the red side, fading out to the right */
-    #s01 .bg-hex.warm{
+    #s02 .bg-hex.warm{
       opacity:.38;
       -webkit-mask-image:radial-gradient(1500px 1200px at 8% 22%, #000 0%, transparent 72%);
       mask-image:radial-gradient(1500px 1200px at 8% 22%, #000 0%, transparent 72%);
@@ -40,7 +40,7 @@
     }
 
     /* breathing red bloom, top-left, exactly where the client put it */
-    #s01 .bg-glow{
+    #s02 .bg-glow{
       position:absolute; left:-620px; top:-820px; width:2900px; height:2900px;
       border-radius:50%;
       background:radial-gradient(circle at center, #FF1A2699 0%, #C4101C55 32%, transparent 66%);
@@ -58,7 +58,7 @@
        bottom and reads as a crop bug. The run also has to clear the whole
        4480px stage plus the rotation overhang (half of a 2464px-tall box
        rotated 24deg is ~500px each side), hence -1100 -> 5600. */
-    #s01 .bg-streak{
+    #s02 .bg-streak{
       position:absolute; top:-60%; bottom:-60%; left:0; width:620px;
       transform:translateX(-1100px) rotate(24deg);
       background:linear-gradient(to right,
@@ -73,7 +73,7 @@
       100% { transform:translateX(5600px)  rotate(24deg); opacity:0; }
     }
     /* a second, static edge so the composition still reads between sweeps */
-    #s01 .bg-edge{
+    #s02 .bg-edge{
       position:absolute; top:-60%; bottom:-60%; left:26%; width:5px;
       transform:rotate(24deg);
       background:linear-gradient(to bottom, transparent, #FF3B45 22%, #FF6B73 50%, #FF3B45 78%, transparent);
@@ -84,25 +84,25 @@
        re-rendering grain over the whole 4480x1120 stage on top of that is
        what would drop frames on an event laptop. Keep the texture, stop
        the animation, and hint the compositor about the movers. */
-    #s01 .deco-noise{ animation:none; opacity:.045; }
-    #s01 .bg-hex, #s01 .bg-glow, #s01 .bg-streak{ will-change:transform; }
+    #s02 .deco-noise{ animation:none; opacity:.045; }
+    #s02 .bg-hex, #s02 .bg-glow, #s02 .bg-streak{ will-change:transform; }
 
-    #s01 .bg-vig{
+    #s02 .bg-vig{
       position:absolute; inset:0;
       background:radial-gradient(1600px 900px at 50% 52%, transparent 30%, #00000073 100%);
     }
 
     /* --- centred content stack --------------------------------------- */
-    #s01 .stack{
+    #s02 .stack{
       position:relative; z-index:1; width:100%; height:100%;
       display:flex; flex-direction:column; align-items:center;
       /* At 80% the stack no longer fills the stage, so it centres vertically
          instead of hanging from the top edge with a hole underneath. */
       justify-content:center;
     }
-    #s01 .partners{ width:1413px; height:auto; display:block; }
-    #s01 .badge{ width:534px; height:auto; display:block; margin-top:48px; }
-    #s01 .title{
+    #s02 .partners{ width:1413px; height:auto; display:block; }
+    #s02 .badge{ width:534px; height:auto; display:block; margin-top:48px; }
+    #s02 .title{
       width:2823px; height:auto; display:block; margin-top:18px;
       filter:drop-shadow(0 30px 70px #00000080);
     }

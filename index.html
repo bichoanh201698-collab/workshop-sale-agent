@@ -14,8 +14,140 @@
   <div id="stage">
     <div class="stage-grid-overlay"></div>
 
-<!-- ===== 01-cover.html ===== -->
-<section class="slide t-ink" data-slide="1" data-title="Cover — X3 năng suất bán hàng" id="s01">
+<!-- ===== 01-backdrop.html ===== -->
+<section class="slide t-ink" data-slide="1" data-title="Backdrop — check-in" id="s01">
+  <style>
+    /* Slide 0: the screen that stands behind check-in. It is a step-and-repeat
+       backdrop, which is what an event wall actually is — the logo and the event
+       name tiled and sunk almost into the ground, drifting slowly, with the real
+       lockup legible in the middle. Nothing here is meant to be read from the
+       back of the room; it is furniture. */
+    #s01{ padding:0; overflow:hidden; align-items:center; justify-content:center; }
+
+    /* --- ground ------------------------------------------------------- */
+    #s01 .bg{ position:absolute; inset:0; z-index:-3; overflow:hidden; }
+    #s01 .bg-base{
+      position:absolute; inset:0;
+      background:
+        radial-gradient(2200px 1500px at 50% 46%, #7A0A12 0%, #3A050A 34%, #140406 64%, #08080A 100%),
+        linear-gradient(180deg, #0B0B0E 0%, #120609 55%, #0A0A0C 100%);
+    }
+    #s01 .bloom{
+      position:absolute; left:50%; top:50%; width:3400px; height:2200px;
+      margin:-1100px 0 0 -1700px; border-radius:50%;
+      background:radial-gradient(closest-side, #FF1A2680 0%, #C4101C40 42%, transparent 72%);
+      filter:blur(60px);
+      animation:s01breathe 13s ease-in-out infinite alternate;
+    }
+    @keyframes s01breathe{
+      from{ transform:scale(1); opacity:.62; }
+      to  { transform:scale(1.1); opacity:.92; }
+    }
+
+    /* --- the sunken step-and-repeat ----------------------------------- */
+    #s01 .repeat{
+      position:absolute; left:-22%; top:-30%; width:150%; height:170%;
+      transform:rotate(-9deg); transform-origin:center;
+      display:flex; flex-direction:column; gap:62px;
+      /* Oscillates instead of looping: a looping translate would have to equal
+         exactly one tile width to avoid a visible snap, and the tile width here
+         is set by text metrics. Drifting out and back has no seam at all. */
+      animation:s01drift 46s ease-in-out infinite alternate;
+      will-change:transform;
+    }
+    @keyframes s01drift{
+      from{ transform:rotate(-9deg) translate3d(0,0,0); }
+      to  { transform:rotate(-9deg) translate3d(-360px,-62px,0); }
+    }
+    #s01 .rr{
+      display:flex; white-space:nowrap; flex:none;
+      font-family:var(--mono); font-size:86px; font-weight:600;
+      letter-spacing:.34em; color:#FFFFFF; opacity:.055;
+    }
+    /* a second, brighter pass masked to the centre so the wall has depth */
+    /* must drift on exactly the same clock as the base layer — at different
+       durations the two passes separate and read as doubled text, not depth */
+    #s01 .repeat.glow{ animation-duration:46s; }
+    #s01 .repeat.glow .rr{
+      opacity:.16; color:#FF8C93;
+      -webkit-mask-image:radial-gradient(1500px 760px at 50% 50%, #000 0%, transparent 74%);
+      mask-image:radial-gradient(1500px 760px at 50% 50%, #000 0%, transparent 74%);
+    }
+
+    /* The partner lockup is dark artwork; on the bright centre of the bloom its
+       organiser half lost contrast. This pulls the middle back down so the logos
+       read, and it reads as a spotlight rather than a patch. */
+    #s01 .scrim{
+      position:absolute; left:50%; top:50%; width:3000px; height:1240px;
+      margin:-620px 0 0 -1500px;
+      background:radial-gradient(closest-side, #0A0508E6 0%, #0A0508B3 44%, transparent 74%);
+    }
+
+    #s01 .vig{
+      position:absolute; inset:0;
+      background:radial-gradient(1900px 1000px at 50% 50%, transparent 26%, #000000A6 100%);
+    }
+
+    /* --- the legible lockup ------------------------------------------- */
+    #s01 .plate{
+      position:relative; z-index:1;
+      display:flex; flex-direction:column; align-items:center; gap:54px;
+    }
+    #s01 .partners{ width:1180px; height:auto; display:block; opacity:.96; }
+    #s01 .wm{
+      margin:0; font-size:196px; font-weight:900; letter-spacing:-.03em; line-height:1;
+      color:#FFF6F6; text-align:center; white-space:nowrap;
+      text-shadow:0 24px 70px #00000073;
+    }
+    #s01 .wm b{ color:var(--brand); font-weight:900; }
+    #s01 .rule{
+      width:560px; height:3px; background:linear-gradient(to right,transparent,#FF3B4599,transparent);
+    }
+    #s01 .badge{ width:420px; height:auto; display:block; opacity:.95; }
+  </style>
+
+  <div class="bg">
+    <div class="bg-base"></div>
+    <div class="bloom"></div>
+    <div class="repeat">
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+    </div>
+    <div class="repeat glow">
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+    </div>
+    <div class="scrim"></div>
+    <div class="vig"></div>
+    <div class="deco-noise" style="opacity:.05; animation:none;"></div>
+  </div>
+
+  <div class="plate">
+    <img class="partners" src="assets/brand/cover-partners.png"
+         alt="OpenClaw VN · ClawExperts.com · Firegroup" data-anim="up-sm" data-delay="200">
+    <img class="badge" src="assets/brand/cover-badge-workshop.png"
+         alt="Workshop" data-anim="scale" data-delay="360" data-dur="900">
+    <h1 class="wm" data-anim="up-sm" data-delay="480" data-dur="1100">Sale <b>Agent</b> Event</h1>
+    <span class="rule" data-anim="grow-x" data-delay="900" data-dur="900"></span>
+  </div>
+</section>
+
+<!-- ===== 02-cover.html ===== -->
+<section class="slide t-ink" data-slide="2" data-title="Cover — X3 năng suất bán hàng" id="s02">
   <style>
     /* ------------------------------------------------------------------
        Cover rebuilt from the client's "slide mo dau.pptx". Their layout is
@@ -26,12 +158,12 @@
        be upscaled 2.4x, and rebuilding it keeps it crisp AND lets it move.
        The speaker portrait from the previous cover is gone, per the client.
        ------------------------------------------------------------------ */
-    #s01{ padding:0; overflow:hidden; }
+    #s02{ padding:0; overflow:hidden; }
 
     /* --- background layers ------------------------------------------- */
-    #s01 .bg{ position:absolute; inset:0; z-index:-3; overflow:hidden; }
+    #s02 .bg{ position:absolute; inset:0; z-index:-3; overflow:hidden; }
 
-    #s01 .bg-base{
+    #s02 .bg-base{
       position:absolute; inset:0;
       background:
         radial-gradient(1900px 1400px at 6% 18%,  #7E0A12 0%, #3A050A 34%, #120406 62%, #08080A 100%),
@@ -39,7 +171,7 @@
     }
 
     /* honeycomb field — drifts slowly and for ever */
-    #s01 .bg-hex{
+    #s02 .bg-hex{
       position:absolute; inset:-260px;
       background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2246.77%22%20height=%2281.00%22%20viewBox=%220%200%2046.77%2081.00%22%3E%3Cg%20fill=%22none%22%20stroke=%22%23ffffff%22%20stroke-width=%221.05%22%3E%3Cpath%20d=%22M23.38%20-6.75%20L46.77%206.75%20L46.77%2033.75%20L23.38%2047.25%20L0.00%2033.75%20L0.00%206.75%20Z%22/%3E%3Cpath%20d=%22M0.00%2033.75%20L23.38%2047.25%20L23.38%2074.25%20L0.00%2087.75%20L-23.38%2074.25%20L-23.38%2047.25%20Z%22/%3E%3Cpath%20d=%22M46.77%2033.75%20L70.15%2047.25%20L70.15%2074.25%20L46.77%2087.75%20L23.38%2074.25%20L23.38%2047.25%20Z%22/%3E%3C/g%3E%3Cg%20fill=%22%23ffffff%22%3E%3Ccircle%20cx=%2223.38%22%20cy=%22-6.75%22%20r=%221.7%22/%3E%3Ccircle%20cx=%220.00%22%20cy=%2233.75%22%20r=%221.7%22/%3E%3Ccircle%20cx=%2246.77%22%20cy=%2233.75%22%20r=%221.7%22/%3E%3C/g%3E%3C/svg%3E");
       background-repeat:repeat;
@@ -49,7 +181,7 @@
     @keyframes s01drift{ to{ transform:translate3d(-46.77px, -81.00px, 0); } }
 
     /* the field is brightest on the red side, fading out to the right */
-    #s01 .bg-hex.warm{
+    #s02 .bg-hex.warm{
       opacity:.38;
       -webkit-mask-image:radial-gradient(1500px 1200px at 8% 22%, #000 0%, transparent 72%);
       mask-image:radial-gradient(1500px 1200px at 8% 22%, #000 0%, transparent 72%);
@@ -57,7 +189,7 @@
     }
 
     /* breathing red bloom, top-left, exactly where the client put it */
-    #s01 .bg-glow{
+    #s02 .bg-glow{
       position:absolute; left:-620px; top:-820px; width:2900px; height:2900px;
       border-radius:50%;
       background:radial-gradient(circle at center, #FF1A2699 0%, #C4101C55 32%, transparent 66%);
@@ -75,7 +207,7 @@
        bottom and reads as a crop bug. The run also has to clear the whole
        4480px stage plus the rotation overhang (half of a 2464px-tall box
        rotated 24deg is ~500px each side), hence -1100 -> 5600. */
-    #s01 .bg-streak{
+    #s02 .bg-streak{
       position:absolute; top:-60%; bottom:-60%; left:0; width:620px;
       transform:translateX(-1100px) rotate(24deg);
       background:linear-gradient(to right,
@@ -90,7 +222,7 @@
       100% { transform:translateX(5600px)  rotate(24deg); opacity:0; }
     }
     /* a second, static edge so the composition still reads between sweeps */
-    #s01 .bg-edge{
+    #s02 .bg-edge{
       position:absolute; top:-60%; bottom:-60%; left:26%; width:5px;
       transform:rotate(24deg);
       background:linear-gradient(to bottom, transparent, #FF3B45 22%, #FF6B73 50%, #FF3B45 78%, transparent);
@@ -101,25 +233,25 @@
        re-rendering grain over the whole 4480x1120 stage on top of that is
        what would drop frames on an event laptop. Keep the texture, stop
        the animation, and hint the compositor about the movers. */
-    #s01 .deco-noise{ animation:none; opacity:.045; }
-    #s01 .bg-hex, #s01 .bg-glow, #s01 .bg-streak{ will-change:transform; }
+    #s02 .deco-noise{ animation:none; opacity:.045; }
+    #s02 .bg-hex, #s02 .bg-glow, #s02 .bg-streak{ will-change:transform; }
 
-    #s01 .bg-vig{
+    #s02 .bg-vig{
       position:absolute; inset:0;
       background:radial-gradient(1600px 900px at 50% 52%, transparent 30%, #00000073 100%);
     }
 
     /* --- centred content stack --------------------------------------- */
-    #s01 .stack{
+    #s02 .stack{
       position:relative; z-index:1; width:100%; height:100%;
       display:flex; flex-direction:column; align-items:center;
       /* At 80% the stack no longer fills the stage, so it centres vertically
          instead of hanging from the top edge with a hole underneath. */
       justify-content:center;
     }
-    #s01 .partners{ width:1413px; height:auto; display:block; }
-    #s01 .badge{ width:534px; height:auto; display:block; margin-top:48px; }
-    #s01 .title{
+    #s02 .partners{ width:1413px; height:auto; display:block; }
+    #s02 .badge{ width:534px; height:auto; display:block; margin-top:48px; }
+    #s02 .title{
       width:2823px; height:auto; display:block; margin-top:18px;
       filter:drop-shadow(0 30px 70px #00000080);
     }
@@ -147,30 +279,30 @@
   </div>
 </section>
 
-<!-- ===== 02-speaker-tin.html ===== -->
-<section class="slide t-ink" data-slide="2" data-title="Speaker — Tín Trương" id="s02">
+<!-- ===== 03-speaker-tin.html ===== -->
+<section class="slide t-ink" data-slide="3" data-title="Speaker — Tín Trương" id="s03">
   <style>
     /* Rebuilt from the client's speaker card (docs/ref/ref-02-speaker-card.png).
        Their card is 552px square, so blowing it up on a 4480px wall would be
        soft. The portrait is used at close to native size and the pill, frame
        and name band are rebuilt live, with the name moved out to carry the
        left half of the stage instead of being repeated twice. */
-    #s02{ align-items:center; justify-content:center; gap:130px; }
+    #s03{ align-items:center; justify-content:center; gap:130px; }
 
-    #s02 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:44px; }
-    #s02 .nm{
+    #s03 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:44px; }
+    #s03 .nm{
       margin:0; font-size:252px; font-weight:900; letter-spacing:-.042em; line-height:.94;
     }
-    #s02 .roles{ display:flex; flex-direction:column; gap:26px; }
-    #s02 .roles p{
+    #s03 .roles{ display:flex; flex-direction:column; gap:26px; }
+    #s03 .roles p{
       margin:0; display:flex; align-items:center; gap:26px;
       font-size:54px; font-weight:700; letter-spacing:-.016em;
     }
-    #s02 .roles p svg{ width:52px; height:52px; flex:none; stroke:var(--accent); }
-    #s02 .roles p.sub{ font-size:52px; font-weight:500; color:var(--muted); }
+    #s03 .roles p svg{ width:52px; height:52px; flex:none; stroke:var(--accent); }
+    #s03 .roles p.sub{ font-size:52px; font-weight:500; color:var(--muted); }
 
     /* --- the card ---------------------------------------------------- */
-    #s02 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
+    #s03 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
       margin:150px 0; transform-origin:center top; }
 
     /* Portrait card: the client's half-body cutout (transparent PNG) stands
@@ -178,21 +310,21 @@
        proper speaker card. The name lives large on the left, so the card
        carries only the client's "Speakers" pill — repeating the name in a
        band as their 552px card does would say it twice on one stage. */
-    #s02 .card2{
+    #s03 .card2{
       flex:none; width:640px; height:790px; position:relative;
       border-radius:56px; background:#A10808;
       box-shadow:0 0 0 7px var(--brand), 0 0 110px -12px #E61F28AA, 0 54px 130px -44px #000000CC;
     }
-    #s02 .card2 .ph{
+    #s03 .card2 .ph{
       position:absolute; inset:0; border-radius:56px; overflow:hidden; display:block;
     }
-    #s02 .card2 img{
+    #s03 .card2 img{
       /* 97%, not 100+%: at full height the crop's top padding disappears and
          the hair clips against the card edge. */
       position:absolute; left:50%; bottom:0; transform:translateX(-50%);
       height:97%; width:auto; display:block;
     }
-    #s02 .card2 .pill{
+    #s03 .card2 .pill{
       position:absolute; left:50%; bottom:-34px; transform:translateX(-50%);
       z-index:3; white-space:nowrap;
       background:#08080A; color:#fff; border:5px solid var(--brand);
@@ -201,7 +333,7 @@
       box-shadow:0 0 40px -4px #E61F28CC;
     }
     /* slow shine crawling across the frame */
-    #s02 .card2 .ph::after{
+    #s03 .card2 .ph::after{
       content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
       background:linear-gradient(115deg, transparent 34%, #FFFFFF1F 47%, #FFFFFF4D 50%, #FFFFFF1F 53%, transparent 66%);
       transform:translateX(-120%);
@@ -253,45 +385,45 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 03-agenda.html ===== -->
-<section class="slide t-paper" data-slide="3" data-title="Agenda — 5 phần" id="s03">
+<!-- ===== 04-agenda.html ===== -->
+<section class="slide t-paper" data-slide="4" data-title="Agenda — 5 phần" id="s04">
   <style>
-    #s03{ flex-direction:column; justify-content:flex-start; }
+    #s04{ flex-direction:column; justify-content:flex-start; }
 
-    #s03 .top{ display:flex; align-items:flex-end; gap:64px; flex:none; }
-    #s03 .ttl{
+    #s04 .top{ display:flex; align-items:flex-end; gap:64px; flex:none; }
+    #s04 .ttl{
       margin:0; font-size:238px; font-weight:900; line-height:.9;
       letter-spacing:-.045em;
     }
 
-    #s03 .row{ display:flex; gap:44px; margin-top:56px; align-items:stretch; flex:1; min-height:0; margin-bottom:26px; }
+    #s04 .row{ display:flex; gap:44px; margin-top:56px; align-items:stretch; flex:1; min-height:0; margin-bottom:26px; }
 
-    #s03 .it{
+    #s04 .it{
       flex:1; min-width:0;
       background:#FFFFFF; border:2px solid #0A0B0D14;
       border-radius:30px; padding:48px 46px 52px;
       display:flex; flex-direction:column;
       box-shadow:0 24px 60px -34px #0A0B0D26;
     }
-    #s03 .it .bar{
+    #s04 .it .bar{
       display:block; width:96px; height:9px; border-radius:99px;
       background:var(--accent); transform-origin:left center;
     }
-    #s03 .it .n{
+    #s04 .it .n{
       margin:30px 0 0; font-size:128px; font-weight:900; line-height:.86;
       letter-spacing:-.05em; color:var(--accent); font-variant-numeric:tabular-nums;
     }
-    #s03 .it .t{
+    #s04 .it .t{
       margin:32px 0 0; font-size:47px; font-weight:700; line-height:1.24;
       letter-spacing:-.014em; color:var(--fg); text-wrap:pretty;
     }
     /* echo of the arc motif in the reference layout */
-    #s03 .arc{
+    #s04 .arc{
       position:absolute; right:-460px; bottom:-620px;
       width:1560px; height:1560px; border-radius:50%;
       border:76px solid var(--accent); opacity:.14;
     }
-    #s03 .arc.two{
+    #s04 .arc.two{
       right:-300px; bottom:-800px; width:1180px; height:1180px;
       border-width:52px; opacity:.1;
     }
@@ -347,16 +479,16 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 04-divider-casestudy.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="4" data-title="Phần 01 — Bài toán kinh doanh: Mái Nhà Việt" id="s04">
+<!-- ===== 05-divider-casestudy.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="5" data-title="Phần 01 — Bài toán kinh doanh: Mái Nhà Việt" id="s05">
   <style>
     /* Back to a single line after the client's rewording, so the component's
        line-height:1 is fine; only the size is pulled in to keep the longer
        title clear of the safe edge. */
-    #s04 .dtitle{ font-size:190px; }
+    #s05 .dtitle{ font-size:190px; }
     /* these three numbers are the point of the slide — give them more presence
        than the component's default 40px sub-line */
-    #s04 .sub{ font-size:50px; margin-top:46px; max-width:none; }
+    #s05 .sub{ font-size:50px; margin-top:46px; max-width:none; }
   </style>
 
   <div class="deco">
@@ -389,49 +521,49 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 05-mainhaviet.html ===== -->
-<section class="slide t-ink l-stack" data-slide="5" data-title="Mái Nhà Việt x3 năng suất — 3 kết quả" id="s05">
+<!-- ===== 06-mainhaviet.html ===== -->
+<section class="slide t-ink l-stack" data-slide="6" data-title="Mái Nhà Việt x3 năng suất — 3 kết quả" id="s06">
   <style>
-    #s05{ gap:76px; }
+    #s06{ gap:76px; }
 
-    #s05 .band{ display:flex; align-items:flex-end; }
-    #s05 .band .say{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
-    #s05 .hd{ margin:0; font-size:146px; font-weight:900; letter-spacing:-.034em; line-height:1.06; white-space:nowrap; }
+    #s06 .band{ display:flex; align-items:flex-end; }
+    #s06 .band .say{ flex:1; min-width:0; display:flex; flex-direction:column; gap:32px; }
+    #s06 .hd{ margin:0; font-size:146px; font-weight:900; letter-spacing:-.034em; line-height:1.06; white-space:nowrap; }
 
 
-    #s05 .strip{ display:flex; align-items:flex-start; }
-    #s05 .strip > .stat{ flex:1; min-width:0; padding:0 70px; gap:30px; }
-    #s05 .strip > .stat:first-child{ padding-left:0; }
-    #s05 .strip > .stat:last-child{ padding-right:0; }
-    #s05 .strip > .stat + .stat{ border-left:3px solid var(--hair); }
+    #s06 .strip{ display:flex; align-items:flex-start; }
+    #s06 .strip > .stat{ flex:1; min-width:0; padding:0 70px; gap:30px; }
+    #s06 .strip > .stat:first-child{ padding-left:0; }
+    #s06 .strip > .stat:last-child{ padding-right:0; }
+    #s06 .strip > .stat + .stat{ border-left:3px solid var(--hair); }
     /* .stat .num is a <p> here; theme.css already zeroes the margin, but a
        1em margin at 300px would blow the 1120px canvas — keep it explicit. */
-    #s05 .stat .num{ font-size:288px; margin:0; }
-    #s05 .stat .cap{ max-width:1210px; font-size:44px; color:var(--muted); }
-    #s05 .stat .cap b{ color:var(--fg); font-weight:800; }
+    #s06 .stat .num{ font-size:288px; margin:0; }
+    #s06 .stat .cap{ max-width:1210px; font-size:44px; color:var(--muted); }
+    #s06 .stat .cap b{ color:var(--fg); font-weight:800; }
 
     /* ---- before → after variant of .stat ------------------------------
        The first figure is a transition (47m25s → 6s), not a fraction, so
        .num carries two values at different weights plus a handoff arrow
        instead of the .den suffix the component was built for. */
-    #s05 .stat.ba .num{ gap:34px; align-items:flex-end; }
+    #s06 .stat.ba .num{ gap:34px; align-items:flex-end; }
     /* each value carries its own label so "Sau" sits under 6s, not next to Trước */
-    #s05 .stat.ba .col{ display:flex; flex-direction:column; align-items:flex-start; gap:12px; }
-    #s05 .stat.ba .col .tag{
+    #s06 .stat.ba .col{ display:flex; flex-direction:column; align-items:flex-start; gap:12px; }
+    #s06 .stat.ba .col .tag{
       font-family:var(--mono); font-size:25px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
     }
-    #s05 .stat.ba .col.now-col .tag{ color:var(--accent); }
-    #s05 .stat.ba .was{
+    #s06 .stat.ba .col.now-col .tag{ color:var(--accent); }
+    #s06 .stat.ba .was{
       font-size:122px; font-weight:800; color:var(--muted);
       letter-spacing:-.025em; line-height:.82;
     }
-    #s05 .stat.ba .now{ line-height:.82; }
-    #s05 .stat.ba .to{
+    #s06 .stat.ba .now{ line-height:.82; }
+    #s06 .stat.ba .to{
       position:relative; flex:none;
       width:118px; height:9px; background:var(--hair); margin:0 8px 106px;
     }
-    #s05 .stat.ba .to::after{
+    #s06 .stat.ba .to::after{
       content:""; position:absolute; right:-2px; top:50%; transform:translateY(-50%);
       width:0; height:0; border:25px solid transparent;
       border-left-color:var(--accent); border-right:0;
@@ -484,11 +616,11 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 06-inbox-3x.html ===== -->
-<section class="slide t-ink-2 l-center" data-slide="6" data-title="Nếu inbox tăng gấp 3" id="s06">
+<!-- ===== 07-inbox-3x.html ===== -->
+<section class="slide t-ink-2 l-center" data-slide="7" data-title="Nếu inbox tăng gấp 3" id="s07">
   <style>
-    #s06{ gap:0; }
-    #s06 .q{
+    #s07{ gap:0; }
+    #s07 .q{
       margin:0; font-size:150px; font-weight:900; letter-spacing:-.036em;
       line-height:1.16; text-align:center;
     }
@@ -517,50 +649,50 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 07-scale-pressure.html ===== -->
-<section class="slide t-ink l-stack" data-slide="7" data-title="Scale traffic, Scale năng lực" id="s07">
+<!-- ===== 08-scale-pressure.html ===== -->
+<section class="slide t-ink l-stack" data-slide="8" data-title="Scale traffic, Scale năng lực" id="s08">
   <style>
-    #s07{ justify-content:center; gap:0; }
+    #s08{ justify-content:center; gap:0; }
 
-    #s07 .band{ display:flex; align-items:flex-end; gap:120px; flex:none; }
-    #s07 .ttl{
+    #s08 .band{ display:flex; align-items:flex-end; gap:120px; flex:none; }
+    #s08 .ttl{
       margin:0; font-size:172px; font-weight:900; line-height:1; letter-spacing:-.04em;
       flex:1 1 auto; min-width:0;
     }
-    #s07 .ttl b{ color:var(--accent); font-weight:900; }
-    #s07 .band .cue{
+    #s08 .ttl b{ color:var(--accent); font-weight:900; }
+    #s08 .band .cue{
       flex:0 0 auto; margin:0 0 18px; font-family:var(--mono); font-size:29px; font-weight:600;
       letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
       display:flex; align-items:center; gap:20px;
     }
-    #s07 .band .cue i{ display:block; width:58px; height:3px; background:var(--accent); flex:none; }
+    #s08 .band .cue i{ display:block; width:58px; height:3px; background:var(--accent); flex:none; }
 
     /* four nodes reading left to right, joined by arrows: traffic grows, and
        each answer to it creates the next pressure */
-    #s07 .chain{ display:flex; align-items:stretch; margin-top:104px; flex:none; }
+    #s08 .chain{ display:flex; align-items:stretch; margin-top:104px; flex:none; }
 
-    #s07 .node2{
+    #s08 .node2{
       flex:1; min-width:0; background:var(--card); border:2px solid var(--card-line);
       border-top:6px solid var(--accent); border-radius:0 0 22px 22px;
       min-height:376px; padding:38px 36px 42px; display:flex; flex-direction:column; gap:24px;
     }
-    #s07 .node2 .n{
+    #s08 .node2 .n{
       margin:0; font-family:var(--mono); font-size:30px; font-weight:600;
       letter-spacing:.18em; color:var(--accent);
     }
-    #s07 .node2 .t{
+    #s08 .node2 .t{
       margin:auto 0 0; font-size:56px; font-weight:700; line-height:1.2; letter-spacing:-.018em;
     }
     /* the last node is the conventional answer — it costs money and time, which
        is the tension the next slide resolves */
-    #s07 .node2.last{ border-top-color:var(--amber); }
-    #s07 .node2.last .n{ color:var(--amber); }
+    #s08 .node2.last{ border-top-color:var(--amber); }
+    #s08 .node2.last .n{ color:var(--amber); }
 
-    #s07 .arw{
+    #s08 .arw{
       flex:0 0 96px; position:relative; align-self:center; height:6px;
       background:var(--hair);
     }
-    #s07 .arw::after{
+    #s08 .arw::after{
       content:""; position:absolute; right:-2px; top:50%; transform:translateY(-50%);
       width:0; height:0; border:19px solid transparent;
       border-left-color:var(--accent); border-right:0;
@@ -615,18 +747,18 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 08-agent-reveal.html ===== -->
-<section class="slide t-accent l-center" data-slide="8" data-title="Nhân viên tư vấn số" id="s08">
+<!-- ===== 09-agent-reveal.html ===== -->
+<section class="slide t-accent l-center" data-slide="9" data-title="Nhân viên tư vấn số" id="s09">
   <style>
     /* The answer to the pressure chain on slide 07, so it is deliberately bare:
        the term itself, nothing else. Weight carries the emphasis the client
        asked for — "Nhân viên" light, "tư vấn số" heavy. */
-    #s08{ gap:0; }
-    #s08 .nm{
+    #s09{ gap:0; }
+    #s09 .nm{
       margin:0; font-size:330px; font-weight:500; letter-spacing:-.045em;
       line-height:1; text-align:center; white-space:nowrap;
     }
-    #s08 .nm b{ font-weight:900; }
+    #s09 .nm b{ font-weight:900; }
   </style>
 
   <div class="deco">
@@ -648,15 +780,15 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 09-divider-understand.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="9" data-title="Phần 02 — Trước khi tạo nhân viên số" id="s09">
+<!-- ===== 10-divider-understand.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="10" data-title="Phần 02 — Trước khi tạo nhân viên số" id="s10">
   <style>
     /* two-line divider title: the component ships line-height:1 (single-line),
        which collides ạ/ộ dot-belows with the next line's tone marks. */
-    #s09 .dtitle{ font-size:214px; line-height:1.06; }
-    #s09 .dtitle .ln{ display:block; }
+    #s10 .dtitle{ font-size:214px; line-height:1.06; }
+    #s10 .dtitle .ln{ display:block; }
     /* lift the strip clear of the .brandbar plate (bottom:34px, ~70px tall) */
-    #s09 .strip{ bottom:182px; }
+    #s10 .strip{ bottom:182px; }
   </style>
 
   <div class="deco">
@@ -689,35 +821,35 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 10-what-is-agent.html ===== -->
-<section class="slide t-ink l-stack" data-slide="10" data-title="Nhân viên tư vấn số là gì?" id="s10">
+<!-- ===== 11-what-is-agent.html ===== -->
+<section class="slide t-ink l-stack" data-slide="11" data-title="Nhân viên tư vấn số là gì?" id="s11">
   <style>
-    #s10{ gap:0; }
+    #s11{ gap:0; }
 
     /* ---- headline ---- */
-    #s10 .top{ display:flex; align-items:flex-end; }
-    #s10 .top .hd{ flex:1 1 auto; min-width:0; }
-    #s10 .top .hd h1{
+    #s11 .top{ display:flex; align-items:flex-end; }
+    #s11 .top .hd{ flex:1 1 auto; min-width:0; }
+    #s11 .top .hd h1{
       margin:36px 0 0; font-size:180px; font-weight:900;
       letter-spacing:-.042em; line-height:.92; white-space:nowrap;
     }
 
     /* ---- the question and its answer chipset ---- */
-    #s10 .qa{ margin-top:176px; }
-    #s10 .q{
+    #s11 .qa{ margin-top:176px; }
+    #s11 .q{
       display:flex; align-items:baseline; gap:32px; margin:0;
       font-size:84px; font-weight:700; letter-spacing:-.022em; line-height:1.06;
     }
-    #s10 .q .mk{
+    #s11 .q .mk{
       font-family:var(--mono); font-weight:600; color:var(--accent); flex:none;
       font-size:66px;
     }
-    #s10 .chipset{ margin-top:52px; gap:22px; justify-content:space-between; }
-    #s10 .chip{
+    #s11 .chipset{ margin-top:52px; gap:22px; justify-content:space-between; }
+    #s11 .chip{
       font-size:52px; padding:24px 40px; border-width:3px; background:transparent;
     }
-    #s10 .chip .ic{ width:18px; height:18px; }
-    #s10 .chip .k{
+    #s11 .chip .ic{ width:18px; height:18px; }
+    #s11 .chip .k{
       font-family:var(--mono); font-size:25px; letter-spacing:.16em;
       color:var(--muted); margin-right:2px;
     }
@@ -766,17 +898,17 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 11-clincher-staff.html ===== -->
-<section class="slide t-paper l-center" data-slide="11" data-title="Câu chốt — nhân viên thật và nhân viên số" id="s11">
+<!-- ===== 12-clincher-staff.html ===== -->
+<section class="slide t-paper l-center" data-slide="12" data-title="Câu chốt — nhân viên thật và nhân viên số" id="s12">
   <style>
     /* Warm-paper ground (matching every other light slide), black body copy,
        crimson bold on the two things the sentence equates. */
-    #s11{ gap:0; }
-    #s11 .cl{
+    #s12{ gap:0; }
+    #s12 .cl{
       margin:0; font-size:184px; font-weight:600; letter-spacing:-.032em;
       line-height:1.12; text-align:center; color:var(--fg);
     }
-    #s11 .cl b{ font-weight:900; color:var(--accent); }
+    #s12 .cl b{ font-weight:900; color:var(--accent); }
   </style>
 
   <div class="deco">
@@ -800,25 +932,25 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 12-hr-file.html ===== -->
-<section class="slide t-paper" data-slide="12" data-title="Nhân viên số cũng cần một hồ sơ nhân sự" id="s12">
+<!-- ===== 13-hr-file.html ===== -->
+<section class="slide t-paper" data-slide="13" data-title="Nhân viên số cũng cần một hồ sơ nhân sự" id="s13">
   <style>
-    #s12{ flex-direction:column; justify-content:center; gap:0; }
+    #s13{ flex-direction:column; justify-content:center; gap:0; }
 
-    #s12 .band{ display:flex; align-items:flex-start; }
-    #s12 .band h1{ flex:1 1 auto; min-width:0; font-size:172px; line-height:1.08; margin:0; }
+    #s13 .band{ display:flex; align-items:flex-start; }
+    #s13 .band h1{ flex:1 1 auto; min-width:0; font-size:172px; line-height:1.08; margin:0; }
 
-    #s12 .items{ display:flex; gap:32px; margin-top:132px; align-items:stretch; }
-    #s12 .it{
+    #s13 .items{ display:flex; gap:32px; margin-top:132px; align-items:stretch; }
+    #s13 .it{
       flex:1; min-width:0; padding-top:30px; border-top:6px solid var(--accent);
       display:flex; flex-direction:column; gap:22px;
     }
-    #s12 .it .no{ margin:0; font-family:var(--mono); font-size:28px; font-weight:600;
+    #s13 .it .no{ margin:0; font-family:var(--mono); font-size:28px; font-weight:600;
       letter-spacing:.2em; color:var(--accent); }
-    #s12 .it .k{ margin:0; font-size:68px; font-weight:800; letter-spacing:-.018em; line-height:1.14; }
+    #s13 .it .k{ margin:0; font-size:68px; font-weight:800; letter-spacing:-.018em; line-height:1.14; }
     /* the last item is the loop that keeps the whole file alive */
-    #s12 .it.last{ border-top-color:var(--ink); }
-    #s12 .it.last .no{ color:var(--ink); opacity:.5; }
+    #s13 .it.last{ border-top-color:var(--ink); }
+    #s13 .it.last .no{ color:var(--ink); opacity:.5; }
   </style>
 
   <div class="deco">
@@ -854,30 +986,30 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 13-chat-with-an.html ===== -->
-<section class="slide t-ink" data-slide="13" data-title="Chat với An — nhân viên tư vấn trái cây và mâm ngũ quả" id="s13">
+<!-- ===== 14-chat-with-an.html ===== -->
+<section class="slide t-ink" data-slide="14" data-title="Chat với An — nhân viên tư vấn trái cây và mâm ngũ quả" id="s14">
   <style>
     /* Two elements only, so they sit as one centred pair with a hairline
        between them — the same recipe as the speaker slide. Anchoring each
        to its own safe edge would leave a hole in the middle of a 4:1 stage. */
-    #s13{ align-items:center; justify-content:center; gap:150px; }
+    #s14{ align-items:center; justify-content:center; gap:150px; }
 
-    #s13 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:46px; }
-    #s13 .lz h1{
+    #s14 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:46px; }
+    #s14 .lz h1{
       margin:0; font-size:168px; font-weight:900; letter-spacing:-.038em; line-height:1.1;
     }
 
-    #s13 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
+    #s14 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
       margin:118px 0; transform-origin:center top; }
 
-    #s13 .plate{
+    #s14 .plate{
       flex:none; position:relative; width:660px; height:660px; border-radius:44px;
       background:#fff; padding:44px; box-sizing:border-box;
       box-shadow:0 0 0 8px var(--brand), 0 44px 120px -30px #E61F28AA;
       overflow:hidden;
     }
-    #s13 .plate img{ width:100%; height:100%; display:block; object-fit:contain; }
-    #s13 .plate .scan{
+    #s14 .plate img{ width:100%; height:100%; display:block; object-fit:contain; }
+    #s14 .plate .scan{
       position:absolute; left:0; right:0; height:170px; pointer-events:none;
       background:linear-gradient(to bottom,#E61F2800,#E61F2830 45%,#E61F28CC 50%,#E61F2830 55%,#E61F2800);
       animation:s11scan 3.4s cubic-bezier(.45,0,.55,1) infinite;
@@ -920,28 +1052,28 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 14-divider-training.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="14" data-title="Phần 03 — Tuyển dụng và đào tạo nhân viên đầu tiên của bạn" id="s14">
+<!-- ===== 15-divider-training.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="15" data-title="Phần 03 — Tuyển dụng và đào tạo nhân viên đầu tiên của bạn" id="s15">
   <style>
-    #s14 .dtitle{ font-size:196px; }
+    #s15 .dtitle{ font-size:196px; }
     /* lift the strip clear of the .brandbar plate (bottom:34px, ~70px tall) */
-    #s14 .strip{ bottom:182px; }
+    #s15 .strip{ bottom:182px; }
 
     /* trial code — attendees type this in, so it gets the one solid plate
        on the slide instead of living in the .sub slot as a footnote. */
-    #s14 .code{
+    #s15 .code{
       margin:66px 0 0; display:flex; align-items:stretch;
       border-radius:22px; overflow:hidden;
       box-shadow:0 34px 90px -40px #00000099;
     }
-    #s14 .code .lb{
+    #s15 .code .lb{
       flex:none; display:flex; align-items:center;
       background:var(--accent); color:#fff;
       font-family:var(--mono); font-size:44px; font-weight:600;
       letter-spacing:.24em; text-transform:uppercase;
       padding:0 44px;
     }
-    #s14 .code .val{
+    #s15 .code .val{
       flex:none; display:flex; align-items:center;
       background:var(--paper); color:var(--ink);
       font-family:var(--mono); font-size:158px; font-weight:700;
@@ -983,26 +1115,26 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 15-create-agent.html ===== -->
-<section class="slide t-paper l-rail" data-slide="15" data-title="Hãy tạo một nhân viên tư vấn số đầu tiên" id="s15">
+<!-- ===== 16-create-agent.html ===== -->
+<section class="slide t-paper l-rail" data-slide="16" data-title="Hãy tạo một nhân viên tư vấn số đầu tiên" id="s16">
   <style>
-    #s15{ justify-content:flex-start; gap:58px; padding-bottom:148px; }
+    #s16{ justify-content:flex-start; gap:58px; padding-bottom:148px; }
 
-    #s15 .band{ flex:none; }
-        #s15 .band h1{ font-size:132px; line-height:1.1; letter-spacing:-.034em; }
+    #s16 .band{ flex:none; }
+        #s16 .band h1{ font-size:132px; line-height:1.1; letter-spacing:-.034em; }
 
-    #s15 .rail{ flex:1; min-height:0; gap:38px; }
-    #s15 .card{
+    #s16 .rail{ flex:1; min-height:0; gap:38px; }
+    #s16 .card{
       min-height:0; gap:0; border-radius:30px;
       padding:38px 44px 44px;
       background:#FFFFFF; border:2px solid #0A0B0D14; border-top:9px solid var(--accent);
       box-shadow:0 24px 60px -34px #0A0B0D26;
     }
-    #s15 .card .n{
+    #s16 .card .n{
       font-family:var(--mono); font-size:196px; font-weight:600; line-height:.88;
       letter-spacing:-.04em; color:var(--accent); margin:0;
     }
-    #s15 .card .k{
+    #s16 .card .k{
       font-size:56px; font-weight:800; line-height:1.16; letter-spacing:-.022em;
       margin:auto 0 0; padding-top:32px; border-top:3px solid #0A0B0D1F; color:var(--fg);
       text-wrap:pretty;
@@ -1056,51 +1188,51 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 16-feed-data.html ===== -->
-<section class="slide t-ink l-stack" data-slide="16" data-title="Nhân viên cần biết những gì để trả lời được?" id="s16">
+<!-- ===== 17-feed-data.html ===== -->
+<section class="slide t-ink l-stack" data-slide="17" data-title="Nhân viên cần biết những gì để trả lời được?" id="s17">
   <style>
-    #s16{ gap:76px; padding-bottom:150px; }
+    #s17{ gap:76px; padding-bottom:150px; }
 
-    #s16 .band{ display:flex; align-items:flex-end; gap:120px; flex:none; }
-    #s16 .band .hd{ flex:1; min-width:0; display:flex; flex-direction:column; gap:30px; }
-    #s16 .band h1{ line-height:1.06; }
-    #s16 .band .cnt{
+    #s17 .band{ display:flex; align-items:flex-end; gap:120px; flex:none; }
+    #s17 .band .hd{ flex:1; min-width:0; display:flex; flex-direction:column; gap:30px; }
+    #s17 .band h1{ line-height:1.06; }
+    #s17 .band .cnt{
       flex:0 0 auto; display:flex; align-items:baseline; gap:26px;
       border-top:3px solid var(--accent); padding-top:26px;
     }
-    #s16 .band .cnt .b{
+    #s17 .band .cnt .b{
       font-family:var(--mono); font-size:96px; font-weight:600; line-height:.82;
       letter-spacing:-.04em; color:var(--accent); margin:0;
     }
-    #s16 .band .cnt .t{
+    #s17 .band .cnt .t{
       margin:0; font-family:var(--mono); font-size:32px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
       line-height:1; white-space:nowrap;
     }
 
-    #s16 .grid7{ display:grid; grid-template-columns:repeat(7,1fr); gap:34px; flex:1; min-height:0; }
-    #s16 .it{
+    #s17 .grid7{ display:grid; grid-template-columns:repeat(7,1fr); gap:34px; flex:1; min-height:0; }
+    #s17 .it{
       display:flex; flex-direction:column;
       padding:26px 24px 0 0;
       border-top:4px solid #FFFFFF3D;
     }
-    #s16 .it .n{
+    #s17 .it .n{
       font-family:var(--mono); font-size:84px; font-weight:600; letter-spacing:-.03em;
       line-height:1; color:var(--muted); opacity:.7;
     }
-    #s16 .it .k{
+    #s17 .it .k{
       margin:auto 0 0; font-size:54px; font-weight:800; letter-spacing:-.024em; line-height:1.08;
       padding-bottom:24px; text-wrap:pretty;
     }
-    #s16 .it .u{ display:block; height:4px; background:var(--accent); border-radius:2px; }
+    #s17 .it .u{ display:block; height:4px; background:var(--accent); border-radius:2px; }
 
-    #s16 .it.last{
+    #s17 .it.last{
       border-top:none; background:var(--accent); color:#FFFFFF;
       border-radius:26px; padding:26px 30px 30px; margin-top:-4px;
     }
-    #s16 .it.last .n{ color:#FFFFFF; opacity:.62; }
-    #s16 .it.last .k{ padding-bottom:0; }
-    #s16 .it.last .tag{
+    #s17 .it.last .n{ color:#FFFFFF; opacity:.62; }
+    #s17 .it.last .k{ padding-bottom:0; }
+    #s17 .it.last .tag{
       display:block; font-family:var(--mono); font-size:27px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; opacity:.8; margin-bottom:14px;
     }
@@ -1166,38 +1298,38 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 17-test-5.html ===== -->
-<section class="slide t-paper l-split" data-slide="17" data-title="Test bằng 5 câu khách thật sẽ hỏi" id="s17">
+<!-- ===== 18-test-5.html ===== -->
+<section class="slide t-paper l-split" data-slide="18" data-title="Test bằng 5 câu khách thật sẽ hỏi" id="s18">
   <style>
-    #s17{ gap:120px; padding-bottom:140px; }
-    #s17 > .lead{ flex:0 0 1420px; gap:46px; }
-    #s17 > .lead h1{ font-size:126px; line-height:1.08; }
-    #s17 > .payload{ flex-direction:row; gap:60px; align-items:flex-start; justify-content:flex-start; }
-    #s17 .col{ flex:1; min-width:0; display:flex; flex-direction:column; gap:44px; }
-    #s17 .col.b{ margin-top:214px; }
+    #s18{ gap:120px; padding-bottom:140px; }
+    #s18 > .lead{ flex:0 0 1420px; gap:46px; }
+    #s18 > .lead h1{ font-size:126px; line-height:1.08; }
+    #s18 > .payload{ flex-direction:row; gap:60px; align-items:flex-start; justify-content:flex-start; }
+    #s18 .col{ flex:1; min-width:0; display:flex; flex-direction:column; gap:44px; }
+    #s18 .col.b{ margin-top:214px; }
 
-    #s17 .bub{
+    #s18 .bub{
       max-width:100%; width:100%; background:#FFFFFF; border:2px solid var(--paper-3);
       padding:38px 46px 40px; font-size:58px; line-height:1.2; font-weight:500;
       letter-spacing:-.014em; border-radius:34px; border-bottom-left-radius:8px;
       box-shadow:0 20px 46px -26px #0A0B0D2E;
     }
-    #s17 .bub .who{ color:var(--muted); opacity:1; font-size:26px; letter-spacing:.2em; margin-bottom:16px; }
-    #s17 .bub.esc{ border-color:var(--accent); border-width:3px; }
-    #s17 .bub.esc .who{ color:var(--accent); }
+    #s18 .bub .who{ color:var(--muted); opacity:1; font-size:26px; letter-spacing:.2em; margin-bottom:16px; }
+    #s18 .bub.esc{ border-color:var(--accent); border-width:3px; }
+    #s18 .bub.esc .who{ color:var(--accent); }
 
-    #s17 .chk{
+    #s18 .chk{
       background:var(--accent); color:#FFFFFF; border-radius:30px; padding:40px 46px 44px;
       display:flex; flex-direction:column; gap:22px;
       box-shadow:0 28px 64px -34px #E61F2866;
     }
-    #s17 .chk .t{
+    #s18 .chk .t{
       font-family:var(--mono); font-size:27px; font-weight:600; letter-spacing:.22em;
       text-transform:uppercase; opacity:.78; margin:0;
     }
-    #s17 .chk p{ margin:0; font-size:44px; line-height:1.22; font-weight:600; letter-spacing:-.012em; }
-    #s17 .chk p b{ font-weight:800; }
-    #s17 .chk p.two{ padding-top:22px; border-top:2px solid #FFFFFF52; }
+    #s18 .chk p{ margin:0; font-size:44px; line-height:1.22; font-weight:600; letter-spacing:-.012em; }
+    #s18 .chk p b{ font-weight:800; }
+    #s18 .chk p.two{ padding-top:22px; border-top:2px solid #FFFFFF52; }
   </style>
 
   <div class="deco">
@@ -1250,8 +1382,8 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 18-refine.html ===== -->
-<section class="slide t-ink l-split" data-slide="18" data-title="Nhân viên số không cần hoàn hảo ngay từ lần đầu" id="s18">
+<!-- ===== 19-refine.html ===== -->
+<section class="slide t-ink l-split" data-slide="19" data-title="Nhân viên số không cần hoàn hảo ngay từ lần đầu" id="s19">
   <div class="deco">
     <div class="deco-grid"></div>
     <div class="deco-orb mint" style="right:-700px; bottom:-1160px; opacity:.13;"></div>
@@ -1260,23 +1392,23 @@
   <p class="meta">Training <b>·</b> Sửa &amp; train lại</p>
 
   <style>
-    #s18{ gap:150px; }
-    #s18 > .lead{ flex:0 0 1560px; gap:44px; }
-    #s18 > .payload{ flex-direction:row; align-items:center; gap:56px; }
-    #s18 .arrow i{ width:150px; height:4px; }
+    #s19{ gap:150px; }
+    #s19 > .lead{ flex:0 0 1560px; gap:44px; }
+    #s19 > .payload{ flex-direction:row; align-items:center; gap:56px; }
+    #s19 .arrow i{ width:150px; height:4px; }
 
-    #s18 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; gap:34px; }
-    #s18 .cap{
+    #s19 .pane{ flex:1; min-width:0; display:flex; flex-direction:column; gap:34px; }
+    #s19 .cap{
       margin:0; font-family:var(--mono); font-size:29px; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
       display:flex; align-items:center; gap:18px;
     }
-    #s18 .cap i{ width:52px; height:3px; background:currentColor; flex:none; }
-    #s18 .pane.after .cap{ color:var(--mint); }
+    #s19 .cap i{ width:52px; height:3px; background:currentColor; flex:none; }
+    #s19 .pane.after .cap{ color:var(--mint); }
 
-    #s18 .bub{ max-width:100%; width:100%; padding:44px 48px; font-size:56px; line-height:1.24; }
-    #s18 .bub.bad{ border-style:dashed; border-color:#FFFFFF33; color:var(--muted); }
-    #s18 .bub .who{ font-size:25px; }
+    #s19 .bub{ max-width:100%; width:100%; padding:44px 48px; font-size:56px; line-height:1.24; }
+    #s19 .bub.bad{ border-style:dashed; border-color:#FFFFFF33; color:var(--muted); }
+    #s19 .bub .who{ font-size:25px; }
   </style>
 
   <div class="lead">
@@ -1317,8 +1449,8 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 19-press.html ===== -->
-<section class="slide t-paper press" data-slide="19" data-title="Báo chí đang nói về nhân viên số" id="s19">
+<!-- ===== 20-press.html ===== -->
+<section class="slide t-paper press" data-slide="20" data-title="Báo chí đang nói về nhân viên số" id="s20">
   <div class="deco">
     <div class="deco-dots" style="opacity:.4;"></div>
     <div class="deco-orb" style="left:-960px; top:-1300px; opacity:.08;"></div>
@@ -1385,16 +1517,16 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 20-divider-company.html ===== -->
-<section class="slide t-ink l-center divider" data-slide="20" data-title="Phần 04 — Từ nhân viên số đến công ty số" id="s20">
+<!-- ===== 21-divider-company.html ===== -->
+<section class="slide t-ink l-center divider" data-slide="21" data-title="Phần 04 — Từ nhân viên số đến công ty số" id="s21">
   <style>
     /* two-line divider title: the shared component ships line-height:1
        (single-line), which drops the ố/ộ dot-belows of line 1 into line 2's
        tone-mark zone. 1.06 clears it. */
-    #s20 .dtitle{ font-size:232px; line-height:1.06; }
-    #s20 .dtitle .ln{ display:block; }
+    #s21 .dtitle{ font-size:232px; line-height:1.06; }
+    #s21 .dtitle .ln{ display:block; }
     /* lift the strip clear of the .brandbar plate (bottom:22px, ~98px tall) */
-    #s20 .strip{ bottom:182px; }
+    #s21 .strip{ bottom:182px; }
   </style>
 
   <div class="deco">
@@ -1427,43 +1559,43 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 21-speaker-hoang.html ===== -->
-<section class="slide t-ink" data-slide="21" data-title="Speaker — Hoàng Lê" id="s21">
+<!-- ===== 22-speaker-hoang.html ===== -->
+<section class="slide t-ink" data-slide="22" data-title="Speaker — Hoàng Lê" id="s22">
   <style>
     /* Same construction as slide 02 (Tín Trương) so the two speaker slides
        read as a pair: centred name/role + hairline + portrait card. */
-    #s21{ align-items:center; justify-content:center; gap:130px; }
+    #s22{ align-items:center; justify-content:center; gap:130px; }
 
-    #s21 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:44px; }
-    #s21 .nm{
+    #s22 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:44px; }
+    #s22 .nm{
       margin:0; font-size:252px; font-weight:900; letter-spacing:-.042em; line-height:.94;
     }
-    #s21 .roles{ display:flex; flex-direction:column; gap:26px; }
-    #s21 .roles p{
+    #s22 .roles{ display:flex; flex-direction:column; gap:26px; }
+    #s22 .roles p{
       margin:0; display:flex; align-items:center; gap:26px;
       font-size:54px; font-weight:700; letter-spacing:-.016em;
     }
-    #s21 .roles p svg{ width:52px; height:52px; flex:none; stroke:var(--accent); }
+    #s22 .roles p svg{ width:52px; height:52px; flex:none; stroke:var(--accent); }
 
-    #s21 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
+    #s22 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
       margin:150px 0; transform-origin:center top; }
 
-    #s21 .card2{
+    #s22 .card2{
       flex:none; width:640px; height:790px; position:relative;
       border-radius:56px; background:#A10808;
       box-shadow:0 0 0 7px var(--brand), 0 0 110px -12px #E61F28AA, 0 54px 130px -44px #000000CC;
     }
-    #s21 .card2 .ph{
+    #s22 .card2 .ph{
       position:absolute; inset:0; border-radius:56px; overflow:hidden; display:block;
     }
     /* his crop is a wider frame than Tín's (0.79 vs 0.66), so it is sized to
        84% of card height — that lands his head at the same size as Tín's and
        keeps a comfortable red margin at the sides. */
-    #s21 .card2 img{
+    #s22 .card2 img{
       position:absolute; left:50%; bottom:0; transform:translateX(-50%);
       height:84%; width:auto; display:block;
     }
-    #s21 .card2 .pill{
+    #s22 .card2 .pill{
       position:absolute; left:50%; bottom:-34px; transform:translateX(-50%);
       z-index:3; white-space:nowrap;
       background:#08080A; color:#fff; border:5px solid var(--brand);
@@ -1471,7 +1603,7 @@
       font-size:52px; font-weight:800; letter-spacing:-.01em;
       box-shadow:0 0 40px -4px #E61F28CC;
     }
-    #s21 .card2 .ph::after{
+    #s22 .card2 .ph::after{
       content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
       background:linear-gradient(115deg, transparent 34%, #FFFFFF1F 47%, #FFFFFF4D 50%, #FFFFFF1F 53%, transparent 66%);
       transform:translateX(-120%);
@@ -1519,19 +1651,19 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 22-opener-company.html ===== -->
-<section class="slide t-ink l-center" data-slide="22" data-title="Bạn vừa có một nhân viên số. Còn cả một công ty thì sao?" id="s22">
+<!-- ===== 23-opener-company.html ===== -->
+<section class="slide t-ink l-center" data-slide="23" data-title="Bạn vừa có một nhân viên số. Còn cả một công ty thì sao?" id="s23">
   <style>
     /* Client art direction: exactly two lines, accent on "nhân viên số" and
        "công ty", a real beat between them, and nothing else on the slide.
        The emptiness is the brief — no eyebrow, no sub, no role list. */
-    #s22{ gap:0; }
+    #s23{ gap:0; }
 
-    #s22 .say{ margin:0; font-weight:900; letter-spacing:-.038em; white-space:nowrap; }
-    #s22 .one{ font-size:212px; line-height:1.06; }
-    #s22 .two{ font-size:264px; line-height:1.08; margin-top:132px; letter-spacing:-.042em; }
+    #s23 .say{ margin:0; font-weight:900; letter-spacing:-.038em; white-space:nowrap; }
+    #s23 .one{ font-size:212px; line-height:1.06; }
+    #s23 .two{ font-size:264px; line-height:1.08; margin-top:132px; letter-spacing:-.042em; }
     /* the accent words are the only colour on the slide */
-    #s22 .say .ac{ color:var(--accent); }
+    #s23 .say .ac{ color:var(--accent); }
   </style>
 
   <div class="deco">
@@ -1555,54 +1687,54 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 23-four-roles.html ===== -->
-<section class="slide t-paper l-rail" data-slide="23" data-title="Mỗi nhân viên số, một phần việc rõ ràng" id="s23">
+<!-- ===== 24-four-roles.html ===== -->
+<section class="slide t-paper l-rail" data-slide="24" data-title="Mỗi nhân viên số, một phần việc rõ ràng" id="s24">
   <style>
     /* Brief v13: the card title is the EMPLOYEE's job scope, never a department
        name — "Không dùng tên phòng ban làm tiêu đề thẻ." Four equal, independent
        scopes: no numbering, no arrows, no size hierarchy. The only differences
        allowed are the icon, the words, and the quiet tie-back on the advisory
        role the room already met in the Sale Agent part. */
-    #s23{ justify-content:flex-start; gap:66px; }
+    #s24{ justify-content:flex-start; gap:66px; }
 
-    #s23 .ttl{
+    #s24 .ttl{
       /* +30px offsets the .mask negative margin so the diacritics on "Mỗi"
          still clear the 104px safe line. */
       margin:30px 0 0; font-size:148px; font-weight:900; line-height:.94;
       letter-spacing:-.04em; flex:none;
     }
 
-    #s23 .rail{ flex:none; gap:40px; height:556px; }
+    #s24 .rail{ flex:none; gap:40px; height:556px; }
 
-    #s23 .it{
+    #s24 .it{
       background:#FFFFFF; border:2px solid #0A0B0D14; height:100%;
       border-radius:30px; padding:48px 44px 52px;
       display:flex; flex-direction:column;
       box-shadow:0 24px 60px -34px #0A0B0D26;
     }
-    #s23 .it .ic{ display:block; width:132px; height:132px; flex:none; }
-    #s23 .it .eb{
+    #s24 .it .ic{ display:block; width:132px; height:132px; flex:none; }
+    #s24 .it .eb{
       margin:32px 0 0; font-family:var(--mono); font-size:25px; font-weight:600;
       letter-spacing:.22em; text-transform:uppercase; color:var(--muted);
     }
-    #s23 .it .k{
+    #s24 .it .k{
       margin:16px 0 0; font-size:62px; font-weight:900; line-height:1.08;
       letter-spacing:-.026em; color:var(--fg);
     }
-    #s23 .it .v{
+    #s24 .it .v{
       margin:auto 0 0; padding-top:30px; border-top:2px solid #0A0B0D14;
       font-size:42px; font-weight:500; line-height:1.26;
       letter-spacing:-.012em; color:var(--muted); text-wrap:pretty;
     }
     /* the tie-back: mono, small, one line — it must not add weight to the card */
-    #s23 .it .tie{
+    #s24 .it .tie{
       margin:24px 0 0; font-family:var(--mono); font-size:25px; font-weight:600;
       letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
       display:flex; align-items:center; gap:16px;
     }
-    #s23 .it .tie i{ width:11px; height:11px; border-radius:50%; background:var(--accent); flex:none; }
+    #s24 .it .tie i{ width:11px; height:11px; border-radius:50%; background:var(--accent); flex:none; }
 
-    #s23 .arc{
+    #s24 .arc{
       position:absolute; left:-520px; top:-680px;
       width:1500px; height:1500px; border-radius:50%;
       border:70px solid var(--accent); opacity:.1;
@@ -1683,8 +1815,8 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 24-org-diagram.html ===== -->
-<section class="slide t-paper" data-slide="24" data-title="Công ty số — sơ đồ ba tầng" id="s24">
+<!-- ===== 25-org-diagram.html ===== -->
+<section class="slide t-paper" data-slide="25" data-title="Công ty số — sơ đồ ba tầng" id="s25">
   <style>
     /* ------------------------------------------------------------------
        Slide 19 — conceptual org chart, three tiers.
@@ -1694,58 +1826,58 @@
        (912px of height has to hold three tiers plus two connector zones).
        Every coordinate below is local to .dg (2720 x 912).
        ------------------------------------------------------------------ */
-    #s24{ align-items:center; gap:130px; }
+    #s25{ align-items:center; gap:130px; }
 
-    #s24 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:46px; }
-    #s24 .ttl{
+    #s25 .lead{ flex:1; min-width:0; display:flex; flex-direction:column; gap:46px; }
+    #s25 .ttl{
       margin:0; font-size:130px; font-weight:900;
       letter-spacing:-.032em; line-height:1.05; text-wrap:balance;
     }
-    #s24 .lead .sm{ max-width:20ch; }
+    #s25 .lead .sm{ max-width:20ch; }
 
-    #s24 .dg{
+    #s25 .dg{
       flex:none; width:2720px; height:912px; position:relative;
       /* The foundation tier ended exactly on the safe-area edge, where the
          .ribbon pill sits. Scale the whole chart from its top so the internal
          geometry stays exact and the bottom tier clears the furniture. */
       transform:scale(.93); transform-origin:top center;
     }
-    #s24 .lay{ position:absolute; inset:0; }
+    #s25 .lay{ position:absolute; inset:0; }
 
     /* thicker rules than the 3px default — 3px vanishes on an LED wall */
-    #s24 .conn.h{ height:5px; margin-top:-2.5px; }
-    #s24 .conn.v{ width:5px;  margin-left:-2.5px; }
-    #s24 .ah{
+    #s25 .conn.h{ height:5px; margin-top:-2.5px; }
+    #s25 .conn.v{ width:5px;  margin-left:-2.5px; }
+    #s25 .ah{
       position:absolute; width:0; height:0; margin-left:-18px;
       border:18px solid transparent; border-top-color:var(--forest); border-bottom:0;
     }
 
-    #s24 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
+    #s25 .node{ position:absolute; box-shadow:0 20px 48px -34px #0A0B0D3D; }
 
     /* tier 1 — the human owner. The ONLY crimson on this slide. */
-    #s24 .owner{ left:930px; top:0; width:860px; height:182px; border-width:4px; }
-    #s24 .owner .hd{
+    #s25 .owner{ left:930px; top:0; width:860px; height:182px; border-width:4px; }
+    #s25 .owner .hd{
       height:100%; display:flex; align-items:center; justify-content:center;
       gap:30px; font-size:54px; padding:0 40px; line-height:1.14; letter-spacing:-.01em;
     }
-    #s24 .owner svg{ width:66px; height:66px; flex:none; }
+    #s25 .owner svg{ width:66px; height:66px; flex:none; }
 
     /* tier 2 — four equal digital roles, icon over label */
-    #s24 .role{ top:372px; width:650px; height:250px; }
-    #s24 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
-    #s24 .role .ic svg{ width:116px; height:116px; }
-    #s24 .role .hd{ font-size:37px; padding:18px 20px; line-height:1.16; letter-spacing:-.008em; }
+    #s25 .role{ top:372px; width:650px; height:250px; }
+    #s25 .role .ic{ flex:1; display:grid; place-items:center; color:var(--forest); }
+    #s25 .role .ic svg{ width:116px; height:116px; }
+    #s25 .role .hd{ font-size:37px; padding:18px 20px; line-height:1.16; letter-spacing:-.008em; }
 
     /* tier 3 — the shared working platform: solid plates, icon beside label */
-    #s24 .found{
+    #s25 .found{
       top:756px; height:176px; width:880px;
       flex-direction:row; align-items:center; gap:34px; padding:0 46px;
       background:var(--forest); border-color:var(--forest); color:#fff;
     }
-    #s24 .found svg{ width:76px; height:76px; flex:none; }
-    #s24 .found .t{ font-size:44px; font-weight:700; letter-spacing:-.014em; line-height:1.1;
+    #s25 .found svg{ width:76px; height:76px; flex:none; }
+    #s25 .found .t{ font-size:44px; font-weight:700; letter-spacing:-.014em; line-height:1.1;
       display:flex; flex-direction:column; gap:10px; }
-    #s24 .found .t em{
+    #s25 .found .t em{
       font-style:normal; font-family:var(--mono); font-size:25px; font-weight:600;
       letter-spacing:.08em; opacity:.72;
     }
@@ -1890,8 +2022,8 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 25-zalo-flow.html ===== -->
-<section class="slide t-paper" data-slide="25" data-title="Từ tin nhắn Zalo đến công việc của cả đội" id="s25">
+<!-- ===== 26-zalo-flow.html ===== -->
+<section class="slide t-paper" data-slide="26" data-title="Từ tin nhắn Zalo đến công việc của cả đội" id="s26">
   <style>
     /* ------------------------------------------------------------------
        Slide 22 — the four-step Zalo coordination story.
@@ -1922,38 +2054,38 @@
        Step badges are neutral ink so they never borrow crimson.
        No verification badges, no numbers beyond the brief.
        ------------------------------------------------------------------ */
-    #s25{ align-items:stretch; gap:120px; }
+    #s26{ align-items:stretch; gap:120px; }
 
     /* ---- lead ------------------------------------------------------- */
-    #s25 .lead{
+    #s26 .lead{
       flex:none; width:1500px; min-width:0;
       display:flex; flex-direction:column; justify-content:center; gap:40px;
     }
-    #s25 .ttl{
+    #s26 .ttl{
       margin:0; font-size:148px; font-weight:900;
       letter-spacing:-.036em; line-height:1.06;
     }
-    #s25 .spine{
+    #s26 .spine{
       margin:0; font-size:40px; line-height:1.34; font-weight:500;
       letter-spacing:-.012em; color:var(--fg); max-width:1170px;
     }
-    #s25 .spine b{ font-weight:800; color:var(--forest); }
-    #s25 .spine i{ font-style:normal; color:var(--brand); font-weight:800; }
-    #s25 .spine em{ font-style:normal; color:var(--muted); font-weight:700; padding:0 .1em; }
+    #s26 .spine b{ font-weight:800; color:var(--forest); }
+    #s26 .spine i{ font-style:normal; color:var(--brand); font-weight:800; }
+    #s26 .spine em{ font-style:normal; color:var(--muted); font-weight:700; padding:0 .1em; }
 
     /* ---- flow region ------------------------------------------------
        gaps are asymmetric on purpose: the wider right gap is where the
        crimson "người thật" tag breaks out of phone 03. */
-    #s25 .flow{ flex:1; min-width:0; display:flex; align-items:stretch; }
-    #s25 .flow > .ph:first-child{ margin-right:130px; }
-    #s25 .flow > .ph:last-child{ margin-left:170px; }
+    #s26 .flow{ flex:1; min-width:0; display:flex; align-items:stretch; }
+    #s26 .flow > .ph:first-child{ margin-right:130px; }
+    #s26 .flow > .ph:last-child{ margin-left:170px; }
 
     /* ---- phone: the reference's 310:660, driven off available height - */
-    #s25 .ph{
+    #s26 .ph{
       flex:none; width:402px; aspect-ratio:310 / 660;
       align-self:flex-end; margin-bottom:26px; position:relative;
     }
-    #s25 .phone{
+    #s26 .phone{
       position:absolute; inset:0; overflow:visible;   /* the tags break the frame */
       display:flex; flex-direction:column;
       border:9px solid #FCFCFD; border-radius:44px;
@@ -1962,85 +2094,85 @@
     }
     /* the blue bar and the home bar carry the frame's rounding, so .phone
        itself can stay overflow:visible for the callout tags */
-    #s25 .blue{
+    #s26 .blue{
       flex:none; color:#fff; border-radius:35px 35px 0 0;
       background:linear-gradient(108deg,#277DFF 0%,#139AFF 55%,#00BDEB 100%);
     }
-    #s25 .stt{
+    #s26 .stt{
       display:flex; justify-content:space-between; align-items:center;
       padding:9px 20px 3px; font-size:21px; font-weight:600; line-height:1.14;
     }
-    #s25 .stt svg{ width:54px; height:15px; }
-    #s25 .hd{ display:flex; align-items:center; gap:12px; padding:5px 16px 12px; }
-    #s25 .hd > svg{ width:28px; height:28px; flex:none; }
-    #s25 .hd .who{ flex:1; min-width:0; }
-    #s25 .hd .nm{
+    #s26 .stt svg{ width:54px; height:15px; }
+    #s26 .hd{ display:flex; align-items:center; gap:12px; padding:5px 16px 12px; }
+    #s26 .hd > svg{ width:28px; height:28px; flex:none; }
+    #s26 .hd .who{ flex:1; min-width:0; }
+    #s26 .hd .nm{
       margin:0; font-size:30px; font-weight:700; letter-spacing:-.018em; line-height:1.14;
       white-space:nowrap; overflow:hidden;
     }
-    #s25 .hd .rm{
+    #s26 .hd .rm{
       margin:2px 0 0; font-family:var(--mono); font-size:20px; font-weight:600;
       letter-spacing:.06em; text-transform:uppercase; opacity:.92; line-height:1.2;
       white-space:nowrap;
     }
-    #s25 .hd .dt{ width:26px; height:26px; flex:none; }
+    #s26 .hd .dt{ width:26px; height:26px; flex:none; }
 
     /* real chats sit on the bottom edge — flex-end keeps the slack up top
        instead of letting a long thread push out through the header */
-    #s25 .chat{
+    #s26 .chat{
       flex:1; min-height:0; background:#E3E6F2;
       display:flex; flex-direction:column; justify-content:flex-end; gap:8px;
       padding:10px 12px 8px;
     }
-    #s25 .in{ display:flex; align-items:flex-start; gap:10px; }
-    #s25 .av{
+    #s26 .in{ display:flex; align-items:flex-start; gap:10px; }
+    #s26 .av{
       width:40px; height:40px; border-radius:50%; flex:none;
       display:grid; place-items:center; background:#0068FF; color:#fff;
       font-size:20px; font-weight:700;
     }
-    #s25 .bub{
+    #s26 .bub{
       background:#fff; border-radius:17px; padding:10px 14px;
       font-size:27px; line-height:1.2; font-weight:500; max-width:300px;
     }
-    #s25 .bub small{
+    #s26 .bub small{
       display:block; font-size:20px; font-weight:600; color:#7E8D98;
       margin-bottom:2px; line-height:1.16;
     }
-    #s25 .bub time{ display:block; font-size:20px; color:#98A1AA; margin-top:3px; font-weight:600; line-height:1.16; }
-    #s25 .bub strong{ font-weight:800; }
-    #s25 .out{ display:flex; justify-content:flex-end; }
+    #s26 .bub time{ display:block; font-size:20px; color:#98A1AA; margin-top:3px; font-weight:600; line-height:1.16; }
+    #s26 .bub strong{ font-weight:800; }
+    #s26 .out{ display:flex; justify-content:flex-end; }
     /* "tin gửi vẫn xanh nhạt" — the human's reply keeps Zalo's sent colour;
        only its label is crimson. */
-    #s25 .out .bub{ background:#D3F2FB; border:2px solid #E4F8FC; max-width:324px; }
+    #s26 .out .bub{ background:#D3F2FB; border:2px solid #E4F8FC; max-width:324px; }
 
-    #s25 .file{
+    #s26 .file{
       display:flex; align-items:center; gap:11px; margin-left:50px;
       background:#fff; border-radius:15px; padding:8px 13px; max-width:300px;
     }
-    #s25 .file svg{ width:32px; height:32px; flex:none; color:#1685DB; }
-    #s25 .file b{ display:block; font-size:24px; font-weight:700; line-height:1.14; }
-    #s25 .file small{ display:block; font-size:19px; color:#98A1AA; font-weight:600; line-height:1.14; margin-top:1px; }
+    #s26 .file svg{ width:32px; height:32px; flex:none; color:#1685DB; }
+    #s26 .file b{ display:block; font-size:24px; font-weight:700; line-height:1.14; }
+    #s26 .file small{ display:block; font-size:19px; color:#98A1AA; font-weight:600; line-height:1.14; margin-top:1px; }
 
-    #s25 .chips{ display:flex; justify-content:center; gap:10px; padding-top:2px; }
-    #s25 .chips span{
+    #s26 .chips{ display:flex; justify-content:center; gap:10px; padding-top:2px; }
+    #s26 .chips span{
       background:#fff; border-radius:999px; padding:7px 14px;
       font-size:20px; font-weight:600; color:#52606D; white-space:nowrap; line-height:1.2;
     }
 
-    #s25 .cmp{
+    #s26 .cmp{
       flex:none; display:flex; align-items:center; gap:11px;
       padding:6px 15px; background:#fff; color:#9096A0;
     }
-    #s25 .cmp svg{ width:29px; height:29px; flex:none; }
-    #s25 .cmp span{ flex:1; font-size:24px; font-weight:500; }
-    #s25 .home{
+    #s26 .cmp svg{ width:29px; height:29px; flex:none; }
+    #s26 .cmp span{ flex:1; font-size:24px; font-weight:500; }
+    #s26 .home{
       flex:none; height:24px; border-radius:0 0 35px 35px; background:#fff;
       display:flex; align-items:center; justify-content:center;
     }
-    #s25 .home i{ width:148px; height:6px; border-radius:99px; background:#DADCE4; display:block; }
+    #s26 .home i{ width:148px; height:6px; border-radius:99px; background:#DADCE4; display:block; }
 
     /* ---- annotation layer: which kind of worker is on the other end -- */
-    #s25 .bdg{
+    #s26 .bdg{
       position:absolute; left:-50px; top:20px; z-index:4;
       width:68px; height:68px; border-radius:20px;
       background:var(--ink); color:#fff;
@@ -2048,91 +2180,91 @@
       font-family:var(--mono); font-size:34px; font-weight:600; font-style:normal;
       box-shadow:0 14px 30px -12px #0A0B0D8C;
     }
-    #s25 .tag{
+    #s26 .tag{
       margin:0; position:relative; z-index:3;
       display:inline-flex; align-items:center; gap:12px;
       border-radius:13px; padding:9px 18px; white-space:nowrap;
       font-size:28px; font-weight:800; letter-spacing:-.01em; color:#fff;
       box-shadow:0 12px 26px -12px #0A0B0D66;
     }
-    #s25 .tag::after{
+    #s26 .tag::after{
       content:""; position:absolute; bottom:-10px;
       width:0; height:0; border:10px solid transparent; border-bottom:0;
     }
-    #s25 .tag i{ width:12px; height:12px; border-radius:50%; background:#FFFFFFB3; flex:none; }
-    #s25 .tag.dig{ align-self:flex-end; background:var(--forest); }
-    #s25 .tag.dig::after{ right:30px; border-top-color:var(--forest); }
+    #s26 .tag i{ width:12px; height:12px; border-radius:50%; background:#FFFFFFB3; flex:none; }
+    #s26 .tag.dig{ align-self:flex-end; background:var(--forest); }
+    #s26 .tag.dig::after{ right:30px; border-top-color:var(--forest); }
     /* the real human is the one thing allowed to break the phone frame */
-    #s25 .tag.man{ align-self:flex-start; margin-left:-150px; background:var(--brand); }
-    #s25 .tag.man::after{ right:34px; border-top-color:var(--brand); }
+    #s26 .tag.man{ align-self:flex-start; margin-left:-150px; background:var(--brand); }
+    #s26 .tag.man::after{ right:34px; border-top-color:var(--brand); }
 
     /* ---- middle column --------------------------------------------- */
-    #s25 .mid{
+    #s26 .mid{
       flex:1; min-width:0; display:flex; flex-direction:column;
       justify-content:center; gap:22px;
     }
-    #s25 .bn{
+    #s26 .bn{
       flex:none; width:68px; height:68px; border-radius:20px;
       background:var(--ink); color:#fff; display:grid; place-items:center;
       font-family:var(--mono); font-size:34px; font-weight:600; font-style:normal;
     }
-    #s25 .srow{ display:flex; align-items:center; gap:24px; }
-    #s25 .srow .st{
+    #s26 .srow{ display:flex; align-items:center; gap:24px; }
+    #s26 .srow .st{
       margin:0; font-family:var(--mono); font-size:33px; font-weight:600;
       letter-spacing:.15em; text-transform:uppercase; color:var(--fg); white-space:nowrap;
     }
-    #s25 .srow .ln{ flex:1; height:3px; background:#0A0B0D26; transform-origin:left center; }
+    #s26 .srow .ln{ flex:1; height:3px; background:#0A0B0D26; transform-origin:left center; }
 
-    #s25 .chk{
+    #s26 .chk{
       background:var(--forest); border-radius:26px; padding:26px 30px;
       box-shadow:0 26px 60px -34px #14503A80;
     }
-    #s25 .chk .top{ display:flex; align-items:center; gap:22px; }
-    #s25 .chk .ic{ flex:none; width:66px; height:66px; }
-    #s25 .chk .rl{
+    #s26 .chk .top{ display:flex; align-items:center; gap:22px; }
+    #s26 .chk .ic{ flex:none; width:66px; height:66px; }
+    #s26 .chk .rl{
       margin:0; font-size:44px; font-weight:800; color:#fff;
       letter-spacing:-.022em; line-height:1.1;
     }
-    #s25 .chk .jb{
+    #s26 .chk .jb{
       margin:8px 0 0; font-size:31px; font-weight:500; color:#BEDACB;
       letter-spacing:-.005em; line-height:1.2;
     }
-    #s25 .chk .rs{
+    #s26 .chk .rs{
       display:flex; align-items:center; gap:18px;
       margin:18px 0 0; padding:16px 0 0; border-top:2px solid #FFFFFF29;
       font-size:40px; font-weight:800; letter-spacing:-.02em; line-height:1.14;
       color:#8FE9B8;
     }
-    #s25 .chk .rs svg{ width:42px; height:42px; flex:none; }
-    #s25 .chk .rs.pend{ color:var(--amber); }
+    #s26 .chk .rs svg{ width:42px; height:42px; flex:none; }
+    #s26 .chk .rs.pend{ color:var(--amber); }
 
-    #s25 .hand{
+    #s26 .hand{
       display:flex; align-items:center; gap:20px;
       font-family:var(--mono); font-size:31px; font-weight:600;
       letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
     }
-    #s25 .hand .ln{ flex:1; height:3px; background:#0A0B0D26; transform-origin:left center; }
-    #s25 .hand .ar{ width:40px; height:40px; flex:none; color:var(--forest); }
+    #s26 .hand .ln{ flex:1; height:3px; background:#0A0B0D26; transform-origin:left center; }
+    #s26 .hand .ar{ width:40px; height:40px; flex:none; color:var(--forest); }
 
-    #s25 .res{
+    #s26 .res{
       display:flex; align-items:flex-start; gap:28px;
       background:var(--forest-pale); border:3px solid #A9C5B4;
       border-radius:26px; padding:24px 30px; margin-top:6px;
     }
-    #s25 .res .tx{ flex:1; min-width:0; }
-    #s25 .res .lb{
+    #s26 .res .tx{ flex:1; min-width:0; }
+    #s26 .res .lb{
       margin:0; font-family:var(--mono); font-size:30px; font-weight:600;
       letter-spacing:.15em; text-transform:uppercase; color:var(--forest-2);
     }
-    #s25 .res .vl{
+    #s26 .res .vl{
       margin:11px 0 0; font-size:42px; font-weight:700; line-height:1.2;
       letter-spacing:-.02em; color:#0F3F2D; text-wrap:balance;
     }
-    #s25 .res .vl b{ font-weight:800; color:var(--forest); }
+    #s26 .res .vl b{ font-weight:800; color:var(--forest); }
 
     /* Phone 03 stands in the top-right corner where .meta normally lives, so
        this slide's section marker is the lead eyebrow instead. */
-    #s25 .meta{ display:none; }
+    #s26 .meta{ display:none; }
   </style>
 
   <div class="deco">
@@ -2383,8 +2515,8 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 26-you-set-goals.html ===== -->
-<section class="slide t-ink l-stack" data-slide="26" data-title="Bạn giao mục tiêu. Đội ngũ thực hiện." id="s26">
+<!-- ===== 27-you-set-goals.html ===== -->
+<section class="slide t-ink l-stack" data-slide="27" data-title="Bạn giao mục tiêu. Đội ngũ thực hiện." id="s27">
   <style>
     /* Client art direction: headline in the top third; three short lines
        below, laid along the reading direction, with the VERBS carrying the
@@ -2392,36 +2524,36 @@
        table — that framing shrinks the owner's role to a single approval —
        and no human figures. So each row is one continuous line running the
        full 4080px, verb phrase → rule → question. */
-    #s26{ justify-content:flex-start; gap:0; }
+    #s27{ justify-content:flex-start; gap:0; }
 
-    #s26 .ttl{
+    #s27 .ttl{
       /* +26px offsets the .mask negative margin so the diacritics clear the
          104px safe line. */
       margin:26px 0 0; font-size:172px; font-weight:900; line-height:.94;
       letter-spacing:-.04em; flex:none;
     }
 
-    #s26 .rows{ margin-top:78px; display:flex; flex-direction:column; flex:none; }
+    #s27 .rows{ margin-top:78px; display:flex; flex-direction:column; flex:none; }
 
-    #s26 .r{
+    #s27 .r{
       display:flex; align-items:baseline; justify-content:center; gap:46px;
       padding:36px 0 38px; border-top:2px solid var(--hair);
     }
-    #s26 .r:last-child{ border-bottom:2px solid var(--hair); }
+    #s27 .r:last-child{ border-bottom:2px solid var(--hair); }
 
-    #s26 .r .v{
+    #s27 .r .v{
       flex:none; font-size:120px; font-weight:800; line-height:1.06;
       letter-spacing:-.03em; white-space:nowrap;
     }
-    #s26 .r .v b{ color:var(--accent); font-weight:900; }
+    #s27 .r .v b{ color:var(--accent); font-weight:900; }
 
     /* The rule used to be flex:1, which threw the question out to the far
        right edge — on a 4480px wall that is a full head-turn per row. It is
        now a short fixed connector, so verb and question sit inside one eye
        fixation. The full-width hairlines above/below carry the stage width. */
-    #s26 .r .cx{ flex:none; width:104px; height:3px; background:var(--hair); }
+    #s27 .r .cx{ flex:none; width:104px; height:3px; background:var(--hair); }
 
-    #s26 .r .q{
+    #s27 .r .q{
       flex:none; font-size:94px; font-weight:500; line-height:1.1;
       letter-spacing:-.02em; color:var(--muted); white-space:nowrap;
     }
@@ -2464,24 +2596,24 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 27-closing-question.html ===== -->
-<section class="slide t-accent l-center" data-slide="27" data-title="Bạn đã có nhân viên số đầu tiên. Bạn muốn xây đội ngũ nào tiếp theo?" id="s27">
+<!-- ===== 28-closing-question.html ===== -->
+<section class="slide t-accent l-center" data-slide="28" data-title="Bạn đã có nhân viên số đầu tiên. Bạn muốn xây đội ngũ nào tiếp theo?" id="s28">
   <style>
     /* Client art direction: two large lines, generous emptiness so the
        question carries weight, accent on "đội ngũ", line one first then a
        beat before the question, and nothing added — no image, no new idea.
        On t-accent --accent resolves to white, so the accent on "đội ngũ" is
        carried by an inverted white plate (crimson type on white). */
-    #s27{ gap:0; }
+    #s28{ gap:0; }
 
-    #s27 .say{ margin:0; font-weight:900; letter-spacing:-.038em; white-space:nowrap; }
-    #s27 .one{ font-size:186px; line-height:1.06; }
-    #s27 .two{ font-size:230px; line-height:1.08; margin-top:138px; letter-spacing:-.042em; }
+    #s28 .say{ margin:0; font-weight:900; letter-spacing:-.038em; white-space:nowrap; }
+    #s28 .one{ font-size:186px; line-height:1.06; }
+    #s28 .two{ font-size:230px; line-height:1.08; margin-top:138px; letter-spacing:-.042em; }
 
     /* the plate has to clear the circumflex on ộ and the tilde on ũ above,
        and the dot below ộ underneath */
-    #s27 .hl.fill .hl-bar{ top:-.15em; bottom:-.13em; border-radius:10px; }
-    #s27 .hl.fill{ padding:0 .07em; }
+    #s28 .hl.fill .hl-bar{ top:-.15em; bottom:-.13em; border-radius:10px; }
+    #s28 .hl.fill{ padding:0 .07em; }
   </style>
 
   <div class="deco">
@@ -2505,37 +2637,37 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 28-clawexperts-cta.html ===== -->
-<section class="slide t-ink" data-slide="28" data-title="Cùng xây đội ngũ số phía sau bạn — ClawExperts" id="s28">
+<!-- ===== 29-clawexperts-cta.html ===== -->
+<section class="slide t-ink" data-slide="29" data-title="Cùng xây đội ngũ số phía sau bạn — ClawExperts" id="s29">
   <style>
     /* Brief: "Giữ tiêu đề và QR là hai điểm nhìn chính." Nothing else competes —
        no map, no policy figures, no international examples on the closing slide. */
-    #s28{ align-items:center; justify-content:center; gap:150px; }
+    #s29{ align-items:center; justify-content:center; gap:150px; }
 
-    #s28 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:40px; }
-    #s28 .lz h1{
+    #s29 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:40px; }
+    #s29 .lz h1{
       margin:0; font-size:184px; font-weight:900; letter-spacing:-.038em; line-height:1.08;
     }
-    #s28 .lz .sub{
+    #s29 .lz .sub{
       margin:0; font-size:56px; font-weight:500; line-height:1.3; color:var(--muted);
     }
-    #s28 .lz .sub b{ color:var(--fg); font-weight:700; }
+    #s29 .lz .sub b{ color:var(--fg); font-weight:700; }
 
-    #s28 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
+    #s29 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
       margin:140px 0; transform-origin:center top; }
 
-    #s28 .rz{ flex:none; display:flex; flex-direction:column; align-items:center; gap:40px; }
+    #s29 .rz{ flex:none; display:flex; flex-direction:column; align-items:center; gap:40px; }
 
     /* The brief's sample code pointed at example.com; this is the speaker's real
        Zalo QR, supplied by the client. White surround kept per the brief so it
        scans from a distance. */
-    #s28 .qrslot{
+    #s29 .qrslot{
       width:560px; height:560px; border-radius:32px;
       background:#FFFFFF; padding:24px; box-sizing:border-box;
       box-shadow:0 0 0 6px var(--brand), 0 40px 110px -34px #000000CC;
     }
-    #s28 .qrslot img{ width:100%; height:100%; display:block; object-fit:contain; }
-    #s28 .rz .cue{
+    #s29 .qrslot img{ width:100%; height:100%; display:block; object-fit:contain; }
+    #s29 .rz .cue{
       margin:0; font-family:var(--mono); font-size:31px; font-weight:600;
       letter-spacing:.12em; text-transform:uppercase; color:var(--accent); text-align:center;
     }
@@ -2576,8 +2708,8 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 29-press.html ===== -->
-<section class="slide t-paper press" data-slide="29" data-title="Báo chí đang nói về nhân viên số (nhắc lại)" id="s29">
+<!-- ===== 30-press.html ===== -->
+<section class="slide t-paper press" data-slide="30" data-title="Báo chí đang nói về nhân viên số (nhắc lại)" id="s30">
   <div class="deco">
     <div class="deco-dots" style="opacity:.4;"></div>
     <div class="deco-orb" style="left:-960px; top:-1300px; opacity:.08;"></div>
@@ -2644,36 +2776,36 @@
   <p class="ribbon"><span class="dot"></span>Sale Agent Event</p>
 </section>
 
-<!-- ===== 30-qa.html ===== -->
-<section class="slide t-paper" data-slide="30" data-title="Q&amp;A — tham gia cộng đồng" id="s30">
+<!-- ===== 31-qa.html ===== -->
+<section class="slide t-paper" data-slide="31" data-title="Q&amp;A — tham gia cộng đồng" id="s31">
   <style>
-    #s30{ gap:140px; align-items:center; justify-content:center; }
+    #s31{ gap:140px; align-items:center; justify-content:center; }
 
-    #s30 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:40px; }
-    #s30 .qa{ margin:0; font-size:336px; font-weight:900; letter-spacing:-.055em; line-height:.86; }
-    #s30 .lz p.t{ margin:0; font-size:44px; line-height:1.32; color:var(--muted); max-width:24ch; }
-    #s30 .lz p.t b{ color:var(--fg); font-weight:700; }
+    #s31 .lz{ flex:0 0 auto; display:flex; flex-direction:column; gap:40px; }
+    #s31 .qa{ margin:0; font-size:336px; font-weight:900; letter-spacing:-.055em; line-height:.86; }
+    #s31 .lz p.t{ margin:0; font-size:44px; line-height:1.32; color:var(--muted); max-width:24ch; }
+    #s31 .lz p.t b{ color:var(--fg); font-weight:700; }
 
-    #s30 .rz{ flex:0 0 auto; display:flex; flex-direction:column; gap:44px; }
-    #s30 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
+    #s31 .rz{ flex:0 0 auto; display:flex; flex-direction:column; gap:44px; }
+    #s31 .rule{ flex:none; align-self:stretch; width:3px; background:var(--hair);
       margin:132px 0; transform-origin:center top; }
 
-    #s30 .hd{ display:flex; align-items:center; gap:26px; border-bottom:3px solid var(--hair); padding-bottom:26px; }
-    #s30 .hd h2{ margin:0; font-size:72px; font-weight:800; letter-spacing:-.02em; }
-    #s30 .hd i{ display:block; width:80px; height:5px; background:var(--accent); flex:none; }
+    #s31 .hd{ display:flex; align-items:center; gap:26px; border-bottom:3px solid var(--hair); padding-bottom:26px; }
+    #s31 .hd h2{ margin:0; font-size:72px; font-weight:800; letter-spacing:-.02em; }
+    #s31 .hd i{ display:block; width:80px; height:5px; background:var(--accent); flex:none; }
 
     /* Two codes, both real. They no longer need to stretch to the far edge —
        a fixed gap keeps the pair inside one eye fixation. */
-    #s30 .codes{ display:flex; gap:120px; align-items:flex-start; justify-content:center; }
+    #s31 .codes{ display:flex; gap:120px; align-items:flex-start; justify-content:center; }
     /* Both codes now sit in an identical crimson frame. qr-zalo.png shipped with
        a red frame baked into the bitmap, which made the pair look mismatched, so
        it was stripped and the code rebuilt on a clean white canvas. */
-    #s30 .codes .qr img{
+    #s31 .codes .qr img{
       width:404px; height:404px; display:block; background:#fff;
       border:8px solid var(--brand); border-radius:26px; box-sizing:border-box;
       padding:14px;
     }
-    #s30 .codes .qr span{ color:var(--fg); font-size:31px; }
+    #s31 .codes .qr span{ color:var(--fg); font-size:31px; }
   </style>
 
   <div class="deco">
@@ -2727,7 +2859,7 @@
   <button data-nav="overview">Overview (O)</button>
   <button data-nav="grid">Grid (G)</button>
   <span>F fullscreen · C fit-mode · R replay</span>
-  <span id="counter">01 / 30</span>
+  <span id="counter">01 / 31</span>
 </div>
 <script src="src/js/deck.js"></script>
 </body>

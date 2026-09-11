@@ -1,0 +1,130 @@
+<section class="slide t-ink" data-slide="1" data-title="Backdrop — check-in" id="s01">
+  <style>
+    /* Slide 0: the screen that stands behind check-in. It is a step-and-repeat
+       backdrop, which is what an event wall actually is — the logo and the event
+       name tiled and sunk almost into the ground, drifting slowly, with the real
+       lockup legible in the middle. Nothing here is meant to be read from the
+       back of the room; it is furniture. */
+    #s01{ padding:0; overflow:hidden; align-items:center; justify-content:center; }
+
+    /* --- ground ------------------------------------------------------- */
+    #s01 .bg{ position:absolute; inset:0; z-index:-3; overflow:hidden; }
+    #s01 .bg-base{
+      position:absolute; inset:0;
+      background:
+        radial-gradient(2200px 1500px at 50% 46%, #7A0A12 0%, #3A050A 34%, #140406 64%, #08080A 100%),
+        linear-gradient(180deg, #0B0B0E 0%, #120609 55%, #0A0A0C 100%);
+    }
+    #s01 .bloom{
+      position:absolute; left:50%; top:50%; width:3400px; height:2200px;
+      margin:-1100px 0 0 -1700px; border-radius:50%;
+      background:radial-gradient(closest-side, #FF1A2680 0%, #C4101C40 42%, transparent 72%);
+      filter:blur(60px);
+      animation:s01breathe 13s ease-in-out infinite alternate;
+    }
+    @keyframes s01breathe{
+      from{ transform:scale(1); opacity:.62; }
+      to  { transform:scale(1.1); opacity:.92; }
+    }
+
+    /* --- the sunken step-and-repeat ----------------------------------- */
+    #s01 .repeat{
+      position:absolute; left:-22%; top:-30%; width:150%; height:170%;
+      transform:rotate(-9deg); transform-origin:center;
+      display:flex; flex-direction:column; gap:62px;
+      /* Oscillates instead of looping: a looping translate would have to equal
+         exactly one tile width to avoid a visible snap, and the tile width here
+         is set by text metrics. Drifting out and back has no seam at all. */
+      animation:s01drift 46s ease-in-out infinite alternate;
+      will-change:transform;
+    }
+    @keyframes s01drift{
+      from{ transform:rotate(-9deg) translate3d(0,0,0); }
+      to  { transform:rotate(-9deg) translate3d(-360px,-62px,0); }
+    }
+    #s01 .rr{
+      display:flex; white-space:nowrap; flex:none;
+      font-family:var(--mono); font-size:86px; font-weight:600;
+      letter-spacing:.34em; color:#FFFFFF; opacity:.055;
+    }
+    /* a second, brighter pass masked to the centre so the wall has depth */
+    /* must drift on exactly the same clock as the base layer — at different
+       durations the two passes separate and read as doubled text, not depth */
+    #s01 .repeat.glow{ animation-duration:46s; }
+    #s01 .repeat.glow .rr{
+      opacity:.16; color:#FF8C93;
+      -webkit-mask-image:radial-gradient(1500px 760px at 50% 50%, #000 0%, transparent 74%);
+      mask-image:radial-gradient(1500px 760px at 50% 50%, #000 0%, transparent 74%);
+    }
+
+    /* The partner lockup is dark artwork; on the bright centre of the bloom its
+       organiser half lost contrast. This pulls the middle back down so the logos
+       read, and it reads as a spotlight rather than a patch. */
+    #s01 .scrim{
+      position:absolute; left:50%; top:50%; width:3000px; height:1240px;
+      margin:-620px 0 0 -1500px;
+      background:radial-gradient(closest-side, #0A0508E6 0%, #0A0508B3 44%, transparent 74%);
+    }
+
+    #s01 .vig{
+      position:absolute; inset:0;
+      background:radial-gradient(1900px 1000px at 50% 50%, transparent 26%, #000000A6 100%);
+    }
+
+    /* --- the legible lockup ------------------------------------------- */
+    #s01 .plate{
+      position:relative; z-index:1;
+      display:flex; flex-direction:column; align-items:center; gap:54px;
+    }
+    #s01 .partners{ width:1180px; height:auto; display:block; opacity:.96; }
+    #s01 .wm{
+      margin:0; font-size:196px; font-weight:900; letter-spacing:-.03em; line-height:1;
+      color:#FFF6F6; text-align:center; white-space:nowrap;
+      text-shadow:0 24px 70px #00000073;
+    }
+    #s01 .wm b{ color:var(--brand); font-weight:900; }
+    #s01 .rule{
+      width:560px; height:3px; background:linear-gradient(to right,transparent,#FF3B4599,transparent);
+    }
+    #s01 .badge{ width:420px; height:auto; display:block; opacity:.95; }
+  </style>
+
+  <div class="bg">
+    <div class="bg-base"></div>
+    <div class="bloom"></div>
+    <div class="repeat">
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+    </div>
+    <div class="repeat glow">
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr" style="margin-left:-560px"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+      <div class="rr"><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span><span>SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; SALE AGENT EVENT &nbsp;·&nbsp; OPENCLAW VN &nbsp;·&nbsp; CLAWEXPERTS &nbsp;·&nbsp; </span></div>
+    </div>
+    <div class="scrim"></div>
+    <div class="vig"></div>
+    <div class="deco-noise" style="opacity:.05; animation:none;"></div>
+  </div>
+
+  <div class="plate">
+    <img class="partners" src="assets/brand/cover-partners.png"
+         alt="OpenClaw VN · ClawExperts.com · Firegroup" data-anim="up-sm" data-delay="200">
+    <img class="badge" src="assets/brand/cover-badge-workshop.png"
+         alt="Workshop" data-anim="scale" data-delay="360" data-dur="900">
+    <h1 class="wm" data-anim="up-sm" data-delay="480" data-dur="1100">Sale <b>Agent</b> Event</h1>
+    <span class="rule" data-anim="grow-x" data-delay="900" data-dur="900"></span>
+  </div>
+</section>
