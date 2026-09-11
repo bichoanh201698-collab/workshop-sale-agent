@@ -85,16 +85,18 @@ Kết quả → Bối cảnh → Inbox tăng gấp 3. Marquee keywords: X3 NĂNG
 Port the stat treatment from `_v1/06-fact.html` — but note the first figure is a *before → after*, not a fraction, so `.stat .num` needs a variant. Mark the slide as a customer result, not a promise.
 
 ## 06 · Nếu inbox tăng gấp 3 — `t-ink-2` · `l-center`
-**Cut to a single sentence at the client's request.** The slide now carries nothing but:
-> **Nếu inbox tăng gấp 3, shop có còn giữ được tốc độ phản hồi như hiện tại?**
+**Cut to a single sentence, then reworded by the client.** The slide carries nothing but:
+> **Nếu inbox tăng gấp 3, shop có còn tư vấn đúng, phản hồi kịp và không bỏ sót khách cần người hỗ trợ ngay không?**
 
-Two balanced lines at 162px, `tăng gấp 3` accented with a `grow-x` underline. Gone with the trim: the
-sub-line about mùa lễ/viral, the inline-SVG response-speed curve, the *"Khi khách đến nhiều hơn…"*
-conclusion, the *"Không thay thế con người…"* line, and the **"kịch bản giả định" badge**.
+Three balanced lines at 150px, `tăng gấp 3` accented with a `grow-x` underline. The longer wording
+dropped the size from 162 to 150px and added a third line; widest line runs 766→3717, well inside the
+safe area. Gone with the earlier trim: the sub-line about mùa lễ/viral, the inline-SVG response-speed
+curve, the *"Khi khách đến nhiều hơn…"* conclusion, the *"Không thay thế con người…"* line, and the
+**"kịch bản giả định" badge**.
 
 **⚠** That badge was an explicit requirement from the client's own rehearsal checklist — *"Trình bày
 'traffic tăng gấp 3' như số liệu đã chứng minh"* is listed under **cần tránh**. As a single bare
-question the slide no longer states that ×3 is a hypothetical, so the speaker now has to say it aloud.
+question the slide still does not state that ×3 is hypothetical, so the speaker has to say it aloud.
 
 ## 07 · Divider — `t-ink` · `.divider`
 **Title (verbatim):** Trước khi tạo nhân viên số, hãy hiểu nhân viên đó sẽ làm gì.
