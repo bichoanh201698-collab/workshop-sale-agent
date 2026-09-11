@@ -218,7 +218,7 @@ Port `_v1/23-test-5.html` — it already solves five bubbles on one ultrawide st
 Port `_v1/24-refine.html`. **Its before/after bubble copy and ×/✓ lists were written by a builder, not the client** — keep the before/after device (it earns the slide) but the invented lines are yours to justify; if in doubt, cut them down to the two verbatim sentences plus the device.
 
 ## 20 · Báo chí đang nói về nhân viên số — `t-paper` · `.press` — **NEW, client request**
-### and again at 30, immediately before Q&A
+### and again at 29, immediately before the ClawExperts CTA
 A press-clipping **bento** built for FOMO: five real articles with their own cover photos — one feature
 clipping spanning both rows, four smaller ones beside it, so the wall reads as "lots of coverage".
 **All five carry headline *and* lead** — the four side cards were headline-only at first and read as
@@ -244,7 +244,7 @@ wants the exact cover, it needs to come from them.
 **The title — *"Báo chí đang nói về nhân viên số."* — is ours, not the client's.** It is deliberately
 flat: the clippings do the persuading, so the headline only has to name what the room is looking at.
 
-The slide appears **twice, identically** (20 and 30). Its CSS is the `.press` component in `theme.css`
+The slide appears **twice, identically** (20 and 29). Its CSS is the `.press` component in `theme.css`
 rather than a scoped block, precisely so the repeat cannot drift out of sync with the first showing —
 the two partials differ only in `id`, `data-slide` and `data-title`.
 
@@ -346,7 +346,9 @@ Bạn muốn xây đội ngũ nào tiếp theo?
 **Client art direction:** *"Hai dòng chữ lớn. Dòng đầu ghi nhận trải nghiệm vừa có; dòng sau mở ra câu hỏi về đội ngũ của khán giả. Dùng màu nhấn cho 'đội ngũ'. Giữ nhiều khoảng trống để câu hỏi có sức nặng. Cho dòng đầu xuất hiện trước, dừng một nhịp rồi hiện câu hỏi… Không thêm hình hoặc ý mới. Kết bằng câu hỏi để khán giả tự hình dung."*
 Two lines, generous emptiness, accent on "đội ngũ", a real beat between the lines, nothing else.
 
-## 29 · Cùng xây đội ngũ số phía sau bạn — `t-ink` — **NEW, S7 of the brief**
+## 29 · Báo chí đang nói về nhân viên số — *(repeat, identical to 20 — see that entry)*
+
+## 30 · Cùng xây đội ngũ số phía sau bạn — `t-ink` — **NEW, S7 of the brief**
 **Copy:** eyebrow *ClawExperts · Đồng hành triển khai* · headline **Cùng xây đội ngũ số phía sau bạn.** ·
 *Bắt đầu từ một phần việc thực tế của công ty.* · *Quét QR để trao đổi về nhu cầu triển khai*
 
