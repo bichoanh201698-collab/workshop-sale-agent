@@ -70,7 +70,7 @@ slides 10 and 24.
 
 ## 03 · Speaker — Tín Trương — `t-ink` — file `03-speaker-tin.html`
 **Copy — nothing beyond this is on the slide, and nothing was invented:**
-Speakers · **Tín Trương** · Lead Producer — AI Agent Business Solutions · ClawExperts.com
+Speaker · **Tín Trương** · Lead Producer — AI Agent Business Solutions · ClawExperts.com
 
 **Photo:** `assets/brand/speaker-tin-halfbody.png` — the client's half-body cutout, a transparent PNG
 (source `docs/ref/ref-02-speaker-halfbody.png`, 552×698, subject 425×649). It replaced the head crop
@@ -78,7 +78,7 @@ taken out of their 552px speaker card, which had only ~316px of subject and had 
 The cutout stands on the red ground anchored to the card's bottom edge, at 97% of card height — at 100%
 or more the crop's top padding vanishes and the hair clips against the frame.
 
-Card is 640×790 portrait with the crimson glow frame and the client's "Speakers" pill straddling the
+Card is 640×790 portrait with the crimson glow frame and the client's "Speaker" pill straddling the
 bottom edge. Their card repeats the name in a black band under the photo; that band is dropped, because
 the name is already the largest thing on the stage. Name + roles and the card sit as one centred pair
 with a hairline between them, so the composition reads as deliberate rather than as two blocks pushed to
@@ -256,10 +256,10 @@ Port from `_v1/12-session2.html` or `_v1/20-session3.html`. Strip items: Một n
 
 ## 22 · Speaker — Hoàng Lê — `t-ink` — **NEW, client request** — file `22-speaker-hoang.html`
 Placed immediately after the *Từ nhân viên số → Đến công ty số* divider, which is the section he presents.
-**Copy — all of it:** Speakers · **Hoàng Lê** · Program Manager — AI Agent Business Solution
+**Copy — all of it:** Speaker · **Hoàng Lê** · Program Manager — AI Agent Business Solution
 
 Built with the same construction as slide 02 so the two speaker slides read as a pair: centred name/role,
-hairline, portrait card with the crimson glow frame and the "Speakers" pill straddling the bottom edge.
+hairline, portrait card with the crimson glow frame and the "Speaker" pill straddling the bottom edge.
 Photo is `assets/brand/speaker-hoang-halfbody.png`, the client's transparent cutout
 (`docs/ref/ref-18-speaker-hoang.png`, subject 426×528). His crop is a wider frame than Tín's — 0.79 against
 0.66 — so it is sized to **84%** of card height rather than 97%; that lands his head at the same size as
